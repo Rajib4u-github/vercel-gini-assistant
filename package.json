@@ -2,8 +2,11 @@
   "name": "node-portfolio",
   "version": "1.0.0",
   "description": "A dynamic Portfolio Creation Platform.",
-  "main": "index.js",
-  "dependencies": {
+  "main": "server.js",
+    "scripts": {
+      "start": "node server.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },  "dependencies": {
     "@babel/core": "7.2.0",
     "axios": "^1.10.0",
     "body-parser": "^1.18.2",
@@ -25,9 +28,6 @@
   },
   "devDependencies": {
     "electron": "2.0.5"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC"
