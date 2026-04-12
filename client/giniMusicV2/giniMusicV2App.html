@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>GiniMusicV2App</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+
+  <!-- Favicons -->
+  <link href="static/img/favicon.png" rel="icon">
+  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- <link href="static/vendor/icofont/icofont.min.css" rel="stylesheet"> -->
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/venobox/venobox.css" rel="stylesheet">
+  <!-- <link href="static/vendor/owl.carousel/static/owl.carousel.min.css" rel="stylesheet"> -->
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+  <!-- <link href="static/vendor/font-awesome/font-awesome.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+  <style >
+      :root {
+        /* --default-theme-color: #0F71A1; */
+        --default-theme-color: #6264A7;
+        --default-theme-primary-color: #424242;
+        --default-theme-font-color: #212529;
+        --default-theme-bg-color: #2b68e3;
+        --default-theme-menu-bg-color: #212529;
+        --default-theme-menu-font-color : #212529;
+        --default-theme-on-hover-bg-color: #212529;
+        --default-theme-on-hover-font-color: #212529;
+        --default-theme-disabled-bg-color: #212529;
+      }
+
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      section {
+          padding: 30px 0;
+          overflow: hidden;
+      }
+      a{color: white;}
+      body{background: var(--default-theme-bg-color);}
+      a:hover {
+        /* color: var(--default-theme-color); */
+        text-decoration: none;
+      }
+
+      /* OVERLAY IMAGE ICON CSS */
+      .overlay-icon{opacity: 0; }
+      .overlay-icon:hover{opacity: 1; color: var(--default-theme-color);}
+      .overlay-container:hover .overlay-icon{opacity: 1; }
+
+      /*  THEMING  CSS  SECTION  */
+      .default-theme-color{color: var(--default-theme-color)};
+      .default-theme-primary-color{color: var(--default-theme-primary-color);}
+      .default-outline-color{outline-color: var(--default-theme-color) !important;}
+      .progress-bar-theme{background-color: var(--default-theme-color) !important;}
+      .default-background-color{background-color: var(--default-theme-color);}
+      .default-theme-bg-color{background-color: var(--default-theme-bg-color);}
+      .default-theme-font-color{color: var(--default-theme-font-color);}
+      .default-theme-menu-bg-color{background-color: var(--default-theme-menu-bg-color);}
+      .default-theme-menu-font-color{color: var(--default-theme-menu-font-color);}
+      .custom-social-links{background: var(--default-theme-color); color: #ffffff;}
+      .custom-social-links:hover{background: #000000; color: var(--default-theme-color);}
+      .custom-profile{color: var(--default-theme-color);}
+      .custom-primary-font-weight{font-weight: 600; color: var(--default-theme-primary-color); }
+      .default-disabled-bg-color{background: var(--default-theme-disabled-bg-color); }
+      /* CUSTOMIZED  BORDER  THEMING */
+      .custom-theme-border{border-left: 0px solid var(--default-theme-color)}
+      .custom-theme-bb-2{border-bottom: 2px solid var(--default-theme-color) !important}
+      .no-outline{outline : none !important;}
+
+      .icon{color: var(--default-theme-color);}
+      .default-theme-border{border: 1px solid var(--default-theme-color)}
+      .custom-menu-icon{background: var(--default-theme-color); color: #ffffff; border-radius: 50px; margin-right: 10px; padding: 5px;}
+      .custom-menu-icon:hover{background: #000000; color: var(--default-theme-color); border-radius: 50px; margin-right: 10px; padding: 5px;}
+
+      .default-theme-menu-font-color:hover{color: var(--default-theme-on-hover-font-color);}
+      .nav-menu .custom-menu:hover{ background: var(--default-theme-on-hover-bg-color); }
+
+      .custom-section-popup{display: none; background: var(--default-theme-color);  width: 300px; height: auto; padding: 20px; font-size: 16px; box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);}
+      .custom-popup{display: none; background: var(--default-theme-color);  width: 300px; height: auto; padding: 20px; font-size: 16px; box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);}
+
+      .container {width: 100%; padding: 0px !important; margin-right: auto; margin-left: auto;}
+
+      #header{padding-right: 0px !important; padding-left: 0px !important;}
+      .custom-header{width: 100% !important; z-index: 999 !important; bottom: auto !important}
+      .sections_class{position: relative;}
+
+      /* .nav-menu .custom-menu-font:hover{color: white !important;} */
+      /* .nav-menu li:hover > a{color: white !important; background: var(--default-theme-color); border-radius: 50px;}
+      .nav-menu a:hover i {color: white !important;}
+      .nav-menu li:hover > a span{color: white !important;} */
+      .services .icon{float: left;display: flex;align-items: center;justify-content: center;width: 50px;  height: 50px;background: var(--default-theme-color) !important; border: 1px solid var(--default-theme-color) !important;  border-radius: 50%;transition: 0.5s; color: white ;}
+      input[type=text] {border: none; padding: 5px 20px; margin-bottom: 5px; background: var(--default-theme-bg-color) ; outline-color: #0F71A1 !important; }
+      textarea {border: none; padding: 5px 20px; margin-bottom: 5px; background: var(--default-theme-bg-color);  width: 100%; outline-color: #0F71A1 !important;}
+      div.scrollmenu { overflow: auto; white-space: nowrap; transition: 0.3s;}
+      div.scrollmenu a {  display: inline-block; text-decoration: none; vertical-align: top; color: grey;}
+      .category-item{background: #E8EAED; padding: 6px 16px; margin-right: 8px; border-radius: 16px; color: black;}
+      .work-item{width: 24%; float: left; display: inline-block; margin-right: 1%; margin-bottom: 16px;}
+      .workcat-items-block{display: inline-block; width: 93%;}
+      .work-item{width: 24%; float: left; display: inline-block; margin-right: 1%; margin-bottom: 16px;}
+      .work-cat-left-arrow-block{width: 4%; display: inline-block; position: relative; top: -18px;}
+      .work-cat-right-arrow-block{width: 5%; display: inline-block; position: relative; top: -18px; text-align: center;}
+      .single-line-ellipse{white-space: nowrap; width: 80%; overflow: hidden; text-overflow: ellipsis;}
+      #jsonViewer {width: 100%;min-height: 30rem;font-family: "Lucida Console", Monaco, monospace;font-size: 0.8rem;line-height: 1.2;}
+      /* .nav-menu a:hover i {color: var(--default-theme-color) !important;} */
+
+      #hero h1 {margin: 0 0 10px 0;font-size: 50px;font-weight: 600;line-height: 30px;color: #fff; color: black;}
+      /* modal related stylesheet */
+      .modal-dialog{ position: relative; max-width: 50% !important; margin-left: 35%;margin-top: 10%;}
+      .menu-active-selection, .special-active-selection{background: var(--default-theme-color) !important; color: white !important;}
+
+      /* ellipse styles start here  */
+      .ellipse-line-one{
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .ellipse-line-two{
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .ellipse-line-three{
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .public-apis-choose-category{display: none; }
+      .allPublicApisSideBarSearch{display: inline-block; width: 20%; float: left; }
+      /*  ellipse styles end here  */
+    @media (min-width: 320px) and (max-width: 480px) {
+      .custom-each-education-section, .mob-width-full, .custom-part {width: 100% !important;}
+      .skills .progress{width: 100% !important}
+      .custom-work-img{height: auto; width: 100%;}
+      .work-cat-arrow-block{display: none; width: 3%;}
+      .portfolio-item{width: 100%;}
+      .each-project-section{margin-right: 0px;}
+      .work-cat-left-arrow-block, .work-cat-right-arrow-block{display: none;}
+      .collection-parts-mob-style{display: block; }
+      /* .allPublicApisSideBarSearch{display: none !important; }
+      .public-apis-choose-category{display: block !importat;} */
+      .allPublicApisSideBarSearch{display: none}
+      .public-apis-choose-category{display: block;}
+    }
+  </style>
+  <style media="screen">
+      .carousel-indicators .active {
+          width: 12px;
+          height: 12px;
+          margin: 0;
+          background: var(--default-theme-color) !important;
+      }
+      .carousel-indicators li {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          margin: 1px;
+          text-indent: -999px;
+          cursor: pointer;
+          background-color: #000\9;
+          background-color: rgba(0,0,0,0);
+          border: 2px solid var(--default-theme-color) !important;
+          border-radius: 10px;
+      }
+      @media screen and (min-width: 768px){
+        .carousel-indicators {
+            bottom: 10px !important;
+          }
+      }
+
+  </style>
+  <style media="screen">
+      .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    /* background-color: rgb(0,0,0); */
+    /* background-color: rgba(0,0,0, 0.9); */
+    overflow-x: hidden;
+    transition: 0.5s;
+    }
+
+    .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    }
+
+    .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    }
+
+    .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+    }
+
+    .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    }
+
+    @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+    }
+  </style>
+  <style media="screen">
+
+    .input {float:right;}
+    .output{clear:right;}
+    .input{margin-bottom:8px; border-radius: 10px; padding: 3px 12px 3px 12px;background-color: #4267b2; color: white; max-width: 370px; min-width:100px; text-align: left;margin-right : 5px; border-color:#4267b2; }
+    .output{margin-top:10px; border-radius: 10px; padding: 10px; background-color: white ; color: #4b4f56; padding-top:3px; padding-left: 15px; margin-left : 5px; border-color: white; padding-bottom: 15px;}
+    .chat-container{padding:5px;}
+    .mCSB_draggerRail{width:20px;}
+    .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color: #e9ebee !important;}
+    .mCSB_scrollTools .mCSB_draggerRail {background-color: #e9ebee !important;}
+    .mCSB_inside > .mCSB_container {margin-right: 3px !important;}
+    /* .container-fluid{overflow-x: hidden;} */
+
+    .chat-container{padding-left:0px; padding-right:0px; overflow: auto; height:83vh; border-bottom:2px solid white;}
+    .query-block{left:0px; right:0px; margin:auto;height:10vh;}
+
+    .chat-block{padding-left:2px; padding-right:0px;}
+    .chat-layout{margin-top:10px;}
+
+    .send-div-pad{padding-left: 0px; padding-right:0px;}
+    .query-div-pad{padding-left: 0px;}
+    .send-btn{padding: 6px 24px 6px 24px; height:38px; margin-top:2px; background-color: #4267b2;border-color: #4267b2; color:white; outline:none !important; border-radius:7px;}
+    .send-icon{font-size:15px; transform: rotate(60deg); margin-left: -5px;margin-top: 3px;position: absolute;top: 8px;}
+    .send-btn-txt{padding-left:25px;}
+    .body-layout{background-color: #e9ebee; font-family: -apple-system, BlinkMacSystemFont, Roboto, Arial, Helvetica, sans-serif;}
+    .loader-img{height:20px; width: 20px; margin-top: -30px; margin-right: 3px;}
+    .query-div-row{padding-top:3px;}
+    .query{margin-left:10px; margin-top:0px; margin-left:5px; outline:none; border-radius:10px; height:40px; border: 1px solid #e9ebee; outline:none !important;}
+
+    /*  =================== hints scrollable elemnt ========================= */
+    /* google translator override css */
+    .goog-te-banner{
+    display:none !important;
+    }
+    .goog-te-banner-frame{
+    display: none !important;
+    }
+    .goog-logo-link{
+    display:none !important;
+    }
+
+    /* ======================================  */
+    div.scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+    padding-top: 3px;
+    color: #4b4f56;
+    padding-right: 10px;
+    }
+    .hints-block {
+      margin-left: -10px;
+      border-bottom: 2px solid white;
+      /* margin-bottom: -14px; */
+    }
+    .hints-item{
+    padding: 10px 12px !important; border: 1px solid #e9ebee; margin-right:10px; border-radius: 25px; background-color: white;
+    }
+    div.scrollmenu a {
+    display: inline-block;
+    color: #4b4f56;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    }
+
+    div.scrollmenu a:hover {
+    background-color: #4267b2;
+    color: white;
+    }
+    /* width */
+    ::-webkit-scrollbar {
+    width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+    /* background: #e9ebee; */
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+    /* background: #e9ebee; */
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+    background: #e9ebee;
+    }
+
+    div.scrollmenu {
+    /* background-color: #333; */
+    overflow: auto;
+    white-space: nowrap;
+    }
+
+    div.scrollmenu a {
+    display: inline-block;
+    /* color: white; */
+    /* text-align: center; */
+    /* padding: 14px; */
+    text-decoration: none;
+    vertical-align: top;
+    }
+    .ellipse {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    /* line-height: 1rem; */
+    pointer-events:none;
+    }
+
+    .ellipse:after {
+    content:"";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 48px;
+    z-index: 1;
+    pointer-events:initial;
+    }
+
+    .ellipse:hover:after{
+    cursor: pointer;
+    visibility: visible;
+    }
+
+    .tooltip {
+    width: 45%;
+    visibility: hidden;
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    padding: 5px;
+    -webkit-box-shadow: 0 0 50px 0 rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    }
+
+
+    .ellipse:hover + .tooltip {
+    visibility: visible;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+    }
+
+
+    @media (min-width: 320px) and (max-width: 480px) {
+    .ellipse:hover + .tooltip {
+      visibility: hidden !important;
+    }
+    .tooltip {
+      visibility: hidden !important;
+    }
+    .ellipse:hover:after{
+      cursor: pointer;
+      visibility: hidden !important;;
+    }
+  }
+/* ====================================================================== */
+
+  </style>
+
+</head>
+
+<body>
+
+  <header id="header" class="fixed-top custom-header"></header>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="fa fa-bars" style="color: white;" aria-hidden="true"></i></button>
+  <div id="typedBlock" class=""></div>
+
+  <main id="main" style="width: 80%; margin: auto;">
+    <div class="sections_class default-theme-bg-color default-theme-font-color" id="sections_block" style=""></div>
+
+    <!-- ******************* EDIT  PROFILE  SECTION  HERE  ******************* * -->
+    <div id="editStylePopup" class="default-theme-bg-color default-theme-font-color" style="display: none; width: 300px; height: auto; padding: 20px; font-size: 16px; box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);">
+      <!-- <div onClick="closeEditStylePopup()" style="width: 100%; float: right;"><div style="font-size: 22px; color: red; float: right; position: relative; top: -16px; right: -5px; "> <i class="fa fa-times-circle" aria-hidden="true"></i> </div></div> -->
+      <div >
+        <div id="editStyleContainer" ></div>
+      </div>
+    </div>
+
+    <div id="popup" class="custom-popup sections_class default-theme-bg-color default-theme-font-color" style="">
+        <div>
+            <div><a href="#" onclick="onClickThreeDotsOption('delete_item'); return false;">Delete Item</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('add_item_on_top'); return false;">Add Text Item On Top</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('add_item_on_below'); return false;">Add Text Item Below</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('add_similar_item_on_top'); return false;">Add Similar Item On Top/Left</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('add_similar_item_on_top'); return false;">Add Similar Item Below/Right</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('edit_item_style'); return false;">Edit Item Style</a></div>
+        </div>
+
+    </div>
+
+    <div id="sectionPopup" class="custom-section-popup sections_class default-theme-bg-color default-theme-font-color" style="">
+        <div>
+            <div><a href="#" onclick="onClickThreeDotsOption('delete_section'); return false;">Delete Section</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('add_section_left'); return false;">Add Similar Section On Left</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('add_section_right'); return false;">Add Similar Section On Right</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('edit_part_style'); return false;">Edit Section Style</a></div>
+        </div>
+    </div>
+
+    <div id="custom_overlay_block" class="overlay sections_class default-theme-bg-color default-theme-font-color" style="z-index: 99999;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div id="custom_overlay_loader" class=""></div>
+        <div id="custom_overlay_template" class=""></div>
+    </div>
+
+
+    <div class="json-viewer-block" id="jsonViewerBlock" style="display: none;">
+      <textarea id="jsonViewer">
+      </textarea>
+      <div class="">
+          <button type="button" name="button" onclick="oncickEditJson(event, 'save')" style="height: 40px; border: none; background: var(--default-theme-color); color: white ; font-weight: 600; width: 100%;">Save</button>
+      </div>
+    </div>
+
+    <div class="sections-action-block" id="sections_action_block"></div>
+  </main>
+
+  <!-- <div id="settingsBlock" style="position: relative; left: 10%;">
+
+  </div> -->
+
+  <div class="modal" id="setupSectionsModal">
+      <div class="modal-dialog" style="position: relative; max-width: 60% !important; margin-left: 30%; margin-top: 5%;">
+        <div class="modal-content" style="">
+          <!-- Modal Header -->
+          <div class="modal-header" style="border: none; padding-bottom: 5px !important; ">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <!-- Modal body -->
+          <div id="setupSectionsBlock" class="modal-body" style="padding: 5px; padding-left: 20px;padding-right: 20px;">  </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="modal" id="setupThemeModal">
+    <div class="modal-dialog" style="position: relative; max-width: 60% !important; margin-left: 30%; margin-top: 5%;">
+      <div class="modal-content" style="">
+        <!-- Modal Header -->
+        <div class="modal-header" style="border: none; padding-bottom: 5px !important; ">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div id="setupThemeBlock" class="modal-body" style="padding: 5px; padding-left: 20px;padding-right: 20px;"></div>
+      </div>
+    </div>
+</div>
+
+
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+  <script src="static/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="static/vendor/counterup/counterup.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/venobox/venobox.min.js"></script>
+  <script src="static/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/vendor/typed.js/typed.min.js"></script>
+  <script src="static/vendor/aos/aos.js"></script>
+  <script src="static/vendor/font-awesome/font-awesome-kit.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  <!-- Template Main JS File -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="static/js/main.js"></script>
+  <script src="static/js/giniMusicV2/controllers/giniMusicV2.client.controller.js"></script>
+  <script src="static/js/core/controllers/genericFeature.core.client.controller.js"></script>
+
+
+  <script>
+
+  </script>
+
+
+</body>
+
+</html>

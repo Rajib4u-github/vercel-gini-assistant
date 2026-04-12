@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell UI Challenge</title>
+    <link href="assets/css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+  <header id="header" class="">
+      <div class="header-nav"  >
+        <div class="empty-div"  >  </div>
+        <div class="header-nav-brand"  >
+          <span class="brand" tabindex="0"  ><a href="#">Company</a></span>
+        </div>
+        <div class="header-nav-navigation"  >
+          <nav class="nav-menu ">
+            <ul>
+              <li class="" tabindex="0"><a href="#">About Us</a></li>
+              <li tabindex="0"><a href="#">Services</a></li>
+              <li tabindex="0"><a href="#">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="empty-div"  >  </div>
+      </div>
+
+      <div class="mob-header-nav">
+          <div class="burger" onclick="onClickMobSideNavBtn(this, event)"    >
+              <span class="burger-menu"  ></span>
+              <span class="burger-menu"  ></span>
+              <span class="burger-menu"  ></span>
+          </div>
+          <div class="brand"  >
+              <span  class="brand-name"  >Company</span>
+          </div>
+          <div class="mob-header-three-dots"   >
+              <span class="three-dots-icon"  >...</span>
+          </div>
+          <div id="mobSideNav" class="mob-side-nav" style="display: none;">
+              <div class="">
+                  <span class="side-nav-close-btn" onclick="onClickMobSideNavBtn(this, event)"  >+</span>
+              </div>
+              <div class="side-nav-bar">
+                <ul>
+                  <li tabindex="0"><a href="#">About Us</a></li>
+                  <li tabindex="0"><a href="#">Services</a></li>
+                  <li tabindex="0"><a href="#">Contact Us</a></li>
+                </ul>
+              </div>
+          </div>
+      </div>
+  </header>
+
+  <section id="brandImg" class="brand-img">
+      <div class="">
+          <div class="banner-content"  >
+              <div class="title"  >
+                  <span>Web developement is fun</span>
+              </div>
+              <div class="content"  >
+                <span>Thanks for taking this Challenge. We are exited to see how you tackle this challenge. </span>
+              </div>
+              <div class="btns"  >
+                  <div class="btn-block" tabindex="0"  >
+                    <button type="button" class="btn btn-fill"  name="button">Learn More</button>
+                  </div>
+                  <div class="btn-block" tabindex="0" >
+                    <button type="button" class="btn btn-light"  name="button">Get in touch</button>
+                  </div>
+              </div>
+          </div>
+          <div>
+            <img src="assets/img/main-banner.jpg" class="banner-img" alt="brand-img">
+          </div>
+      </div>
+  </section>
+  <section id="services" class="">
+    <div class="services">
+        <div class="services-link"  >
+            <div  tabindex="0" ><a href="#">AREAS WHAT WE SERVE</a></div>
+            <div class="services-title"  >Our Services</div>
+        </div>
+    </div>
+  </section>
+
+  <script type="text/javascript">
+    window.onClickMobSideNavBtn = function(that, event){
+        console.log("====== calling onClickMobSideNavBtn =======");
+        var x = document.getElementById("mobSideNav").style.display;
+        if(document.getElementById("mobSideNav").style.display === 'block'){
+            document.getElementById("mobSideNav").style.display = 'none';
+        }else if(document.getElementById("mobSideNav").style.display === 'none'){
+            document.getElementById("mobSideNav").style.display = 'block';
+        }
+    }
+
+  </script>
+
+  </body>
+</html>

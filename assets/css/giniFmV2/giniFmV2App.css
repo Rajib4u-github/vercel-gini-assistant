@@ -1,0 +1,215 @@
+
+.audio-player {
+  height: 50px;
+  width: 350px;
+  background: #444;
+  box-shadow: 0 0 20px 0 #000a;
+  font-family: arial;
+  color: white;
+  font-size: 0.75em;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 6px auto;
+}
+
+.audio-player .timeline {
+  background: white;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 2px 10px 0 #0008;
+}
+
+.audio-player .timeline .progress {
+  background: coral;
+  width: 0%;
+  height: 100%;
+  transition: 0.25s;
+}
+
+.audio-player .controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 0 20px;
+}
+.audio-player .controls > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.audio-player .controls .toggle-play.play {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid #0000;
+  border-left: 13px solid white;
+}
+.audio-player .controls .toggle-play.play:hover {
+  transform: scale(1.1);
+}
+.audio-player .controls .toggle-play.pause {
+  height: 15px;
+  width: 20px;
+  cursor: pointer;
+  position: relative;
+}
+.audio-player .controls .toggle-play.pause:before {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  background: white;
+  content: "";
+  height: 15px;
+  width: 3px;
+}
+.audio-player .controls .toggle-play.pause:after {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  background: white;
+  content: "";
+  height: 15px;
+  width: 3px;
+}
+.audio-player .controls .toggle-play.pause:hover {
+  transform: scale(1.1);
+}
+
+.audio-player .controls .time {
+  display: flex;
+}
+.audio-player .controls .time > * {
+  padding: 2px;
+}
+
+.audio-player .controls .volume-container {
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+.audio-player .controls .volume-container .volume-button {
+  height: 26px;
+  display: flex;
+  align-items: center;
+}
+.audio-player .controls .volume-container .volume-button .volume {
+  transform: scale(0.7);
+}
+
+.audio-player .controls .volume-container .volume-slider {
+  position: absolute;
+  top: 15px;
+  left: -3px;
+  z-index: -1;
+  width: 0;
+  height: 15px;
+  background: white;
+  box-shadow: 0 0 20px #000a;
+  transition: 0.25s;
+}
+.audio-player .controls .volume-container .volume-slider .volume-percentage {
+  background: coral;
+  height: 100%;
+  width: 75%;
+}
+.audio-player .controls .volume-container:hover .volume-slider {
+  left: -123px;
+  width: 120px;
+}
+
+
+.vjs-big-play-button{display: none !important;}
+.video-js .vjs-control-bar {display: flex !important}
+.vjs-control-bar > .vjs-play-control .vjs-control .vjs-button .vjs-playing,
+.vjs-control-bar > .vjs-volume-panel .vjs-control .vjs-volume-panel-horizontal,
+.vjs-control-bar > .vjs-progress-control .vjs-control{ display: flex !important}
+.vjs-default-skin .vjs-control-bar {
+  display: flex !important;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3.0em;
+}
+.vjs-user-inactive{display: flex !important;}
+.vjs-user-active{display: flex !important;}
+.vjs-has-started .vjs-control-bar, .vjs-audio-only-mode .vjs-control-bar{display: flex !important;}
+.vjs-playing .vjs-has-started .vjs-user-inactive{display: flex !important; opacity: 1 !important; }
+.vjs-playing .vjs-has-started .vjs-user-active{display: flex !important; opacity: 1 !important; }
+
+.video-js{background: #2B333F !important;}
+.video-js .vjs-control-bar {
+    display: none;
+    width: 100%;
+    position: absolute;
+    bottom: 12px !important;
+    left: 0;
+    right: 0;
+    height: 3em;
+    background-color: #2B333F;
+    background-color: rgba(43, 51, 63, 0.7);
+}
+.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {visibility: visible !important; opacity: 1 !important; transition: visibility 1s, opacity 1s;}
+.topRadioFrame-dimensions.vjs-fluid {padding-top: 0px !important;}
+
+.footer{
+  position: fixed !important;
+  left: 0;
+  bottom: 0;
+  background-color: #2B333F !important;
+  color: white;
+  width: 100% !important;
+  margin-left: 0%;
+  height: 60px;
+  padding: 0px !important;
+  display: none;
+}
+
+.footer-img-block{display: inline-block; width: 30% !important; float: left;}
+.custom-yt-Player .custom-ytplayer-play-btn-icon, .custom-yt-Player .custom-ytplayer-pause-btn-icon{font-size:25px; color:brown; display: none; position: relative; top: 18px;}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .mob-width-full, .custom-part {width: 80% !important; margin-right: -13% !important;}
+  .mob-section-class{padding: 0px 20px;}
+  .footer{
+    position: fixed !important;
+    top: 0px;
+    left: 0;
+    bottom: 0;
+    background-color: #2B333F !important;
+    color: white;
+    width: 100% !important;
+    margin-left: 0px;
+    height: 88px;
+    padding: 0px;
+    display: none;
+    z-index: 9999 !important;
+  }
+  /* .footer .grid-section{width: 100% !important} */
+  .footer .custom-part{width: 100% !important}
+  .footer .footer-player-title-block{width: 65% !important; }
+  .footer-img-block{display: inline-block; width: 37% !important; float: left;}
+  .footer .grid-section, .footer .mob-width-full{width: 0%;}
+  .footer-player-title-block{width: 65% !important; position: absolute !important; left: 22%; }
+  .footer-player-block{position: absolute !important; width: 65% !important;}
+  .topRadioFrame-dimensions.vjs-fluid { padding-top: 0px !important; position: absolute !important; left: 35%; top: 35px;}
+  .mob-full-width-part{width: 100% !important}
+
+  /* ============= custom yt player css here ============== */
+  /* .custom-yt-player{z-index: 9999;} */
+  .custom-yt-Player .custom-part{width: 100% !important}
+  .custom-yt-Player .custom_ytplayer_title_block{width: 65% !important; }
+  .custom-yt-Player .custom-ytplayer-img{display: inline-block; width: 50% !important; float: left; height: 88px !important;}
+  .custom-yt-Player .grid-section, .footer .mob-width-full{width: 0%;}
+  .custom-yt-Player .custom-ytplayer-title-block{width: 65% !important; position: absolute !important; left: 32%; }
+  .custom-yt-Player .custom-ytplayer-controls-block{position: absolute !important; width: 65% !important; right: 13%; top: 30%; }
+  .custom-yt-Player .custom-ytplayer-play-btn-icon {font-size: 20px; color:brown; display: block; position: relative; top: 18px;}
+  .custom-yt-Player .custom-ytplayer-pause-btn-icon{font-size: 20px; color:brown; display: none; position: relative; top: 18px;}
+  .custom-yt-Player .custom-ytplayer-volume-slider{width: 15%; margin-left: 40px; height: 5px; position: relative; top: 4px; }
+  .custom-yt-Player .custom-ytplayer-seek-slider{width: 45%; margin-left: 10px; height: 5px; position: relative; top: 4px; }
+  .custom-yt-Player .custom-ytplayer-close-btn {float: right; font-size: 22px; position: relative; right: 5px; color: white; top: -5px; }
+}

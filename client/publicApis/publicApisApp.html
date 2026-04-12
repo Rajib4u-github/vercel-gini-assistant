@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>GiniKontestsV2App</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+
+  <!-- Favicons -->
+  <link href="static/img/favicon.png" rel="icon">
+  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- <link href="static/vendor/icofont/icofont.min.css" rel="stylesheet"> -->
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/venobox/venobox.css" rel="stylesheet">
+  <!-- <link href="static/vendor/owl.carousel/static/owl.carousel.min.css" rel="stylesheet"> -->
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+  <!-- <link href="static/vendor/font-awesome/font-awesome.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+  <link href="static/css/core/genericFeature.core.client.css" rel="stylesheet">
+  <link href="static/css/giniKontestV2/giniKontestV2App.css" rel="stylesheet">
+
+
+  <style >
+        :root {
+          /* --default-theme-color: #0F71A1; */
+          --default-theme-color: #6264A7;
+          --default-theme-primary-color: #424242;
+          --default-theme-font-color: #212529;
+          --default-theme-bg-color: #2b68e3;
+          --default-theme-menu-bg-color: #212529;
+          --default-theme-menu-font-color : #212529;
+          --default-theme-on-hover-bg-color: #212529;
+          --default-theme-on-hover-font-color: #212529;
+          --default-theme-disabled-bg-color: #212529;
+        }
+
+        ::-webkit-scrollbar {
+          width: 10px;
+        }
+        section {
+            padding: 30px 0;
+            overflow: hidden;
+        }
+        a{color: white;}
+        body{background: var(--default-theme-bg-color);}
+        a:hover {
+          /* color: var(--default-theme-color); */
+          text-decoration: none;
+        }
+  </style>
+
+</head>
+
+<body>
+
+  <header id="header" class="fixed-top custom-header"></header>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="fa fa-bars" style="color: white;" aria-hidden="true"></i></button>
+  <div id="typedBlock" class=""></div>
+
+  <main id="main" style="width: 85%; margin: auto;">
+    <div class="sections_class default-theme-bg-color default-theme-font-color" id="sections_block" style=""></div>
+
+    <!-- ******************* EDIT  PROFILE  SECTION  HERE  ******************* * -->
+    <div id="editStylePopup" class="default-theme-bg-color default-theme-font-color" style="display: none; width: 300px; height: auto; padding: 20px; font-size: 16px; box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);">
+      <!-- <div onClick="closeEditStylePopup()" style="width: 100%; float: right;"><div style="font-size: 22px; color: red; float: right; position: relative; top: -16px; right: -5px; "> <i class="fa fa-times-circle" aria-hidden="true"></i> </div></div> -->
+      <div >
+        <div id="editStyleContainer" ></div>
+      </div>
+    </div>
+
+    <div id="popup" class="custom-popup sections_class default-theme-bg-color default-theme-font-color" style="">
+        <div>
+            <div><a href="#" onclick="onClickThreeDotsOption('delete_item'); return false;">Delete Item</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('add_item_on_top'); return false;">Add Text Item On Top</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('add_item_on_below'); return false;">Add Text Item Below</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('add_similar_item_on_top'); return false;">Add Similar Item On Top/Left</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('add_similar_item_on_top'); return false;">Add Similar Item Below/Right</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('edit_item_style'); return false;">Edit Item Style</a></div>
+        </div>
+
+    </div>
+
+    <div id="sectionPopup" class="custom-section-popup sections_class default-theme-bg-color default-theme-font-color" style="">
+        <div>
+            <div><a href="#" onclick="onClickThreeDotsOption('delete_section'); return false;">Delete Section</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('add_section_left'); return false;">Add Similar Section On Left</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('add_section_right'); return false;">Add Similar Section On Right</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('edit_part_style'); return false;">Edit Section Style</a></div>
+        </div>
+    </div>
+
+    <div id="custom_overlay_block" class="overlay sections_class default-theme-bg-color default-theme-font-color" style="z-index: 99999;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div id="custom_overlay_loader" class=""></div>
+        <div id="custom_overlay_template" class=""></div>
+    </div>
+
+
+    <div class="json-viewer-block" id="jsonViewerBlock" style="display: none;">
+      <textarea id="jsonViewer">
+      </textarea>
+      <div class="">
+          <button type="button" name="button" onclick="oncickEditJson(event, 'save')" style="height: 40px; border: none; background: var(--default-theme-color); color: white ; font-weight: 600; width: 100%;">Save</button>
+      </div>
+    </div>
+
+    <div class="sections-action-block" id="sections_action_block"></div>
+  </main>
+
+  <!-- <div id="settingsBlock" style="position: relative; left: 10%;">
+
+  </div> -->
+
+  <div class="modal" id="setupSectionsModal">
+      <div class="modal-dialog" style="position: relative; max-width: 60% !important; margin-left: 30%; margin-top: 5%;">
+        <div class="modal-content" style="">
+          <!-- Modal Header -->
+          <div class="modal-header" style="border: none; padding-bottom: 5px !important; ">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <!-- Modal body -->
+          <div id="setupSectionsBlock" class="modal-body" style="padding: 5px; padding-left: 20px;padding-right: 20px;">  </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="modal" id="setupThemeModal">
+    <div class="modal-dialog" style="position: relative; max-width: 60% !important; margin-left: 30%; margin-top: 5%;">
+      <div class="modal-content" style="">
+        <!-- Modal Header -->
+        <div class="modal-header" style="border: none; padding-bottom: 5px !important; ">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div id="setupThemeBlock" class="modal-body" style="padding: 5px; padding-left: 20px;padding-right: 20px;"></div>
+      </div>
+    </div>
+</div>
+
+
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+  <script src="static/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="static/vendor/counterup/counterup.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/venobox/venobox.min.js"></script>
+  <script src="static/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/vendor/typed.js/typed.min.js"></script>
+  <script src="static/vendor/aos/aos.js"></script>
+  <script src="static/vendor/font-awesome/font-awesome-kit.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  <!-- Template Main JS File -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="static/js/main.js"></script>
+  <script src="static/js/publicApis/controllers/publicApis.client.controller.js"></script>
+  <script src="static/js/core/controllers/genericFeature.core.client.controller.js"></script>
+
+
+  <script>
+
+  </script>
+
+
+</body>
+
+</html>

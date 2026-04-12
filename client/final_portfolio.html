@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>iPortfolio Bootstrap Template - Index</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <script src="/socket.io/socket.io.js"></script>
+
+  <!-- Favicons -->
+  <link href="static/img/favicon.png" rel="icon">
+  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="static/vendor/icofont/icofont.min.css" rel="stylesheet"> -->
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="static/vendor/owl.carousel/static/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+  <!-- <link href="static/vendor/font-awesome/font-awesome.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+  <style >
+      :root {
+        /* --default-theme-color: #0F71A1; */
+        --default-theme-color: #6264A7;
+        --default-theme-primary-color: #424242;
+        --default-theme-font-color: #212529;
+        --default-theme-bg-color: #2b68e3;
+        --default-theme-menu-bg-color: #212529;
+        --default-theme-menu-font-color : #212529;
+        --default-theme-on-hover-bg-color: #212529;
+        --default-theme-on-hover-font-color: #212529;
+      }
+
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+      section {
+          padding: 30px 0;
+          overflow: hidden;
+      }
+      a{color: white;}
+      a:hover {
+        color: var(--default-theme-color);
+        text-decoration: none;
+      }
+
+      /*  THEMING  CSS  SECTION  */
+      .default-theme-color{color: var(--default-theme-color)};
+      .default-theme-primary-color{color: var(--default-theme-primary-color);}
+      .default-outline-color{outline-color: var(--default-theme-color) !important;}
+      .progress-bar-theme{background-color: var(--default-theme-color) !important;}
+      .default-background-color{background-color: var(--default-theme-color);}
+      .default-theme-bg-color{background-color: var(--default-theme-bg-color);}
+      .default-theme-font-color{color: var(--default-theme-font-color);}
+      .default-theme-menu-bg-color{background-color: var(--default-theme-menu-bg-color);}
+      .default-theme-menu-font-color{color: var(--default-theme-menu-font-color);}
+      .custom-social-links{background: var(--default-theme-color); color: #ffffff;}
+      .custom-social-links:hover{background: #000000; color: var(--default-theme-color);}
+      .custom-profile{color: var(--default-theme-color);}
+      .custom-primary-font-weight{font-weight: 600; color: var(--default-theme-primary-color); }
+
+      /* CUSTOMIZED  BORDER  THEMING */
+      .custom-theme-border{border-left: 0px solid var(--default-theme-color)}
+      .custom-theme-bb-2{border-bottom: 2px solid var(--default-theme-color) !important}
+      .no-outline{outline : none !important;}
+
+      .icon{color: var(--default-theme-color);}
+      .default-theme-border{border: 1px solid var(--default-theme-color)}
+      .custom-menu-icon{background: var(--default-theme-color); color: #ffffff; border-radius: 50px; margin-right: 10px; padding: 5px;}
+      .custom-menu-icon:hover{background: #000000; color: var(--default-theme-color); border-radius: 50px; margin-right: 10px; padding: 5px;}
+
+      .default-theme-menu-font-color:hover{color: var(--default-theme-on-hover-font-color);}
+      .nav-menu .custom-menu:hover{ background: var(--default-theme-on-hover-bg-color); }
+
+      .custom-section-popup{display: none; background: var(--default-theme-color);  width: 300px; height: auto; padding: 20px; font-size: 16px; box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);}
+      .custom-popup{display: none; background: var(--default-theme-color);  width: 300px; height: auto; padding: 20px; font-size: 16px; box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);}
+
+      #header{padding-right: 0px !important;}
+      #main {
+        margin-left: 300px;
+      }
+
+      /* .nav-menu .custom-menu-font:hover{color: white !important;} */
+      /* .nav-menu li:hover > a{color: white !important; background: var(--default-theme-color); border-radius: 50px;}
+      .nav-menu a:hover i {color: white !important;}
+      .nav-menu li:hover > a span{color: white !important;} */
+      .services .icon{float: left;display: flex;align-items: center;justify-content: center;width: 50px;  height: 50px;background: var(--default-theme-color) !important; border: 1px solid var(--default-theme-color) !important;  border-radius: 50%;transition: 0.5s; color: white ;}
+      input[type=text] {border: none; padding: 5px 20px; margin-bottom: 5px; background: var(--default-theme-bg-color) ; outline-color: #0F71A1 !important; }
+      textarea {border: none; padding: 5px 20px; margin-bottom: 5px; background: var(--default-theme-bg-color);  width: 100%; outline-color: #0F71A1 !important;}
+      div.scrollmenu { overflow: auto; white-space: nowrap; transition: 0.3s;}
+      div.scrollmenu a {  display: inline-block; text-decoration: none; vertical-align: top; color: grey;}
+      .category-item{background: #E8EAED; padding: 6px 16px; margin-right: 8px; border-radius: 16px; color: black;}
+      .work-item{width: 24%; float: left; display: inline-block; margin-right: 1%; margin-bottom: 16px;}
+      .workcat-items-block{display: inline-block; width: 93%;}
+      .work-item{width: 24%; float: left; display: inline-block; margin-right: 1%; margin-bottom: 16px;}
+      .work-cat-left-arrow-block{width: 4%; display: inline-block; position: relative; top: -18px;}
+      .work-cat-right-arrow-block{width: 5%; display: inline-block; position: relative; top: -18px; text-align: center;}
+      .single-line-ellipse{white-space: nowrap; width: 80%; overflow: hidden; text-overflow: ellipsis;}
+      #jsonViewer {width: 100%;min-height: 30rem;font-family: "Lucida Console", Monaco, monospace;font-size: 0.8rem;line-height: 1.2;}
+      /* .nav-menu a:hover i {color: var(--default-theme-color) !important;} */
+
+      #hero h1 {margin: 0 0 10px 0;font-size: 50px;font-weight: 600;line-height: 30px;color: #fff; color: black;}
+      /* modal related stylesheet */
+      .modal-dialog{ position: relative; max-width: 50% !important; margin-left: 35%;margin-top: 10%;}
+
+    @media (min-width: 320px) and (max-width: 480px) {
+      .custom-each-education-section, .mob-width-full, .custom-part {width: 100% !important;}
+      .skills .progress{width: 100% !important}
+      .custom-work-img{height: auto; width: 100%;}
+      .work-cat-arrow-block{display: none; width: 3%;}
+      .portfolio-item{width: 100%;}
+      .each-project-section{margin-right: 0px;}
+      .work-cat-left-arrow-block, .work-cat-right-arrow-block{display: none;}
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+
+  <!-- <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+      <h1>Alex Smith</h1>
+      <div class="element" style="font-size: 44px; color: white; font-weight: 700;"></div>
+  </section> -->
+
+  <div id="typedBlock" class=""></div>
+
+
+
+  <main id="main">
+    <div class="sections_class default-theme-bg-color default-theme-font-color"  id="sections_block" style=""></div>
+  </main>
+
+  <!-- <div id="settingsBlock" style="position: relative; left: 10%;">
+
+  </div> -->
+
+  <div class="modal" id="setupSectionsModal">
+  <div class="modal-dialog" style="position: relative; max-width: 60% !important; margin-left: 30%; margin-top: 5%;">
+    <div class="modal-content" style="">
+
+      <!-- Modal Header -->
+      <div class="modal-header" style="border: none; padding-bottom: 5px !important; ">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div id="setupSectionsBlock" class="modal-body" style="padding: 5px; padding-left: 20px;padding-right: 20px;">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+  <script src="static/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="static/vendor/counterup/counterup.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/venobox/venobox.min.js"></script>
+  <script src="static/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/vendor/typed.js/typed.min.js"></script>
+  <script src="static/vendor/aos/aos.js"></script>
+  <script src="static/vendor/font-awesome/font-awesome-kit.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+
+
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script>
+  <script>
+    var socket = io();
+    let currentSelectedWorkCategory = "Education";
+    let localStorage = {};
+    function inittial_setup(sections, edit){
+        console.log("################## calling cli ent side init function ===============");
+        console.log("################## sections :: ", sections);
+        let sections1 = ["header", "typed", "about", "facts", "services", "skills", "education", "workexp", "workcat", "work", "languages", "contacts"];
+        let dynamicHeaderMenus = [];
+        let sectionsTemplate = '';
+        sections.values.forEach((item, index) => {
+            dynamicHeaderMenus.push(item.section.name);
+        });
+        sections.values.forEach((item, index) => {
+            let loaderTemplate = '';
+
+            let request_section_data = {apiRef : item.section.name+'_section', sectionName: item.section.name+'_section', blockId: 'custom_'+item.section.name+'_block', templateId: 'custom_'+item.section.name+'_template', loaderId: 'custom_'+item.section.name+'_loader', edit: edit, myPortfolio: true};
+            if(item.loader.img !== undefined && item.loader.img !== null){
+                loaderTemplate += `<img class="loader-img" src="`+item.loader.img.imgUrl+`"  alt="`+item.loader.alt+`" style="`+item.loader.img.style+`">`;
+            }
+            if(item.section.name === 'work'){
+                  request_section_data.logoCategory = "Education";
+            }
+            if(item.section.name === 'typed' || item.section.name === 'settings'){
+                request_section_data = {apiRef : item.section.name+'_section', sectionName: item.section.name+'_section', blockId: null, templateId: null, loaderId: null, edit: edit}
+                socket.emit("request-generic-portfolio", request_section_data);
+
+            }else if(item.section.name !== 'header'){
+              sectionsTemplate += `
+                  <section id="`+item.section.name+`" class="`+item.section.name+`" style="`+item.section.style+`">
+                      <div class="custom-`+item.section.name+`-block " id="custom_`+item.section.name+`_block" style="`+item.block.style+`">
+                          <div class="loader-block" id="custom_`+item.section.name+`_loader" style="display: block; `+item.loader.style+`">
+                                `+loaderTemplate+`
+                          </div>
+                          <div class="custom-`+item.section.name+`-template `+item.template.class+`" id="custom_`+item.section.name+`_template" style="display: none; `+item.template.style+`"></div>
+                      </div>
+                  </section>
+              `;
+              socket.emit("request-generic-portfolio", request_section_data);
+
+            }else if(item.section.name === 'header'){
+              sectionsTemplate += `
+                      <div class="custom-`+item.section.name+`-block " id="custom_`+item.section.name+`_block" style="`+item.block.style+`">
+                          <div class="loader-block" id="custom_`+item.section.name+`_loader" style="display: block; `+item.loader.style+`">
+                              `+loaderTemplate+`
+                          </div>
+                          <div class="custom-`+item.section.name+`-template `+item.template.class+`" id="custom_`+item.section.name+`_template" style="display: none; `+item.template.style+`"></div>
+                      </div>
+              `;
+              request_section_data.dynamic_header_menus = dynamicHeaderMenus;
+              request_section_data.dynamic_sections = sections;
+              socket.emit("request-generic-portfolio", request_section_data);
+
+            }
+
+        })
+        {
+          document.getElementById("sections_block").innerHTML = '';
+          document.getElementById("sections_block").innerHTML = sectionsTemplate;
+          // if(sections.sectionStyle && sections.sectionStyle !== ''){
+          //   document.getElementById("sections_block").style = sections.sectionStyle;
+          // }
+        }
+
+    };
+
+    (function init(){
+        socket.emit("request-final-portfolio-sections", {});
+    })();
+
+    socket.on("response-final-portfolio-sections", (data) => {
+          console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+          console.log("!!! initSections :: ", data.initSections);
+          setup_default_theme(data.defaultStyle);
+          inittial_setup(data.initSections, false);
+    })
+
+    function createTypedSection(data){
+        // console.log("@@@ data :: ", data);
+        // console.log("url: ", data.data.img.url);
+        let typedTxt = data.data.typedText;
+        let typedOptions = data.data.typedOptions;
+        let template = `
+            <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+                <h1 style="`+data.data.profile.style+`">`+data.data.profile.name+`</h1>
+                <div class="element" style="font-size: 44px; color: white; font-weight: 700;"></div>
+            </section>
+        `;
+        //document.getElementById("custom_typed_loader").style.display = "none";
+        document.getElementById("typedBlock").innerHTML = template;
+        // document.getElementById("hero").style.backgroundImage = "url('static/img/me_portfolio/portfolio1.jpg')";
+        if(data.data.img && data.data.img.url !== ''){
+            let url = "url("+data.data.img.url+")";
+            document.getElementById("hero").style.backgroundImage = url;
+        }
+        var typed = new Typed('.element', typedOptions);
+    }
+
+    function setup_default_theme(defaultStyle){
+        console.log("============ calling default style function =============");
+        console.log("@@@ defaultStyle : ", defaultStyle);
+        let root = document.documentElement;
+        root.style.setProperty('--default-theme-color', defaultStyle.themeColor);
+        root.style.setProperty('--default-theme-bg-color', defaultStyle.themeBgColor);
+        root.style.setProperty('--default-theme-font-color', defaultStyle.themeFontColor);
+        root.style.setProperty('--default-theme-menu-bg-color', defaultStyle.themeMenuBgColor);
+        root.style.setProperty('--default-theme-menu-font-color', defaultStyle.themeMenuFontColor);
+        root.style.setProperty('--default-theme-on-hover-bg-color', defaultStyle.themeMenuOnHoverBgColor);
+        root.style.setProperty('--default-theme-on-hover-font-color', defaultStyle.themeMenuOnHoverFontColor);
+        root.style.setProperty('--default-theme-primary-color', defaultStyle.themePrimaryColor);
+
+    }
+
+
+    socket.on("response-generic-portfolio", (data) => {
+        console.log("!!! data.apiref :: ", data.apiRef);
+        if(data.apiRef === 'settings_section'){
+          // console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+          // console.log("!!!!@@@@ data : ", data );
+          document.getElementById("setupSectionsBlock").innerHTML = data.template;
+          return;
+        }
+        if(data.apiRef === 'about_section'){
+            // console.log("!!!! data : ", data );
+        }
+        if(data.apiRef === "typed_section"){
+            createTypedSection(data);
+            return;
+        }
+        if(data.apiRef === "update_initial_sections"){
+          updateSettingsBlock();
+          return;
+        }
+        if(data.blockId !== null && data.blockId !== undefined){
+
+        }
+        if(data.loaderId !== null && data.loaderId !== undefined && data.loaderId !== ''){
+            document.getElementById(data.loaderId).style.display = "none";
+        }
+        if(data.templateId !== null && data.templateId !== undefined && data.templateId !== ''){
+          document.getElementById(data.templateId).style.display = "block";
+          document.getElementById(data.templateId).innerHTML = '';
+          document.getElementById(data.templateId).innerHTML = data.template;
+        }
+
+    })
+
+    window.onClickworkCategoryArrowIcon = function(event, arrow){
+
+        if(arrow === "left_arrow"){
+            if(workCategoryStartIndex !== 0){
+                workCategoryStartIndex -= 1;
+                createWordByCategoryList(workCategoryStartIndex, currentSelectedWorkCategory);
+                document.getElementById("workCategory_left_arrow").style.display = "block";
+                document.getElementById("workCategory_right_arrow").style.display = "block";
+            }else if(workCategoryStartIndex === 0){
+              document.getElementById("workCategory_left_arrow").style.display = "none";
+            }else{
+                document.getElementById("workCategory_left_arrow").style.display = "none";
+            }
+        }else if(arrow === "right_arrow"){
+            if(workCategoryStartIndex <= 3){
+                workCategoryStartIndex += 1;
+                createWordByCategoryList(workCategoryStartIndex, currentSelectedWorkCategory);
+                document.getElementById("workCategory_left_arrow").style.display = "block";
+            }else{
+              document.getElementById("workCategory_right_arrow").style.display = "none";
+            }
+        }
+      }
+
+    window.onClickWorkCatItem = function(event){
+        document.getElementById(currentSelectedWorkCategory).style.background = "#E8EAED";
+        document.getElementById(currentSelectedWorkCategory).style.color = "black";
+        let id = event.target.id;
+        currentSelectedWorkCategory = id;
+        document.getElementById(currentSelectedWorkCategory).style.background = "var(--default-theme-color)";
+        document.getElementById(currentSelectedWorkCategory).style.color = "white";
+        socket.emit("request-generic-portfolio", {apiRef : 'work_section', blockId: 'custom_work_block', templateId: 'custom_work_template', loaderId: 'custom_work_loader', logoCategory : id});
+
+        // socket.emit("request-generic-portfolio", {apiRef : 'work_by_category', blockId: 'custom_new_latest_work_block', templateId: 'custom_new_latest_work_template', loaderId: 'custom_new_latest_work_loader', logoCategory : id});
+    }
+
+    window.onClickRedirectUrl = function(url){
+        // console.log("==== on click redirect url function ====");
+        window.open(url, "_blank", );
+    }
+
+  </script>
+
+
+</body>
+
+</html>

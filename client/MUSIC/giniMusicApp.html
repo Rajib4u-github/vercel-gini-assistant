@@ -1,0 +1,2270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>iPortfolio Bootstrap Template - Index</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <script src="/socket.io/socket.io.js"></script>
+
+  <!-- Favicons -->
+  <link href="static/img/favicon.png" rel="icon">
+  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- <link href="static/vendor/icofont/icofont.min.css" rel="stylesheet"> -->
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/venobox/venobox.css" rel="stylesheet">
+  <!-- <link href="static/vendor/owl.carousel/static/owl.carousel.min.css" rel="stylesheet"> -->
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+  <!-- <link href="static/vendor/font-awesome/font-awesome.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+  <style >
+      :root {
+        /* --default-theme-color: #0F71A1; */
+        --default-theme-color: #6264A7;
+        --default-theme-primary-color: #424242;
+        --default-theme-font-color: #212529;
+        --default-theme-bg-color: #2b68e3;
+        --default-theme-menu-bg-color: #212529;
+        --default-theme-menu-font-color : #212529;
+        --default-theme-on-hover-bg-color: #212529;
+        --default-theme-on-hover-font-color: #212529;
+        --default-theme-disabled-bg-color: #212529;
+      }
+
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      section {
+          padding: 30px 0;
+          overflow: hidden;
+      }
+      a{color: white;}
+      a:hover {
+        /* color: var(--default-theme-color); */
+        text-decoration: none;
+      }
+
+      /* OVERLAY IMAGE ICON CSS */
+      .overlay-icon{opacity: 0; }
+      .overlay-icon:hover{opacity: 1; color: var(--default-theme-color);}
+      .overlay-container:hover .overlay-icon{opacity: 1; }
+
+      /*  THEMING  CSS  SECTION  */
+      .default-theme-color{color: var(--default-theme-color)};
+      .default-theme-primary-color{color: var(--default-theme-primary-color);}
+      .default-outline-color{outline-color: var(--default-theme-color) !important;}
+      .progress-bar-theme{background-color: var(--default-theme-color) !important;}
+      .default-background-color{background-color: var(--default-theme-color);}
+      .default-theme-bg-color{background-color: var(--default-theme-bg-color);}
+      .default-theme-font-color{color: var(--default-theme-font-color);}
+      .default-theme-menu-bg-color{background-color: var(--default-theme-menu-bg-color);}
+      .default-theme-menu-font-color{color: var(--default-theme-menu-font-color);}
+      .custom-social-links{background: var(--default-theme-color); color: #ffffff;}
+      .custom-social-links:hover{background: #000000; color: var(--default-theme-color);}
+      .custom-profile{color: var(--default-theme-color);}
+      .custom-primary-font-weight{font-weight: 600; color: var(--default-theme-primary-color); }
+      .default-disabled-bg-color{background: var(--default-theme-disabled-bg-color); }
+      /* CUSTOMIZED  BORDER  THEMING */
+      .custom-theme-border{border-left: 0px solid var(--default-theme-color)}
+      .custom-theme-bb-2{border-bottom: 2px solid var(--default-theme-color) !important}
+      .no-outline{outline : none !important;}
+
+      .icon{color: var(--default-theme-color);}
+      .default-theme-border{border: 1px solid var(--default-theme-color)}
+      .custom-menu-icon{background: var(--default-theme-color); color: #ffffff; border-radius: 50px; margin-right: 10px; padding: 5px;}
+      .custom-menu-icon:hover{background: #000000; color: var(--default-theme-color); border-radius: 50px; margin-right: 10px; padding: 5px;}
+
+      .default-theme-menu-font-color:hover{color: var(--default-theme-on-hover-font-color);}
+      .nav-menu .custom-menu:hover{ background: var(--default-theme-on-hover-bg-color); }
+
+      .custom-section-popup{display: none; background: var(--default-theme-color);  width: 300px; height: auto; padding: 20px; font-size: 16px; box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);}
+      .custom-popup{display: none; background: var(--default-theme-color);  width: 300px; height: auto; padding: 20px; font-size: 16px; box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);}
+
+      .container {width: 100%; padding: 0px !important; margin-right: auto; margin-left: auto;}
+
+      #header{padding-right: 0px !important; padding-left: 0px !important;}
+      .custom-header{width: 100% !important; z-index: 999 !important; bottom: auto !important}
+      .sections_class{position: relative; top: 75px}
+
+      /* .nav-menu .custom-menu-font:hover{color: white !important;} */
+      /* .nav-menu li:hover > a{color: white !important; background: var(--default-theme-color); border-radius: 50px;}
+      .nav-menu a:hover i {color: white !important;}
+      .nav-menu li:hover > a span{color: white !important;} */
+      .services .icon{float: left;display: flex;align-items: center;justify-content: center;width: 50px;  height: 50px;background: var(--default-theme-color) !important; border: 1px solid var(--default-theme-color) !important;  border-radius: 50%;transition: 0.5s; color: white ;}
+      input[type=text] {border: none; padding: 5px 20px; margin-bottom: 5px; background: var(--default-theme-bg-color) ; outline-color: #0F71A1 !important; }
+      textarea {border: none; padding: 5px 20px; margin-bottom: 5px; background: var(--default-theme-bg-color);  width: 100%; outline-color: #0F71A1 !important;}
+      div.scrollmenu { overflow: auto; white-space: nowrap; transition: 0.3s;}
+      div.scrollmenu a {  display: inline-block; text-decoration: none; vertical-align: top; color: grey;}
+      .category-item{background: #E8EAED; padding: 6px 16px; margin-right: 8px; border-radius: 16px; color: black;}
+      .work-item{width: 24%; float: left; display: inline-block; margin-right: 1%; margin-bottom: 16px;}
+      .workcat-items-block{display: inline-block; width: 93%;}
+      .work-item{width: 24%; float: left; display: inline-block; margin-right: 1%; margin-bottom: 16px;}
+      .work-cat-left-arrow-block{width: 4%; display: inline-block; position: relative; top: -18px;}
+      .work-cat-right-arrow-block{width: 5%; display: inline-block; position: relative; top: -18px; text-align: center;}
+      .single-line-ellipse{white-space: nowrap; width: 80%; overflow: hidden; text-overflow: ellipsis;}
+      #jsonViewer {width: 100%;min-height: 30rem;font-family: "Lucida Console", Monaco, monospace;font-size: 0.8rem;line-height: 1.2;}
+      /* .nav-menu a:hover i {color: var(--default-theme-color) !important;} */
+
+      #hero h1 {margin: 0 0 10px 0;font-size: 50px;font-weight: 600;line-height: 30px;color: #fff; color: black;}
+      /* modal related stylesheet */
+      .modal-dialog{ position: relative; max-width: 50% !important; margin-left: 35%;margin-top: 10%;}
+      .menu-active-selection, .special-active-selection{background: var(--default-theme-color) !important; color: white !important;}
+
+      /* ellipse styles start here  */
+      .ellipse-line-one{
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .ellipse-line-two{
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .ellipse-line-three{
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      /*  ellipse styles end here  */
+    @media (min-width: 320px) and (max-width: 480px) {
+      .custom-each-education-section, .mob-width-full, .custom-part {width: 100% !important;}
+      .skills .progress{width: 100% !important}
+      .custom-work-img{height: auto; width: 100%;}
+      .work-cat-arrow-block{display: none; width: 3%;}
+      .portfolio-item{width: 100%;}
+      .each-project-section{margin-right: 0px;}
+      .work-cat-left-arrow-block, .work-cat-right-arrow-block{display: none;}
+      .collection-parts-mob-style{display: block; }
+    }
+  </style>
+  <style media="screen">
+      .carousel-indicators .active {
+          width: 12px;
+          height: 12px;
+          margin: 0;
+          background: var(--default-theme-color) !important;
+      }
+      .carousel-indicators li {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          margin: 1px;
+          text-indent: -999px;
+          cursor: pointer;
+          background-color: #000\9;
+          background-color: rgba(0,0,0,0);
+          border: 2px solid var(--default-theme-color) !important;
+          border-radius: 10px;
+      }
+      @media screen and (min-width: 768px){
+        .carousel-indicators {
+            bottom: 10px !important;
+          }
+      }
+
+  </style>
+  <style media="screen">
+      .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    /* background-color: rgb(0,0,0); */
+    /* background-color: rgba(0,0,0, 0.9); */
+    overflow-x: hidden;
+    transition: 0.5s;
+    }
+
+    .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    }
+
+    .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    }
+
+    .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+    }
+
+    .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    }
+
+    @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+    }
+  </style>
+  <style media="screen">
+
+    .input {float:right;}
+    .output{clear:right;}
+    .input{margin-bottom:8px; border-radius: 10px; padding: 3px 12px 3px 12px;background-color: #4267b2; color: white; max-width: 370px; min-width:100px; text-align: left;margin-right : 5px; border-color:#4267b2; }
+    .output{margin-top:10px; border-radius: 10px; padding: 10px; background-color: white ; color: #4b4f56; padding-top:3px; padding-left: 15px; margin-left : 5px; border-color: white; padding-bottom: 15px;}
+    .chat-container{padding:5px;}
+    .mCSB_draggerRail{width:20px;}
+    .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color: #e9ebee !important;}
+    .mCSB_scrollTools .mCSB_draggerRail {background-color: #e9ebee !important;}
+    .mCSB_inside > .mCSB_container {margin-right: 3px !important;}
+    /* .container-fluid{overflow-x: hidden;} */
+
+    .chat-container{padding-left:0px; padding-right:0px; overflow: auto; height:83vh; border-bottom:2px solid white;}
+    .query-block{left:0px; right:0px; margin:auto;height:10vh;}
+
+    .chat-block{padding-left:2px; padding-right:0px;}
+    .chat-layout{margin-top:10px;}
+
+    .send-div-pad{padding-left: 0px; padding-right:0px;}
+    .query-div-pad{padding-left: 0px;}
+    .send-btn{padding: 6px 24px 6px 24px; height:38px; margin-top:2px; background-color: #4267b2;border-color: #4267b2; color:white; outline:none !important; border-radius:7px;}
+    .send-icon{font-size:15px; transform: rotate(60deg); margin-left: -5px;margin-top: 3px;position: absolute;top: 8px;}
+    .send-btn-txt{padding-left:25px;}
+    .body-layout{background-color: #e9ebee; font-family: -apple-system, BlinkMacSystemFont, Roboto, Arial, Helvetica, sans-serif;}
+    .loader-img{height:20px; width: 20px; float: right; margin-top: -30px; margin-right: 3px;}
+    .query-div-row{padding-top:3px;}
+    .query{margin-left:10px; margin-top:0px; margin-left:5px; outline:none; border-radius:10px; height:40px; border: 1px solid #e9ebee; outline:none !important;}
+
+    /*  =================== hints scrollable elemnt ========================= */
+    /* google translator override css */
+    .goog-te-banner{
+    display:none !important;
+    }
+    .goog-te-banner-frame{
+    display: none !important;
+    }
+    .goog-logo-link{
+    display:none !important;
+    }
+
+    /* ======================================  */
+    div.scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+    padding-top: 3px;
+    color: #4b4f56;
+    padding-right: 10px;
+    }
+    .hints-block {
+      margin-left: -10px;
+      border-bottom: 2px solid white;
+      /* margin-bottom: -14px; */
+    }
+    .hints-item{
+    padding: 10px 12px !important; border: 1px solid #e9ebee; margin-right:10px; border-radius: 25px; background-color: white;
+    }
+    /* div.scrollmenu a {
+    display: inline-block;
+    color: #4b4f56;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    }
+
+    div.scrollmenu a:hover {
+    background-color: #4267b2;
+    color: white;
+    } */
+    /* width */
+    ::-webkit-scrollbar {
+    width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+    /* background: #e9ebee; */
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+    /* background: #e9ebee; */
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+    background: #e9ebee;
+    }
+
+    div.scrollmenu {
+    /* background-color: #333; */
+    overflow: auto;
+    white-space: nowrap;
+    }
+
+    div.scrollmenu a {
+    display: inline-block;
+    /* color: white; */
+    /* text-align: center; */
+    /* padding: 14px; */
+    text-decoration: none;
+    vertical-align: top;
+    }
+    .ellipse {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    /* line-height: 1rem; */
+    pointer-events:none;
+    }
+
+    .ellipse:after {
+    content:"";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 48px;
+    z-index: 1;
+    pointer-events:initial;
+    }
+
+    .ellipse:hover:after{
+    cursor: pointer;
+    visibility: visible;
+    }
+
+    .tooltip {
+    width: 45%;
+    visibility: hidden;
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    padding: 5px;
+    -webkit-box-shadow: 0 0 50px 0 rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    }
+
+
+    .ellipse:hover + .tooltip {
+    visibility: visible;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+    }
+
+
+    @media (min-width: 320px) and (max-width: 480px) {
+    .ellipse:hover + .tooltip {
+      visibility: hidden !important;
+    }
+    .tooltip {
+      visibility: hidden !important;
+    }
+    .ellipse:hover:after{
+      cursor: pointer;
+      visibility: hidden !important;;
+    }
+
+
+    }
+
+
+/* ====================================================================== */
+
+  </style>
+
+</head>
+
+<body>
+
+  <header id="header" class="fixed-top custom-header"></header>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="fa fa-bars" style="color: white;" aria-hidden="true"></i></button>
+
+
+  <!-- <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+      <h1>Alex Smith</h1>
+      <div class="element" style="font-size: 44px; color: white; font-weight: 700;"></div>
+  </section> -->
+
+  <div id="typedBlock" class=""></div>
+
+
+
+  <main id="main" style="margin-left: 0px;">
+    <div class="sections_class default-theme-bg-color default-theme-font-color" id="sections_block" style=""></div>
+
+    <!-- ******************* EDIT  PROFILE  SECTION  HERE  ******************* * -->
+    <div id="editStylePopup" class="default-theme-bg-color default-theme-font-color" style="display: none; width: 300px; height: auto; padding: 20px; font-size: 16px; box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);">
+      <!-- <div onClick="closeEditStylePopup()" style="width: 100%; float: right;"><div style="font-size: 22px; color: red; float: right; position: relative; top: -16px; right: -5px; "> <i class="fa fa-times-circle" aria-hidden="true"></i> </div></div> -->
+      <div >
+        <div id="editStyleContainer" ></div>
+      </div>
+    </div>
+
+    <div id="popup" class="custom-popup sections_class default-theme-bg-color default-theme-font-color" style="">
+        <div>
+            <div><a href="#" onclick="onClickThreeDotsOption('delete_item'); return false;">Delete Item</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('add_item_on_top'); return false;">Add Text Item On Top</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('add_item_on_below'); return false;">Add Text Item Below</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('add_similar_item_on_top'); return false;">Add Similar Item On Top/Left</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('add_similar_item_on_top'); return false;">Add Similar Item Below/Right</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('edit_item_style'); return false;">Edit Item Style</a></div>
+        </div>
+
+    </div>
+
+    <div id="sectionPopup" class="custom-section-popup sections_class default-theme-bg-color default-theme-font-color" style="">
+        <div>
+            <div><a href="#" onclick="onClickThreeDotsOption('delete_section'); return false;">Delete Section</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('add_section_left'); return false;">Add Similar Section On Left</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('add_section_right'); return false;">Add Similar Section On Right</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('edit_part_style'); return false;">Edit Section Style</a></div>
+        </div>
+    </div>
+
+    <div id="custom_overlay_block" class="overlay sections_class default-theme-bg-color default-theme-font-color" style="z-index: 99999;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!-- <div class="overlay-content">
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Clients</a>
+          <a href="#">Contact</a>
+        </div> -->
+        <div id="custom_overlay_loader" class=""></div>
+        <div id="custom_overlay_template" class=""></div>
+
+
+    </div>
+
+    <!-- <div class="sections-settings-block" id="sections_settings_block" style="width: 100%; height: 100px; background: rgb(241, 243, 246);">
+      <div class="" style="float: right; position: relative; top: 30%; right: 100px;">
+          <button id="editJson" type="button" name="button" onclick="oncickEditJson(event, 'html')" style="border: none; padding: 10px 20px; background: white; outline-color: #0F71A1 !important;"><i class="fa fa-html5" aria-hidden="true" style="font-size: 15px; font-weight: 600; font-family: 'fontawesome'; position: relative; right: 6px; "></i>Edit Html</button>
+          <button id="editJson" type="button" name="button" onclick="oncickEditJson(event, 'code')" style="border: none; padding: 10px 20px; background: white; outline-color: #0F71A1 !important;"><i class="fa fa-code" aria-hidden="true" style="font-size: 15px; font-weight: 600; position: relative; right: 6px; "></i> Edit Code</button>
+      </div>
+    </div> -->
+    <!-- <div class="sections_class" id="sections_block" style="display: block;"></div> -->
+
+    <div class="json-viewer-block" id="jsonViewerBlock" style="display: none;">
+      <textarea id="jsonViewer">
+      </textarea>
+      <div class="">
+          <button type="button" name="button" onclick="oncickEditJson(event, 'save')" style="height: 40px; border: none; background: var(--default-theme-color); color: white ; font-weight: 600; width: 100%;">Save</button>
+      </div>
+    </div>
+
+    <div class="sections-action-block" id="sections_action_block"></div>
+  </main>
+
+  <!-- <div id="settingsBlock" style="position: relative; left: 10%;">
+
+  </div> -->
+
+  <div class="modal" id="setupSectionsModal">
+      <div class="modal-dialog" style="position: relative; max-width: 60% !important; margin-left: 30%; margin-top: 5%;">
+        <div class="modal-content" style="">
+          <!-- Modal Header -->
+          <div class="modal-header" style="border: none; padding-bottom: 5px !important; ">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <!-- Modal body -->
+          <div id="setupSectionsBlock" class="modal-body" style="padding: 5px; padding-left: 20px;padding-right: 20px;">  </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="modal" id="setupThemeModal">
+    <div class="modal-dialog" style="position: relative; max-width: 60% !important; margin-left: 30%; margin-top: 5%;">
+      <div class="modal-content" style="">
+        <!-- Modal Header -->
+        <div class="modal-header" style="border: none; padding-bottom: 5px !important; ">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div id="setupThemeBlock" class="modal-body" style="padding: 5px; padding-left: 20px;padding-right: 20px;"></div>
+      </div>
+    </div>
+</div>
+
+
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+  <script src="static/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="static/vendor/counterup/counterup.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/venobox/venobox.min.js"></script>
+  <script src="static/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/vendor/typed.js/typed.min.js"></script>
+  <script src="static/vendor/aos/aos.js"></script>
+  <script src="static/vendor/font-awesome/font-awesome-kit.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script>
+  <script>
+  //     ****************************** START:   G L O B A L  _  D E C L A R A T I O N  _  S  S E C T I O N   *********************************
+
+    var socket = io();
+    // let currentSelectedWorkCategory = "Education";
+    let localStorage = {};
+    let currentOnClickThreeDotsState = {};
+    let application = 'GINIMUSIC';
+    var fileName = 'giniMusicApp';
+    //     ****************************** START:    G L O B A L  _  D E C L A R A T I O N  _  S  S E C T I O N   *********************************
+
+
+    //     ****************************** START:   S O C K E T   _  E M I T  _  O N  _  C A L L S  _  F U N C T I O N S  *********************************
+
+    // socket.emit("request-initial-sections-data", {});
+
+    socket.on("response-initial-sections-data", (data) => {
+        console.log("************* calling socket response-initial-sections-data ************");
+        // let allSectionsData = data.allSectionsData;
+        console.log("@@@@ all initial sections data :: ", data);
+        localStorage.allSectionData = data.allSectionsData;
+        localStorage.activeSectionsData = data.allSectionsData;
+        localStorage.default_style = data.defaultStyle;
+        setup_default_theme(data.defaultStyle);
+        inittial_setup(data.allSectionsData, false);
+
+    });
+
+    socket.on("response-generic-portfolio", (data) => {
+        console.log("!!! data.apiref :: ", data.apiRef);
+        if(data.apiRef === "newsApiNewsSources_section"){
+            console.log("@@@@@ section template : ", data);
+        }
+        if(data.apiRef === "get_section_template"){
+            console.log("@@@@@ section template : ", data);
+        }
+        if(data.apiRef === 'settings_section'){
+          // console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+          console.log("!!!!@@@@ data : ", data );
+          console.log("@@@ loader id : data.loaderId :: ", data.loaderId);
+          let x = document.getElementById(data.loaderId);
+          console.log("@@@ x : ", x);
+          document.getElementById(data.loaderId).style.display = "none";
+
+          // openSectionsSetupModal();
+          // document.getElementById("setupSectionsBlock").innerHTML = data.template;
+          // return;
+        }
+
+        if(data.apiRef === "typed_section"){
+            createTypedSection(data);
+            return;
+        }
+        if(data.edit){
+            sectionData = data.templateData;
+            console.log("@@@@ edit section template data : ", data);
+            let inputId = "input_"+data.elementId;
+            console.log("@@@@ inputid : ", inputId);
+            var elmnt = document.getElementById(inputId);
+            console.log("@@@ elmnt : ", elmnt);
+            // if(elmnt !== null){
+            //   elmnt.scrollIntoView();
+            //
+            // }
+        }
+        if(data.apiRef === "update_initial_sections"){
+          updateSettingsBlock();
+          return;
+        }
+        if(data.apiRef === 'request_initial_sections'){
+            console.log("!!! initSections :: ", data.initSections);
+            console.log("777777777777777777777777777 allSectionsData :: ", data.allSectionsData);
+
+            localStorage.allSectionsData = data.allSectionsData;
+            localStorage.activeSectionsData = data.allSectionsData;
+            localStorage.default_style = data.defaultStyle;
+
+            setup_default_theme(data.defaultStyle);
+            inittial_setup(data.initSections, false);
+        }
+        if(data.apiRef === 'headerNav_section'){
+            document.getElementById("header").innerHTML = data.template;
+            return ;
+        }
+        if(data.blockId !== null && data.blockId !== undefined){
+
+        }
+        if(data.loaderId !== null && data.loaderId !== undefined && data.loaderId !== ''){
+            if(document.getElementById(data.loaderId) !== null){
+                document.getElementById(data.loaderId).style.display = "none";
+            }
+        }
+        if(data.templateId !== null && data.templateId !== undefined && data.templateId !== ''){
+          document.getElementById(data.templateId).style.display = "block";
+          document.getElementById(data.templateId).innerHTML = '';
+          document.getElementById(data.templateId).innerHTML = data.template;
+        }
+
+    })
+
+    socket.on("response-action-edit-style", (data) => {
+        console.log("@@@@@ data :: ", data);
+        let style = data.style.split(";");
+        localStorage.currentEditedStyleArr = style;
+        let template = convertRawStyleToEditedStyleTemplate(style);
+        showEditStylePopup(template);
+    });
+
+    //     ****************************** END:   S O C K E T   _  E M I T  _  O N  _  C A L L S  _  F U N C T I O N S  *********************************
+
+
+
+    //     ****************************** START:   G L O B A L  _  F U N C T I O N S  *********************************
+
+    function test(){
+        console.log("===== calling test request =====");
+        socket.emit("test-request",);
+
+        socket.on("test-response", (data) => {
+              console.log("===== response from test request =====");
+              console.log("@@@ data : ", data);
+        })
+    }
+    // test();
+
+    function inittial_setup(sections, edit){
+        console.log("################## calling cli ent side init function ===============");
+        console.log("################## sections :: ", sections);
+        let dynamicHeaderMenus = [];
+        let sectionsTemplate = '';
+        sections.values.forEach((item, index) => {
+            if(item && item.section && item.section.name){
+              dynamicHeaderMenus.push(item.section.name);
+            }
+
+        });
+        sections.values.forEach((item, index) => {
+            let loaderTemplate = '';
+            let category = null;
+            let request_section_data  = null;
+
+            if(item === undefined && item === null ){
+              return ;
+            }
+            if(item && item.section.name){
+              request_section_data = {apiRef : item.section.name+'_section', sectionName: item.section.name+'_section', blockId: 'custom_'+item.section.name+'_block', templateId: 'custom_'+item.section.name+'_template', loaderId: 'custom_'+item.section.name+'_loader', edit: edit, application: application, fileName: fileName};
+
+            }
+
+            if(item && item.loader.img !== undefined && item.loader.img !== null){
+                loaderTemplate += `<img class="loader-img" src="`+item.loader.img.imgUrl+`"  alt="`+item.loader.alt+`" style="`+item.loader.img.style+`">`;
+            }
+            if(item && item.section.name === 'work'){
+                  request_section_data.logoCategory = "Education";
+            }
+            if(item && item.section && item.section.name === 'menu'){
+                  // request_section_data.logoCategory = "starter";
+                  // socket.emit("request-generic-portfolio", {apiRef : 'menu_section', sectionName: 'menu_section', blockId: 'custom_menu_block', templateId: 'custom_menu_template', loaderId: 'custom_menu_block', category : "starter", application: application});
+                  socket.emit("request-generic-portfolio", {apiRef : item.section.name+'_section', sectionName: item.section.name+'_section', blockId: 'custom_'+item.section.name+'_block', templateId: 'custom_'+item.section.name+'_template', loaderId: 'custom_'+item.section.name+'_loader', edit: edit, category : "starter", application: application, fileName: fileName});
+            }
+            if(item && item.section && item.section.name === 'typed' ){
+                request_section_data = {apiRef : item.section.name+'_section', sectionName: item.section.name+'_section', blockId: null, templateId: null, loaderId: null, edit: edit, application: application, fileName: fileName}
+                socket.emit("request-generic-portfolio", request_section_data);
+
+            }
+            // if(item.section.name === 'typed' || item.section.name === 'settings'){
+            //     request_section_data = {apiRef : item.section.name+'_section', sectionName: item.section.name+'_section', blockId: null, templateId: null, loaderId: null, edit: edit, application: application}
+            //     socket.emit("request-generic-portfolio", request_section_data);
+            //
+            // }
+            // if(item.section.name === 'typed'){
+            //     request_section_data = {apiRef : item.section.name+'_section', sectionName: item.section.name+'_section', blockId: null, templateId: null, loaderId: null, edit: edit, application: application}
+            //     socket.emit("request-generic-portfolio", request_section_data);
+            //
+            // }
+            else if(item && item.section.name === 'header'){
+              sectionsTemplate += `
+                      <div class="custom-`+item.section.name+`-block " id="custom_`+item.section.name+`_block" style="`+item.block.style+`">
+                          <div class="loader-block" id="custom_`+item.section.name+`_loader" style="display: block; `+item.loader.style+`">
+                              `+loaderTemplate+`
+                          </div>
+                          <div class="custom-`+item.section.name+`-template `+item.template.class+`" id="custom_`+item.section.name+`_template" style="display: none; `+item.template.style+`"></div>
+                      </div>
+              `;
+              request_section_data.dynamic_header_menus = dynamicHeaderMenus;
+              request_section_data.dynamic_sections = sections;
+              socket.emit("request-generic-portfolio", request_section_data);
+            }else if(item && item.section.name === 'headerNav'){
+                    request_section_data = {apiRef : item.section.name+'_section', sectionName: item.section.name+'_section', blockId: null, templateId: 'header', loaderId: null, edit: edit, application: application, fileName: fileName};
+                    socket.emit("request-generic-portfolio", request_section_data);
+            }else if(item && (
+                    item.section.name === 'menu'
+                    || item.section.name === 'specialMenuContainer'
+                    || item.section.name === 'newsByCategory'
+                    || item.section.name === "entertainmentNewsByCategoryContainer"
+                    || item.section.name === "educationalNewsByCategoryContainer"
+                    || item.section.name === "medicalNewsByCategoryContainer"
+                    || item.section.name === "newsApiTopArticlesNewsByCategoryContainer"
+                    || item.section.name === "newsApiTopJournalNewsByCategoryContainer"
+                    || item.section.name === "hereMapPlacesByCategoryContainer"
+                    || item.section.name === "hereMapPlacesByTransportPlacesCategoryContainer"
+                    || item.section.name === "hereMapPlacesByAccomodationPlacesCategoryContainer"
+                    || item.section.name === "hereMapPlacesByEmmergencyServicePlacesCategoryContainer"
+                    || item.section.name === "hereMapPlacesByShoppingCategoryContainer"
+
+
+                    )){
+                    if(item.section.defaultCategory !== undefined && item.section.defaultCategory !== null && item.section.defaultCategory !== ''){
+                        localStorage[item.section.name] = {category : item.section.defaultCategory};
+                        category = item.section.defaultCategory;
+                    }
+                    // request_section_data = {apiRef : item.section.name+'_section', sectionName: item.section.name+'_section', blockId: null, templateId: 'header', loaderId: null, edit: edit, application: application};
+                    //request_section_data.category = "starter";
+                    sectionsTemplate += `
+                        <section id="`+item.section.name+`" class="`+item.section.name+`" style="`+item.section.style+`">
+                            <div class="custom-`+item.section.name+`-block " id="custom_`+item.section.name+`_block" style="`+item.block.style+`">
+                                <div class="loader-block" id="custom_`+item.section.name+`_loader" style="display: block; `+item.loader.style+`">
+                                      `+loaderTemplate+`
+                                </div>
+                                <div class="custom-`+item.section.name+`-template `+item.template.class+`" id="custom_`+item.section.name+`_template" style="display: none; `+item.template.style+`"></div>
+                            </div>
+                        </section>
+                    `;
+                    // if(item.section.name === 'specialMenuContainer'){
+                    //     category = "special_1";
+                    // }
+                    socket.emit("request-generic-portfolio", {apiRef : item.section.name+'_section', sectionName: item.section.name+'_section', blockId: 'custom_'+item.section.name+'_block', templateId: 'custom_'+item.section.name+'_template', loaderId: 'custom_'+item.section.name+'_loader', edit: edit, category : item.section.defaultCategory, application: application, fileName: fileName});
+
+                    // socket.emit("request-generic-portfolio", request_section_data);
+            }else if(item && item.section.name !== 'header'){
+              sectionsTemplate += `
+                  <section id="`+item.section.name+`" class="`+item.section.name+`" style="`+item.section.style+`">
+                      <div class="custom-`+item.section.name+`-block " id="custom_`+item.section.name+`_block" style="`+item.block.style+`">
+                          <div class="loader-block" id="custom_`+item.section.name+`_loader" style="display: block; `+item.loader.style+`">
+                                `+loaderTemplate+`
+                          </div>
+                          <div class="custom-`+item.section.name+`-template `+item.template.class+`" id="custom_`+item.section.name+`_template" style="display: none; `+item.template.style+`"></div>
+                      </div>
+                  </section>
+              `;
+              socket.emit("request-generic-portfolio", request_section_data);
+
+            }
+
+        })
+        // console.log("@@@ sectionsTemplate : ", sectionsTemplate);
+        {
+          document.getElementById("sections_block").innerHTML = '';
+          document.getElementById("sections_block").innerHTML = sectionsTemplate;
+          // if(sections.sectionStyle && sections.sectionStyle !== ''){
+          //   document.getElementById("sections_block").style = sections.sectionStyle;
+          // }
+        }
+
+    };
+
+    (function init(){
+        // socket.emit("request-final-portfolio-sections", {});
+        // socket.emit("request-gini-home-initial-sections", {});
+        socket.emit("request-generic-portfolio", {apiRef: 'request_initial_sections', application: application, fileName: fileName});
+    })();
+
+    function setup_default_theme(defaultStyle){
+        console.log("============ calling default style function =============");
+        console.log("@@@ defaultStyle : ", defaultStyle);
+        let root = document.documentElement;
+        root.style.setProperty('--default-theme-color', defaultStyle.themeColor);
+        root.style.setProperty('--default-theme-bg-color', defaultStyle.themeBgColor);
+        root.style.setProperty('--default-theme-card-bg-color', defaultStyle.themeCardBgColor);
+        root.style.setProperty('--default-theme-font-color', defaultStyle.themeFontColor);
+        root.style.setProperty('--default-theme-menu-bg-color', defaultStyle.themeMenuBgColor);
+        root.style.setProperty('--default-theme-menu-font-color', defaultStyle.themeMenuFontColor);
+        root.style.setProperty('--default-theme-on-hover-bg-color', defaultStyle.themeMenuOnHoverBgColor);
+        root.style.setProperty('--default-theme-on-hover-font-color', defaultStyle.themeMenuOnHoverFontColor);
+        root.style.setProperty('--default-theme-primary-color', defaultStyle.themePrimaryColor);
+
+    }
+
+    function createTypedSection(data){
+        console.log("@@@ data :: ", data);
+        // console.log("url: ", data.data.img.url);
+        let typedTxt = data.data.typedText;
+        let typedOptions = data.data.typedOptions;
+        let template = `
+            <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+                <h1 class="" style="`+data.data.profile.style+`">`+data.data.profile.name+`</h1>
+                <div class="element" style="font-size: 30px; font-weight: 500;"></div>
+            </section>
+        `;
+        //document.getElementById("custom_typed_loader").style.display = "none";
+        document.getElementById("typedBlock").innerHTML = template;
+        // document.getElementById("hero").style.backgroundImage = "url('static/img/me_portfolio/portfolio1.jpg')";
+        if(data.data.img && data.data.img.url !== ''){
+            let url = "url("+data.data.img.url+")";
+            document.getElementById("hero").style.backgroundImage = url;
+        }
+        var typed = new Typed('.element', typedOptions);
+    }
+
+    function syncData(){
+        let payload = {
+          apiRef : 'update_block_data',
+          actionType : 'save_updated_style',
+          sectionName : sectionName,
+          sectionIndex: sectionIndex,
+          partsIndex: partsIndex,
+          itemIndex: itemIndex,
+          itemStyle : itemStyle,
+          secStyle : secStyle,
+          propName: null,
+          propValue: null,
+          application: application,
+          fileName: fileName
+        }
+        document.getElementById(inputId).style = itemStyle;
+        document.getElementById(itemId).style = secStyle;
+        document.getElementById("editStylePopup").style.display = 'none';
+        socket.emit("request-generic-portfolio", payload);
+        document.getElementById("editStylePopup").style.display = 'none';
+    }
+
+    function applyNewTheme(theme){
+        console.log("======== calling the apply New Theme =========");
+        console.log("@@@ theme : ", theme);
+        let payload = {
+          apiRef : "update_theme",
+          theme: theme,
+          sectionName: 'theme_section',
+          application: application,
+          fileName: fileName
+
+        }
+        socket.emit("request-generic-portfolio", payload);
+    }
+
+    function onClickSettings1(that , event, eventState){
+        // console.log("******** on click function on click item ********");
+        // console.log("@@@@ EVENT :: ", event);
+        // console.log("@@@ that ::  ", that);
+        // console.log("@@@ eventState ::  ", eventState);
+        let updatedSetupArr = [];
+        let x = document.getElementById("setupSectionsBlock").querySelectorAll(".custom-part");
+        x.forEach((item, index) => {
+            if(item.dataset.all !== undefined){
+                let dataset = item.dataset.all;
+                let tempObj = {};
+                tempObj.id = item.id;
+                tempObj.selected = JSON.parse(dataset).selected;
+                tempObj.sectionName = JSON.parse(dataset).sectionName;
+                updatedSetupArr.push(tempObj);
+            }
+        });
+        console.log("!!!!!!!!! final settings setups dataset ", updatedSetupArr);
+        console.log("!!!! localStorage : ", localStorage.allSectionData);
+        let allSectionsData = localStorage.allSectionData;
+        let filteredInitialSections = [];
+        let isSelectedTypedSection = null;
+        let activeSections = [];
+        let header = null;
+        let settings = null;
+        updatedSetupArr.forEach((item, index) => {
+
+            localStorage.allSectionData.values.forEach((element, index) => {
+
+                if(element.section.name === 'header'){
+                    header = element;
+                }
+                if(element.section.name === 'settings'){
+                    settings = element;
+                }
+
+                if(item.sectionName === 'typed'){
+                     if(item.selected === true){
+                         document.getElementById("typedBlock").style.display = "block";
+                         isSelectedTypedSection = true;
+                         activeSections.push("typed");
+                         // defaultTypedObj = item;
+                         // filteredInitialSections.push(item);
+                     }else{
+                         document.getElementById("typedBlock").style.display = "none";
+                         isSelectedTypedSection = false;
+                     }
+                 }else if((item.sectionName === element.section.name) && (item.selected === true)){
+                     activeSections.push(item.sectionName);
+                     filteredInitialSections.push(element);
+                 }
+            })
+
+
+        })
+        filteredInitialSections.unshift(header);
+        filteredInitialSections.push(settings);
+
+
+        if(isSelectedTypedSection){
+            // filteredInitialSections.splice(1, 0, defaultTypedObj);
+            // sections.push(defaultTypedObj);
+            let typedObj = {
+              section: {name: 'typed', id: '', class: '', style: ''},
+              menu: {name: 'Introduction ', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+              block: {class: '', style: ''},
+              loader: {img: {imgUrl: '', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            };
+            // filteredInitialSections.push(typedObj);
+            filteredInitialSections.splice(1, 0, typedObj);
+        }
+        let sections = {values: filteredInitialSections, sectionStyle: 'background: '+localStorage.themeBgColor+''};
+        // localStorage.activeSectionsData = sections;
+        console.log("!!!! sections :: ", sections);
+        localStorage.activeSectionsData = sections;
+        inittial_setup(sections, false);
+
+        let payload = {
+            apiRef : 'update_initial_sections',
+            actionType : 'update_initial_sections_setup',
+            sectionName: 'settings_section',
+            updatedSections: updatedSetupArr,
+            updatedInitialSections: sections,
+            application: application,
+            fileName: fileName
+
+        }
+        // document.getElementById("setupSectionsModal").style.display = 'none';
+        $('#setupSectionsModal').modal('hide');
+        document.getElementById("sections_block").style.bckground = localStorage.themeBgColor;
+        socket.emit("request-generic-portfolio", payload);
+    }
+
+    function onClickSettings(that , event, eventState){
+        // console.log("******** on click function on click item ********");
+        // console.log("@@@@ EVENT :: ", event);
+        // console.log("@@@ that ::  ", that);
+        // console.log("@@@ eventState ::  ", eventState);
+        let updatedSetupArr = [];
+        let x = document.getElementById("custom_settings_template").querySelectorAll(".custom-part");
+        x.forEach((item, index) => {
+            if(item.dataset.all !== undefined){
+                let dataset = item.dataset.all;
+                let tempObj = {};
+                tempObj.id = item.id;
+                tempObj.selected = JSON.parse(dataset).selected;
+                tempObj.sectionName = JSON.parse(dataset).sectionName;
+                updatedSetupArr.push(tempObj);
+            }
+        });
+        console.log("!!!!!!!!! final settings setups dataset ", updatedSetupArr);
+        console.log("777777777 localStorage allSectionsData : ", localStorage.allSectionsData);
+        console.log("8888888888 updatedSetupArr :: ", updatedSetupArr);
+        let allSectionsData = localStorage.allSectionsData;
+        let filteredInitialSections = [];
+        let isSelectedTypedSection = null;
+        let activeSections = [];
+        let header = null;
+        let settings = null;
+        updatedSetupArr.forEach((item, index) => {
+
+            localStorage.allSectionsData.forEach((element, index) => {
+
+                if(element && element.section.name === 'header'){
+                    header = element;
+                }
+                // if(element.section.name === 'settings'){
+                //     settings = element;
+                // }
+
+                if(item.sectionName === 'typed'){
+                     if(item.selected === true){
+                         document.getElementById("typedBlock").style.display = "block";
+                         isSelectedTypedSection = true;
+                         activeSections.push("typed");
+                         // defaultTypedObj = item;
+                         // filteredInitialSections.push(item);
+                     }else{
+                         document.getElementById("typedBlock").style.display = "none";
+                         isSelectedTypedSection = false;
+                     }
+                 }else if(element !== null && (item.sectionName === element.section.name) && (item.selected === true)){
+                     activeSections.push(item.sectionName);
+                     filteredInitialSections.push(element);
+                 }
+            })
+
+
+        })
+        filteredInitialSections.unshift(header);
+        filteredInitialSections.push(settings);
+
+
+        if(isSelectedTypedSection){
+            // filteredInitialSections.splice(1, 0, defaultTypedObj);
+            // sections.push(defaultTypedObj);
+            let typedObj = {
+              section: {name: 'typed', id: '', class: '', style: ''},
+              menu: {name: 'Introduction ', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+              block: {class: '', style: ''},
+              loader: {img: {imgUrl: '', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            };
+            // filteredInitialSections.push(typedObj);
+            filteredInitialSections.splice(1, 0, typedObj);
+        }
+        let sections = {values: filteredInitialSections, sectionStyle: 'background: '+localStorage.themeBgColor+''};
+        // localStorage.activeSectionsData = sections;
+        console.log("!!!! sections :: ", sections);
+        // localStorage.allSectionsData = sections;
+        // localStorage.allSectionsData = filteredInitialSections;
+
+
+        console.log("!!!! localStorage.allSectionsData:: ", localStorage.allSectionsData);
+
+        inittial_setup(sections, false);
+
+        let payload = {
+            apiRef : 'update_initial_sections',
+            actionType : 'update_initial_sections_setup',
+            sectionName: 'settings_section',
+            updatedSections: updatedSetupArr,
+            updatedInitialSections: sections,
+            application: application,
+            fileName: fileName
+
+        }
+        // document.getElementById("setupSectionsModal").style.display = 'none';
+        console.log("@@@@@ !!!!!!!!!!!! payload : ", payload);
+        $('#setupSectionsModal').modal('hide');
+        document.getElementById("sections_block").style.bckground = localStorage.themeBgColor;
+        socket.emit("request-generic-portfolio", payload);
+    }
+
+
+    function updateSettingsBlock(){
+        console.log("===== calling update settings block =====");
+        socket.emit("request-generic-portfolio", {apiRef : 'settings_section', sectionName: 'settings_section', blockId: 'custom_settings_block', templateId: 'custom_settings_template', loaderId: 'custom_settings_loader', application: application});
+    }
+
+    function createUpdateBtn(sectionName){
+        console.log("=================================");
+        let template = '';
+        let updateMethod = 'onclick="onClickUpdateSection(\''+sectionName+'\')"';;
+        template += `
+            <div style="text-align: center; width: 100%; margin: 20px 0px;">
+                <button type="button" `+updateMethod+` style="border: none; outline: none !important; padding: 5px 20px; margin-top: 50px; width: 87%; margin: auto; background: #0F71A1; color: white; ">Update `+sectionName+` Section</button>
+            </div>
+        `;
+        return template;
+    }
+
+    function isEmpty(obj) {
+        for(var key in obj) {
+            if(obj.hasOwnProperty(key))
+                return false;
+        }
+        return true;
+    }
+
+    function convertStringToCSSTemplate(item){
+          let template = '';
+          if(item){
+              if(item.key.name !== ''){
+                  console.log("@@@ key style :: ", item.key.style);
+                  let strArr = item.key.style.split(";");
+                  console.log("@@@ strArr : ", strArr);
+                  let height = 'auto';
+                  let css = '';
+                  css += '{ ';
+                  // strArr.forEach((item, index) => {
+                  //     css += item+'; ';
+                  // });
+                  css += item.key.style;
+                  css += '}'
+                  height = ((strArr.length) * 20 )+'px;';
+                  template += `
+                    <div>
+                      <div class="single-line-ellipse">`+item.key.name+`</div>
+                      <div>
+                        <textarea id="itemStyle" name="name" style="width: 100%; height: `+height+`">
+                        `+css+`
+                        </textarea>
+                      </div>
+                    </div>
+                  `;
+              }
+
+              if(item.secStyle !== ''){
+                let strArr = item.secStyle.split(";");
+                let css = '';
+                css += '{ ';
+                // strArr.forEach((item, index) => {
+                //     css += item+'; \n';
+                // });
+                css += item.secStyle;
+                css += '}'
+                let height = ((strArr.length) * 20 )+'px;';
+                template += `
+                  <div>
+                    <div class="">Section Style</div>
+                    <div>
+                      <textarea id="sectionStyle" name="name" style="width: 100%; height: `+height+`">
+                      `+css+`
+                      </textarea>
+                    </div>
+                  </div>
+                `;
+              }
+              let onClickPreviewMethod = 'onclick="onClickSaveStyles(\''+currentOnClickThreeDotsState.sectionName+'\', \''+currentOnClickThreeDotsState.sectionIndex+'\', \''+currentOnClickThreeDotsState.partsIndex+'\', \''+currentOnClickThreeDotsState.itemIndex+'\', \''+'preview'+'\')"';
+              let onClickSaveMethod = 'onclick="onClickSaveStyles(\''+currentOnClickThreeDotsState.sectionName+'\', \''+currentOnClickThreeDotsState.sectionIndex+'\', \''+currentOnClickThreeDotsState.partsIndex+'\', \''+currentOnClickThreeDotsState.itemIndex+'\', \''+'save'+'\')"';
+              template += `
+                <div>
+                  <button type="button"  name="" `+onClickPreviewMethod+`  style="border: none; padding: 10px 20px; width: 48%; display: inline-block; text-align: center;">Preview</button>
+                  <button type="button"  name=""  `+onClickSaveMethod+` style="border: none; padding: 10px 20px; width: 48%; display: inline-block; text-align: center;">Save</button>
+                </div>
+              `;
+          }
+          return template;
+      }
+
+    function convertCSStoStringTemplate(css){
+        if(css.indexOf("{") !== -1 && css.indexOf("}") !== -1){
+            css = css.replace("{"," ");
+            css = css.replace("}"," ");
+        }
+        return css;
+    }
+
+    function onClickAddSection(that, event){
+            console.log("====== calling on click add section method =======");
+            console.log("@@@ that : ", that);
+            console.log("@@@ event : ", event);
+    }
+
+    function closeNav() {
+      document.getElementById("custom_overlay_block").style.width = "0%";
+    }
+
+    function closeEditStylePopup(){
+        document.getElementById("editStylePopup").style.display = "none";
+    }
+
+    function convertRawStyleToEditedStyleTemplate(style){
+        let previewStyleMethod = '';
+        let saveStyleMethod = '';
+        let template = '<div style="width: 100%; ">';
+        let addStyleMethod = 'onclick="onClickEditStyle(\''+'add_style'+'\', \''+null+'\')"';
+        let popupCrossBtn = '';
+
+        let onKeyUpEditStyleMethod = 'onkeyup="onKeyUpEditStyleInput(this)"';
+        // let cancelPopupBtnMethod = 'onClick="closeEditStylePopup()"';
+        let cancelPopupBtnMethod = null;
+
+        if(localStorage.currentStyleEditorType === 'item'){
+            previewStyleMethod = 'onclick="onClickEditStyle(\''+'preview_style_item'+'\', \''+null+'\')"';
+            saveStyleMethod = 'onclick="onClickEditStyle(\''+'save_item_style'+'\', \''+null+'\')"';
+            cancelPopupBtnMethod = 'onclick="onClickEditStyle(\''+'cancel_item_style'+'\', \''+null+'\')"';
+            popupCrossBtn = '<div onclick="onClickEditStyle(\''+'cancel_item_style'+'\', \''+null+'\')" style="width: 100%; float: right;"><div style="font-size: 22px; color: red; float: right; position: relative; top: -16px; right: -5px; "> <i class="fa fa-times-circle" aria-hidden="true"></i> </div></div>';
+        }else if(localStorage.currentStyleEditorType === 'part'){
+            previewStyleMethod = 'onclick="onClickEditStyle(\''+'preview_style_part'+'\', \''+null+'\')"';
+            saveStyleMethod = 'onclick="onClickEditStyle(\''+'save_part_style'+'\', \''+null+'\')"';
+            cancelPopupBtnMethod = 'onclick="onClickEditStyle(\''+'cancel_part_style'+'\', \''+null+'\')"';
+            popupCrossBtn = '<div onclick="onClickEditStyle(\''+'cancel_part_style'+'\', \''+null+'\')" style="width: 100%; float: right;"><div style="font-size: 22px; color: red; float: right; position: relative; top: -16px; right: -5px; "> <i class="fa fa-times-circle" aria-hidden="true"></i> </div></div>';
+
+        }
+        localStorage.currentEditedStyleArr = style;
+        // let onKeyUpInputMethodName = 'onkeyup="onKeyUpInputProperties(event, \''+sectionName+'\', \''+sectionIndex+'\', \''+partsIndex+'\', \''+itemIndex+'\', \''+'name'+'\')"';
+        template += popupCrossBtn;
+        style.forEach((item, index) => {
+              let subStyle = item.split(":");
+              let editStyleKeyId = 'editStyle_key_'+index;
+              let editStyleValueId = 'editStyle_value_'+index;
+              if(item.length > 5){
+                let delStyleMethod = 'onclick="onClickEditStyle(\''+'delete_style'+'\', \''+index+'\')"';
+                // addStyleMethod = 'onclick="onClickEditStyle(\''+'add_style'+'\', \''+index+'\')"';
+                template += `
+                  <span style=" padding: 5px; border-radius: 50px;">
+                    <input type="text" id="`+editStyleKeyId+`" `+onKeyUpEditStyleMethod+` style="background: var(--default-theme-color); color: white; padding: 5px; border-radius: 50px; text-align: center;" value="`+subStyle[0]+`" />
+                    <span> : </span>
+                    <input type="text" id="`+editStyleValueId+`"  `+onKeyUpEditStyleMethod+` style="background: white; color: var(--default-theme-color); padding: 5px; border-radius: 50px; text-align: center;" value="`+subStyle[1]+`" />
+                    <span style="font-size: 18px; color: grey; padding: 5px;"  `+delStyleMethod+`> <i class="fa fa-times" aria-hidden="true"></i> </span>
+                  </span>
+                `;
+              }
+        });
+        template += `
+              <span style=" padding: 5px; border-radius: 50px;">
+                <span><input type="text" id="editStyleKey" style="background: white; color: var(--default-theme-color); padding: 5px; border-radius: 50px; text-align: center;" value="" placeholder="Enter css property" /></span>
+                <span> : </span>
+                <span><input type="text" id="editStyleValue" style="background: white; color: var(--default-theme-color); padding: 5px; border-radius: 50px; text-align: center;" value=""  placeholder="Enter css value"  /></span>
+                <span style="font-size: 18px; color: grey; padding: 5px;"  `+addStyleMethod+`> <i class="fa fa-plus" aria-hidden="true"></i> </span>
+              </span>
+          </div>
+          <div style="width: 100%; margin: 60px 0px 5px 0px;">
+              <div>
+                  <button type="button" `+previewStyleMethod +` class="" style="width: 32%; border: none; padding: 5px 20px; text-align: center; margin-right: 10px; background: var(--default-theme-color); color: white; border-radius: 8px;">Preview Style</button>
+                  <button type="button" `+saveStyleMethod+` class="" style="width: 32%; border: none; padding: 5px 20px; text-align: center; margin-right: 10px; background: var(--default-theme-color); color: white; border-radius: 8px;">Save Style</button>
+                  <button type="button" `+cancelPopupBtnMethod+` class="" style="width: 29%; border: none; padding: 5px 20px; text-align: center; background: var(--default-theme-color);  color:  white; border-radius: 8px;">Cancel</button>
+
+              </div>
+          </div>
+        `;
+        return template;
+    }
+
+    function showEditStylePopup(template){
+        let left = null;
+        let top = null;
+        if(localStorage.currentStyleEditorType === 'item'){
+            left = currentOnClickThreeDotsState.popupPosition.left;
+            top = currentOnClickThreeDotsState.popupPosition.top;
+        }else if(localStorage.currentStyleEditorType === 'part'){
+            left = localStorage.current_Part_Threedots_state.position.left;
+            top = localStorage.current_Part_Threedots_state.position.top;
+        }
+        left = parseInt(left);
+        left = left - 200;
+        left = left + 'px';
+        console.log("@@@@@@ showEditStylePopup  top : ", top);
+        console.log("@@@@@@ showEditStylePopup  left : ", left);
+
+
+        document.getElementById("editStylePopup").style.display = "block";
+        document.getElementById("editStyleContainer").innerHTML = template;
+        document.getElementById("editStylePopup").style.position = "absolute";
+        document.getElementById("editStylePopup").style.left = left;
+        document.getElementById("editStylePopup").style.top = top;
+        document.getElementById("editStylePopup").style.zIndex = "99";
+        document.getElementById("editStylePopup").style.width = "500px";
+    }
+
+    function getOnClickThreeDotsItemId(){
+      console.log("====== calling get item id ======");
+      let itemId = null;
+      if(currentOnClickThreeDotsState !== undefined && currentOnClickThreeDotsState !== null){
+          itemId = 'input_'+currentOnClickThreeDotsState.sectionName+'-'+currentOnClickThreeDotsState.sectionIndex+'-'+currentOnClickThreeDotsState.partsIndex+'-'+currentOnClickThreeDotsState.itemIndex;
+      }
+      return itemId;
+    }
+
+    function getOnClickThreeDotsPartId(){
+      console.log("====== calling get item id ======");
+      let partId = null;
+      if(localStorage.current_Part_Threedots_state !== undefined && localStorage.current_Part_Threedots_state !== null){
+          partId = 'part_'+localStorage.current_Part_Threedots_state.sectionName+'-'+localStorage.current_Part_Threedots_state.sectionIndex+'-'+localStorage.current_Part_Threedots_state.partsIndex;
+      }
+      return partId;
+    }
+
+    function onClickSectionThreeDotsBtn(that, event, partId, sectionName, sectionIndex, partsIndex){
+          console.log("============ calling on click section three dots btn =============");
+          console.log("@@@@@ threedotsid : ", that.id);
+          console.log("@@@@@ sectionId : ", partId);
+          console.log("@@@@@ sectionName : ", sectionName);
+          console.log("@@@@@ sectionIndex : ", sectionIndex);
+          console.log("@@@@@ partsIndex : ", partsIndex);
+
+          if(currentOnClickThreeDotsState.prevSectionThreeDotsId !== undefined || currentOnClickThreeDotsState.prevSectionThreeDotsId !== null){
+              if(currentOnClickThreeDotsState.prevSectionThreeDotsId === that.id){
+                  console.log("!!!! ##### %%%%%% &&&&&&&&& ********");
+                  // document.getElementById(sectionId).style.border = "none";
+                  document.getElementById(partId).style.outline = "none";
+
+                  document.getElementById("sectionPopup").style.display = "none";
+                  currentOnClickThreeDotsState.prevSectionThreeDotsId = null;
+                  return;
+              }
+          }
+          currentOnClickThreeDotsState.prevSectionThreeDotsId = that.id;
+
+          let left = event.pageX - (300 + 6);
+          let top = event.pageY + 'px';
+          left = left + 'px';
+          let current_Part_Threedots_state = {
+              partId : partId,
+              sectionName : sectionName,
+              sectionIndex: sectionIndex,
+              partsIndex: partsIndex,
+              position : {left: left, top: top}
+          }
+          localStorage.current_Part_Threedots_state = current_Part_Threedots_state;
+          document.getElementById("sectionPopup").style.display = "block";
+          document.getElementById("sectionPopup").style.position = "absolute";
+          document.getElementById("sectionPopup").style.left = left;
+          document.getElementById("sectionPopup").style.top = top;
+          document.getElementById("sectionPopup").style.zIndex = "99";
+          document.getElementById(partId).style.outline = "2px solid var(--default-theme-color)";
+
+
+      }
+
+    function getPartIndexById(id){
+        console.log("===== calling get part index by id =====");
+        // console.log("@@@ id : ", id);
+        id = id.split("-");
+        id = parseInt(id[id.length-1]);
+        return id;
+    }
+
+    function getGragAndDropIdById(id){
+        console.log("===== calling getGragAndDropIdById by id =====");
+        console.log("@@@ id : ", id);
+        // part_facts_section-0-2
+        let dragId = '';
+        id = id.split("-");
+        // id = parseInt(id[id.length-1]);
+        // dragId += 'section:'+parseInt(id[1])+','+'part:'+parseInt(id[2]);
+        dragId += parseInt(id[1])+','+parseInt(id[2]);
+
+        return dragId;
+    }
+
+    function getSectionNameId(id){
+        console.log("===== calling get part index by id =====");
+        // console.log("@@@ id : ", id);
+        id = id.split("_");
+        id = id[1];
+        return id+'_section';
+    }
+
+    //     ******************************   END:   G L O B A L  _  F U N C T I O N S   *********************************
+
+    //     ******************************   START:   G L O B A L _ W I N D O W _ F U N C T I O N S   *********************************
+
+    window.onKeyUpEditStyleInput = function(that){
+        console.log("==== calling edit style on key up on input ====");
+        console.log("@@@ input id : ", that.id);
+        console.log("@@@ input current value : ", document.getElementById(that.id).value);
+        let index = that.id.split("_");
+        index = index[index.length-1];
+        let newStyle = null;
+      //  if(that.id.indexOf("key") !== -1){
+            let key = document.getElementById("editStyle_key_"+index).value;
+            let value = document.getElementById("editStyle_value_"+index).value;
+            newStyle = key+" : "+value;
+            console.log("11111111111111 ney style : ", newStyle);
+            localStorage.currentEditedStyleArr[index] = newStyle;
+        //}
+    }
+
+    window.onClickEditStyle = function(state, index){
+        console.log("========= calling on click edit style =========");
+        console.log("@@@ index : ", index);
+        console.log("@@@@ state : ", state);
+        console.log("@@@ style arr : ", localStorage.currentEditedStyleArr);
+        if(state === 'delete_style'){
+              localStorage.currentEditedStyleArr.splice(index, 1);
+              let style = localStorage.currentEditedStyleArr;
+              let template = convertRawStyleToEditedStyleTemplate(style);
+              if(currentOnClickThreeDotsState.popupPosition && currentOnClickThreeDotsState.popupPosition !== undefined){
+                    showEditStylePopup(template);
+              }
+        }else if(state === 'add_style'){
+              console.log("===== calling state add_style =====");
+              let cssKey = document.getElementById("editStyleKey").value;
+              let cssValue = document.getElementById("editStyleValue").value;
+              let cssStr = cssKey+':'+cssValue;
+              let styleArr = localStorage.currentEditedStyleArr;
+              styleArr.push(cssStr);
+              let template = convertRawStyleToEditedStyleTemplate(styleArr);
+              if(currentOnClickThreeDotsState.popupPosition && currentOnClickThreeDotsState.popupPosition !== undefined){
+                    showEditStylePopup(template);
+              }
+
+        //=====================================================
+
+            // let style = localStorage.currentEditedStyleArr.join(" ; ");
+            // let inputId = getOnClickThreeDotsPartId();
+            // console.log("");
+            // document.getElementById(inputId).style = style;
+            // document.getElementById(itemId).style.border = "none !important";
+
+        }else if(state === 'preview_style_item'){
+              let style = localStorage.currentEditedStyleArr.join(" ; ");
+              let inputId = getOnClickThreeDotsItemId();
+              let itemId = inputId.replace("input", "item");
+              document.getElementById(inputId).style = style;
+        }else if(state === 'preview_style_part'){
+              let style = localStorage.currentEditedStyleArr.join(" ; ");
+              let partId = getOnClickThreeDotsPartId();
+              document.getElementById(partId).style = style;
+              document.getElementById(partId).style.outlineColor = "none !important";
+
+        }else if(state === 'save_item_style'){
+              let style = localStorage.currentEditedStyleArr.join(" ; ");
+              let inputId = getOnClickThreeDotsItemId();
+              let itemId = inputId.replace("input", "item");
+              document.getElementById(itemId).style.border = "none";
+
+              let payload = {
+                  apiRef : 'update_block_data',
+                  actionType : state,
+                  sectionName : currentOnClickThreeDotsState.sectionName,
+                  sectionIndex: parseInt(currentOnClickThreeDotsState.sectionIndex),
+                  partsIndex: parseInt( currentOnClickThreeDotsState.partsIndex),
+                  itemIndex: parseInt(currentOnClickThreeDotsState.itemIndex),
+                  style: style,
+                  application: application,
+                  fileName: fileName
+              }
+              closeEditStylePopup()
+              socket.emit("request-generic-portfolio", payload);
+        }else if(state === "save_part_style"){
+              let style = localStorage.currentEditedStyleArr.join(" ; ");
+              let payload = {
+                apiRef : 'update_block_data',
+                actionType : state,
+                sectionName : localStorage.current_Part_Threedots_state.sectionName,
+                sectionIndex: parseInt(localStorage.current_Part_Threedots_state.sectionIndex),
+                partsIndex: parseInt(localStorage.current_Part_Threedots_state.partsIndex),
+                itemIndex: null,
+                style: style,
+                application: application,
+                fileName: fileName
+
+              }
+              socket.emit("request-generic-portfolio", payload);
+              let partId = localStorage.current_Part_Threedots_state.partId;
+              document.getElementById(partId).style.outline = "none";
+              closeEditStylePopup()
+        }else if(state === 'cancel_item_style'){
+              let inputId = getOnClickThreeDotsItemId();
+              let itemId = inputId.replace("input", "item");
+              document.getElementById(itemId).style.border = "none";
+              closeEditStylePopup()
+        }else if(state === 'cancel_part_style'){
+              closeEditStylePopup()
+              let partId = localStorage.current_Part_Threedots_state.partId;
+              document.getElementById(partId).style.outline = "none";
+        }
+
+    }
+
+    window.onClickworkCategoryArrowIcon = function(event, arrow){
+
+      if(arrow === "left_arrow"){
+          if(workCategoryStartIndex !== 0){
+              workCategoryStartIndex -= 1;
+              createWordByCategoryList(workCategoryStartIndex, currentSelectedWorkCategory);
+              document.getElementById("workCategory_left_arrow").style.display = "block";
+              document.getElementById("workCategory_right_arrow").style.display = "block";
+          }else if(workCategoryStartIndex === 0){
+            document.getElementById("workCategory_left_arrow").style.display = "none";
+          }else{
+              document.getElementById("workCategory_left_arrow").style.display = "none";
+          }
+      }else if(arrow === "right_arrow"){
+          if(workCategoryStartIndex <= 3){
+              workCategoryStartIndex += 1;
+              createWordByCategoryList(workCategoryStartIndex, currentSelectedWorkCategory);
+              document.getElementById("workCategory_left_arrow").style.display = "block";
+          }else{
+            document.getElementById("workCategory_right_arrow").style.display = "none";
+          }
+      }
+    }
+
+    // window.onClickWorkCatItem = function(event){
+    //   document.getElementById(currentSelectedWorkCategory).style.background = "#E8EAED";
+    //   document.getElementById(currentSelectedWorkCategory).style.color = "black";
+    //   let id = event.target.id;
+    //   currentSelectedWorkCategory = id;
+    //   document.getElementById(currentSelectedWorkCategory).style.background = "var(--default-theme-color)";
+    //   document.getElementById(currentSelectedWorkCategory).style.color = "white";
+    //   socket.emit("request-generic-portfolio", {apiRef : 'work_section', sectionName: 'work_section', blockId: 'custom_work_block', templateId: 'custom_work_template', loaderId: 'custom_work_loader', logoCategory : id, application: application});
+    //
+    //   // socket.emit("request-generic-portfolio", {apiRef : 'work_by_category', blockId: 'custom_new_latest_work_block', templateId: 'custom_new_latest_work_template', loaderId: 'custom_new_latest_work_loader', logoCategory : id});
+    // }
+
+    window.onClickWorkCatItem = function(that,event){
+        console.log("@@@ that : ", that);
+        console.log("@@@ event id: ", event.target.id);
+        console.log("@@@ localstorage :: ", localStorage);
+        let argument = JSON.parse(that.getAttribute("data"));
+        let category = argument.category;
+        let sectionName = argument.sectionName;
+        let currentId = event.target.id;
+        console.log("@@@ argument : ", argument);
+        console.log("@@@ currentId : ", currentId);
+        if(argument.sectionName === 'menu' || argument.sectionName === 'newsByCategory'){
+            let ele = document.querySelectorAll(".news-cat-menu .menu-active-selection");
+            console.log("@@@ x :: ", ele);
+            if(ele.length === 1){
+                ele[0].classList.remove("menu-active-selection");
+            }
+            that.classList.add("menu-active-selection");
+            socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+
+        }else if(argument.sectionName === 'specialMenuContainer'){
+            let ele = document.querySelectorAll(".special-active-selection");
+            console.log("@@@ x :: ", ele);
+            if(ele.length === 1){
+                ele[0].classList.remove("special-active-selection");
+            }
+            that.classList.add("special-active-selection");
+            socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+
+        }else if(argument.sectionName === 'entertainmentNewsByCategoryContainer' ){
+            let ele = document.querySelectorAll(".entertainment-news-cat .menu-active-selection");
+            console.log("@@@ x :: ", ele);
+            if(ele.length === 1){
+                ele[0].classList.remove("menu-active-selection");
+            }
+            that.classList.add("menu-active-selection");
+            socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+
+        }else if(argument.sectionName === 'hereMapPlacesByCategoryContainer' ){
+            let ele = document.querySelectorAll(".near-by-places-cat-general .menu-active-selection");
+            console.log("@@@ x :: ", ele);
+            if(ele.length === 1){
+                ele[0].classList.remove("menu-active-selection");
+            }
+            that.classList.add("menu-active-selection");
+            socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+
+        }else if(argument.sectionName === 'hereMapPlacesByAccomodationPlacesCategoryContainer' ){
+            let ele = document.querySelectorAll(".near-by-accommodation-cat .menu-active-selection");
+            console.log("@@@ x :: ", ele);
+            if(ele.length === 1){
+                ele[0].classList.remove("menu-active-selection");
+            }
+            that.classList.add("menu-active-selection");
+            socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+
+        }else if(argument.sectionName === 'hereMapPlacesByTransportPlacesCategoryContainer' ){
+            let ele = document.querySelectorAll(".near-by-places-cat-transport .menu-active-selection");
+            console.log("@@@ x :: ", ele);
+            if(ele.length === 1){
+                ele[0].classList.remove("menu-active-selection");
+            }
+            that.classList.add("menu-active-selection");
+            socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+
+        }else if(argument.sectionName === "educationalNewsByCategoryContainer"){ hereMapPlacesByTransportPlacesCategoryContainer_section
+            console.log("777777777777777777777777777777777777777777777777777777777777777777777");
+            let ele = document.querySelectorAll(".educational-news-cat .menu-active-selection");
+            console.log("@@@ x :: ", ele);
+            if(ele.length === 1){
+                ele[0].classList.remove("menu-active-selection");
+            }
+            that.classList.add("menu-active-selection");
+            socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+
+        }else if(argument.sectionName === "hereMapPlacesByEmmergencyServicePlacesCategoryContainer"){
+            console.log("777777777777777777777777777777777777777777777777777777777777777777777");
+            let ele = document.querySelectorAll(".near-by-emergency-service-cat .menu-active-selection");
+            console.log("@@@ x :: ", ele);
+            if(ele.length === 1){
+                ele[0].classList.remove("menu-active-selection");
+            }
+            that.classList.add("menu-active-selection");
+            socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+
+        }else if(argument.sectionName === "hereMapPlacesByShoppingCategoryContainer"){
+            console.log("777777777777777777777777777777777777777777777777777777777777777777777");
+            let ele = document.querySelectorAll(".near-by-shopping-cat .menu-active-selection");
+            console.log("@@@ x :: ", ele);
+            if(ele.length === 1){
+                ele[0].classList.remove("menu-active-selection");
+            }
+            that.classList.add("menu-active-selection");
+            socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+
+        }else if(argument.sectionName === "medicalNewsByCategoryContainer"){
+            console.log("777777777777777777777777777777777777777777777777777777777777777777777");
+            let ele = document.querySelectorAll(".medical-news-cat .menu-active-selection");
+            console.log("@@@ x :: ", ele);
+            if(ele.length === 1){
+                ele[0].classList.remove("menu-active-selection");
+            }
+            that.classList.add("menu-active-selection");
+            socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+
+        }else if(argument.sectionName === "newsApiTopArticlesNewsByCategoryContainer"){
+            console.log("777777777777777777777777777777777777777777777777777777777777777777777");
+            let ele = document.querySelectorAll(".news-api-top-articles-by-cat .menu-active-selection");
+            console.log("@@@ x :: ", ele);
+            if(ele.length === 1){
+                ele[0].classList.remove("menu-active-selection");
+            }
+            that.classList.add("menu-active-selection");
+            socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+
+        }else if(argument.sectionName === "newsApiTopJournalNewsByCategoryContainer"){
+            console.log("777777777777777777777777777777777777777777777777777777777777777777777");
+            let ele = document.querySelectorAll(".top-journal-news .menu-active-selection");
+            console.log("@@@ x :: ", ele);
+            if(ele.length === 1){
+                ele[0].classList.remove("menu-active-selection");
+            }
+            that.classList.add("menu-active-selection");
+            socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+
+        }
+    }
+    window.onClickRedirectUrl = function(that, event){
+      console.log("==== on click redirect url function ====");
+      let argument = JSON.parse(that.getAttribute("data"));
+      // console.log("@@@ argument :: ", argument);
+      if(argument.key.action !== undefined && argument.key.action !== '' && argument.key.action === 'redirectUrl'){
+          let url = argument.key.name;
+          window.open(url, "_blank", );
+      }
+    }
+
+    window.onClickFlipImgToVideo = function(that, event){
+
+      console.log("==== on click redirect url function ====");
+      console.log("===== this: ", this);
+      console.log("===== event: ", event);
+      console.log("===== event.target.id : ", event.target.id);
+      let replaceItemWithInput = event.target.id.replace("input", "item");
+      let spilitedItemIndex = replaceItemWithInput.split("-")
+      console.log("=== itemIndex : ", spilitedItemIndex);
+      let index = spilitedItemIndex[spilitedItemIndex.length - 1];
+      index = (parseInt(index) + 1).toString();
+      spilitedItemIndex[spilitedItemIndex.length - 1] = index;
+      videoItemIndex = spilitedItemIndex.join().replace(/,/g, "-");
+      console.log("===== videoItemIndex : ", videoItemIndex);
+      document.getElementById(event.target.id).style.display = "none";
+      document.getElementById(videoItemIndex).style.display = "block";
+
+      // let argument = JSON.parse(that.getAttribute("data"));
+      // console.log("@@@ argument :: ", argument);
+      // if(argument.key.action !== undefined && argument.key.action !== '' && argument.key.action === 'redirectUrl'){
+      //     let url = argument.key.name;
+      //     window.open(url, "_blank", );
+      // }
+    }
+
+
+
+    window.onClickGiniHomeProducts = function(that, event){
+      console.log("================= on click onClickGiniProducts ==================");
+      let argument = JSON.parse(that.getAttribute("data"));
+      console.log("@@@ argument  : ", argument);
+
+    }
+
+    window.onClickParts = function(that, event){
+      console.log("******** onclick SETTINGS ********");
+      console.log("@@@@ EVENT :: ", event);
+      console.log("@@@ that  ::  ", that);
+      let element = document.getElementById(that.id);
+      let customData = JSON.parse(that.dataset.all);
+      if(customData.selected){
+          customData.selected = false;
+          let dataSet = JSON.stringify(customData);
+          element.setAttribute('data-all', dataSet);
+          console.log("@@@ false section ");
+          document.getElementById(that.id).style.background = 'white';
+          document.getElementById(that.id).style.color = 'black';
+          document.getElementById(that.id).querySelectorAll(".icon")[1].style.color = 'var(--default-theme-color)';
+      }else{
+          customData.selected = true;
+          let dataSet = JSON.stringify(customData);
+          element.setAttribute('data-all', dataSet);
+          document.getElementById(that.id).style.background = 'var(--default-theme-color)';
+          document.getElementById(that.id).style.color = 'white';
+          document.getElementById(that.id).querySelectorAll(".icon")[1].style.color = 'white';
+      }
+    }
+
+    window.openSectionsSetupModal = function(){
+        console.log("********  call open sections setup modal *********");
+        $("#setupSectionsModal").modal();
+
+    }
+
+    window.onClickSetupProfile = function(that, event, state){
+          console.log("********  call on click edit profile  *********");
+          if(state === 'edit_profile'){
+              console.log(" eeddiitt localStorage.activeSectionsData : ", localStorage.activeSectionsData);
+              // document.getElementById("menu_editProfile").style.display = 'none';
+              // document.getElementById("menu_previewProfile").style.display = 'block';
+
+              localStorage.activeSectionsData.values.splice(localStorage.activeSectionsData.values.length - 1, 1);
+              inittial_setup(localStorage.activeSectionsData, true);
+              // window.open('http://localhost:4000/edit', "_blank", );
+          }else if(state === 'preview_profile'){
+              console.log("==== preview prifile ====");
+              let settingSection = {
+                section: {name: 'settings', id: '', class: '', style: ''},
+                menu: {name: 'Sections You Like', style: '', method: '', icon: {name: 'envelope',type: 'bx', style: ''}},
+                block: {class: '', style: ''},
+                loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+                template: {style: ''}
+              };
+              // document.getElementById("menu_editProfile").style.display = 'block';
+              // document.getElementById("menu_previewProfile").style.display = 'none';
+              localStorage.activeSectionsData.values.push(settingSection);
+              inittial_setup(localStorage.activeSectionsData, false);
+          }else if(state === 'open_profile'){
+              console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+              // console.log("@@@@ activeSectionsData : ", localStorage.activeSectionsData);
+              window.open("http://localhost:4000/me", "_blank", );
+
+          }else if(state === 'setup_theme'){
+              console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+              socket.emit("request-generic-portfolio", {apiRef : 'theme_section', sectionName: 'theme_section', blockId: null, templateId: null, loaderId: null, edit: false, application: application});
+              $("#setupThemeModal").modal();
+
+          }else if(state === 'close-themeing-modal'){
+            console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            $('#setupThemeModal').modal('hide');
+
+          }else if(state === 'apply_theme_changes'){
+            let themeColor = document.getElementById("defaultThemeColor").value;
+            let themeBgColor = document.getElementById("defaultThemeBgColor").value;
+            localStorage.themeBgColor = themeBgColor;
+            let themeCardBgColor = document.getElementById("themeCardBgColor").value;
+            let themeFontColor = document.getElementById("defaultThemeFontColor").value;
+            let themeMenuFontColor = document.getElementById("defaultThemeMenuFontColor").value;
+            let themeMenuBgColor = document.getElementById("defaultThemeMenuBgColor").value;
+            let themeMenuOnHoverFontColor = document.getElementById("themeMenuOnHoverFontColor").value;
+            let themeMenuOnHoverBgColor = document.getElementById("themeMenuOnHoverBgColor").value;
+            let themePrimaryColor = document.getElementById("themePrimaryColor").value;
+
+              // console.log("@@@ themeColor : ", themeColor);
+              // console.log("@@@ themeBgColor : ", themeBgColor);
+              // console.log("@@@ themeFontColor : ", themeFontColor);
+              // console.log("@@@ themeMenuFontColor : ", themeMenuFontColor);
+              // console.log("@@@ themeMenuBgColor : ", themeMenuBgColor);
+              // console.log("@@@ themeMenuOnHoverFontColor : ", themeMenuOnHoverFontColor);
+              // console.log("@@@ themeMenuOnHoverBgColor : ", themeMenuOnHoverBgColor);
+
+              let newTheme = {
+                themeColor : themeColor,
+                themeBgColor : themeBgColor,
+                themeCardBgColor: themeCardBgColor,
+                themeFontColor : themeFontColor,
+                themeMenuFontColor : themeMenuFontColor,
+                themeMenuBgColor : themeMenuBgColor,
+                themeMenuOnHoverFontColor : themeMenuOnHoverFontColor,
+                themeMenuOnHoverBgColor : themeMenuOnHoverBgColor,
+                themePrimaryColor : themePrimaryColor
+              };
+              setup_default_theme(newTheme);
+              applyNewTheme(newTheme);
+              $('#setupThemeModal').modal('hide');
+
+          }else if(state === 'apply_store_theme'){
+              console.log("======= calling apply store theme  =======");
+              console.log("@@@ id : ", that.id);
+              let tempid = that.id.split("-");
+              let theme = that.getAttribute("data");
+              theme = JSON.parse(theme);
+              // console.log("@@@@ data :: ", theme.themeColor);
+              setup_default_theme(theme);
+              applyNewTheme(theme);
+              $('#setupThemeModal').modal('hide');
+              let payload = {
+                apiRef : 'update_block_data',
+                actionType : 'apply_store_theme',
+                sectionName : tempid[0].split("_")[1]+'_'+tempid[0].split("_")[2],
+                sectionIndex: parseInt(tempid[1]),
+                partsIndex: parseInt(tempid[2]),
+                itemIndex: parseInt(tempid[3]),
+                application: application
+              }
+              console.log("@@@ payload : ", payload);
+              socket.emit("request-generic-portfolio", payload);
+          }else if(state === 'custom_theme_section'){
+              console.log("@@@ btn id : ", that.id);
+              let tempid = that.id.split("-");
+              let nextItemIndex = tempid[0]+'-'+tempid[1]+'-'+tempid[2]+'-'+(parseInt(tempid[3])+1);
+              nextItemIndex = nextItemIndex.replace("element", "item")
+              let currentItemid = that.id.replace("element", "item");
+              // console.log("@@@ nextItemIndex : ", nextItemIndex);
+              document.getElementsByClassName("custom_theme_section")[0].style.display = "block";
+              document.getElementsByClassName("custom_theme_store")[0].style.display = "none";
+              document.getElementById(currentItemid).classList.add("custom-theme-bb-2");
+              document.getElementById(nextItemIndex).classList.remove("custom-theme-bb-2");
+              let payload = {
+                apiRef : 'update_block_data',
+                actionType : 'save_item_isselected',
+                sectionName : tempid[0].split("_")[1]+'_'+tempid[0].split("_")[2],
+                sectionIndex: parseInt(tempid[1]),
+                partsIndex: parseInt(tempid[2]),
+                itemIndex: parseInt(tempid[3]),
+                application: application
+              }
+              console.log("@@@ payload : ", payload);
+              socket.emit("request-generic-portfolio", payload);
+          }else if(state === 'custom_theme_store'){
+              console.log("@@@ btn id : ", that.id);
+              let tempid = that.id.split("-");
+              let prevItemIndex = tempid[0]+'-'+tempid[1]+'-'+tempid[2]+'-'+((tempid[3])-1);
+              console.log("@@@ tempid[0] :: ", tempid[0]);
+              prevItemIndex = prevItemIndex.replace("element", "item");
+              let currentItemid = that.id.replace("element", "item");
+              // console.log("@@@ prevItemIndex : ", prevItemIndex);
+              document.getElementsByClassName("custom_theme_section")[0].style.display = "none";
+              document.getElementsByClassName("custom_theme_store")[0].style.display = "block";
+              document.getElementById(currentItemid).classList.add("custom-theme-bb-2");
+              document.getElementById(prevItemIndex).classList.remove("custom-theme-bb-2");
+
+              let payload = {
+                apiRef : 'update_block_data',
+                actionType : 'save_item_isselected',
+                sectionName : tempid[0].split("_")[1]+'_'+tempid[0].split("_")[2],
+                sectionIndex: parseInt(tempid[1]),
+                partsIndex: parseInt(tempid[2]),
+                itemIndex: parseInt(tempid[3]),
+                application: application
+              }
+              console.log("@@@ payload : ", payload);
+              socket.emit("request-generic-portfolio", payload);
+          }
+      }
+
+    window.onClickUpdateSection = function(sectionName){
+        console.log("=== on click update section ===");
+        console.log("@@@ section name : ", sectionName);
+        console.log("@@@ section data :: ", sectionData);
+        socket.emit("request-generic-portfolio", {apiRef : 'update_section_data', sectionName: sectionName, sectionData: sectionData, application: application});
+    }
+
+    window.onKeyUpInputProperties = function(event, sectionName, sectionIndex, partsIndex, itemIndex, propName){
+        console.log("====== on key up input properties =======");
+        console.log("@@@ sectionName :: ", sectionName);
+        console.log("@@@ secIndex :: ", sectionIndex);
+        console.log("@@@ partsIndex :: ", partsIndex);
+        console.log("@@@ itemIndex :: ", itemIndex);
+        console.log("@@@ propName :: ", propName);
+
+        socket.emit("request-generic-portfolio", {apiRef : 'update_block_data', actionType: 'edit_block_item', sectionName : sectionName, sectionIndex: sectionIndex, partsIndex: partsIndex,  itemIndex: itemIndex, propName: propName, propValue: event.target.value, application: application});
+    }
+
+    window.oncickEditJson = function(event, from){
+        // console.log("@@@ from :: ", from);
+        if(from === "html"){
+            document.getElementById("jsonViewerBlock"). style.display = "none";
+            document.getElementById("editable"). style.display = "block";
+        }else if(from === "code"){
+            document.getElementById("jsonViewerBlock"). style.display = "block";
+            document.getElementById("editable"). style.display = "none";
+        }else if(from === 'save'){
+          let sectionData = document.getElementById("jsonViewer").value;
+          console.log("@@@ sectionData :: ", sectionData);
+          socket.emit("request-generic-portfolio", {apiRef : 'update_section_data', sectionData: sectionData, application: application});
+
+        }
+    }
+
+    window.onClickThreeDotsBtn = function(event, sectionName, sectionIndex, partsIndex, itemIndex, propName, id){
+        console.log("====== on click three dots btn  =======");
+        console.log("@@@ secIndex :: ", sectionIndex);
+        console.log("@@@ partsIndex :: ", partsIndex);
+        console.log("@@@ itemIndex :: ", itemIndex);
+        console.log("@@@ propName :: ", propName);
+        console.log("@@@ sectionName :: ", sectionName);
+        console.log("@@@ currentOnClickThreeDotsState length :: ", currentOnClickThreeDotsState.length);
+        console.log("@@@ currentOnClickThreeDotsState  :: ", currentOnClickThreeDotsState);
+        let threeDotsId = "three_dots_"+id;
+        let itemId = "item_"+id;
+        if(currentOnClickThreeDotsState.id !== undefined && currentOnClickThreeDotsState.id !== ' ' && (currentOnClickThreeDotsState.id === id)){
+            document.getElementById("three_dots_"+id).style.color = "black";
+            document.getElementById("item_"+id).style.border = "none";
+            document.getElementById('popup').style.display = "none";
+            currentOnClickThreeDotsState.id = undefined;
+            return;
+        }
+        if(!isEmpty(currentOnClickThreeDotsState) && currentOnClickThreeDotsState.prevThreeDotsId !== undefined && currentOnClickThreeDotsState.prevThreeDotsId !== null){
+            if(document.getElementById(currentOnClickThreeDotsState.prevThreeDotsId) !== null){
+              document.getElementById(currentOnClickThreeDotsState.prevThreeDotsId).style.color = "black";
+            }
+        }
+        if(currentOnClickThreeDotsState.prevItemId !== undefined){
+            if(document.getElementById(currentOnClickThreeDotsState.prevItemId) !== null){
+              document.getElementById(currentOnClickThreeDotsState.prevItemId).style.border = "none";
+            }
+        }
+        currentOnClickThreeDotsState.sectionName = sectionName;
+        currentOnClickThreeDotsState.sectionIndex = sectionIndex;
+        currentOnClickThreeDotsState.partsIndex = partsIndex;
+        currentOnClickThreeDotsState.itemIndex = itemIndex;
+        currentOnClickThreeDotsState.propName = propName;
+        currentOnClickThreeDotsState.id = id;
+        currentOnClickThreeDotsState.prevThreeDotsId = threeDotsId;
+        currentOnClickThreeDotsState.prevItemId = itemId;
+
+        document.getElementById(threeDotsId).style.color = "var(--default-theme-color)";
+        document.getElementById(itemId).style.border = "2px solid var(--default-theme-color)";
+
+        let left = event.pageX - (300 + 6);
+        let top = event.pageY + 'px';
+        currentOnClickThreeDotsState.popupPosition = {left: left, top: top};
+        left = left + 'px';
+        currentOnClickThreeDotsState.popupPosition = {left: left, top: top};
+
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("popup").style.position = "absolute";
+        document.getElementById("popup").style.left = left;
+        document.getElementById("popup").style.top = top;
+        document.getElementById("popup").style.zIndex = "99";
+    }
+
+    window.showHideThreeDotsbtn = function(event, eventType, elementType){
+        // console.log("=========== on click show hide three dots button ==========");
+        // console.log("@@@ this :: ", event);
+        // console.log("@@@ eventType :: ", eventType);
+        let id = event.id;
+        if(id.indexOf('item') !== -1){
+            id = id.replace('item', 'three_dots');
+            // console.log("!!! id :: ", id );
+        }
+        if(eventType === 'mouse_over'){
+            document.getElementById(id).style.display = "block";
+        }else if(eventType === 'mouse_out'){
+            // console.log("@@@ currentOnClickThreeDotsState.id :: ", currentOnClickThreeDotsState.id);
+            // console.log("@@@ id :: ", id);
+            if(currentOnClickThreeDotsState.id !== undefined && id.indexOf(currentOnClickThreeDotsState.id) !== -1){
+                // console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            }else{
+              document.getElementById(id).style.display = "none";
+            }
+        }
+    }
+
+    window.onClickThreeDotsOption = function(option){
+          console.log("========= on click three dots options ==========");
+          console.log("@@@ option :: ", option );
+          let payload = {
+            apiRef : 'update_block_data',
+            actionType : option,
+            elementId : currentOnClickThreeDotsState.id,
+            sectionName : currentOnClickThreeDotsState.sectionName,
+            sectionIndex: currentOnClickThreeDotsState.sectionIndex,
+            partsIndex: currentOnClickThreeDotsState.partsIndex,
+            itemIndex: currentOnClickThreeDotsState.itemIndex,
+            propName: null,
+            propValue: null,
+            application: application
+          }
+          if(option === 'delete_item'){
+              let id = currentOnClickThreeDotsState.id;
+              let itemId = 'item_'+id;
+              console.log("id :: ", id);
+              let threeDotsId = "three_dots_"+id;
+              document.getElementById(itemId).style.display = "none";
+              socket.emit("request-generic-portfolio", payload);
+          }else if(option === "add_item_on_top" || option === "add_item_on_below" || option === "add_similar_item_on_top" || option === "add_similar_item_on_below"){
+              socket.emit("request-generic-portfolio", payload);
+          }else if(option === "edit_item_style" ){
+              localStorage.currentStyleEditorType = "item";
+              socket.emit("request-generic-portfolio", payload);
+              // socket.on("response-action-edit-style", (data) => {
+              //     console.log("@@@@@ data :: ", data);
+              //     let style = data.style.split(";");
+              //     localStorage.currentEditedStyleArr = style;
+              //     let template = convertRawStyleToEditedStyleTemplate(style);
+              //     showEditStylePopup(template);
+              // });
+          }else if(option === 'delete_section' || option === 'add_section_right' || option === 'add_section_left'){
+              console.log("==== calling delete _ section ====");
+              let id = currentOnClickThreeDotsState.prevSectionThreeDotsId;
+              let payload = {
+                apiRef : 'update_block_data',
+                actionType : option,
+                elementId : currentOnClickThreeDotsState.prevSectionThreeDotsId,
+                sectionName : id.split("-")[0].replace("part_three_dots_", ""),
+                sectionIndex: parseInt(id.split("-")[1]),
+                partsIndex: parseInt(id.split("-")[2]),
+                itemIndex: null,
+                propName: null,
+                propValue: null,
+                application: application
+              }
+
+              document.getElementById("sectionPopup").style.display = "none";
+              console.log("@@@ payload :: ", payload);
+              socket.emit("request-generic-portfolio", payload);
+          }else if(option === "edit_part_style"){
+              console.log("44444444444444444444444444444444444444444444444444444");
+              if(localStorage.current_Part_Threedots_state !== undefined && localStorage.current_Part_Threedots_state !== null && localStorage.current_Part_Threedots_state !== ''){
+                  let payload = {
+                    apiRef : 'update_block_data',
+                    actionType : option,
+                    elementId : currentOnClickThreeDotsState.id,
+                    sectionName : localStorage.current_Part_Threedots_state.sectionName,
+                    sectionIndex: localStorage.current_Part_Threedots_state.sectionIndex,
+                    partsIndex: localStorage.current_Part_Threedots_state.partsIndex,
+                    itemIndex: null,
+                    propName: null,
+                    propValue: null,
+                    application: application
+                  }
+                  console.log("@@@ payload :: ", payload);
+                  localStorage.currentStyleEditorType = "part";
+                  socket.emit("request-generic-portfolio", payload);
+              }
+
+                    // let template = "I am part style for edit...."
+                    // showEditStylePopup(template);
+          }
+          // document.getElementById("popup").style.display = "none";
+          if(option.includes("item")){
+              document.getElementById("popup").style.display = "none";
+          }else if(option.includes("section") || option.includes("part")){
+              document.getElementById("sectionPopup").style.display = "none";
+          }
+
+
+      }
+
+    window.onClickSaveStyles = function(sectionName, sectionIndex, partsIndex, itemIndex, actionType){
+        console.log("===== calling onClickSaveStyles fun =====");
+        console.log("@@@ sectionName : ", sectionName);
+        console.log("@@@ sectionIndex : ", sectionIndex);
+        console.log("@@@ partsIndex : ", partsIndex);
+        console.log("@@@ itemIndex : ", itemIndex);
+        console.log("@@@ actionType : ", actionType);
+        let id = sectionName+'-'+sectionIndex+'-'+partsIndex+'-'+itemIndex;
+        console.log("@@@ id :: ", id);
+        let itemId = 'item_'+id;
+        let inputId = 'input_'+id;
+        let threeDotsId = 'three_dots_'+id;
+        let itemStyle = document.getElementById("itemStyle").value;
+        let secStyle = document.getElementById("sectionStyle").value;
+        itemStyle = convertCSStoStringTemplate(itemStyle);
+        secStyle = convertCSStoStringTemplate(secStyle);
+        if(actionType === "preview"){
+            let item = sectionData.block.sections[sectionIndex].parts[partsIndex].desc[itemIndex];
+            document.getElementById(inputId).style = itemStyle;
+            document.getElementById(itemId).style = secStyle;
+            sectionData.block.sections[sectionIndex].parts[partsIndex].desc[itemIndex].key.style = itemStyle;
+            sectionData.block.sections[sectionIndex].parts[partsIndex].desc[itemIndex].secStyle = secStyle;
+            document.getElementById("editStylePopup").style.display = 'none';
+        }else if(actionType === 'save'){
+            let payload = {
+              apiRef : 'update_block_data',
+              actionType : 'save_updated_style',
+              sectionName : sectionName,
+              sectionIndex: sectionIndex,
+              partsIndex: partsIndex,
+              itemIndex: itemIndex,
+              itemStyle : itemStyle,
+              secStyle : secStyle,
+              propName: null,
+              propValue: null,
+              application: application
+            }
+            document.getElementById(inputId).style = itemStyle;
+            document.getElementById(itemId).style = secStyle;
+            document.getElementById("setupSectionsModal").style.display = 'none';
+            socket.emit("request-generic-portfolio", payload);
+            // document.getElementById("editStylePopup").style.display = 'none';
+        }
+        document.getElementById(threeDotsId).style.color = "black";
+        document.getElementById(itemId).style.border = "none";
+
+      }
+
+    window.onClickAddNewSection = function(that, event){
+        console.log("======= calling on click add ne section =======");
+        document.getElementById("custom_overlay_block").style.width = "100%";
+        let payload = {
+          apiRef : 'get_section_template',
+          actionType : 'section_template',
+          sectionName : "createNewSectionModal_section",
+          blockId: 'custom_overlay_block',
+          loaderId: 'custom_overlay_loader',
+          templateId: 'custom_overlay_template',
+          edit: false,
+          application: application
+        }
+        socket.emit("request-generic-portfolio", payload);
+    }
+
+    window.onClickCreateNewSection = function(that, event){
+        console.log("======= calling on click create new section ========");
+        console.log("@@@ id : ", that.id);
+        let argument = that.getAttribute("data");
+        argument = JSON.parse(argument);
+        console.log("@@@ argument : ", argument);
+        if(argument.state === 'create_new_section'){
+            if(argument.mapToId !== undefined && argument.mapToId !== ''){
+                let mapToIdVal = document.getElementById(argument.mapToId).value;
+                console.log("@@@@ mapToIdVal : ", mapToIdVal);
+                let payload = {
+                  apiRef : 'create_new_section',
+                  actionType : 'save_new_section_data',
+                  referenceSection: 'dummyNewSectionTemplate_section',
+                  sectionName : mapToIdVal,
+                  application: application
+                }
+                closeNav();
+                socket.emit("request-generic-portfolio", payload);
+                $('#setupSectionsModal').modal('hide');
+
+            }
+        }
+    }
+
+    window.onKeyUpInputs = function(that, event, state){
+        console.log("======== calling on key up inputs ========");
+        console.log("@@@ id : ", that.id);
+        let argument = that.getAttribute("data");
+        if(argument !== undefined && argument !== null ){
+              argument = JSON.parse(argument);
+        }
+        console.log("@@@ argument :: ", argument);
+        if(state === 'input_new_section_name'){
+            document.getElementById(argument.hideTextId).style.display = 'none';
+            document.getElementById(argument.enableBtnId).disabled = false;
+            document.getElementById(argument.enableBtnId).classList.remove(argument.removeClass);
+            document.getElementById(argument.enableBtnId).classList.add(argument.addClass);
+
+        }
+    }
+
+    window.onclickSynsFile = function(){
+        console.log("66666666666666666  on click onclickSynsFile  66666666666666666");
+        let payload = {
+          apiRef : 'sync_portfolio_file',
+          actionType : 'update_portfolio_file',
+          application: application
+        }
+        socket.emit("request-generic-portfolio", payload);
+    }
+
+    window.allowDrop = function(that, ev) {
+      // console.log("!!!!!!!!!!!!! calling allow drop fun...");
+      // console.log("!!!!! allowdrop id : ", that.id);
+      ev.preventDefault();
+    }
+
+    window.drag = function(that, ev) {
+      console.log("!!!!!!!!!!!!! calling drag fun...");
+      // console.log("!!!!! drag event : ", ev);
+      // console.log("!!!!! drag that : ", that);
+      console.log("!!!!! drag id : ", that.id);
+
+      // ev.dataTransfer.setData("dragid", getPartIndexById(that.id));
+      ev.dataTransfer.setData("dragid", getGragAndDropIdById(that.id));
+
+    }
+
+    window.drop = function(that, ev) {
+      console.log("!!!!!!!!!!!!! calling drop fun...");
+      // console.log("!!!!! drop event : ", ev);
+      // console.log("!!!!! drop that : ", that);
+
+      ev.preventDefault();
+      var dragId = ev.dataTransfer.getData("dragid");
+      console.log("@@@@@@@@@@@@@ 1111111111111111 : ", dragId);
+      // let newDragId = getGragAndDropIdById(dragId)
+      let x = dragId.split(",");
+      x = parseInt(x[1]);
+      let dropId = getPartIndexById(that.id);
+      let sectionName = getSectionNameId(that.id);
+      console.log("!!!! dragId : ", x);
+      console.log("!!!! dropid : ", dropId);
+      console.log("!!!! drop sectionName : ", sectionName);
+      let payload = {
+        apiRef : 'update_block_data',
+        actionType : "settings_drag_and_drop",
+        sectionName: sectionName,
+        dragId : dragId,
+        dropId : getGragAndDropIdById(that.id),
+        application: application
+        // newDragId : dragId,
+        // newDropId : getGragAndDropIdById(that.id),
+
+      }
+      console.log("@@@ payload : ", payload);
+      socket.emit("request-generic-portfolio", payload);
+      // ev.target.appendChild(document.getElementById(data));
+    }
+
+    window.onClickHeaderNavigation = function(that, event){
+        console.log("============ calling onClickHeaderNavigation =============");
+        // console.log("@@@ that: ", that);
+        // console.log("@@@ event :: ", event);
+        let isSectionsEdit = false;
+        let argument = that.getAttribute("data");
+        argument = JSON.parse(argument);
+        // console.log("@@@ data : ", argument);
+        let sectionsData = argument.mapToSectionsData;
+        if(argument.isSectionsEdit !== undefined && argument.isSectionsEdit !== null && argument.isSectionsEdit !== '' && argument.isSectionsEdit === true){
+            isSectionsEdit = argument.isSectionsEdit;
+        }
+        console.log("@@@ sectionsData : ", sectionsData);
+        let sections = {values: sectionsData, sectionStyle: 'background: #F1F3F6;'}
+        inittial_setup(sections, isSectionsEdit);
+
+        //====== REMOVE ACTIVE CLASS AND ADD NEW ELEMENT ACTIVE CLASS ======
+        let x = document.querySelectorAll(".nav-menu .active");
+        if(document.querySelectorAll(".nav-menu .active").length === 1){
+            document.querySelectorAll(".nav-menu .active")[0].classList.remove("active");
+        }
+        that.classList.add("active");
+
+    }
+
+    window.onChangeDefaultSettings = function(that, event){
+        console.log("=========== on click on change default settings ============");
+        console.log("@@@ that :: ", that);
+        console.log("@@@ that name :: ", that.name);
+        console.log("@@@ event :: ", event);
+        let val = null;
+        let argument = that.getAttribute("data");
+        argument = JSON.parse(argument);
+        if(document.getElementById(that.id)){
+          val = document.getElementById(that.id).value;
+          console.log("country val : ", val);
+          let payload = {
+            apiRef : 'update_defaults_settings',
+            actionType : "",
+            category: argument.defaultCategory,
+            sectionName: argument.updateSectionName,
+            defaultPropToBeUpdate: argument.defaultPropToBeUpdate,
+            newSectionDefaultValue: val,
+            updateSectionName: argument.updateSectionName,
+            application: application,
+            edit: false
+          }
+          console.log("@@@ payload : ", payload);
+          socket.emit("request-generic-portfolio", payload);
+        }
+
+    }
+
+    //     ****************************** END:   G L O B A L _ W I N D O W _ F U N C T I O N S  *********************************
+
+  </script>
+
+
+</body>
+
+</html>

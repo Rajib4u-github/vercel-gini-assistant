@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>iPortfolio Bootstrap Template - Index</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <script src="/socket.io/socket.io.js"></script>
+
+  <!-- Favicons -->
+  <link href="static/img/favicon.png" rel="icon">
+  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="static/vendor/icofont/icofont.min.css" rel="stylesheet"> -->
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="static/vendor/owl.carousel/static/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+  <!-- <link href="static/vendor/font-awesome/font-awesome.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+  <style >
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+      /* body{background: #ACB0B8 !important;} */
+      div.scrollmenu { overflow: auto; white-space: nowrap; transition: 0.3s;}
+      div.scrollmenu a {  display: inline-block; text-decoration: none; vertical-align: top; color: grey;}
+      .category-item{background: #E8EAED; padding: 6px 16px; margin-right: 8px; border-radius: 16px; color: black;}
+      .work-item{width: 24%; float: left; display: inline-block; margin-right: 1%; margin-bottom: 16px;}
+      .work-cat-items-block{display: inline-block; width: 93%;}
+      .work-item{width: 24%; float: left; display: inline-block; margin-right: 1%; margin-bottom: 16px;}
+      .work-cat-left-arrow-block{width: 4%; display: inline-block; position: relative; top: -18px;}
+      .work-cat-right-arrow-block{width: 5%; display: inline-block; position: relative; top: -18px; text-align: center;}
+      /* .work-cat-block{text-align: center;} */
+    @media (min-width: 320px) and (max-width: 480px) {
+      .custom-progress-block, .custom-education-section-degree, .custom-each-education-section, .custom-each-work-exp-section, .testimonial-item, .mob-width-full{width: 100% !important;}
+      .skills .progress{width: 100% !important}
+      .custom-work-img{height: auto; width: 100%;}
+      .work-cat-arrow-block{display: none; width: 3%;}
+      .portfolio-item{width: 100%;}
+    }
+  </style>
+
+  <!-- =======================================================
+  * Template Name: iPortfolio - v1.2.1
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    <div class="custom-header-block" id="custom_header_block">
+      <div class="loader-block" id="custom_header_loader" style="display: block;">
+        <img class="loader-img" src="static/img/generic_portfolio_image/loader/loader_wait.gif"  alt="">
+      </div>
+      <div class="custom-header-template" id="custom_header_template" style="display: none;">
+      </div>
+    </div>
+
+
+
+  <!-- ======= Hero Section ======= -->
+
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Alex Smith</h1>
+      <p id="typedItems">I'm <span class="typed" data-typed-items="Graphic Designer"></span></p>
+    </div>
+  </section>
+
+  <!-- <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1 id="typedProfileName"></h1>
+      <p id="typedItems"></p>
+    </div>
+  </section> -->
+
+  <!-- <section id="hero" class="">
+    <div class="custom-typed-block" id="custom_typed_block">
+      <div class="loader-block" id="custom_typed_loader" style="display: block;">
+        <img class="loader-img" src="static/img/generic_portfolio_image/loader/loader_wait.gif"  alt="">
+      </div>
+      <div class="custom-typed-template" id="custom_typed_template" style="display: none;">
+      </div>
+    </div>
+  </section> -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="custom-about-block" id="custom_about_block">
+        <div class="loader-block" id="custom_about_loader" style="display: block;">
+          <img class="loader-img" src="static/img/generic_portfolio_image/loader/loader_wait.gif"  alt="">
+        </div>
+        <div class="custom-about-template" id="custom_about_template" style="display: none;">
+        </div>
+      </div>
+
+    </section><!-- End About Section -->
+
+    <!-- ======= Facts Section ======= -->
+    <section id="facts" class="facts">
+      <div class="custom-facts-block" id="custom_facts_block">
+        <div class="loader-block" id="custom_facts_loader" style="display: block;">
+          <img class="loader-img" src="static/img/generic_portfolio_image/loader/loader_wait.gif"  alt="">
+        </div>
+        <div class="custom-facts-template" id="custom_facts_template" style="display: none;">
+        </div>
+      </div>
+    </section><!-- End Facts Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+        <div class="custom-skills-block" id="custom_skills_block">
+          <div class="loader-block" id="custom_skills_loader" style="display: block;">
+            <img class="loader-img" src="static/img/generic_portfolio_image/loader/loader_wait.gif"  alt="">
+          </div>
+          <div class="custom-skills-template" id="custom_skills_template" style="display: none;">
+          </div>
+        </div>
+    </section><!-- End Skills Section -->
+
+    <section id="education" class="education">
+      <div class="custom-education-block" id="custom_education_block">
+        <div class="loader-block" id="custom_education_loader" style="display: block;">
+          <img class="loader-img" src="static/img/generic_portfolio_image/loader/loader_wait.gif"  alt="">
+        </div>
+        <div class="custom-education-template" id="custom_education_template" style="display: none;">
+        </div>
+      </div>
+    </section>
+
+    <section id="workExp" class="work-exp">
+      <div class="custom-work-exp-block" id="custom_work_exp_block">
+        <div class="loader-block" id="custom_work_exp_loader" style="display: block;">
+          <img class="loader-img" src="static/img/generic_portfolio_image/loader/loader_wait.gif"  alt="">
+        </div>
+        <div class="custom-work-exp-template" id="custom_work_exp_template" style="display: none;">
+        </div>
+      </div>
+    </section>
+
+    <section>
+        <div class="custom-work-cat-block" id="custom_work_cat_block" data-aos="fade-up">
+          <div class="loader-block" id="custom_work_cat_loader" style="display: block;">
+            <img class="loader-img" src="static/img/generic_portfolio_image/loader/loader_wait.gif"  alt="">
+          </div>
+          <div class="custom_work_cat_template" id="custom_work_cat_template" style="display: none; width: 90%; margin: auto;"></div>
+        </div>
+
+        <div class="custom-new-latest-work-block" id="custom_new_latest_work_block" data-aos="fade-up">
+          <div class="loader-block" id="custom_new_latest_work_loader" style="display: block;">
+            <img class="loader-img" src="static/img/generic_portfolio_image/loader/loader_wait.gif"  alt="">
+          </div>
+          <div class="custom-new-latest-work-template" id="custom_new_latest_work_template" style="display: none; width: 90%; margin: auto;"></div>
+        </div>
+    </section>
+
+
+    <section id="services"  class="services">
+      <div class="custom-services-block" id="custom_services_block">
+        <div class="loader-block" id="custom_services_loader" style="display: block;">
+          <img class="loader-img" src="static/img/generic_portfolio_image/loader/loader_wait.gif"  alt="">
+        </div>
+        <div class="custom-services-template" id="custom_services_template" style="display: none;">
+        </div>
+      </div>
+    </section>
+    <!-- ======= Services Section ======= -->
+
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials"  class="testimonials section-bg">
+      <div class="custom-testimonials-block" id="custom_testimonials_block">
+        <div class="loader-block" id="custom_testimonials_loader" style="display: block;">
+          <img class="loader-img" src="static/img/generic_portfolio_image/loader/loader_wait.gif"  alt="">
+        </div>
+        <div class="custom-testimonials-template" id="custom_testimonials_template" style="display: none;">
+        </div>
+      </div>
+    </section>
+
+    <section id="languages"  class="languages section-bg">
+      <div class="custom-languages-block" id="custom_languages_block">
+        <div class="loader-block" id="custom_languages_loader" style="display: block;">
+          <img class="loader-img" src="static/img/generic_portfolio_image/loader/loader_wait.gif"  alt="">
+        </div>
+        <div class="custom-languages-template" id="custom_languages_template" style="display: none;">
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="custom-contacts-block" id="custom_contacts_block">
+        <div class="loader-block" id="custom_contacts_loader" style="display: block;">
+          <img class="loader-img" src="static/img/generic_portfolio_image/loader/loader_wait.gif"  alt="">
+        </div>
+        <div class="custom-contacts-template" id="custom_contacts_template" style="display: none;">
+        </div>
+      </div>
+    </section>
+
+
+
+  </main>
+
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+  <script src="static/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="static/vendor/counterup/counterup.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/venobox/venobox.min.js"></script>
+  <script src="static/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/vendor/typed.js/typed.min.js"></script>
+  <script src="static/vendor/aos/aos.js"></script>
+  <script src="static/vendor/font-awesome/font-awesome-kit.js"></script>
+
+
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script>
+  <script>
+    var socket = io();
+    let currentSelectedWorkCategory = "Education";
+    (function init(){
+        console.log("============== calling cli ent side init function ===============");
+        // document.getElementById("typedItems").innerHTML = 'Im <span class="typed" data-typed-items="Graphic Designer"></span>';
+        // document.getElementById("typedProfileName").innerHTML = "Rajib karmakar";
+        socket.emit("request-generic-portfolio", {apiRef : 'header_section', blockId: 'custom_header_block', templateId: 'custom_header_template', loaderId: 'custom_header_loader'});
+
+        // socket.emit("request-generic-portfolio", {apiRef : 'typed_section', blockId: 'custom_typed_block', templateId: 'custom_typed_template', loaderId: 'custom_typed_loader'});
+
+        socket.emit("request-generic-portfolio", {apiRef : 'work_cat_list_section', blockId: 'custom_work_cat_block', templateId: 'custom_work_cat_template', loaderId: 'custom_work_cat_loader'});
+
+        socket.emit("request-generic-portfolio", {apiRef : 'work_by_category', blockId: 'custom_new_latest_work_block', templateId: 'custom_new_latest_work_template', loaderId: 'custom_new_latest_work_loader', logoCategory : "Education"});
+
+        socket.emit("request-generic-portfolio", {apiRef : 'about_section', blockId: 'custom_about_block', templateId: 'custom_about_template', loaderId: 'custom_about_loader'});
+
+        socket.emit("request-generic-portfolio", {apiRef : 'facts_section', blockId: 'custom_facts_block', templateId: 'custom_facts_template', loaderId: 'custom_facts_loader'});
+
+        socket.emit("request-generic-portfolio", {apiRef : 'skills_section', blockId: 'custom_skills_block', templateId: 'custom_skills_template', loaderId: 'custom_skills_loader'});
+
+        socket.emit("request-generic-portfolio", {apiRef : 'education_section', blockId: 'custom_education_block', templateId: 'custom_education_template', loaderId: 'custom_education_loader'});
+
+        socket.emit("request-generic-portfolio", {apiRef : 'work_exp_section', blockId: 'custom_work_exp_block', templateId: 'custom_work_exp_template', loaderId: 'custom_work_exp_loader'});
+
+        // socket.emit("request-generic-portfolio", {apiRef : 'latest_work_section', blockId: 'custom_latest_work_block', templateId: 'custom_latest_work_template', loaderId: 'custom_latest_work_loader'});
+
+        socket.emit("request-generic-portfolio", {apiRef : 'services_section', blockId: 'custom_services_block', templateId: 'custom_services_template', loaderId: 'custom_services_loader'});
+
+        socket.emit("request-generic-portfolio", {apiRef : 'testimonials_section', blockId: 'custom_testimonials_block', templateId: 'custom_testimonials_template', loaderId: 'custom_testimonials_loader'});
+
+        socket.emit("request-generic-portfolio", {apiRef : 'languages_section', blockId: 'custom_languages_block', templateId: 'custom_languages_template', loaderId: 'custom_languages_loader'});
+
+        socket.emit("request-generic-portfolio", {apiRef : 'contacts_section', blockId: 'custom_contacts_block', templateId: 'custom_contacts_template', loaderId: 'custom_contacts_loader'});
+
+    })();
+
+
+    socket.on("response-generic-portfolio", (data) => {
+        if(data.blockId !== null && data.blockId !== undefined){
+
+        }
+        if(data.loaderId !== null && data.loaderId !== undefined && data.loaderId !== ''){
+            document.getElementById(data.loaderId).style.display = "none";
+        }
+        if(data.templateId !== null && data.templateId !== undefined && data.templateId !== ''){
+          document.getElementById(data.templateId).style.display = "block";
+          document.getElementById(data.templateId).innerHTML = '';
+          document.getElementById(data.templateId).innerHTML = data.template;
+        }
+    })
+
+    window.onClickworkCategoryArrowIcon = function(event, arrow){
+    if(arrow === "left_arrow"){
+        if(workCategoryStartIndex !== 0){
+            workCategoryStartIndex -= 1;
+            createWordByCategoryList(workCategoryStartIndex, currentSelectedWorkCategory);
+            document.getElementById("workCategory_left_arrow").style.display = "block";
+            document.getElementById("workCategory_right_arrow").style.display = "block";
+        }else if(workCategoryStartIndex === 0){
+          document.getElementById("workCategory_left_arrow").style.display = "none";
+        }else{
+            document.getElementById("workCategory_left_arrow").style.display = "none";
+        }
+    }else if(arrow === "right_arrow"){
+        if(workCategoryStartIndex <= 3){
+            workCategoryStartIndex += 1;
+            createWordByCategoryList(workCategoryStartIndex, currentSelectedWorkCategory);
+            document.getElementById("workCategory_left_arrow").style.display = "block";
+        }else{
+          document.getElementById("workCategory_right_arrow").style.display = "none";
+        }
+    }
+}
+
+window.onClickWorkCatItem = function(event){
+    document.getElementById(currentSelectedWorkCategory).style.background = "#E8EAED";
+    document.getElementById(currentSelectedWorkCategory).style.color = "black";
+    let id = event.target.id;
+    currentSelectedWorkCategory = id;
+    document.getElementById(currentSelectedWorkCategory).style.background = "orange";
+    document.getElementById(currentSelectedWorkCategory).style.color = "white";
+    socket.emit("request-generic-portfolio", {apiRef : 'work_by_category', blockId: 'custom_new_latest_work_block', templateId: 'custom_new_latest_work_template', loaderId: 'custom_new_latest_work_loader', logoCategory : id});
+
+
+}
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+{
+  "version": 3.0,
+  "name": "gini-assistant-products",
+  "builds": [
+    { "src": "server.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/server.js" }
+  ]
+}
+
+

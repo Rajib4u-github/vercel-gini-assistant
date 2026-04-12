@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>iPortfolio Bootstrap Template - Index</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <script src="/socket.io/socket.io.js"></script>
+
+  <!-- Favicons -->
+  <link href="static/img/favicon.png" rel="icon">
+  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="static/vendor/icofont/icofont.min.css" rel="stylesheet"> -->
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="static/vendor/owl.carousel/static/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+  <!-- <link href="static/vendor/font-awesome/font-awesome.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+  <style >
+      :root {
+        /* --default-theme-color: #0F71A1; */
+        --default-theme-color: #6264A7;
+        --default-theme-primary-color: #424242;
+        --default-theme-font-color: #212529;
+        --default-theme-bg-color: #2b68e3;
+        --default-theme-menu-bg-color: #212529;
+        --default-theme-menu-font-color : #212529;
+        --default-theme-on-hover-bg-color: #212529;
+        --default-theme-on-hover-font-color: #212529;
+      }
+
+      /* ::-webkit-scrollbar {
+        width: 0px;
+      } */
+      section {
+          padding: 30px 0;
+          overflow: hidden;
+      }
+      a{color: white;}
+      a:hover {
+        color: var(--default-theme-color);
+        text-decoration: none;
+      }
+
+      .animated {
+          animation: up-down 2s ease-in-out infinite alternate-reverse both;
+      }
+      .fa, .far, .fas {
+          font: normal normal normal 14px/1 FontAwesome;
+      }
+
+      /*  THEMING  CSS  SECTION  */
+      .default-theme-color{color: var(--default-theme-color)};
+      .default-theme-primary-color{color: var(--default-theme-primary-color);}
+      .default-outline-color{outline-color: var(--default-theme-color) !important;}
+      .progress-bar-theme{background-color: var(--default-theme-color) !important;}
+      .default-background-color{background-color: var(--default-theme-color);}
+      .default-theme-bg-color{background-color: var(--default-theme-bg-color);}
+      .default-theme-font-color{color: var(--default-theme-font-color);}
+      .default-theme-menu-bg-color{background-color: var(--default-theme-menu-bg-color);}
+      .default-theme-menu-font-color{color: var(--default-theme-menu-font-color);}
+      .custom-social-links{background: var(--default-theme-color); color: #ffffff;}
+      .custom-social-links:hover{background: #000000; color: var(--default-theme-color);}
+      .custom-profile{color: var(--default-theme-color);}
+      .custom-primary-font-weight{font-weight: 600; color: var(--default-theme-primary-color); }
+
+      /* CUSTOMIZED  BORDER  THEMING */
+      .custom-theme-border{border-left: 0px solid var(--default-theme-color)}
+      .custom-theme-bb-2{border-bottom: 2px solid var(--default-theme-color) !important}
+      .no-outline{outline : none !important;}
+
+      .icon{color: var(--default-theme-color);}
+      .default-theme-border{border: 1px solid var(--default-theme-color)}
+      .custom-menu-icon{background: var(--default-theme-color); color: #ffffff; border-radius: 50px; margin-right: 10px; padding: 5px;}
+      .custom-menu-icon:hover{background: #000000; color: var(--default-theme-color); border-radius: 50px; margin-right: 10px; padding: 5px;}
+
+      .default-theme-menu-font-color:hover{color: var(--default-theme-on-hover-font-color);}
+      .nav-menu .custom-menu:hover{ background: var(--default-theme-on-hover-bg-color); }
+
+      .custom-section-popup{display: none; background: var(--default-theme-color);  width: 300px; height: auto; padding: 20px; font-size: 16px; box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);}
+      .custom-popup{display: none; background: var(--default-theme-color);  width: 300px; height: auto; padding: 20px; font-size: 16px; box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);}
+
+      /* #header { transition: all 0.5s; z-index: 997; padding: 20px 0; } */
+      #jsonViewer {width: 100%;min-height: 30rem;font-family: "Lucida Console", Monaco, monospace;font-size: 0.8rem;line-height: 1.2;}
+
+      #hero h1 {margin: 0 0 10px 0;font-size: 50px;font-weight: 600;line-height: 30px;color: #fff; color: black;}
+      /* #main{margin-left: 0px;} */
+      /* .nav-menu .custom-menu-font:hover{color: white !important;} */
+      /* .nav-menu li:hover > a{color: white !important; background: var(--default-theme-color); border-radius: 50px;}
+      .nav-menu a:hover i {color: white !important;}
+      .nav-menu li:hover > a span{color: white !important;} */
+      .services .icon{float: left;display: flex;align-items: center;justify-content: center;width: 50px;  height: 50px;background: var(--default-theme-color) !important; border: 1px solid var(--default-theme-color) !important;  border-radius: 50%;transition: 0.5s; color: white ;}
+      input[type=text] {border: none; padding: 5px 20px; margin-bottom: 5px; background: var(--default-theme-bg-color) ; outline-color: #0F71A1 !important; }
+      textarea {border: none; padding: 5px 20px; margin-bottom: 5px; background: var(--default-theme-bg-color);  width: 100%; outline-color: #0F71A1 !important;}
+      div.scrollmenu { overflow: auto; white-space: nowrap; transition: 0.3s;}
+      div.scrollmenu a {  display: inline-block; text-decoration: none; vertical-align: top; color: grey;}
+      .category-item{background: #E8EAED; padding: 6px 16px; margin-right: 8px; border-radius: 16px; color: black;}
+      .work-item{width: 24%; float: left; display: inline-block; margin-right: 1%; margin-bottom: 16px;}
+      .workcat-items-block{display: inline-block; width: 93%;}
+      .work-item{width: 24%; float: left; display: inline-block; margin-right: 1%; margin-bottom: 16px;}
+      .work-cat-left-arrow-block{width: 4%; display: inline-block; position: relative; top: -18px;}
+      .work-cat-right-arrow-block{width: 5%; display: inline-block; position: relative; top: -18px; text-align: center;}
+      .single-line-ellipse{white-space: nowrap; width: 80%; overflow: hidden; text-overflow: ellipsis;}
+
+      /* modal related stylesheet */
+      .modal-dialog{ position: relative; max-width: 50% !important; margin-left: 35%;margin-top: 10%;}
+
+      /* ========================================================== */
+      /*--------------------------------------------------------------
+      # Header
+      --------------------------------------------------------------*/
+      #header {
+        transition: all 0.5s;
+        z-index: 997;
+        padding: 0px 0px;
+        overflow: hidden;
+        /* width: 100%; */
+      }
+      .custom-header{width: 100% !important; z-index: 999 !important; bottom: auto !important}
+
+      /* .nav-menu a{color: red !important;} */
+      .custom-menu a{color: var(--default-theme-color) !important;}
+      .custom-nav-menu a{color: white !important;}
+      .nav-menu > ul > li > a:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom: -5px;
+          left: 0;
+          background-color: #fff;
+          visibility: hidden;
+          width: 0px;
+          transition: all 0.3s ease-in-out 0s;
+      }
+      #header.header-scrolled, #header.header-inner-pages {
+        background: rgba(24, 6, 185, 0.8);
+        padding: 12px 0;
+      }
+
+      #header .logo {
+        font-size: 32px;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        font-weight: 400;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      #header .logo a {
+        color: #fff;
+      }
+
+      #header .logo img {
+        max-height: 40px;
+      }
+      .side-bar{width: 300px;}
+      @media (max-width: 992px) {
+        #header {
+          padding: 12px 0;
+        }
+        #header .logo {
+          font-size: 28px;
+        }
+      }
+
+      /*--------------------------------------------------------------
+      # Navigation Menu
+      --------------------------------------------------------------*/
+      /* Desktop Navigation */
+      .nav-menu ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      /* .nav-menu > ul {
+        display: flex;
+      } */
+
+      .nav-menu > ul > li {
+        position: relative;
+        white-space: nowrap;
+        padding: 10px 0 10px 24px;
+      }
+
+      .nav-menu a {
+        display: block;
+        position: relative;
+        color: rgba(255, 255, 255, 0.7);
+        transition: 0.3s;
+        font-size: 15px;
+        font-weight: 600;
+        padding: 0 3px;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .nav-menu > ul > li > a:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: #fff;
+        visibility: hidden;
+        width: 0px;
+        transition: all 0.3s ease-in-out 0s;
+      }
+
+      .nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
+        visibility: visible;
+        width: 100%;
+      }
+
+      .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+        color: #fff;
+      }
+
+      .nav-menu .drop-down ul {
+        display: block;
+        position: absolute;
+        left: 22px;
+        top: calc(100% + 30px);
+        z-index: 99;
+        opacity: 0;
+        visibility: hidden;
+        padding: 10px 0;
+        background: #fff;
+        box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+        transition: 0.3s;
+      }
+
+      .nav-menu .drop-down:hover > ul {
+        opacity: 1;
+        top: 100%;
+        visibility: visible;
+      }
+
+      .nav-menu .drop-down li {
+        min-width: 180px;
+        position: relative;
+      }
+
+      .nav-menu .drop-down ul a {
+        padding: 10px 20px;
+        font-size: 14px;
+        text-transform: none;
+        color: #2c4964;
+      }
+
+      .nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
+        color: #5846f9;
+      }
+
+      .nav-menu .drop-down > a:after {
+        content: "\ea99";
+        font-family: IcoFont;
+        padding-left: 5px;
+      }
+
+      .nav-menu .drop-down .drop-down ul {
+        top: 0;
+        left: calc(100% - 30px);
+      }
+
+      .nav-menu .drop-down .drop-down:hover > ul {
+        opacity: 1;
+        top: 0;
+        left: 100%;
+      }
+
+      .nav-menu .drop-down .drop-down > a {
+        padding-right: 35px;
+      }
+
+      .nav-menu .drop-down .drop-down > a:after {
+        content: "\eaa0";
+        font-family: IcoFont;
+        position: absolute;
+        right: 15px;
+      }
+
+      @media (max-width: 1366px) {
+        .nav-menu .drop-down .drop-down ul {
+          left: -90%;
+        }
+        .nav-menu .drop-down .drop-down:hover > ul {
+          left: -100%;
+        }
+        .nav-menu .drop-down .drop-down > a:after {
+          content: "\ea9d";
+        }
+      }
+
+      /* Get Startet Button */
+      .get-started-btn {
+        margin-left: 25px;
+        color: #fff;
+        border-radius: 5px;
+        padding: 6px 25px 8px 25px;
+        white-space: nowrap;
+        transition: 0.3s;
+        font-size: 14px;
+        font-weight: 600;
+        display: inline-block;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+      }
+
+      .get-started-btn:hover {
+        border-color: #fff;
+        color: #fff;
+      }
+
+      @media (max-width: 992px) {
+        .get-started-btn {
+          margin: 0 48px 0 0;
+          padding: 6px 18px;
+        }
+      }
+
+      /* Mobile Navigation */
+      .mobile-nav-toggle {
+        position: fixed;
+        right: 15px;
+        top: 15px;
+        z-index: 9998;
+        border: 0;
+        background: none;
+        font-size: 24px;
+        transition: all 0.4s;
+        outline: none !important;
+        line-height: 1;
+        cursor: pointer;
+        text-align: right;
+      }
+
+      .mobile-nav-toggle i {
+        color: #fff;
+      }
+
+      .mobile-nav {
+        position: fixed;
+        top: 55px;
+        right: 15px;
+        bottom: 15px;
+        left: 15px;
+        z-index: 9999;
+        overflow-y: auto;
+        background: #fff;
+        transition: ease-in-out 0.2s;
+        opacity: 0;
+        visibility: hidden;
+        border-radius: 10px;
+        padding: 10px 0;
+      }
+
+      .mobile-nav * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .mobile-nav a {
+        display: block;
+        position: relative;
+        color: #2c4964;
+        padding: 10px 20px;
+        font-weight: 500;
+        outline: none;
+      }
+
+      .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
+        color: #5846f9;
+        text-decoration: none;
+      }
+
+      .mobile-nav .drop-down > a:after {
+        content: "\ea99";
+        font-family: IcoFont;
+        padding-left: 10px;
+        position: absolute;
+        right: 15px;
+      }
+
+      .mobile-nav .active.drop-down > a:after {
+        content: "\eaa1";
+      }
+
+      .mobile-nav .drop-down > a {
+        padding-right: 35px;
+      }
+
+      .mobile-nav .drop-down ul {
+        display: none;
+        overflow: hidden;
+      }
+
+      .mobile-nav .drop-down li {
+        padding-left: 20px;
+      }
+
+      .mobile-nav-overly {
+        width: 100%;
+        height: 100%;
+        z-index: 9997;
+        top: 0;
+        left: 0;
+        position: fixed;
+        background: rgba(28, 47, 65, 0.6);
+        overflow: hidden;
+        display: none;
+        transition: ease-in-out 0.2s;
+      }
+
+      .mobile-nav-active {
+        overflow: hidden;
+      }
+
+      .mobile-nav-active .mobile-nav {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .mobile-nav-active .mobile-nav-toggle i {
+        color: #fff;
+      }
+
+
+      /* ========================================================== */
+
+      /* MOBILE SIDE NAV STYLE SET */
+        .mob-side-nav{display: none;}
+      /* ========================== */
+    @media (min-width: 320px) and (max-width: 480px) {
+      .custom-each-education-section, .mob-width-full, .custom-part {width: 100% !important;}
+      .skills .progress{width: 100% !important}
+      .custom-work-img{height: auto; width: 100%;}
+      .work-cat-arrow-block{display: none; width: 3%;}
+      .portfolio-item{width: 100%;}
+      .each-project-section{margin-right: 0px;}
+      .work-cat-left-arrow-block, .work-cat-right-arrow-block{display: none;}
+      .custom-mob-header-block{display: none;}
+      .mob-side-nav{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 300px;
+        transition: all ease-in-out 0.5s;
+        z-index: 99;
+        transition: all 0.5s;
+        padding: 0 15px;
+        background: white;
+        overflow-y: auto;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="header" class="fixed-top custom-header"></header>
+
+  <!-- <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+      <h1>Alex Smith</h1>
+      <div class="element" style="font-size: 44px; color: white; font-weight: 700;"></div>
+  </section> -->
+
+  <div id="typedBlock" class=""></div>
+
+  <main id="main" style="margin-left: 0px;">
+    <div class="">
+        <div class="">
+          <button type="button" class="mobile-nav-toggle d-xl-none" onclick="onClickMobSideNavBtn(this, event)"><i class="fa fa-bars" style="color: red;" aria-hidden="true"></i></button>
+        </div>
+        <div id="mobileSideNavBar" class="mob-side-nav" style="display: none;">
+
+        </div>
+    </div>
+
+    <div class="sections_class default-theme-bg-color default-theme-font-color"  id="sections_block" style="margin-top: 55px;"></div>
+  </main>
+
+  <div class="modal" id="setupSectionsModal">
+
+    <div class="modal-dialog" style="position: relative; max-width: 60% !important; margin-left: 30%; margin-top: 5%;">
+      <div class="modal-content" style="">
+
+        <!-- Modal Header -->
+
+          <div class="modal-header" style="border: none; padding-bottom: 5px !important; ">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+        <!-- Modal body -->
+        <div id="setupSectionsBlock" class="modal-body" style="padding: 5px; padding-left: 20px;padding-right: 20px;">
+
+        </div>
+
+        <!-- Modal Footer -->
+
+      </div>
+    </div>
+
+</div>
+
+
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+  <script src="static/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="static/vendor/counterup/counterup.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/venobox/venobox.min.js"></script>
+  <script src="static/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/vendor/typed.js/typed.min.js"></script>
+  <script src="static/vendor/aos/aos.js"></script>
+  <script src="static/vendor/font-awesome/font-awesome-kit.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script>
+
+  <script>
+    var socket = io();
+    let currentSelectedWorkCategory = "Education";
+    let localStorage = {};
+    let application = "gini_home";
+    function inittial_setup(sections, edit){
+        console.log("################## calling cli ent side init function ===============");
+        console.log("################## sections :: ", sections);
+        let dynamicHeaderMenus = [];
+        let sectionsTemplate = '';
+        sections.values.forEach((item, index) => {
+            dynamicHeaderMenus.push(item.section.name);
+        });
+        sections.values.forEach((item, index) => {
+            let loaderTemplate = '';
+            let request_section_data = {apiRef : item.section.name+'_section', sectionName: item.section.name+'_section', blockId: 'custom_'+item.section.name+'_block', templateId: 'custom_'+item.section.name+'_template', loaderId: 'custom_'+item.section.name+'_loader', edit: edit, myPortfolio: true, application: application};
+
+            if(item.loader.img !== undefined && item.loader.img !== null){
+                loaderTemplate += `<img class="loader-img" src="`+item.loader.img.imgUrl+`"  alt="`+item.loader.alt+`" style="`+item.loader.img.style+`">`;
+            }
+            if(item.section.name === 'work'){
+                  request_section_data.logoCategory = "Education";
+            }
+
+            if(item.section.name === 'typed' || item.section.name === 'settings'){
+                // request_section_data = {apiRef : item.section.name+'_section', blockId: null, templateId: null, loaderId: null, edit: edit}
+                // socket.emit("request-generic-portfolio", request_section_data);
+
+            }else if(item.section.name === 'header'){
+              sectionsTemplate += `
+                      <div class="custom-`+item.section.name+`-block " id="custom_`+item.section.name+`_block" style="`+item.block.style+`">
+                          <div class="loader-block" id="custom_`+item.section.name+`_loader" style="display: block; `+item.loader.style+`">
+                              `+loaderTemplate+`
+                          </div>
+                          <div class="custom-`+item.section.name+`-template `+item.template.class+`" id="custom_`+item.section.name+`_template" style="display: none; `+item.template.style+`"></div>
+                      </div>
+              `;
+              request_section_data.dynamic_header_menus = dynamicHeaderMenus;
+              request_section_data.dynamic_sections = sections;
+              socket.emit("request-generic-portfolio", request_section_data);
+            }else if(item.section.name === 'headerNav'){
+                    request_section_data = {apiRef : item.section.name+'_section', sectionName: item.section.name+'_section', blockId: null, templateId: 'mobileSideNavBar', loaderId: null, edit: edit, application: application};
+                    socket.emit("request-generic-portfolio", request_section_data);
+            }else if(item.section.name === 'mobileSideNavBar'){
+                    request_section_data = {apiRef : item.section.name+'_section', sectionName: item.section.name+'_section', blockId: null, templateId: 'mobileSideNavBar', loaderId: null, edit: edit, application: application};
+                    socket.emit("request-generic-portfolio", request_section_data);
+            }else if(item.section.name !== 'header'){
+              sectionsTemplate += `
+                  <section id="`+item.section.name+`" class="`+item.section.name+`" style="`+item.section.style+`">
+                      <div class="custom-`+item.section.name+`-block " id="custom_`+item.section.name+`_block" style="`+item.block.style+`">
+                          <div class="loader-block" id="custom_`+item.section.name+`_loader" style="display: block; `+item.loader.style+`">
+                                `+loaderTemplate+`
+                          </div>
+                          <div class="custom-`+item.section.name+`-template `+item.template.class+`" id="custom_`+item.section.name+`_template" style="display: none; `+item.template.style+`"></div>
+                      </div>
+                  </section>
+              `;
+              socket.emit("request-generic-portfolio", request_section_data);
+
+            }
+
+        })
+        // console.log("@@@ sectionsTemplate : ", sectionsTemplate);
+        {
+          document.getElementById("sections_block").innerHTML = '';
+          document.getElementById("sections_block").innerHTML = sectionsTemplate;
+          // if(sections.sectionStyle && sections.sectionStyle !== ''){
+          //   document.getElementById("sections_block").style = sections.sectionStyle;
+          // }
+        }
+
+    };
+
+    (function init(){
+        // socket.emit("request-final-portfolio-sections", {});
+        socket.emit("request-gini-home-initial-sections", {});
+        // socket.emit("request-generic-portfolio", {apiRef: 'request_initial_sections', application: 'gini_home'});
+    })();
+
+    socket.on("response-gini-home-initial-sections", (data) => {
+          console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+          console.log("!!! initSections :: ", data.initSections);
+          setup_default_theme(data.defaultStyle);
+          inittial_setup(data.initSections, false);
+    })
+
+    function createTypedSection(data){
+        // console.log("@@@ data :: ", data);
+        // console.log("url: ", data.data.img.url);
+        let typedTxt = data.data.typedText;
+        let typedOptions = data.data.typedOptions;
+        let template = `
+            <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+                <h1 style="`+data.data.profile.style+`">`+data.data.profile.name+`</h1>
+                <div class="element" style="font-size: 44px; color: white; font-weight: 700;"></div>
+            </section>
+        `;
+        //document.getElementById("custom_typed_loader").style.display = "none";
+        document.getElementById("typedBlock").innerHTML = template;
+        // document.getElementById("hero").style.backgroundImage = "url('static/img/me_portfolio/portfolio1.jpg')";
+        if(data.data.img && data.data.img.url !== ''){
+            let url = "url("+data.data.img.url+")";
+            document.getElementById("hero").style.backgroundImage = url;
+        }
+        var typed = new Typed('.element', typedOptions);
+    }
+
+    function setup_default_theme(defaultStyle){
+        console.log("============ calling default style function =============");
+        console.log("@@@ defaultStyle : ", defaultStyle);
+        let root = document.documentElement;
+        root.style.setProperty('--default-theme-color', defaultStyle.themeColor);
+        root.style.setProperty('--default-theme-bg-color', defaultStyle.themeBgColor);
+        root.style.setProperty('--default-theme-font-color', defaultStyle.themeFontColor);
+        root.style.setProperty('--default-theme-menu-bg-color', defaultStyle.themeMenuBgColor);
+        root.style.setProperty('--default-theme-menu-font-color', defaultStyle.themeMenuFontColor);
+        root.style.setProperty('--default-theme-on-hover-bg-color', defaultStyle.themeMenuOnHoverBgColor);
+        root.style.setProperty('--default-theme-on-hover-font-color', defaultStyle.themeMenuOnHoverFontColor);
+        root.style.setProperty('--default-theme-primary-color', defaultStyle.themePrimaryColor);
+
+    }
+
+    socket.on("response-generic-portfolio", (data) => {
+        console.log("!!! data.apiref :: ", data);
+        if(data.apiRef === 'settings_section'){
+          // console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+          // console.log("!!!!@@@@ data : ", data );
+          document.getElementById("setupSectionsBlock").innerHTML = data.template;
+          return;
+        }
+        if(data.apiRef === 'about_section'){
+            // console.log("!!!! data : ", data );
+        }
+        if(data.apiRef === "typed_section"){
+            createTypedSection(data);
+            return;
+        }
+        if(data.apiRef === "update_initial_sections"){
+          updateSettingsBlock();
+          return;
+        }
+        if(data.apiRef === 'request_initial_sections'){
+            console.log("!!! initSections :: ", data.initSections);
+            setup_default_theme(data.defaultStyle);
+            inittial_setup(data.initSections, false);
+        }
+        if(data.apiRef === 'headerNav_section'){
+            // console.log("7777777777777777777777777777777777777777777777777777777777777777777");
+            // console.log("@@@ data :: ", data);
+            document.getElementById("header").innerHTML = data.template;
+            return ;
+        }
+        if(data.apiRef === 'mobileSideNavBar_section'){
+            document.getElementById(data.templateId).innerHTML = data.template;
+            return ;
+        }
+        if(data.blockId !== null && data.blockId !== undefined){
+
+        }
+        if(data.loaderId !== null && data.loaderId !== undefined && data.loaderId !== ''){
+            document.getElementById(data.loaderId).style.display = "none";
+        }
+        if(data.templateId !== null && data.templateId !== undefined && data.templateId !== ''){
+          document.getElementById(data.templateId).style.display = "block";
+          document.getElementById(data.templateId).innerHTML = '';
+          document.getElementById(data.templateId).innerHTML = data.template;
+        }
+
+    })
+
+    window.onClickworkCategoryArrowIcon = function(event, arrow){
+        console.log("======== calling onClickworkCategoryArrowIcon function =========");
+        if(arrow === "left_arrow"){
+            if(workCategoryStartIndex !== 0){
+                workCategoryStartIndex -= 1;
+                createWordByCategoryList(workCategoryStartIndex, currentSelectedWorkCategory);
+                document.getElementById("workCategory_left_arrow").style.display = "block";
+                document.getElementById("workCategory_right_arrow").style.display = "block";
+            }else if(workCategoryStartIndex === 0){
+              document.getElementById("workCategory_left_arrow").style.display = "none";
+            }else{
+                document.getElementById("workCategory_left_arrow").style.display = "none";
+            }
+        }else if(arrow === "right_arrow"){
+            if(workCategoryStartIndex <= 3){
+                workCategoryStartIndex += 1;
+                createWordByCategoryList(workCategoryStartIndex, currentSelectedWorkCategory);
+                document.getElementById("workCategory_left_arrow").style.display = "block";
+            }else{
+              document.getElementById("workCategory_right_arrow").style.display = "none";
+            }
+        }
+      }
+
+    window.onClickWorkCatItem = function(event){
+        console.log(" @@@ event : ", event);
+        document.getElementById(currentSelectedWorkCategory).style.background = "#E8EAED";
+        document.getElementById(currentSelectedWorkCategory).style.color = "black";
+        let id = event.target.id;
+        currentSelectedWorkCategory = id;
+        document.getElementById(currentSelectedWorkCategory).style.background = "var(--default-theme-color)";
+        document.getElementById(currentSelectedWorkCategory).style.color = "white";
+        socket.emit("request-generic-portfolio", {apiRef : 'work_section', sectionName: 'work_section', blockId: 'custom_work_block', templateId: 'custom_work_template', loaderId: 'custom_work_loader', logoCategory : id, application: application});
+
+        // socket.emit("request-generic-portfolio", {apiRef : 'work_by_category', blockId: 'custom_new_latest_work_block', templateId: 'custom_new_latest_work_template', loaderId: 'custom_new_latest_work_loader', logoCategory : id});
+    }
+
+    window.onClickGiniHomeProducts = function(that, event){
+      console.log("================= on click onClickGiniProducts ==================");
+      let argument = JSON.parse(that.getAttribute("data"));
+      console.log("@@@ argument  : ", argument);
+
+    }
+
+    window.onClickRedirectUrl = function(url){
+        // console.log("==== on click redirect url function ====");
+        window.open(url, "_blank", );
+    }
+
+    window.onClickMobSideNavBtn = function(that, event){
+        console.log("====== calling onClickMobSideNavBtn =======");
+        // var x = document.getElementById("mobileSideNavBar").style.display;
+        // console.log("@@@ x : ", x);
+        if(document.getElementById("mobileSideNavBar").style.display === 'block'){
+            document.getElementById("mobileSideNavBar").style.display = 'none';
+        }else if(document.getElementById("mobileSideNavBar").style.display === 'none'){
+            document.getElementById("mobileSideNavBar").style.display = 'block';
+        }
+    }
+
+    window.onClickHeaderNavigation = function(that, event){
+        console.log("============ calling onClickHeaderNavigation =============");
+        // console.log("@@@ that: ", that);
+        // console.log("@@@ event :: ", event);
+        let argument = that.getAttribute("data");
+        argument = JSON.parse(argument);
+        // console.log("@@@ data : ", argument);
+        let sectionsData = argument.mapToSectionsData;
+        // console.log("@@@ sectionsData : ", sectionsData);
+        let sections = {values: sectionsData, sectionStyle: 'background: #F1F3F6;'}
+        inittial_setup(sections, false);
+
+        //====== REMOVE ACTIVE CLASS AND ADD NEW ELEMENT ACTIVE CLASS ======
+        let x = document.querySelectorAll(".nav-menu .active");
+        if(document.querySelectorAll(".nav-menu .active").length === 1){
+            document.querySelectorAll(".nav-menu .active")[0].classList.remove("active");
+        }
+        that.classList.add("active");
+
+    }
+
+    window.onClickMobileSideNavBarItem = function(that, event){
+        console.log("============ calling onClickMobileSideNavBarItem =============");
+        console.log("@@@ that: ", that);
+        console.log("@@@ event :: ", event);
+        let argument = that.getAttribute("data");
+        argument = JSON.parse(argument);
+        // console.log("@@@ data : ", argument);
+        let sectionsData = argument.mapToSectionsData;
+        console.log("@@@ sectionsData : ", sectionsData);
+        let sections = {values: sectionsData, sectionStyle: 'background: #F1F3F6;'}
+        inittial_setup(sections, false);
+
+        if(document.getElementById("mobileSideNavBar").style.display === 'block'){
+            document.getElementById("mobileSideNavBar").style.display = 'none';
+        }else if(document.getElementById("mobileSideNavBar").style.display === 'none'){
+            document.getElementById("mobileSideNavBar").style.display = 'block';
+        }
+
+    }
+
+    window.onClickGiniHomeProducts = function(that, event){
+      console.log("================= on click onClickGiniProducts ==================");
+      let argument = JSON.parse(that.getAttribute("data"));
+      console.log("@@@ argument  : ", argument);
+      if(argument.redirectUrl){
+          window.open(argument.redirectUrl, "_blank", );
+      }
+
+    }
+
+
+    //==========================  THEME  SECTION FUNCTIONALITY  =======================
+    window.onClickSetupProfile = function(that, event, state){
+
+          console.log("********  call on click edit profile  *********");
+          if(state === 'edit_profile'){
+              console.log(" eeddiitt localStorage.activeSectionsData : ", localStorage.activeSectionsData);
+              // document.getElementById("menu_editProfile").style.display = 'none';
+              // document.getElementById("menu_previewProfile").style.display = 'block';
+
+              localStorage.activeSectionsData.values.splice(localStorage.activeSectionsData.values.length - 1, 1);
+              inittial_setup(localStorage.activeSectionsData, true);
+              // window.open('http://localhost:4000/edit', "_blank", );
+          }else if(state === 'preview_profile'){
+              console.log("==== preview prifile ====");
+              let settingSection = {
+                section: {name: 'settings', id: '', class: '', style: ''},
+                menu: {name: 'Sections You Like', style: '', method: '', icon: {name: 'envelope',type: 'bx', style: ''}},
+                block: {class: '', style: ''},
+                loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+                template: {style: ''}
+              };
+              // document.getElementById("menu_editProfile").style.display = 'block';
+              // document.getElementById("menu_previewProfile").style.display = 'none';
+              localStorage.activeSectionsData.values.push(settingSection);
+              inittial_setup(localStorage.activeSectionsData, false);
+          }else if(state === 'open_profile'){
+              console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+              // console.log("@@@@ activeSectionsData : ", localStorage.activeSectionsData);
+              window.open("http://localhost:4000/me", "_blank", );
+
+          }else if(state === 'setup_theme'){
+              console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+              socket.emit("request-generic-portfolio", {apiRef : 'theme_section', sectionName: 'theme_section', blockId: null, templateId: null, loaderId: null, edit: false, application: application});
+              $("#setupThemeModal").modal();
+
+          }else if(state === 'close-themeing-modal'){
+            console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            $('#setupThemeModal').modal('hide');
+
+          }else if(state === 'apply_theme_changes'){
+            let themeColor = document.getElementById("defaultThemeColor").value;
+            let themeBgColor = document.getElementById("defaultThemeBgColor").value;
+            localStorage.themeBgColor = themeBgColor;
+            let themeFontColor = document.getElementById("defaultThemeFontColor").value;
+            let themeMenuFontColor = document.getElementById("defaultThemeMenuFontColor").value;
+            let themeMenuBgColor = document.getElementById("defaultThemeMenuBgColor").value;
+            let themeMenuOnHoverFontColor = document.getElementById("themeMenuOnHoverFontColor").value;
+            let themeMenuOnHoverBgColor = document.getElementById("themeMenuOnHoverBgColor").value;
+            let themePrimaryColor = document.getElementById("themePrimaryColor").value;
+
+              // console.log("@@@ themeColor : ", themeColor);
+              // console.log("@@@ themeBgColor : ", themeBgColor);
+              // console.log("@@@ themeFontColor : ", themeFontColor);
+              // console.log("@@@ themeMenuFontColor : ", themeMenuFontColor);
+              // console.log("@@@ themeMenuBgColor : ", themeMenuBgColor);
+              // console.log("@@@ themeMenuOnHoverFontColor : ", themeMenuOnHoverFontColor);
+              // console.log("@@@ themeMenuOnHoverBgColor : ", themeMenuOnHoverBgColor);
+
+              let newTheme = {
+                themeColor : themeColor,
+                themeBgColor : themeBgColor,
+                themeFontColor : themeFontColor,
+                themeMenuFontColor : themeMenuFontColor,
+                themeMenuBgColor : themeMenuBgColor,
+                themeMenuOnHoverFontColor : themeMenuOnHoverFontColor,
+                themeMenuOnHoverBgColor : themeMenuOnHoverBgColor,
+                themePrimaryColor : themePrimaryColor
+              };
+              setup_default_theme(newTheme);
+              applyNewTheme(newTheme);
+              $('#setupThemeModal').modal('hide');
+
+          }else if(state === 'apply_store_theme'){
+              console.log("======= calling apply store theme  =======");
+              console.log("@@@ id : ", that.id);
+              let tempid = that.id.split("-");
+              let theme = that.getAttribute("data");
+              theme = JSON.parse(theme);
+              // console.log("@@@@ data :: ", theme.themeColor);
+              setup_default_theme(theme);
+              applyNewTheme(theme);
+              $('#setupThemeModal').modal('hide');
+              let payload = {
+                apiRef : 'update_block_data',
+                actionType : 'apply_store_theme',
+                sectionName : tempid[0].split("_")[1]+'_'+tempid[0].split("_")[2],
+                sectionIndex: parseInt(tempid[1]),
+                partsIndex: parseInt(tempid[2]),
+                itemIndex: parseInt(tempid[3]),
+                application: application
+              }
+              console.log("@@@ payload : ", payload);
+              socket.emit("request-generic-portfolio", payload);
+          }else if(state === 'custom_theme_section'){
+              console.log("@@@ btn id : ", that.id);
+              let tempid = that.id.split("-");
+              let nextItemIndex = tempid[0]+'-'+tempid[1]+'-'+tempid[2]+'-'+(parseInt(tempid[3])+1);
+              nextItemIndex = nextItemIndex.replace("element", "item")
+              let currentItemid = that.id.replace("element", "item");
+              // console.log("@@@ nextItemIndex : ", nextItemIndex);
+              document.getElementsByClassName("custom_theme_section")[0].style.display = "block";
+              document.getElementsByClassName("custom_theme_store")[0].style.display = "none";
+              document.getElementById(currentItemid).classList.add("custom-theme-bb-2");
+              document.getElementById(nextItemIndex).classList.remove("custom-theme-bb-2");
+              let payload = {
+                apiRef : 'update_block_data',
+                actionType : 'save_item_isselected',
+                sectionName : tempid[0].split("_")[1]+'_'+tempid[0].split("_")[2],
+                sectionIndex: parseInt(tempid[1]),
+                partsIndex: parseInt(tempid[2]),
+                itemIndex: parseInt(tempid[3]),
+                application: application
+              }
+              console.log("@@@ payload : ", payload);
+              socket.emit("request-generic-portfolio", payload);
+          }else if(state === 'custom_theme_store'){
+              console.log("@@@ btn id : ", that.id);
+              let tempid = that.id.split("-");
+              let prevItemIndex = tempid[0]+'-'+tempid[1]+'-'+tempid[2]+'-'+((tempid[3])-1);
+              console.log("@@@ tempid[0] :: ", tempid[0]);
+              prevItemIndex = prevItemIndex.replace("element", "item");
+              let currentItemid = that.id.replace("element", "item");
+              // console.log("@@@ prevItemIndex : ", prevItemIndex);
+              document.getElementsByClassName("custom_theme_section")[0].style.display = "none";
+              document.getElementsByClassName("custom_theme_store")[0].style.display = "block";
+              document.getElementById(currentItemid).classList.add("custom-theme-bb-2");
+              document.getElementById(prevItemIndex).classList.remove("custom-theme-bb-2");
+
+              let payload = {
+                apiRef : 'update_block_data',
+                actionType : 'save_item_isselected',
+                sectionName : tempid[0].split("_")[1]+'_'+tempid[0].split("_")[2],
+                sectionIndex: parseInt(tempid[1]),
+                partsIndex: parseInt(tempid[2]),
+                itemIndex: parseInt(tempid[3]),
+                application: application
+              }
+              console.log("@@@ payload : ", payload);
+              socket.emit("request-generic-portfolio", payload);
+          }
+      }
+
+      function applyNewTheme(theme){
+          console.log("======== calling the apply New Theme =========");
+          console.log("@@@ theme : ", theme);
+          let payload = {
+            apiRef : "update_theme",
+            theme: theme,
+            sectionName: 'theme_section',
+            application: 'gini_home'
+          }
+          socket.emit("request-generic-portfolio", payload);
+      }
+
+  </script>
+
+
+</body>
+
+</html>

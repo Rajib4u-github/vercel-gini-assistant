@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>iPortfolio Bootstrap Template - Index</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <script src="/socket.io/socket.io.js"></script>
+
+  <!-- Favicons -->
+  <link href="static/img/favicon.png" rel="icon">
+  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="static/vendor/icofont/icofont.min.css" rel="stylesheet"> -->
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="static/vendor/owl.carousel/static/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+  <!-- <link href="static/vendor/font-awesome/font-awesome.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+  <style >
+      :root {
+        --default-theme-color: #0F71A1;
+
+      }
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+      section {
+          padding: 30px 0;
+          overflow: hidden;
+      }
+      a{color: black;}
+      input[type=text] {border: none; padding: 5px 20px; margin-bottom: 5px; background: rgb(241, 243, 246); outline-color: #0F71A1 !important; }
+      textarea {border: none; padding: 5px 20px; margin-bottom: 5px; background: rgb(241, 243, 246);  width: 100%; outline-color: #0F71A1 !important;}
+      div.scrollmenu { overflow: auto; white-space: nowrap; transition: 0.3s;}
+      div.scrollmenu a {  display: inline-block; text-decoration: none; vertical-align: top; color: grey;}
+      .category-item{background: #E8EAED; padding: 6px 16px; margin-right: 8px; border-radius: 16px; color: black;}
+      .work-item{width: 24%; float: left; display: inline-block; margin-right: 1%; margin-bottom: 16px;}
+      .workcat-items-block{display: inline-block; width: 93%;}
+      .work-item{width: 24%; float: left; display: inline-block; margin-right: 1%; margin-bottom: 16px;}
+      .work-cat-left-arrow-block{width: 4%; display: inline-block; position: relative; top: -18px;}
+      .work-cat-right-arrow-block{width: 5%; display: inline-block; position: relative; top: -18px; text-align: center;}
+      .single-line-ellipse{white-space: nowrap; width: 80%; overflow: hidden; text-overflow: ellipsis;}
+      #jsonViewer {
+        width: 100%;
+        min-height: 30rem;
+        font-family: "Lucida Console", Monaco, monospace;
+        font-size: 0.8rem;
+        line-height: 1.2;
+      }
+
+      /* modal related stylesheet */
+      .modal-dialog{ position: relative; max-width: 50% !important; margin-left: 35%;margin-top: 10%;}
+
+    @media (min-width: 320px) and (max-width: 480px) {
+      .custom-progress-block, .custom-education-section-degree, .custom-each-education-section, .custom-each-work-exp-section, .testimonial-item, .mob-width-full, .custom-additional-skill-each-section, .custom-each-fact-section, .each-project-section, .custom-project-header-desc-section, .custom-section {width: 100% !important;}
+      .skills .progress{width: 100% !important}
+      .custom-work-img{height: auto; width: 100%;}
+      .work-cat-arrow-block{display: none; width: 3%;}
+      .portfolio-item{width: 100%;}
+      .each-project-section{margin-right: 0px;}
+      .work-cat-left-arrow-block, .work-cat-right-arrow-block{display: none;}
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <div id="typedBlock" class=""></div>
+
+
+
+  <main id="main">
+    <div id="editStylePopup" style="display: none; background: white; color: black; width: 300px; height: auto; padding: 20px; font-size: 16px; box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);">
+      <div >
+        <div id="editStyleContainer" ></div>
+      </div>
+    </div>
+    <div id="popup" style="display: none; background: white; color: black; width: 300px; height: auto; padding: 20px; font-size: 16px; box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);">
+      <div>
+          <div><a href="#" onclick="onClickThreeDotsOption('delete_item')">Delete Item</a></div>
+          <div><a href="#" onclick="onClickThreeDotsOption('add_item_on_top')">Add Text Field On Top</a></div>
+          <div><a href="#" onclick="onClickThreeDotsOption('add_item_on_below')">Add Text Field Below</a></div>
+          <div><a href="#" onclick="onClickThreeDotsOption('edit_style')">Edit Style</a></div>
+      </div>
+    </div>
+    <div class="sections-settings-block" id="sections_settings_block" style="width: 100%; height: 100px; background: rgb(241, 243, 246);">
+      <!-- <i class="fa fa-html5" aria-hidden="true" style="font-size: 30px; font-weight: 600; color: blue;"></i> -->
+      <div class="" style="float: right; position: relative; top: 30%; right: 100px;">
+          <button id="editJson" type="button" name="button" onclick="oncickEditJson(event, 'html')" style="border: none; padding: 10px 20px; background: white; outline-color: #0F71A1 !important;"><i class="fa fa-html5" aria-hidden="true" style="font-size: 15px; font-weight: 600; font-family: 'fontawesome'; position: relative; right: 6px; "></i>Edit Html</button>
+          <button id="editJson" type="button" name="button" onclick="oncickEditJson(event, 'code')" style="border: none; padding: 10px 20px; background: white; outline-color: #0F71A1 !important;"><i class="fa fa-code" aria-hidden="true" style="font-size: 15px; font-weight: 600; position: relative; right: 6px; "></i> Edit Code</button>
+      </div>
+    </div>
+    <div class="sections_class" id="sections_block" style="display: block;"></div>
+    <div class="json-viewer-block" id="jsonViewerBlock" style="display: none;">
+      <textarea id="jsonViewer">
+      </textarea>
+      <div class="">
+          <button type="button" name="button" onclick="oncickEditJson(event, 'save')" style="height: 40px; border: none; background: var(--default-theme-color); color: white ; font-weight: 600; width: 100%;">Save</button>
+      </div>
+    </div>
+    <div class="sections-action-block" id="sections_action_block"></div>
+
+  </main>
+
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- MODAL SECTION  -->
+
+
+
+  <div class="modal" id="contentEditableModal">
+  <div class="modal-dialog" >
+    <div class="modal-content" style="">
+
+      <!-- Modal Header -->
+      <div class="modal-header" style="border: none; padding-bottom: 5px !important; ">
+        <!-- <h4 class="modal-title">Modal Heading</h4> -->
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body" style="padding: 5px; padding-left: 20px;padding-right: 20px;">
+          <!-- <div id="modalContent" style="text-align: center; color: gray; font-weight: bold;"></div> -->
+          <textarea id="editableContentArea" name="name" rows="8" cols="80"></textarea>
+      </div>
+
+      <!-- Modal footer -->
+      <!-- <div class="modal-footer" style="border: none;">
+        <center> <button type="button" class="btn btn-danger" style="width: 100%;" data-dismiss="modal">Close</button> <center>
+      </div> -->
+
+    </div>
+  </div>
+</div>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+  <script src="static/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="static/vendor/counterup/counterup.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/venobox/venobox.min.js"></script>
+  <script src="static/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/vendor/typed.js/typed.min.js"></script>
+  <script src="static/vendor/aos/aos.js"></script>
+  <script src="static/vendor/font-awesome/font-awesome-kit.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+
+
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script>
+  <script>
+    var socket = io();
+
+    (function init(){
+        console.log("################## calling cli ent side init function ===============");
+        let sectionsTemplate = '';
+        let sidebarMenus = [ "typed", "about", "facts", "services", "skills", "activities", "education", "projects", "workexp", "workcat", "work", "languages", "testimonials", "contacts"];
+        let sections = {
+            values: [
+                {
+                  section: {name: 'header', id: '', class: '', style: ''},
+                  block: {class: '', style: ''},
+                  loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+                  template: {style: ''}
+                },
+                {
+                  section: {name: 'editable', id: 'editable', class: 'facts skills testimonials', style: ''},
+                  block: {class: '', style: ''},
+                  loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+                  template: {style: ''}
+                },
+            ],
+            sectionStyle: 'background: #F1F3F6;',
+        };
+
+        sections.values.forEach((item, index) => {
+            let loaderTemplate = '';
+            let request_section_data = {apiRef : item.section.name+'_section', blockId: 'custom_'+item.section.name+'_block', templateId: 'custom_'+item.section.name+'_template', loaderId: 'custom_'+item.section.name+'_loader', edit: true};
+            if(item.loader.img !== null){
+                loaderTemplate += `<img class="loader-img" src="`+item.loader.img.imgUrl+`"  alt="`+item.loader.alt+`" style="`+item.loader.img.style+`">`;
+            }
+
+            if(item.section.name === 'editable'){
+              sectionsTemplate += `
+                  <section id="`+item.section.id+`" class="`+item.section.class+`" style="`+item.section.style+`">
+                      <div class="custom-`+item.section.name+`-block " id="custom_`+item.section.name+`_block" style="`+item.block.style+`">
+                          <div class="loader-block" id="custom_`+item.section.name+`_loader" style="display: block; `+item.loader.style+`">
+                                `+loaderTemplate+`
+                          </div>
+                          <div class="custom-`+item.section.name+`-template `+item.template.class+`" id="custom_`+item.section.name+`_template" style="display: none; `+item.template.style+`"></div>
+                      </div>
+                  </section>
+              `;
+              request_section_data.apiRef = "about_section";
+              socket.emit("request-generic-portfolio", request_section_data);
+
+            }else if(item.section.name === 'header'){
+              sectionsTemplate += `
+                      <div class="custom-`+item.section.name+`-block " id="custom_`+item.section.name+`_block" style="`+item.block.style+`">
+                          <div class="loader-block" id="custom_`+item.section.name+`_loader" style="display: block; `+item.loader.style+`">
+                              `+loaderTemplate+`
+                          </div>
+                          <div class="custom-`+item.section.name+`-template `+item.template.class+`" id="custom_`+item.section.name+`_template" style="display: none; `+item.template.style+`"></div>
+                      </div>
+              `;
+              request_section_data.dynamic_header_menus = sidebarMenus;
+              socket.emit("request-generic-portfolio", request_section_data);
+
+            }
+
+        })
+
+        {
+          let defaultEditableSection = "about";
+          document.getElementById("sections_block").innerHTML = sectionsTemplate;
+          if(sections.sectionStyle && sections.sectionStyle !== ''){
+            document.getElementById("sections_block").style = sections.sectionStyle;
+          }
+          // document.getElementById("sections_action_block").innerHTML = '';
+          // document.getElementById("sections_action_block").innerHTML = createUpdateBtn(defaultEditableSection);
+        }
+
+    })();
+
+    function createTypedSection(data){
+        let typedTxt = data.data.typedText;
+        let typedOptions = data.data.typedOptions;
+        let template = `
+            <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+                <h1 style="`+data.data.profile.style+`">`+data.data.profile.name+`</h1>
+                <div class="element" style="font-size: 44px; color: white; font-weight: 700;"></div>
+            </section>
+        `;
+        //document.getElementById("custom_typed_loader").style.display = "none";
+        // document.getElementById("typedBlock").innerHTML = template;
+        document.getElementById(data.templateId).innerHTML = '';
+        document.getElementById(data.templateId).innerHTML = template;
+        if(data.data.img && data.data.img.url !== ''){
+            let url = "url("+data.data.img.url+")";
+            document.getElementById("hero").style.backgroundImage = url;
+        }
+        var typed = new Typed('.element', typedOptions);
+    }
+
+    let sectionData = null;
+    let currentOnClickThreeDotsState = {};
+    socket.on("response-generic-portfolio", (data) => {
+        if(data.apiRef === "typed_section"){
+            console.log("@@@ data :: ", data);
+            createTypedSection(data);
+            return;
+        }else if(data.edit){
+            sectionData = data.templateData;
+            console.log("@@@@ edit section template data : ", sectionData);
+        }
+        {
+            if(data.blockId !== null && data.blockId !== undefined){
+
+            }
+            if(data.loaderId !== null && data.loaderId !== undefined && data.loaderId !== ''){
+                document.getElementById(data.loaderId).style.display = "none";
+            }
+            if(data.templateId !== null && data.templateId !== undefined && data.templateId !== ''){
+              document.getElementById(data.templateId).style.display = "block";
+              document.getElementById(data.templateId).innerHTML = '';
+              document.getElementById(data.templateId).innerHTML = data.template;
+              // let prettyJSON = JSON.parse((JSON.stringify(sectionData, null, '\t')));
+              // console.log("@@@ json :: \n\n", (JSON.stringify(JSON.parse(data), null, 2)));
+              //
+              // var textedJson = JSON.stringify(JSON.parse(data), null, 2);
+              $('#jsonViewer').text(JSON.stringify(sectionData, null, 4));
+
+            }
+        }
+    })
+
+    window.onClickworkCategoryArrowIcon = function(event, arrow){
+
+      if(arrow === "left_arrow"){
+          if(workCategoryStartIndex !== 0){
+              workCategoryStartIndex -= 1;
+              createWordByCategoryList(workCategoryStartIndex, currentSelectedWorkCategory);
+              document.getElementById("workCategory_left_arrow").style.display = "block";
+              document.getElementById("workCategory_right_arrow").style.display = "block";
+          }else if(workCategoryStartIndex === 0){
+            document.getElementById("workCategory_left_arrow").style.display = "none";
+          }else{
+              document.getElementById("workCategory_left_arrow").style.display = "none";
+          }
+      }else if(arrow === "right_arrow"){
+          if(workCategoryStartIndex <= 3){
+              workCategoryStartIndex += 1;
+              createWordByCategoryList(workCategoryStartIndex, currentSelectedWorkCategory);
+              document.getElementById("workCategory_left_arrow").style.display = "block";
+          }else{
+            document.getElementById("workCategory_right_arrow").style.display = "none";
+          }
+      }
+}
+
+window.onClickWorkCatItem = function(event){
+    document.getElementById(currentSelectedWorkCategory).style.background = "#E8EAED";
+    document.getElementById(currentSelectedWorkCategory).style.color = "black";
+    let id = event.target.id;
+    currentSelectedWorkCategory = id;
+    document.getElementById(currentSelectedWorkCategory).style.background = "var(--default-theme-color)";
+    document.getElementById(currentSelectedWorkCategory).style.color = "white";
+    socket.emit("request-generic-portfolio", {apiRef : 'work_section', blockId: 'custom_work_block', templateId: 'custom_work_template', loaderId: 'custom_work_loader', logoCategory : id});
+
+    // socket.emit("request-generic-portfolio", {apiRef : 'work_by_category', blockId: 'custom_new_latest_work_block', templateId: 'custom_new_latest_work_template', loaderId: 'custom_new_latest_work_loader', logoCategory : id});
+}
+
+window.onClickRedirectUrl = function(url){
+    // console.log("==== on click redirect url function ====");
+    window.open(url, "_blank", );
+}
+
+window.onclickEditText = function(content, event){
+    console.log("==== calling on click edit txt fun ====");
+    // console.log("@@@@ content : ", content);
+    // console.log("@@@@ event : ", event);
+    $("#contentEditableModal").modal();
+    document.getElementById("editableContentArea").value = content;
+    event.target.innerText = "Hello I am edited world.....";
+}
+
+window.onClickUpdateSection = function(sectionName){
+    console.log("=== on click update section ===");
+    console.log("@@@ section name : ", sectionName);
+    console.log("@@@ section data :: ", sectionData);
+    socket.emit("request-generic-portfolio", {apiRef : 'update_section_data', sectionData: sectionData});
+}
+
+window.onKeyUpInputProperties = function(event, sectionName, sectionIndex, partsIndex, itemIndex, propName){
+    console.log("====== on key up input properties =======");
+    console.log("@@@ sectionName :: ", sectionName);
+    console.log("@@@ secIndex :: ", sectionIndex);
+    console.log("@@@ partsIndex :: ", partsIndex);
+    console.log("@@@ itemIndex :: ", itemIndex);
+    console.log("@@@ propName :: ", propName);
+
+    socket.emit("request-generic-portfolio", {apiRef : 'update_block_data', actionType: 'edit_block_item', sectionName : sectionName, sectionIndex: sectionIndex, partsIndex: partsIndex,  itemIndex: itemIndex, propName: propName, propValue: event.target.value });
+}
+
+function createUpdateBtn(sectionName){
+  console.log("=================================");
+  let template = '';
+  let updateMethod = 'onclick="onClickUpdateSection(\''+sectionName+'\')"';;
+  template += `
+      <div style="text-align: center; width: 100%; margin: 20px 0px;">
+          <button type="button" `+updateMethod+` style="border: none; outline: none !important; padding: 5px 20px; margin-top: 50px; width: 87%; margin: auto; background: #0F71A1; color: white; ">Update `+sectionName+` Section</button>
+      </div>
+  `;
+  return template;
+}
+
+window.onClickSideMenus = function(sideMenu){
+    console.log("=========== on click side menu ============");
+    console.log("@@@@@ sideMenu :: ", sideMenu );
+    let request_section_data = {apiRef : sideMenu+'_section', blockId: 'custom_editable_block', templateId: 'custom_editable_template', loaderId: 'custom_editable_loader', edit: true};
+    socket.emit("request-generic-portfolio", request_section_data);
+    // document.getElementById("sections_action_block").innerHTML = '';
+    // document.getElementById("sections_action_block").innerHTML = createUpdateBtn(sideMenu);
+}
+
+window.oncickEditJson = function(event, from){
+    // console.log("@@@ from :: ", from);
+    if(from === "html"){
+        document.getElementById("jsonViewerBlock"). style.display = "none";
+        document.getElementById("editable"). style.display = "block";
+    }else if(from === "code"){
+        document.getElementById("jsonViewerBlock"). style.display = "block";
+        document.getElementById("editable"). style.display = "none";
+    }else if(from === 'save'){
+      let sectionData = document.getElementById("jsonViewer").value;
+      console.log("@@@ sectionData :: ", sectionData);
+      socket.emit("request-generic-portfolio", {apiRef : 'update_section_data', sectionData: sectionData});
+
+    }
+}
+
+function isEmpty(obj) {
+    for(var key in obj) {
+        if(obj.hasOwnProperty(key))
+            return false;
+    }
+    return true;
+}
+
+window.onClickThreeDotsBtn = function(event, sectionName, sectionIndex, partsIndex, itemIndex, propName, id){
+    console.log("====== on click three dots btn  =======");
+    console.log("@@@ secIndex :: ", sectionIndex);
+    console.log("@@@ partsIndex :: ", partsIndex);
+    console.log("@@@ itemIndex :: ", itemIndex);
+    console.log("@@@ propName :: ", propName);
+    console.log("@@@ sectionName :: ", sectionName);
+    console.log("@@@ currentOnClickThreeDotsState length :: ", currentOnClickThreeDotsState.length);
+    console.log("@@@ currentOnClickThreeDotsState  :: ", currentOnClickThreeDotsState);
+    let threeDotsId = "three_dots_"+id;
+    let itemId = "item_"+id;
+    if(currentOnClickThreeDotsState.id !== undefined && currentOnClickThreeDotsState.id !== ' ' && (currentOnClickThreeDotsState.id === id)){
+        document.getElementById("three_dots_"+id).style.color = "black";
+        document.getElementById("item_"+id).style.border = "none";
+        document.getElementById('popup').style.display = "none";
+        currentOnClickThreeDotsState.id = undefined;
+        return;
+    }
+    if(!isEmpty(currentOnClickThreeDotsState) && currentOnClickThreeDotsState.prevThreeDotsId !== undefined && currentOnClickThreeDotsState.prevThreeDotsId !== null){
+        if(document.getElementById(currentOnClickThreeDotsState.prevThreeDotsId) !== null){
+          document.getElementById(currentOnClickThreeDotsState.prevThreeDotsId).style.color = "black";
+        }
+    }
+    if(currentOnClickThreeDotsState.prevItemId !== undefined){
+        if(document.getElementById(currentOnClickThreeDotsState.prevItemId) !== null){
+          document.getElementById(currentOnClickThreeDotsState.prevItemId).style.border = "none";
+        }
+    }
+    currentOnClickThreeDotsState.sectionName = sectionName;
+    currentOnClickThreeDotsState.sectionIndex = sectionIndex;
+    currentOnClickThreeDotsState.partsIndex = partsIndex;
+    currentOnClickThreeDotsState.itemIndex = itemIndex;
+    currentOnClickThreeDotsState.propName = propName;
+    currentOnClickThreeDotsState.id = id;
+    currentOnClickThreeDotsState.prevThreeDotsId = threeDotsId;
+    currentOnClickThreeDotsState.prevItemId = itemId;
+
+    document.getElementById(threeDotsId).style.color = "var(--default-theme-color)";
+    document.getElementById(itemId).style.border = "2px solid var(--default-theme-color)";
+
+    let left = event.pageX - (300 + 6);
+    let top = event.pageY + 'px';
+    currentOnClickThreeDotsState.popupPosition = {left: left, top: top};
+    left = left + 'px';
+    currentOnClickThreeDotsState.popupPosition = {left: left, top: top};
+
+    document.getElementById("popup").style.display = "block";
+    document.getElementById("popup").style.position = "absolute";
+    document.getElementById("popup").style.left = left;
+    document.getElementById("popup").style.top = top;
+    document.getElementById("popup").style.zIndex = "99";
+}
+
+function convertStringToCSSTemplate(item){
+  let template = '';
+  if(item){
+      if(item.key.name !== ''){
+          console.log("@@@ key style :: ", item.key.style);
+          let strArr = item.key.style.split(";");
+          console.log("@@@ strArr : ", strArr);
+          let height = 'auto';
+          let css = '';
+          css += '{ ';
+          // strArr.forEach((item, index) => {
+          //     css += item+'; ';
+          // });
+          css += item.key.style;
+          css += '}'
+          height = ((strArr.length) * 20 )+'px;';
+          template += `
+            <div>
+              <div class="single-line-ellipse">`+item.key.name+`</div>
+              <div>
+                <textarea id="itemStyle" name="name" style="width: 100%; height: `+height+`">
+                `+css+`
+                </textarea>
+              </div>
+            </div>
+          `
+
+      }
+
+      if(item.secStyle !== ''){
+        let strArr = item.secStyle.split(";");
+        let css = '';
+        css += '{ ';
+        // strArr.forEach((item, index) => {
+        //     css += item+'; \n';
+        // });
+        css += item.secStyle;
+        css += '}'
+        let height = ((strArr.length) * 20 )+'px;';
+        template += `
+          <div>
+            <div class="">Section Style</div>
+            <div>
+              <textarea id="sectionStyle" name="name" style="width: 100%; height: `+height+`">
+              `+css+`
+              </textarea>
+            </div>
+          </div>
+        `
+      }
+      let onClickPreviewMethod = 'onclick="onClickSaveStyles(\''+currentOnClickThreeDotsState.sectionName+'\', \''+currentOnClickThreeDotsState.sectionIndex+'\', \''+currentOnClickThreeDotsState.partsIndex+'\', \''+currentOnClickThreeDotsState.itemIndex+'\', \''+'preview'+'\')"';
+      let onClickSaveMethod = 'onclick="onClickSaveStyles(\''+currentOnClickThreeDotsState.sectionName+'\', \''+currentOnClickThreeDotsState.sectionIndex+'\', \''+currentOnClickThreeDotsState.partsIndex+'\', \''+currentOnClickThreeDotsState.itemIndex+'\', \''+'save'+'\')"';
+
+      template += `
+        <div>
+          <button type="button"  name="" `+onClickPreviewMethod+`  style="border: none; padding: 10px 20px; width: 48%; display: inline-block; text-align: center;">Preview</button>
+          <button type="button"  name=""  `+onClickSaveMethod+` style="border: none; padding: 10px 20px; width: 48%; display: inline-block; text-align: center;">Save</button>
+        </div>
+      `;
+
+  }
+  return template;
+}
+
+function convertCSStoStringTemplate(css){
+    if(css.indexOf("{") !== -1 && css.indexOf("}") !== -1){
+        css = css.replace("{"," ");
+        css = css.replace("}"," ");
+    }
+    return css;
+}
+
+window.showHideThreeDotsbtn = function(event, eventType){
+    // console.log("=========== on click show hide three dots button ==========");
+    // console.log("@@@ this :: ", event);
+    // console.log("@@@ eventType :: ", eventType);
+    let id = event.id;
+    if(id.indexOf('item') !== -1){
+        id = id.replace('item', 'three_dots');
+        // console.log("!!! id :: ", id );
+    }
+    if(eventType === 'mouse_over'){
+        document.getElementById(id).style.display = "block";
+    }else if(eventType === 'mouse_out'){
+        // console.log("@@@ currentOnClickThreeDotsState.id :: ", currentOnClickThreeDotsState.id);
+        // console.log("@@@ id :: ", id);
+        if(currentOnClickThreeDotsState.id !== undefined && id.indexOf(currentOnClickThreeDotsState.id) !== -1){
+            // console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        }else{
+          document.getElementById(id).style.display = "none";
+        }
+    }
+}
+
+window.onClickThreeDotsOption = function(option){
+    console.log("========= on click three dots options ==========");
+    console.log("@@@ option :: ", option );
+    let payload = {
+      apiRef : 'update_block_data',
+      actionType : option,
+      sectionName : currentOnClickThreeDotsState.sectionName,
+      sectionIndex: currentOnClickThreeDotsState.sectionIndex,
+      partsIndex: currentOnClickThreeDotsState.partsIndex,
+      itemIndex: currentOnClickThreeDotsState.itemIndex,
+      propName: null,
+      propValue: null
+    }
+    if(option === 'delete_item'){
+        let id = currentOnClickThreeDotsState.id;
+        let itemId = 'item_'+id;
+        console.log("id :: ", id);
+        let threeDotsId = "three_dots_"+id;
+        document.getElementById(itemId).style.display = "none";
+        socket.emit("request-generic-portfolio", payload);
+
+    }else if(option === "add_item_on_top" || option === "add_item_on_below"){
+
+        socket.emit("request-generic-portfolio", payload);
+    }else if(option === "edit_style"){
+      let item = sectionData.block.sections[currentOnClickThreeDotsState.sectionIndex].parts[currentOnClickThreeDotsState.partsIndex].desc[currentOnClickThreeDotsState.itemIndex];
+      // console.log("@@@ item :: ", item);
+      let id = currentOnClickThreeDotsState.sectionName+'-'+currentOnClickThreeDotsState.sectionIndex+'-'+currentOnClickThreeDotsState.partsIndex+'-'+currentOnClickThreeDotsState.itemIndex;
+      let itemId = 'item_'+id;
+      let inputId = 'input_'+id;
+      // let styleTemplate = createEditStyleTemplate(id);
+      let styleTemplate = convertStringToCSSTemplate(item);
+      if(currentOnClickThreeDotsState.popupPosition && currentOnClickThreeDotsState.popupPosition !== undefined){
+          let left = currentOnClickThreeDotsState.popupPosition.left;
+          left = parseInt(left);
+          left = left - 200;
+          left = left + 'px';
+          let top = currentOnClickThreeDotsState.popupPosition.top;
+          document.getElementById("editStylePopup").style.display = "block";
+          document.getElementById("editStyleContainer").innerHTML = styleTemplate;
+          document.getElementById("editStylePopup").style.position = "absolute";
+          document.getElementById("editStylePopup").style.left = left;
+          document.getElementById("editStylePopup").style.top = top;
+          document.getElementById("editStylePopup").style.zIndex = "99";
+          document.getElementById("editStylePopup").style.width = "500px";
+
+      }
+    }
+    document.getElementById("popup").style.display = "none";
+}
+
+window.onClickSaveStyles = function(sectionName, sectionIndex, partsIndex, itemIndex, actionType){
+  console.log("===== calling onClickSaveStyles fun =====");
+  console.log("@@@ sectionName : ", sectionName);
+  console.log("@@@ sectionIndex : ", sectionIndex);
+  console.log("@@@ partsIndex : ", partsIndex);
+  console.log("@@@ itemIndex : ", itemIndex);
+  console.log("@@@ actionType : ", actionType);
+  let id = sectionName+'-'+sectionIndex+'-'+partsIndex+'-'+itemIndex;
+  console.log("@@@ id :: ", id);
+
+  let itemId = 'item_'+id;
+  let inputId = 'input_'+id;
+  let threeDotsId = 'three_dots_'+id;
+  let itemStyle = document.getElementById("itemStyle").value;
+  let secStyle = document.getElementById("sectionStyle").value;
+  itemStyle = convertCSStoStringTemplate(itemStyle);
+  secStyle = convertCSStoStringTemplate(secStyle);
+  if(actionType === "preview"){
+      let item = sectionData.block.sections[sectionIndex].parts[partsIndex].desc[itemIndex];
+      document.getElementById(inputId).style = itemStyle;
+      document.getElementById(itemId).style = secStyle;
+      sectionData.block.sections[sectionIndex].parts[partsIndex].desc[itemIndex].key.style = itemStyle;
+      sectionData.block.sections[sectionIndex].parts[partsIndex].desc[itemIndex].secStyle = secStyle;
+      document.getElementById("editStylePopup").style.display = 'none';
+  }else if(actionType === 'save'){
+      let payload = {
+        apiRef : 'update_block_data',
+        actionType : 'save_updated_style',
+        sectionName : sectionName,
+        sectionIndex: sectionIndex,
+        partsIndex: partsIndex,
+        itemIndex: itemIndex,
+        itemStyle : itemStyle,
+        secStyle : secStyle,
+        propName: null,
+        propValue: null
+      }
+      document.getElementById(inputId).style = itemStyle;
+      document.getElementById(itemId).style = secStyle;
+      document.getElementById("setupSectionsModal").style.display = 'none';
+      socket.emit("request-generic-portfolio", payload);
+      // document.getElementById("editStylePopup").style.display = 'none';
+  }
+  document.getElementById(threeDotsId).style.color = "black";
+  document.getElementById(itemId).style.border = "none";
+
+}
+
+window.handleBodyEventListener = function(event){
+    console.log("====== call handle event listener ======");
+    console.log("@@@ event:: ", event);
+    // let id = currentOnClickThreeDotsState.id;
+    // document.getElementById(id).style.display = "none";
+    document.getElementById("popup").style.display = "none";
+}
+  </script>
+
+
+</body>
+
+</html>

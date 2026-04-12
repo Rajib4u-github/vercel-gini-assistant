@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>GiniFmV2App</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+
+  <!-- Favicons -->
+  <link href="static/img/favicon.png" rel="icon">
+  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- <link href="static/vendor/icofont/icofont.min.css" rel="stylesheet"> -->
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/venobox/venobox.css" rel="stylesheet">
+  <!-- <link href="static/vendor/owl.carousel/static/owl.carousel.min.css" rel="stylesheet"> -->
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+  <!-- <link href="static/vendor/font-awesome/font-awesome.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+  <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+  <link href="static/css/core/genericFeature.core.client.css" rel="stylesheet">
+  <link href="static/css/giniFmV2/giniFmV2App.css" rel="stylesheet">
+  <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+
+
+  <!-- <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+  <script src="https://unpkg.com/video.js/dist/video.js"></script>
+  <script src="https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
+   -->
+  <link rel="stylesheet" href="https://vjs.zencdn.net/7.5.4/video-js.css">
+
+  <style >
+        :root {
+          /* --default-theme-color: #0F71A1; */
+          --default-theme-color: #6264A7;
+          --default-theme-primary-color: #424242;
+          --default-theme-font-color: #212529;
+          --default-theme-bg-color: #2b68e3;
+          --default-theme-menu-bg-color: #212529;
+          --default-theme-menu-font-color : #212529;
+          --default-theme-on-hover-bg-color: #212529;
+          --default-theme-on-hover-font-color: #212529;
+          --default-theme-disabled-bg-color: #212529;
+        }
+
+        ::-webkit-scrollbar {
+          width: 10px;
+        }
+        section {
+            padding: 30px 0;
+            overflow: hidden;
+        }
+        a{color: white;}
+        <!-- body{background: var(--default-theme-bg-color); } -->
+        body{background: black; }
+
+        a:hover {
+          /* color: var(--default-theme-color); */
+          text-decoration: none;
+        }
+
+        input[type=range]{height: 4px !important; position: relative; top: -8px; accent-color: brown !important;}
+
+  </style>
+  <style>
+  /* input[type="range"] {
+    position: relative;
+    -webkit-appearance: none;
+    width: 48%;
+    margin: 0;
+    padding: 0;
+    height: 19px;
+    margin: 30px 2.5% 20px 2.5%;
+    float: left;
+    outline: none;
+  }
+  input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    background: linear-gradient(to right, rgba(0, 125, 181, 0.6) var(--buffered-width), rgba(0, 125, 181, 0.2) var(--buffered-width));
+  }
+  input[type="range"]::before {
+    position: absolute;
+    content: "";
+    top: 8px;
+    left: 0;
+    width: var(--seek-before-width);
+    height: 3px;
+    background-color: #007db5;
+    cursor: pointer;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    position: relative;
+    -webkit-appearance: none;
+    box-sizing: content-box;
+    border: 1px solid #007db5;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    margin: -7px 0 0 0;
+  }
+  input[type="range"]:active::-webkit-slider-thumb {
+    transform: scale(1.2);
+    background: #007db5;
+  }
+  input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    background: linear-gradient(to right, rgba(0, 125, 181, 0.6) var(--buffered-width), rgba(0, 125, 181, 0.2) var(--buffered-width));
+  }
+  input[type="range"]::-moz-range-progress {
+    background-color: #007db5;
+  }
+  input[type="range"]::-moz-focus-outer {
+    border: 0;
+  }
+  input[type="range"]::-moz-range-thumb {
+    box-sizing: content-box;
+    border: 1px solid #007db5;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  input[type="range"]:active::-moz-range-thumb {
+    transform: scale(1.2);
+    background: #007db5;
+  }
+  input[type="range"]::-ms-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    background: transparent;
+    border: solid transparent;
+    color: transparent;
+  }
+  input[type="range"]::-ms-fill-lower {
+    background-color: #007db5;
+  }
+  input[type="range"]::-ms-fill-upper {
+    background: linear-gradient(to right, rgba(0, 125, 181, 0.6) var(--buffered-width), rgba(0, 125, 181, 0.2) var(--buffered-width));
+  }
+  input[type="range"]::-ms-thumb {
+    box-sizing: content-box;
+    border: 1px solid #007db5;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  input[type="range"]:active::-ms-thumb {
+    transform: scale(1.2);
+    background: #007db5;
+  } */
+  </style>
+  <style>
+      * {
+          box-sizing: border-box;
+      }
+
+      html {
+      height: 100%;
+      }
+
+      body {
+      height: 100%;
+      /* background: linear-gradient(#ffad00 50%, #d58500); */
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      }
+
+      form {
+      width: 600px;
+      height: 350px;
+      margin: -4px -2px;
+      border-radius: 500px;
+      background: linear-gradient(#ffbd00, #ca7900);
+      box-shadow: 0 1px 5px hsla(41, 100%, 40%, 0.3),
+           -3px 25px 25px hsla(41, 100%, 35%, 0.5),
+           -6px 50px 50px hsla(41, 100%, 30%, 0.3),
+           -9px 65px 65px hsla(41, 100%, 20%, 0.3);
+      }
+
+      .toggle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 600px;
+      height: 350px;
+      background: #ffad00;
+      border-radius: 500px;
+      border: solid 5px transparent;
+      background-clip: padding-box;
+      cursor: pointer;
+      }
+
+      .toggle__wrapper {
+      width: 500px;
+      height: 250px;
+      margin: -4px -2px;
+      border-radius: 500px;
+      background: linear-gradient(hsla(39, 100%, 44%, 1), hsla(39, 100%, 42%, 0.1));
+      box-shadow: 0px 5px 1px 0 hsla(41, 100%, 57%, 0.7);
+      }
+
+      .toggle__bg {
+      width: 500px;
+      height: 250px;
+      background: hsla(199, 43%, 59%, 1);
+      background: linear-gradient(to right, hsla(199, 43%, 59%, 1) 50%, hsla(18, 77%, 50%, 1) 50% 100%);
+      background-size: 200% 100%;
+      background-position: 75%;
+      border-radius: 500px;
+      border: solid 5px transparent;
+      background-clip: padding-box;
+      box-shadow: inset 0px 30px 50px 15px hsla(0, 0%, 0%, 0.30);
+      transition: all 0.85s ease-in-out;
+      }
+
+      .toggle__sphere {
+      position: relative;
+      height: 238px;
+      width: 238px;
+      background: hsla(18, 100%, 62%, 1);
+      background:
+      linear-gradient(to right, hsla(199, 43%, 59%, 1) 50%, hsla(18, 77%, 50%, 1) 50% 100%);
+      border-radius: 50%;
+      transform-origin: top left;
+      transform: translateY(1px);
+      box-shadow:
+      2px 0px 5px 1px hsla(18, 77%, 15%, 0.05),
+      0px 10px 10px 1px hsla(18, 77%, 15%, 0.2),
+      -3px 0px 3px 1px hsla(0, 0%, 0%, 0.75);
+      transition: all 0.85s ease-in-out;
+      }
+
+      .toggle__sphere:before,
+      .toggle__sphere:after {
+      content: '';
+      position: absolute;
+      left: calc(50% - 20px);
+      height: 1px;
+      width: 40px;
+      background: hsla(0, 0%, 0%, 0.25);
+      border-radius: 50%;
+      box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.25);
+      }
+
+      .toggle__sphere:before {
+      top: -2px;
+      }
+
+      .toggle__sphere:after {
+      bottom: -1px;
+      }
+
+      .toggle__sphere-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      border-radius: 50%;
+      box-shadow: inset 0px -30px 30px 15px hsla(0, 0%, 0%, 0.1)
+      }
+
+      .toggle__sphere-bg {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      border-radius: 50%;
+      transition: transform 0.85s ease-in-out;
+      }
+
+      .toggle__sphere-bg:before,
+      .toggle__sphere-bg:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      }
+
+      .toggle__sphere-bg:before {
+      background-color: hsla(18, 77%, 50%, 1);
+      border-radius: 50%;
+      }
+
+      .toggle__sphere-bg:after {
+      background-color: hsla(199, 43%, 59%, 1);
+      transform: rotateY(180deg);
+      border-radius: 50%;
+      }
+
+      input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      position: absolute;
+      }
+
+      input:checked + .toggle__bg {
+      background-position: 25%;
+      }
+
+      input:checked + .toggle__bg .toggle__sphere {
+      transform: translateX(250px) translateY(1px);
+      box-shadow:
+      -2px 0px 5px 1px hsla(18, 77%, 15%, 0.05),
+      0px 10px 10px 1px hsla(18, 77%, 15%, 0.2),
+      3px 0px 3px 0px hsla(0, 0%, 0%, 0.75);
+      }
+
+      input:checked + .toggle__bg .toggle__sphere-bg {
+      transform: rotateY(180deg);
+      }
+
+  </style>
+
+
+</head>
+
+<body>
+  <!-- video::-webkit-media-controls-play-button
+  video::-webkit-media-controls-volume-slider-container
+  video::-webkit-media-controls-volume-slider
+  video::-webkit-media-controls-mute-button
+  video::-webkit-media-controls-timeline
+  video::-webkit-media-controls-current-time-display
+  video::-webkit-full-page-media::-webkit-media-controls-panel
+  video::-webkit-media-controls-timeline-container
+  video::-webkit-media-controls-time-remaining-display
+  video::-webkit-media-controls-seek-back-button
+  video::-webkit-media-controls-seek-forward-button
+  video::-webkit-media-controls-fullscreen-button
+  video::-webkit-media-controls-rewind-button
+  video::-webkit-media-controls-return-to-realtime-button
+  video::-webkit-media-controls-toggle-closed-captions-button -->
+
+  <header id="header" class="fixed-top custom-header"></header>
+  <div style="display:flex;justify-content:center;align-items:center; visibility: hidden;">
+    <div style="width:20px;height:10px; border: 2px solid red;">
+        <div data-video="" data-autoplay="0" data-loop="1" id="youtube-audio"></div>
+        <div style="clear:both;margin:10px;text-align:center"></div>
+    </div>
+  </div>
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="fa fa-bars" style="color: white;" aria-hidden="true"></i></button>
+  <div id="typedBlock" class=""></div>
+
+  <main id="main" class="main" style="">
+    <div class="sections_class default-theme-bg-color default-theme-font-color" id="sections_block" style=""></div>
+
+    <!-- ******************* EDIT  PROFILE  SECTION  HERE  ******************* * -->
+    <div id="editStylePopup" class="default-theme-bg-color default-theme-font-color" style="display: none; width: 300px; height: auto; padding: 20px; font-size: 16px; box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);">
+      <!-- <div onClick="closeEditStylePopup()" style="width: 100%; float: right;"><div style="font-size: 22px; color: red; float: right; position: relative; top: -16px; right: -5px; "> <i class="fa fa-times-circle" aria-hidden="true"></i> </div></div> -->
+      <div >
+        <div id="editStyleContainer" ></div>
+      </div>
+    </div>
+
+    <div id="popup" class="custom-popup sections_class default-theme-bg-color default-theme-font-color" style="">
+        <div>
+            <div><a href="#" onclick="onClickThreeDotsOption('delete_item'); return false;">Delete Item</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('add_item_on_top'); return false;">Add Text Item On Top</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('add_item_on_below'); return false;">Add Text Item Below</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('add_similar_item_on_top'); return false;">Add Similar Item On Top/Left</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('add_similar_item_on_top'); return false;">Add Similar Item Below/Right</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('edit_item_style'); return false;">Edit Item Style</a></div>
+        </div>
+
+    </div>
+
+    <div id="sectionPopup" class="custom-section-popup sections_class default-theme-bg-color default-theme-font-color" style="">
+        <div>
+            <div><a href="#" onclick="onClickThreeDotsOption('delete_section'); return false;">Delete Section</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('add_section_left'); return false;">Add Similar Section On Left</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('add_section_right'); return false;">Add Similar Section On Right</a></div>
+            <div><a href="#" onclick="onClickThreeDotsOption('edit_part_style'); return false;">Edit Section Style</a></div>
+        </div>
+    </div>
+
+    <div id="custom_overlay_block" class="overlay sections_class default-theme-bg-color default-theme-font-color" style="z-index: 99999;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div id="custom_overlay_loader" class=""></div>
+        <div id="custom_overlay_template" class=""></div>
+    </div>
+
+
+    <div class="json-viewer-block" id="jsonViewerBlock" style="display: none;">
+      <textarea id="jsonViewer">
+      </textarea>
+      <div class="">
+          <button type="button" name="button" onclick="oncickEditJson(event, 'save')" style="height: 40px; border: none; background: var(--default-theme-color); color: white ; font-weight: 600; width: 100%;">Save</button>
+      </div>
+    </div>
+
+    <div class="sections-action-block" id="sections_action_block"></div>
+  </main>
+
+  <!-- <section id="customYtPlayer" class="mob-section-class footer custom-yt-Player" style="display: none;">
+      <div class="custom-footer-block " id="custom_footer_block" style="">
+          <div class="custom-ytplayer-close-btn" id="custom_ytplayer_close_btn" style="" onClick="onClickCustomYtplayerCloseBtn()"><span>x</span></div>
+          <div class="loader-block" id="custom_footer_loader" style="display: none;">
+                <img class="loader-img" src="static/img/generic_portfolio_image/loader/loader_wait.gif" alt="undefined" style="height: 100px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%;">
+          </div>
+          <div class="custom-footer-template undefined" id="custom_footer_template" style="display: block;">
+            <div class="container" style="">
+              <div class="skills-content" style="width: 100%; ">
+                  <div id="section_footer_section-0 " class="" style="   ">
+                      <div class=" custom-part " id="part_footer_section-0-0" style="width: 100%;   "></div>
+                      <div id="item_footer_section-0-0-0" class="grid-section mob-width-full   " style="display: inline-block; width: 49%; padding: 0px 10px 0px 0px; float: left; ">
+                          <div id="undefined" class="wrap-open footer-mob-width" style=" width: 100%;"></div>
+                          <div id="item_footer_section-0-0-1" class="grid-section mob-width-full   " style=" ">
+                              <span><img src="static/img/gini_defaults/fmRadio.jpg" id="custom_ytplayer_img" class="img-fluid animated footer-img-block custom-ytplayer-img" style="" alt=""></span>
+                          </div>
+                          <div id="item_footer_section-0-0-2" class="grid-section mob-width-full custom-ytplayer-title-block" style=" white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 4%;  ">
+                            <span id="custom_ytplayer_title" class="custom_ytplayer_title" style="font-size: 13px; padding-bottom: 1px; color: white; padding-left: 12px;">arijit sing playlist</span>
+                          </div>
+                          <div id="item_footer_section-0-0-3" class="grid-section mob-width-full   " style=" "></div>
+                      </div>
+                      <div id="item_footer_section-0-0-4" class="grid-section mob-width-full custom-ytplayer-controls-block" style="white-space: initial; width: 50%; float: right; ">
+                              <span>
+                                <div><i id="customPlayerPlayBtn" class=" fa fa-play custom-ytplayer-play-btn-icon" style="display: block;" onclick="onClickCustomPlayerPlayBtn(this, event)"></i></div>
+                                <div><i id="customPlayerPauseBtn" class=" fa fa-pause custom-ytplayer-pause-btn-icon" style="display: none;" onclick="onClickCustomPlayerPlayBtn(this, event)"></i></div>
+                              </span>
+                              <span>
+                                    <div class="custom-ytplayer-volume-slider" style="display: inline-block;"><input type="range" id="volume-slider" max="100" value="100" onclick="onClickCustomPlayerVolumeSlider(this, event)"></div>
+                              </span>
+                              <span>
+                                    <div class="custom-ytplayer-seek-slider" style="display: inline-block;"><input type="range" id="seek-slider" max="100" value="0" onclick="onClickCustomPlayerSeekSlider(this, event)"></div>
+                              </span>
+                              <span style="float: right; margin-right: 30px;">
+                                    <div id="customPlayerDurationTime" style="display: inline-block; position: relative; top: -5px; "></div>
+                                    <div style="display: inline-block; position: relative; left: 10px; top: -4px; "><span class="glyphicon glyphicon-fullscreen"></span></div>
+                              </span>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  </section> -->
+
+  <!-- <section id="customYtPlayer" class="" style="display: none; position: absolute; border: 2px solid yellow;">
+      <div class="wrapper text-white" style="background: black;">
+        <div class="d-flex align-items-center justify-content-between mb-2">
+            <div class="btn mx-2 text-white p-0"><span class="fas fa-arrow-left"></span></div>
+            <div class="fs-09">Now Playing</div>
+            <div class="btn mx-2 text-white p-0"><span class="fas fa-ellipsis-h"></span></div>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+            <div>
+                <img src="https://images.pexels.com/photos/3806767/pexels-photo-3806767.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                    alt="" class="song-thumbnail">
+            </div>
+            <div class="song-name mt-2 fs-8">Lovely</div>
+            <div class="singers fs-09">Bellie Ellish</div>
+        </div>
+        <input class="toggle-heart" type="checkbox">
+        <span class="fas fa-heart"></span>
+        <div class="middle">
+            <div class="multi-range-slider">
+                <input type="range" id="input-left" min="0" max="100" value="0">
+                <div class="slider">
+                    <div class="track"></div>
+                    <div class="range"></div>
+                    <div class="thumb left"></div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mt-2">
+            <div>
+                <span id="amount-left" class="font-weight-bold"></span>
+            </div>
+            <div>
+                <span id="amount-right" class="font-weight-bold"></span>
+            </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mt-3 mb-2">
+            <div class="btn text-white">
+                <span class="fas fa-random"></span>
+            </div>
+            <div class="btn text-white">
+                <span class="fas fa-step-backward"></span>
+            </div>
+            <div class="btn text-white play-icon" id="customPlayerPlayBtn">
+                <span class="fas fa-play playbutton" onclick="onClickCustomPlayerPlayBtn(this, event)"></span>
+            </div>
+            <div class="btn text-white">
+                <span class="fas fa-step-forward"></span>
+            </div>
+            <div class="btn text-white">
+                <span class="fas fa-volume-up"></span>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="fas fa-angle-up"></div>
+            <div class="text-uppercase fs-09">lyrics</div>
+            <div class="lyrics pt-3">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laudantium illo delectus rerum eligendi
+                pariatur sit at error quis. Suscipit minima officia modi tempore quae non totam fuga aliquam atque?
+            </div>
+        </div>
+    </div>
+  </section> -->
+  <!-- <section id="customYtPlayer1" class="mob-section-class " style="display: block; position: absolute;">
+    <form>
+      <label class="toggle">
+        <div class="toggle__wrapper">
+          <input type="checkbox">
+          <div class="toggle__bg">
+            <div class="toggle__sphere">
+              <div class="toggle__sphere-bg"><div style="position: absolute; left: 30%; top: 85px; font-size: 50px;">radio</div>
+              </div>
+              <div class="toggle__sphere-overlay" ></div>
+            </div>
+          </div>
+        </div>
+      </label>
+    </form>
+
+  </section> -->
+
+  <section id="customYtPlayer" class="mob-section-class footer custom-yt-Player" style="display: none; ">
+      <div class="custom-footer-block " id="custom_footer_block" style="">
+          <div class="custom-ytplayer-close-btn" id="custom_ytplayer_close_btn" style="display: inline-block; float: right; margin-right: 6px; font-weight: lighter;" onClick="onClickCustomYtplayerCloseBtn()"><span>x</span></div>
+          <div class="loader-block" id="custom_footer_loader" style="display: none;">
+                <img class="loader-img" src="static/img/generic_portfolio_image/loader/loader_wait.gif" alt="undefined" style="height: 100px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%;">
+          </div>
+          <div class="custom-footer-template undefined" id="custom_footer_template" style="display: block;">
+            <div class="container" style="">
+              <div class="skills-content" style="width: 100%; ">
+                  <div id="section_footer_section-0 " class="" style="   ">
+                      <div class=" custom-part " id="part_footer_section-0-0" style="width: 100%;   "></div>
+                      <div style="display: inline-block; ">
+                        <span>
+                              <div><i id="customPlayerPlayBtn" class=" fa fa-play custom-ytplayer-play-btn-icon" style="display: none; position: relative; top: -2px; left: 100px; color: white; " onclick="onClickCustomPlayerPlayBtn(this, event)"></i></div>
+                              <div><i id="customPlayerPauseBtn" class=" fa fa-pause custom-ytplayer-pause-btn-icon" style="display: block; position: relative; top: -2px; left: 100px; color: white; " onclick="onClickCustomPlayerPlayBtn(this, event)"></i></div>
+                        </span>
+                      </div>
+                      <div id="item_footer_section-0-0-0" class="grid-section mob-width-full   " style="display: inline-block; width: 49%; padding: 0px 10px 0px 0px; margin-left: 28%; ">
+                          <div id="undefined" class="wrap-open footer-mob-width" style=" width: 100%;"></div>
+                          <div id="item_footer_section-0-0-1" class="grid-section mob-width-full   " style=" ">
+                              <span><img src="static/img/gini_defaults/fmRadio.jpg" id="custom_ytplayer_img" class="img-fluid animated footer-img-block custom-ytplayer-img" style="" alt=""></span>
+                          </div>
+                          <div id="item_footer_section-0-0-2" class="grid-section mob-width-full custom-ytplayer-title-block" style=" white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 4%;  ">
+                            <span id="custom_ytplayer_title" class="custom_ytplayer_title" style="font-size: 13px; padding-bottom: 1px; color: white; padding-left: 12px;">arijit sing playlist</span>
+                          </div>
+                          <div id="item_footer_section-0-0-3" class="grid-section mob-width-full   " style=" "></div>
+                      </div>
+                      <div id="item_footer_section-0-0-4" class="grid-section mob-width-full custom-ytplayer-controls-block" style="white-space: initial; width: 50%; float: right; ">
+                              
+                              <span>
+                                    <div class="custom-ytplayer-volume-slider" style="display: inline-block;"><input type="range" id="volume-slider" max="100" value="100" onclick="onClickCustomPlayerVolumeSlider(this, event)"></div>
+                              </span>
+                              <span>
+                                    <div class="custom-ytplayer-seek-slider" style="display: inline-block;"><input type="range" id="seek-slider" max="100" value="0" onclick="onClickCustomPlayerSeekSlider(this, event)"></div>
+                              </span>
+                              <span style="float: right; margin-right: 30px;">
+                                    <div id="customPlayerDurationTime" style="display: inline-block; position: relative; top: -5px; "></div>
+                                    <div style="display: inline-block; position: relative; left: 10px; top: -4px; "><span class="glyphicon glyphicon-fullscreen"></span></div>
+                              </span>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  </section>
+
+  <div class="modal" id="setupSectionsModal">
+      <div class="modal-dialog" style="position: relative; max-width: 60% !important; margin-left: 30%; margin-top: 5%;">
+        <div class="modal-content" style="">
+          <!-- Modal Header -->
+          <div class="modal-header" style="border: none; padding-bottom: 5px !important; ">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <!-- Modal body -->
+          <div id="setupSectionsBlock" class="modal-body" style="padding: 5px; padding-left: 20px;padding-right: 20px;">  </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="modal" id="setupThemeModal">
+    <div class="modal-dialog" style="position: relative; max-width: 60% !important; margin-left: 30%; margin-top: 5%;">
+      <div class="modal-content" style="">
+        <!-- Modal Header -->
+        <div class="modal-header" style="border: none; padding-bottom: 5px !important; ">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div id="setupThemeBlock" class="modal-body" style="padding: 5px; padding-left: 20px;padding-right: 20px;"></div>
+      </div>
+    </div>
+</div>
+
+
+<!-- <script>
+
+    window.onload = function () {
+    var inputLeft = document.getElementById("input-left");
+
+    var thumbLeft = document.querySelector(".slider > .thumb.left");
+    var range = document.querySelector(".slider > .range");
+
+    var amountLeft = document.getElementById('amount-left')
+    var amountRight = document.getElementById('amount-right')
+
+    function setLeftValue() {
+        var _this = inputLeft,
+            min = parseInt(_this.min),
+            max = parseInt(_this.max);
+
+        _this.value = parseInt(_this.value);
+
+        var percent = ((_this.value - min) / (max - min)) * 100;
+        percent = parseInt(percent)
+        console.log(percent);
+
+        thumbLeft.style.left = percent + "%";
+        range.style.left = 0 + "%";
+        range.style.right = (100 - percent) + "%";
+        range.style.background = "#36a31b";
+        let secs = parseInt(percent) % 25;
+        let unit_secs = secs.toString();
+        if (secs < 10) {
+            unit_secs = "0" + secs.toString();
+        }
+
+        if (parseInt(percent) % 25 == 0) {
+            unit_secs = "00";
+        }
+
+        let mins = "0" + Math.floor(parseInt(percent) / 25).toString();
+
+        time = mins + ":" + unit_secs;
+        amountLeft.innerText = time;
+        amountRight.innerText = "04:00";
+    }
+    setLeftValue();
+
+    inputLeft.addEventListener("input", setLeftValue);
+
+    inputLeft.addEventListener("mouseover", function () {
+        thumbLeft.classList.add("hover");
+    });
+    inputLeft.addEventListener("mouseout", function () {
+        thumbLeft.classList.remove("hover");
+    });
+    inputLeft.addEventListener("mousedown", function () {
+        thumbLeft.classList.add("active");
+    });
+    inputLeft.addEventListener("mouseup", function () {
+        thumbLeft.classList.remove("active");
+    });
+
+    var plBtn = document.getElementById("playBtn");
+    plBtn.onclick = function () {
+        var playbtn = document.querySelector(".btn .playbutton");
+        clasList = playbtn.classList;
+        clasList.toggle("fa-play")
+        clasList.toggle("fa-pause");
+    }
+}
+
+</script> -->
+
+
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+  <!-- Vendor JS Files -->
+  <script type="text/javascript" src="https://vjs.zencdn.net/7.5.4/video.js"></script>
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+  <script src="static/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="static/vendor/counterup/counterup.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/venobox/venobox.min.js"></script>
+  <script src="static/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/vendor/typed.js/typed.min.js"></script>
+  <script src="static/vendor/aos/aos.js"></script>
+  <script src="static/vendor/font-awesome/font-awesome-kit.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  <!-- Template Main JS File -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="static/js/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="static/js/giniFmV2/controllers/giniFmV2.client.controller.js"></script>
+  <script src="static/js/core/controllers/genericFeature.core.client.controller.js"></script>
+
+</body>
+
+</html>
