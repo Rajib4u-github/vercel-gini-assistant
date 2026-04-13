@@ -1,6 +1,5 @@
 {
-  "version": 2,
-  "name": "gini-assistant-products",
+  "version": 1,
   "builds": [
     { "src": "server.js", "use": "@vercel/node" }
   ],
