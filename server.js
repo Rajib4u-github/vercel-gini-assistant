@@ -29,14 +29,21 @@ const openai = new OpenAI({
 
 const ROOT_DIR = require("path").resolve();
 var GINI_HOME = require(ROOT_DIR+'/server/GINI/giniHomeProcessing.js');
-var RESTAURANT_APP_SERVICES = require(ROOT_DIR+'/server/RESTAURANT/controllers/restaurantApp.controller.js');
-var MUSIC_APP_SERVICES = require(ROOT_DIR+'/server/MUSIC/controllers/musicApp.controller.js');
-const NEARBY_APP_SERVICES = require(ROOT_DIR+'/server/NEARBY/controllers/nearbyApp.controller.js');
+// var GINI_HOME = import('./server/GINI/giniHomeProcessing.js');
 
-var SHOPPING_APP_SERVICES = require(ROOT_DIR+'/server/SHOPPING/controllers/shoppingApp.controller.js');
-var NEW_PROJECT_APP_SERVICES = require(ROOT_DIR+'/server/NEW_PROJECT/controllers/newProjectApp.controller.js');
+// var RESTAURANT_APP_SERVICES = require(ROOT_DIR+'/server/RESTAURANT/controllers/restaurantApp.controller.js');
+// var MUSIC_APP_SERVICES = require(ROOT_DIR+'/server/MUSIC/controllers/musicApp.controller.js');
+// const NEARBY_APP_SERVICES = require(ROOT_DIR+'/server/NEARBY/controllers/nearbyApp.controller.js');
+// var SHOPPING_APP_SERVICES = require(ROOT_DIR+'/server/SHOPPING/controllers/shoppingApp.controller.js');
+// var NEW_PROJECT_APP_SERVICES = require(ROOT_DIR+'/server/NEW_PROJECT/controllers/newProjectApp.controller.js');
+// var IND_STOCKS_APP_SERVICES = require(ROOT_DIR+'/server/IND_STOCKS/controllers/indStocksApp.controller.js');
 
-var IND_STOCKS_APP_SERVICES = require(ROOT_DIR+'/server/IND_STOCKS/controllers/indStocksApp.controller.js');
+var RESTAURANT_APP_SERVICES = import('./server/RESTAURANT/controllers/restaurantApp.controller.js');
+var MUSIC_APP_SERVICES = import('./server/MUSIC/controllers/musicApp.controller.js');
+const NEARBY_APP_SERVICES = import('./server/NEARBY/controllers/nearbyApp.controller.js');
+var SHOPPING_APP_SERVICES = import('./server/SHOPPING/controllers/shoppingApp.controller.js');
+var NEW_PROJECT_APP_SERVICES = import('./server/NEW_PROJECT/controllers/newProjectApp.controller.js');
+var IND_STOCKS_APP_SERVICES = import('./server/IND_STOCKS/controllers/indStocksApp.controller.js');
 
 
 
@@ -75,6 +82,7 @@ createTestFileAsync().then(function(data){
     console.log("======= return from create file promise =======");
     console.log("77777777777777777777777777777777777777");
     CUSTOM_PORTFOLIO_SERVICE = require('./server/PORTFOLIO/portfolio.js');
+    // CUSTOM_PORTFOLIO_SERVICE = import('./server/PORTFOLIO/portfolio.js');
     let file = {path: './server/PORTFOLIO/LOCAL_DB/test.json', type: "utf8"};
     console.log("+======================= ACCESS LOCAL DB PORTFOLIO FILE  +=========================");
 
@@ -88,68 +96,66 @@ app.use(bodyParser.json());
 app.use('/static', express.static(__dirname+'/assets'));
 
 app.use('/edit', function(req, res) {
-    res.sendfile('./client/portfolio_edit.html');
+    res.sendFile('./client/portfolio_edit.html');
 });
 
 app.use('/shopping', function(req, res) {
-    res.sendfile('./client/SHOPPING/shoppingApp.html');
+    res.sendFile('./client/SHOPPING/shoppingApp.html');
 });
 
 app.use('/music', function(req, res) {
-    res.sendfile('./client/MUSIC/musicApp.html');
+    res.sendFile('./client/MUSIC/musicApp.html');
 });
 
 app.use('/nearby', function(req, res) {
-    res.sendfile('./client/NEARBY/giniNearByPlacesApp.html');
+    res.sendFile('./client/NEARBY/giniNearByPlacesApp.html');
 });
 
 app.use('/qrcode-scan', function(req, res) {
-    res.sendfile('./client/QRCODE_SCANNER/instascanQrcodeApp.html');
+    res.sendFile('./client/QRCODE_SCANNER/instascanQrcodeApp.html');
 });
 
 app.use('/qrcode-create', function(req, res) {
-    res.sendfile('./client/QRCODE_SCANNER/QRCodeGeneratorApp.html');
+    res.sendFile('./client/QRCODE_SCANNER/QRCodeGeneratorApp.html');
 });
 
 app.use('/barcode', function(req, res) {
-    res.sendfile('./client/QRCODE_SCANNER/MDMBarCodeDetector.html');
+    res.sendFile('./client/QRCODE_SCANNER/MDMBarCodeDetector.html');
 });
 
 app.use('/gini-music', function(req, res) {
-    res.sendfile('./client/MUSIC/giniMusicApp.html');
+    res.sendFile('./client/MUSIC/giniMusicApp.html');
 });
 
 app.use('/public-apis', function(req, res) {
-    res.sendfile('./client/publicApis/publicApisApp.html');
+    res.sendFile('./client/publicApis/publicApisApp.html');
 });
 
 app.use('/musicv2', function(req, res) {
-    res.sendfile('./client/giniMusicV2/giniMusicV2App.html');
+    res.sendFile('./client/giniMusicV2/giniMusicV2App.html');
 });
 
 app.use('/sportsv2', function(req, res) {
-    res.sendfile('./client/giniSportsV2/giniSportsV2App.html');
+    res.sendFile('./client/giniSportsV2/giniSportsV2App.html');
 });
 
 app.use('/kontestsv2', function(req, res) {
-    res.sendfile('./client/giniKontestsV2/giniKontestsV2App.html');
+    res.sendFile('./client/giniKontestsV2/giniKontestsV2App.html');
 });
 
 app.use('/gini-fm', function(req, res) {
-    res.sendfile('./client/giniFmV2/giniFmV2App.html');
+    res.sendFile('./client/giniFmV2/giniFmV2App.html');
 });
 
 app.use('/restaurant', function(req, res) {
-    res.sendfile('./client/RESTAURANT/restaurantApp.html');
+    res.sendFile('./client/RESTAURANT/restaurantApp.html');
 });
 
 app.use('/new', function(req, res) {
-    res.sendfile('./client/NEW_PROJECT/newProjectApp.html');
+    res.sendFile('./client/NEW_PROJECT/newProjectApp.html');
 });
 
-app.use('/ind-stocks', function(req, res) {
-    res.sendfile('./client/IND_STOCKS/indStocksApp.html');
-});
+
 
 
 
@@ -176,20 +182,38 @@ app.use('/ind-stocks', function(req, res) {
 //     res.send("hello world......")
 // });
 
-app.use('/me', function(req, res) {
-    res.sendfile('./client/final_portfolio.html');
-});
+// app.use('/me', function(req, res) {
+//     // res.sendFile('./client/final_portfolio.html');
+//     res.sendFile(path.join(__dirname, './client/final_portfolio.html'));
+// });
+
+
 // app.use('/dell', function(req, res) {
 //     res.sendfile('./client/dell_test.html');
 // });
 
-app.use('/cv', function(req, res) {
-    res.sendfile('./client/portfolio_create.html');
+// app.use('/cv', function(req, res) {
+//     // res.sendFile('./client/portfolio_create.html');
+//     res.sendFile(path.join(__dirname, './client/portfolio_create.html'));
+// });
+
+// app.use('/', function(req, res) {
+//     res.sendFile('./client/GINI/gini_home_page.html');
+// });
+
+app.get('/favicon.ico', (req, res) => {
+    res.sendFile(path.join(__dirname, '/static/img/favicon.png'));
+});
+
+app.use('/ind-stocks', function(req, res) {
+    res.sendFile(path.join(__dirname, '/client/IND_STOCKS/indStocksApp.html'));
 });
 
 app.use('/', function(req, res) {
-    res.sendfile('./client/GINI/gini_home_page.html');
+    res.sendFile(path.join(__dirname, '/client/GINI/gini_home_page.html'));
 });
+
+
 
 
 
