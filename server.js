@@ -758,7 +758,6 @@ io.on('connection', function(socket){
               }
           }
       }else if(request.apiRef === "update_initial_sections"){
-          console.log("11111111111111111111 request \n", request);
           LOCAL_STORAGE.initialSections = request.updatedInitialSections;
           let response = CUSTOM_PORTFOLIO_SERVICE.generic_portfolio_functionality_mapping.update_initial_sections(request);
           socket.emit("response-generic-portfolio", {apiRef : request.apiRef});
@@ -786,9 +785,9 @@ io.on('connection', function(socket){
                         template = res.template;
                         socket.emit("response-generic-portfolio", {template : template, blockId: request.blockId, templateId: request.templateId, loaderId: request.loaderId, edit: request.edit, templateData: res.templateData});
                       }else{
-                        console.log("@@@ secname : ", secName);
-                        console.log("@@@@ template : ", 'custom_'+secName+'_template');
-                        console.log("@@@@ block : ", 'custom_'+secName+'_block');
+                        // console.log("@@@ secname : ", secName);
+                        // console.log("@@@@ template : ", 'custom_'+secName+'_template');
+                        // console.log("@@@@ block : ", 'custom_'+secName+'_block');
 
                         template = CUSTOM_PORTFOLIO_SERVICE.generic_portfolio_functionality_mapping.get_section_template(request.apiRef, request.edit, categoryData, request.application, request);
                         // socket.emit("response-generic-portfolio", {template : template, blockId: request.blockId, templateId: request.templateId, loaderId: request.loaderId, apiRef : request.apiRef});
@@ -888,7 +887,6 @@ io.on('connection', function(socket){
       }else if(request.apiRef === "allPublicApis"){
             if(request.action === 'public_apis_by_category'){
                   let data = sectionData.dataSource.data;
-                  console.log("55555555555555555 sectionData.dataSource.data : ", sectionData.dataSource.data);
             }
       }else if(request.apiRef === "request_initial_sections"){
           if(request.application !== undefined && request.application !== null && request.application !== ''){
@@ -1002,7 +1000,6 @@ io.on('connection', function(socket){
           ){
             console.log("999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999");
             if(sectionData.dataSource && sectionData.dataSource.data && sectionData.dataSource.data !== null && sectionData.dataSource.data !== ''){
-               console.log("9999999999999999999999999  *************************** 99999999999999999999999999999");
               if(request.edit){
                   let res = CUSTOM_PORTFOLIO_SERVICE.generic_portfolio_functionality_mapping.get_section_template(request.apiRef, request.edit, sectionData, request.application, request);
                   template = res.template;
@@ -1016,8 +1013,6 @@ io.on('connection', function(socket){
                   socket.emit("response-generic-portfolio", {template : template, blockId: request.blockId, templateId: request.templateId, loaderId: request.loaderId, apiRef : request.apiRef});
                 }
             }else{
-                 console.log("777777777777777777777777777  **********************  77777777777777777777777777");
-
                  CUSTOM_PORTFOLIO_SERVICE.generic_portfolio_functionality_mapping.get_api_data(sectionData.dataSource.url, sectionData.dataSource.authorizationKey, sectionData.dataSource).then((data) => {
                 console.log("@@@ Response from APIS : ", data);
                 if(request.apiRef === "allPublicApis_section"){
@@ -1031,11 +1026,6 @@ io.on('connection', function(socket){
                          let itemStartDate = new Date(item.start_time);
                          let itemEndDate = new Date(item.end_time);
                          let compareVal = today < itemStartDate;
-                         // console.log("---------------------");
-                         // console.log("@@@ itemStartDate : ", itemStartDate);
-                         // console.log("@@@ today : ", today);
-                         // console.log("@@@ compareVal : ", compareVal);
-                         // console.log("---------------------");
                          if( (today < itemStartDate) && request.byCategory === 'future_contests'){
                               futureKontests.push(item)
                          }else if((today > itemStartDate && today < itemEndDate) && request.byCategory === 'live_contests'){
