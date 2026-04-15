@@ -176,6 +176,10 @@ app.use('/ind-stocks', function(req, res) {
 //     res.send("hello world......")
 // });
 
+app.get('/favicon.ico', (req, res) => {
+  res.status(204).end();
+});
+
 app.use('/me', function(req, res) {
     res.sendfile('./client/final_portfolio.html');
 });
