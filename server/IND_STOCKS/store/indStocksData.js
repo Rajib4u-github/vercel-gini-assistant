@@ -1,4 +1,3 @@
-const IND_STOCKS_API_KEY = process.env.IND_STOCKS_API_KEY;
 let default_style = {
   themeColor: '#6264A7',
   themeBgColor: '#F5F5F5',
@@ -9,6 +8,8 @@ let default_style = {
   themeMenuOnHoverFontColor: '#000000',
   themeMenuOnHoverBgColor: '#F5F5F5',
 }
+
+
 let sections_data = {
 
     "default_style": {
@@ -5164,7 +5165,7 @@ let sections_data = {
       dataSource: {
         type: 'API', 
         customHeaders: {
-                    'x-api-key': IND_STOCKS_API_KEY,
+                    'x-api-key': 'sk-live-pgTPVlTN9YSOBKCHu427CYulzFZFVLUUVtSQg0n7',
                     'Content-Type': 'application/json',
         },
         url: 'https://stock.indianapi.in/mutual_funds'
@@ -5607,7 +5608,7 @@ let sections_data = {
       dataSource: {
         type: 'API', 
         customHeaders: {
-                    'x-api-key': IND_STOCKS_API_KEY,
+                    'x-api-key': 'sk-live-pgTPVlTN9YSOBKCHu427CYulzFZFVLUUVtSQg0n7',
                     'Content-Type': 'application/json',
         },
         url: 'https://stock.indianapi.in/mutual_funds'
@@ -5620,7 +5621,7 @@ let sections_data = {
       dataSource: {
         type: 'API', 
         customHeaders: {
-                    'x-api-key': IND_STOCKS_API_KEY,
+                    'x-api-key': 'sk-live-pgTPVlTN9YSOBKCHu427CYulzFZFVLUUVtSQg0n7',
                     'Content-Type': 'application/json',
         },
         url: 'https://stock.indianapi.in/mutual_funds'
@@ -6066,7 +6067,7 @@ let sections_data = {
       dataSource: {
         type: 'API', 
         customHeaders: {
-                    'x-api-key': IND_STOCKS_API_KEY,
+                    'x-api-key': 'sk-live-pgTPVlTN9YSOBKCHu427CYulzFZFVLUUVtSQg0n7',
                     'Content-Type': 'application/json',
         },
         url: 'https://stock.indianapi.in/mutual_funds'
@@ -6512,7 +6513,7 @@ let sections_data = {
       dataSource: {
         type: 'API', 
         customHeaders: {
-                    'x-api-key': IND_STOCKS_API_KEY,
+                    'x-api-key': 'sk-live-pgTPVlTN9YSOBKCHu427CYulzFZFVLUUVtSQg0n7',
                     'Content-Type': 'application/json',
         },
         url: 'https://stock.indianapi.in/mutual_funds'
@@ -8092,7 +8093,7 @@ let sections_data = {
       dataSource: {
         type: 'API',
         customHeaders: {
-              'x-api-key': IND_STOCKS_API_KEY,
+              'x-api-key': 'sk-live-pgTPVlTN9YSOBKCHu427CYulzFZFVLUUVtSQg0n7',
               'Content-Type': 'application/json',
         },
         url: 'https://stock.indianapi.in/ipo'
@@ -8227,7 +8228,7 @@ let sections_data = {
         //     apiKeyValue: 'sk-live-pgTPVlTN9YSOBKCHu427CYulzFZFVLUUVtSQg0n7'
         // },
         customHeaders: {
-                    'x-api-key': IND_STOCKS_API_KEY,
+                    'x-api-key': 'sk-live-pgTPVlTN9YSOBKCHu427CYulzFZFVLUUVtSQg0n7',
                     'Content-Type': 'application/json',
         },
         url: 'https://stock.indianapi.in/news'
@@ -8301,7 +8302,7 @@ let sections_data = {
         //     apiKeyValue: 'sk-live-pgTPVlTN9YSOBKCHu427CYulzFZFVLUUVtSQg0n7'
         // },
         customHeaders: {
-                    'x-api-key': IND_STOCKS_API_KEY,
+                    'x-api-key': 'sk-live-pgTPVlTN9YSOBKCHu427CYulzFZFVLUUVtSQg0n7',
                     'Content-Type': 'application/json',
         },
         url: 'https://stock.indianapi.in/trending'
@@ -8386,7 +8387,7 @@ let sections_data = {
         //     apiKeyValue: 'sk-live-pgTPVlTN9YSOBKCHu427CYulzFZFVLUUVtSQg0n7'
         // },
         customHeaders: {
-                    'x-api-key': IND_STOCKS_API_KEY,
+                    'x-api-key': 'sk-live-pgTPVlTN9YSOBKCHu427CYulzFZFVLUUVtSQg0n7',
                     'Content-Type': 'application/json',
         },
         url: 'https://stock.indianapi.in/BSE_most_active'
@@ -8617,7 +8618,7 @@ let sections_data = {
       dataSource: {
         type: 'API', 
         customHeaders: {
-                    'x-api-key': IND_STOCKS_API_KEY,
+                    'x-api-key': 'sk-live-pgTPVlTN9YSOBKCHu427CYulzFZFVLUUVtSQg0n7',
                     'Content-Type': 'application/json',
         },
         url: 'https://stock.indianapi.in/NSE_most_active'
@@ -8768,7 +8769,7 @@ let sections_data = {
         //     apiKeyValue: 'sk-live-pgTPVlTN9YSOBKCHu427CYulzFZFVLUUVtSQg0n7'
         // },
         customHeaders: {
-                    'x-api-key': IND_STOCKS_API_KEY,
+                    'x-api-key': 'sk-live-pgTPVlTN9YSOBKCHu427CYulzFZFVLUUVtSQg0n7',
                     'Content-Type': 'application/json',
         },
         url: 'https://stock.indianapi.in/price_shockers'

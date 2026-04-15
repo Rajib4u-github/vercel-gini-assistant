@@ -1255,15 +1255,17 @@ function get_add_section_slide_template(){
 
 function get_carrosel_template(data){
     let template = '';
+
+
+
     return template;
 }
 
-const IND_STOCKS_API_KEY = process.env.IND_STOCKS_API_KEY;
 var options = {
   'method': 'GET',
   'url': 'https://stock.indianapi.in/ipo',
   'headers': {
-    'x-api-key': IND_STOCKS_API_KEY,
+    'x-api-key': 'sk-live-pgTPVlTN9YSOBKCHu427CYulzFZFVLUUVtSQg0n7',
     'Content-Type': 'application/json',
   }
 };
