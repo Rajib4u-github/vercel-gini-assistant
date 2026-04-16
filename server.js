@@ -27,7 +27,7 @@ const openai = new OpenAI({
   apiKey: "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",
 });
 
-
+console.log("========= __dirname : ", __dirname)
 
 const ROOT_DIR = require("path").resolve();
 var GINI_HOME = require(ROOT_DIR+'/server/GINI/giniHomeProcessing.js');
@@ -89,68 +89,75 @@ app.use(bodyParser.json());
 
 app.use('/static', express.static(__dirname+'/assets'));
 
-app.use('/edit', function(req, res) {
-    res.sendfile('./client/portfolio_edit.html');
-});
+// app.use('/edit', function(req, res) {
+//     res.sendFile('./client/portfolio_edit.html');
+// });
 
-app.use('/shopping', function(req, res) {
-    res.sendfile('./client/SHOPPING/shoppingApp.html');
-});
+// app.use('/shopping', function(req, res) {
+//     res.sendFile('./client/SHOPPING/shoppingApp.html');
+// });
 
-app.use('/music', function(req, res) {
-    res.sendfile('./client/MUSIC/musicApp.html');
-});
+// app.use('/music', function(req, res) {
+//     res.sendFile('./client/MUSIC/musicApp.html');
+// });
 
-app.use('/nearby', function(req, res) {
-    res.sendfile('./client/NEARBY/giniNearByPlacesApp.html');
-});
+// app.use('/nearby', function(req, res) {
+//     res.sendFile('./client/NEARBY/giniNearByPlacesApp.html');
+// });
 
-app.use('/qrcode-scan', function(req, res) {
-    res.sendfile('./client/QRCODE_SCANNER/instascanQrcodeApp.html');
-});
+// app.use('/qrcode-scan', function(req, res) {
+//     res.sendFile('./client/QRCODE_SCANNER/instascanQrcodeApp.html');
+// });
 
-app.use('/qrcode-create', function(req, res) {
-    res.sendfile('./client/QRCODE_SCANNER/QRCodeGeneratorApp.html');
-});
+// app.use('/qrcode-create', function(req, res) {
+//     res.sendFile('./client/QRCODE_SCANNER/QRCodeGeneratorApp.html');
+// });
 
-app.use('/barcode', function(req, res) {
-    res.sendfile('./client/QRCODE_SCANNER/MDMBarCodeDetector.html');
-});
+// app.use('/barcode', function(req, res) {
+//     res.sendFile('./client/QRCODE_SCANNER/MDMBarCodeDetector.html');
+// });
 
-app.use('/gini-music', function(req, res) {
-    res.sendfile('./client/MUSIC/giniMusicApp.html');
-});
+// app.use('/gini-music', function(req, res) {
+//     res.sendFile('./client/MUSIC/giniMusicApp.html');
+// });
 
 app.use('/public-apis', function(req, res) {
-    res.sendfile('./client/publicApis/publicApisApp.html');
+    // res.sendFile('./client/publicApis/publicApisApp.html');
+    res.sendFile(path.join(__dirname + '/client/publicApis/publicApisApp.html'));
+
 });
 
-app.use('/musicv2', function(req, res) {
-    res.sendfile('./client/giniMusicV2/giniMusicV2App.html');
-});
+// app.use('/musicv2', function(req, res) {
+//     res.sendFile('./client/giniMusicV2/giniMusicV2App.html');
+// });
 
-app.use('/sportsv2', function(req, res) {
-    res.sendfile('./client/giniSportsV2/giniSportsV2App.html');
-});
+// app.use('/sportsv2', function(req, res) {
+//     res.sendFile('./client/giniSportsV2/giniSportsV2App.html');
+// });
 
-app.use('/kontestsv2', function(req, res) {
-    res.sendfile('./client/giniKontestsV2/giniKontestsV2App.html');
-});
+// app.use('/kontestsv2', function(req, res) {
+//     res.sendFile('./client/giniKontestsV2/giniKontestsV2App.html');
+// });
 
 app.use('/gini-fm', function(req, res) {
-    res.sendfile('./client/giniFmV2/giniFmV2App.html');
+    // res.sendFile('./client/giniFmV2/giniFmV2App.html');
+    res.sendFile(path.join(__dirname + '/client/giniFmV2/giniFmV2App.html'));
+
 });
 
 app.use('/restaurant', function(req, res) {
-    res.sendfile('./client/RESTAURANT/restaurantApp.html');
+    // res.sendFile('./client/RESTAURANT/restaurantApp.html');
+    res.sendFile(path.join(__dirname + '/client/RESTAURANT/restaurantApp.html'));
 });
 
-app.use('/new', function(req, res) {
-    res.sendfile('./client/NEW_PROJECT/newProjectApp.html');
-});
+// app.use('/new', function(req, res) {
+//     res.sendFile('./client/NEW_PROJECT/newProjectApp.html');
+// });
 
 app.use('/ind-stocks', function(req, res) {
-    res.sendfile('./client/IND_STOCKS/indStocksApp.html');
+    // res.sendFile('./client/IND_STOCKS/indStocksApp.html');
+    res.sendFile(path.join(__dirname + '/client/IND_STOCKS/indStocksApp.html'));
+
 });
 
 
@@ -183,19 +190,20 @@ app.get('/favicon.ico', (req, res) => {
   res.status(204).end();
 });
 
-app.use('/me', function(req, res) {
-    res.sendfile('./client/final_portfolio.html');
-});
+// app.use('/me', function(req, res) {
+//     res.sendFile('./client/final_portfolio.html');
+// });
 // app.use('/dell', function(req, res) {
 //     res.sendfile('./client/dell_test.html');
 // });
 
-app.use('/cv', function(req, res) {
-    res.sendfile('./client/portfolio_create.html');
-});
+// app.use('/cv', function(req, res) {
+//     res.sendFile('./client/portfolio_create.html');
+// });
 
 app.use('/', function(req, res) {
-    res.sendfile('./client/GINI/gini_home_page.html');
+    // res.sendFile('./client/GINI/gini_home_page.html');
+    res.sendFile(path.join(__dirname + '/client/GINI/gini_home_page.html'));
 });
 
 
