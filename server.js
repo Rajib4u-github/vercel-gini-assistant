@@ -206,6 +206,20 @@ app.use('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/client/GINI/gini_home_page.html'));
 });
 
+app.use((req, res, next) => {
+  const err = new Error(`Route ${req.originalUrl} not found`);
+  err.statusCode = 404;
+  next(err);
+});
+
+app.use((err, req, res, next) => {
+  const statusCode = err.statusCode || 500;
+  res.status(statusCode).json({
+    status: 'error',
+    message: err.message || 'Internal Server Error',
+  });
+});
+
 
 
 //==========================================================================
