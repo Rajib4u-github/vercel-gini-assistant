@@ -1,6 +1,6 @@
 'use strict';
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
+// import { createRequire } from 'module';
+// const require = createRequire(import.meta.url);
 
 const express = require("express");
 var cors = require('cors');
@@ -16,10 +16,12 @@ const { log } = require("console");
 var { YFinanceLive } = require('yfinance-live')
 var YFinance = require('yfinance-live')
 var yahooFinance = require('yahoo-finance');
-import path from 'path';
-const __dirname = path.resolve();
+// import path from 'path';
+const path = require('path');
+// const __dirname = path.resolve();
 
-import OpenAI from "openai";
+// import OpenAI from "openai";
+const OpenAI = require('openai');
 
 const openai = new OpenAI({
   apiKey: "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",
@@ -177,6 +179,7 @@ app.use('/ind-stocks', function(req, res) {
 // });
 
 app.get('/favicon.ico', (req, res) => {
+  console.log("00000000000000000000000000000000000000000000")
   res.status(204).end();
 });
 
