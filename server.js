@@ -213,11 +213,12 @@ app.use((req, res, next) => {
 });
 
 app.use((err, req, res, next) => {
-  const statusCode = err.statusCode || 500;
-  res.status(statusCode).json({
-    status: 'error',
-    message: err.message || 'Internal Server Error',
-  });
+  const statusCode = err.statusCode || 500 || 400;
+  res.status(204).end();
+  // res.status(statusCode).json({
+  //   status: 'error',
+  //   message: err.message || 'Internal Server Error',
+  // });
 });
 
 
