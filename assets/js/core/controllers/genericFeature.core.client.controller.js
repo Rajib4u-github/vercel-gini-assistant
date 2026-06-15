@@ -329,7 +329,8 @@ console.log("============= file : genericFeature.core.client.controller.js =====
     }
 
     async function inittial_setup(sections, edit, fromFun){
-        console.log("################## calling cli ent side init function ===============");
+       try{
+             console.log("################## calling cli ent side init function ===============");
         console.log("################## sections :: ", sections);
         console.log("======= from function its called : ", fromFun);
         console.log("======= from function its edit : ", edit);
@@ -478,6 +479,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
           // }
         }
 
+       }catch(err){
+            console.log("========== err : ", err)
+       }
     };
 
   
@@ -494,30 +498,35 @@ console.log("============= file : genericFeature.core.client.controller.js =====
     // })();
 
      (async function init(){
-        if(application === 'gini_home'){
-            const initSectionsData = await postData({method: 'POST', url: '/fetchInitSections'}, {application: application, fileName: fileName})
-            console.log("=================== initSectionsData ::: ", initSectionsData);
-            const data = initSectionsData.payload;
-            localStorage.allSectionsData = data.allSectionsData;
-            localStorage.activeSectionsData = data.allSectionsData;
-            localStorage.default_style = data.defaultStyle;
-            setup_default_theme(data.defaultStyle);
-            inittial_setup(data.initSections, false, "I am from init function...");
-            // socket.emit("request-gini-home-initial-sections", {});
-            //socket.emit("request-generic-portfolio", {apiRef: 'request_initial_sections', application: application, fileName: fileName});
-        }else{
-            //socket.emit("request-generic-portfolio", {apiRef: 'request_initial_sections', application: application, fileName: fileName});
-            const initSectionsData = await postData({method: 'POST', url: '/fetchInitSections'}, {application: application, fileName: fileName})
-            console.log("=================== initSectionsData ::: ", initSectionsData);
-            const data = initSectionsData.payload;
-            localStorage.allSectionsData = data.allSectionsData;
-            localStorage.activeSectionsData = data.allSectionsData;
-            localStorage.default_style = data.defaultStyle;
-                    console.log("88888888888888888888888888888888888888888888")
+        try{
+            if(application === 'gini_home'){
+                const initSectionsData = await postData({method: 'POST', url: '/fetchInitSections'}, {application: application, fileName: fileName})
+                console.log("=================== initSectionsData ::: ", initSectionsData);
+                const data = initSectionsData.payload;
+                localStorage.allSectionsData = data.allSectionsData;
+                localStorage.activeSectionsData = data.allSectionsData;
+                localStorage.default_style = data.defaultStyle;
+                setup_default_theme(data.defaultStyle);
+                inittial_setup(data.initSections, false, "I am from init function...");
+                // socket.emit("request-gini-home-initial-sections", {});
+                //socket.emit("request-generic-portfolio", {apiRef: 'request_initial_sections', application: application, fileName: fileName});
+            }else{
+                //socket.emit("request-generic-portfolio", {apiRef: 'request_initial_sections', application: application, fileName: fileName});
+                const initSectionsData = await postData({method: 'POST', url: '/fetchInitSections'}, {application: application, fileName: fileName})
+                console.log("=================== initSectionsData ::: ", initSectionsData);
+                const data = initSectionsData.payload;
+                localStorage.allSectionsData = data.allSectionsData;
+                localStorage.activeSectionsData = data.allSectionsData;
+                localStorage.default_style = data.defaultStyle;
+                        console.log("88888888888888888888888888888888888888888888")
 
-            setup_default_theme(data.defaultStyle);
-            inittial_setup(data.initSections, false, "I am from init function...");
+                setup_default_theme(data.defaultStyle);
+                inittial_setup(data.initSections, false, "I am from init function...");
+            }
+        }catch(err){
+            console.log("========== err : ", err)
         }
+      
     })();
 
     
@@ -633,47 +642,56 @@ console.log("============= file : genericFeature.core.client.controller.js =====
     }
 
     async function syncData(){
-        let payload = {
-          apiRef : 'update_block_data',
-          actionType : 'save_updated_style',
-          sectionName : sectionName,
-          sectionIndex: sectionIndex,
-          partsIndex: partsIndex,
-          itemIndex: itemIndex,
-          itemStyle : itemStyle,
-          secStyle : secStyle,
-          propName: null,
-          propValue: null,
-          application: application,
-          fileName: fileName
-        }
-        document.getElementById(inputId).style = itemStyle;
-        document.getElementById(itemId).style = secStyle;
-        document.getElementById("editStylePopup").style.display = 'none';
-        // socket.emit("request-generic-portfolio", payload);
-        const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+        try{
+            let payload = {
+            apiRef : 'update_block_data',
+            actionType : 'save_updated_style',
+            sectionName : sectionName,
+            sectionIndex: sectionIndex,
+            partsIndex: partsIndex,
+            itemIndex: itemIndex,
+            itemStyle : itemStyle,
+            secStyle : secStyle,
+            propName: null,
+            propValue: null,
+            application: application,
+            fileName: fileName
+            }
+            document.getElementById(inputId).style = itemStyle;
+            document.getElementById(itemId).style = secStyle;
+            document.getElementById("editStylePopup").style.display = 'none';
+            // socket.emit("request-generic-portfolio", payload);
+            const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
 
-        document.getElementById("editStylePopup").style.display = 'none';
+            document.getElementById("editStylePopup").style.display = 'none';
+        }catch(err){
+            console.log("=========== err : ", err)
+        }
     }
 
     async function applyNewTheme(theme){
-        console.log("======== calling the apply New Theme =========");
-        console.log("@@@ theme : ", theme);
-        let payload = {
-          apiRef : "update_theme",
-          theme: theme,
-          sectionName: 'theme_section',
-          application: application,
-          fileName: fileName
+        try{
+            console.log("======== calling the apply New Theme =========");
+            console.log("@@@ theme : ", theme);
+            let payload = {
+            apiRef : "update_theme",
+            theme: theme,
+            sectionName: 'theme_section',
+            application: application,
+            fileName: fileName
 
+            }
+            // socket.emit("request-generic-portfolio", payload);
+            const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+
+        }catch(err){
+            console.log("======= err : ", err)
         }
-        // socket.emit("request-generic-portfolio", payload);
-        const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
-
     }
 
     async function onClickSettings1(that , event, eventState){
-        // console.log("******** on click function on click item ********");
+       try{
+             // console.log("******** on click function on click item ********");
         // console.log("@@@@ EVENT :: ", event);
         // console.log("@@@ that ::  ", that);
         // console.log("@@@ eventState ::  ", eventState);
@@ -766,10 +784,14 @@ console.log("============= file : genericFeature.core.client.controller.js =====
         //socket.emit("request-generic-portfolio", payload);
         const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
 
+       }catch(err){
+            console.log("========== err: ", err)
+       }
     }
 
     async function onClickSettings(that , event, eventState){
-        // console.log("******** on click function on click item ********");
+       try{
+             // console.log("******** on click function on click item ********");
         // console.log("@@@@ EVENT :: ", event);
         // console.log("@@@ that ::  ", that);
         // console.log("@@@ eventState ::  ", eventState);
@@ -869,14 +891,21 @@ console.log("============= file : genericFeature.core.client.controller.js =====
         //socket.emit("request-generic-portfolio", payload);
         const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
         renderGenericSections(genericSectionsTemplate)
+       }catch(err){
+            console.log("======= err : ", err)
+       }
     }
 
     async function updateSettingsBlock(){
-        console.log("===== calling update settings block =====");
+       try{
+             console.log("===== calling update settings block =====");
         const payload = {apiRef : 'settings_section', sectionName: 'settings_section', blockId: 'custom_settings_block', templateId: 'custom_settings_template', loaderId: 'custom_settings_loader', application: application, fileName: fileName};
         //socket.emit("request-generic-portfolio", {apiRef : 'settings_section', sectionName: 'settings_section', blockId: 'custom_settings_block', templateId: 'custom_settings_template', loaderId: 'custom_settings_loader', application: application});
         const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
         renderGenericSections(genericSectionsTemplate)
+       }catch(err){
+            console.log("=========== err : ", err)
+       }
     }
 
     function createUpdateBtn(sectionName){
@@ -1179,7 +1208,8 @@ console.log("============= file : genericFeature.core.client.controller.js =====
     }
 
     window.onClickEditStyle = async function(state, index){
-        console.log("========= calling on click edit style =========");
+       try{
+             console.log("========= calling on click edit style =========");
         console.log("@@@ index : ", index);
         console.log("@@@@ state : ", state);
         console.log("@@@ style arr : ", localStorage.currentEditedStyleArr);
@@ -1273,6 +1303,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
               document.getElementById(partId).style.outline = "none";
         }
 
+       }catch(err){
+            console.log("========== err : ", err)
+       }
     }
 
     window.onClickworkCategoryArrowIcon = function(event, arrow){
@@ -1357,7 +1390,8 @@ console.log("============= file : genericFeature.core.client.controller.js =====
     // }
 
     window.onClickWorkCatItem = async function(that,event){
-        console.log("@@@ that : ", that);
+        try{
+            console.log("@@@ that : ", that);
         console.log("@@@ event : ", event);
 
         console.log("@@@ event id: ", that?.target?.id);
@@ -1522,6 +1556,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
             const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
             renderGenericSections(genericSectionsTemplate)
 
+        }
+        }catch(err){
+            console.log("============= err :  ", err)
         }
     }
 
@@ -2359,44 +2396,55 @@ console.log("============= file : genericFeature.core.client.controller.js =====
     }
 
     window.onClickUpdateSection = async function(sectionName){
-        console.log("=== on click update section ===");
-        console.log("@@@ section name : ", sectionName);
-        console.log("@@@ section data :: ", sectionData);
-        //socket.emit("request-generic-portfolio", {apiRef : 'update_section_data', sectionName: sectionName, sectionData: sectionData, application: application});
-        const payload = {apiRef : 'update_section_data', sectionName: sectionName, sectionData: sectionData, application: application};
-        const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+        try{
+            console.log("=== on click update section ===");
+            console.log("@@@ section name : ", sectionName);
+            console.log("@@@ section data :: ", sectionData);
+            //socket.emit("request-generic-portfolio", {apiRef : 'update_section_data', sectionName: sectionName, sectionData: sectionData, application: application});
+            const payload = {apiRef : 'update_section_data', sectionName: sectionName, sectionData: sectionData, application: application};
+            const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
 
+        }catch(err){
+            console.log("=========== err : ", err)
+        }
     }
 
     window.onKeyUpInputProperties = async function(event, sectionName, sectionIndex, partsIndex, itemIndex, propName){
-        console.log("====== on key up input properties =======");
-        console.log("@@@ sectionName :: ", sectionName);
-        console.log("@@@ secIndex :: ", sectionIndex);
-        console.log("@@@ partsIndex :: ", partsIndex);
-        console.log("@@@ itemIndex :: ", itemIndex);
-        console.log("@@@ propName :: ", propName);
+        try{
+            console.log("====== on key up input properties =======");
+            console.log("@@@ sectionName :: ", sectionName);
+            console.log("@@@ secIndex :: ", sectionIndex);
+            console.log("@@@ partsIndex :: ", partsIndex);
+            console.log("@@@ itemIndex :: ", itemIndex);
+            console.log("@@@ propName :: ", propName);
 
-        //socket.emit("request-generic-portfolio", {apiRef : 'update_block_data', actionType: 'edit_block_item', sectionName : sectionName, sectionIndex: sectionIndex, partsIndex: partsIndex,  itemIndex: itemIndex, propName: propName, propValue: event.target.value, application: application});
-        const payload = {apiRef : 'update_block_data', actionType: 'edit_block_item', sectionName : sectionName, sectionIndex: sectionIndex, partsIndex: partsIndex,  itemIndex: itemIndex, propName: propName, propValue: event.target.value, application: application, fileName: fileName};
-        const genericSectionsTemplateResponse = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
-        renderGenericSections(genericSectionsTemplateResponse)
+            //socket.emit("request-generic-portfolio", {apiRef : 'update_block_data', actionType: 'edit_block_item', sectionName : sectionName, sectionIndex: sectionIndex, partsIndex: partsIndex,  itemIndex: itemIndex, propName: propName, propValue: event.target.value, application: application});
+            const payload = {apiRef : 'update_block_data', actionType: 'edit_block_item', sectionName : sectionName, sectionIndex: sectionIndex, partsIndex: partsIndex,  itemIndex: itemIndex, propName: propName, propValue: event.target.value, application: application, fileName: fileName};
+            const genericSectionsTemplateResponse = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+            renderGenericSections(genericSectionsTemplateResponse)
+        }catch(err){
+            console.log("========= err : ", err)
+        }
     }
 
     window.oncickEditJson = async function(event, from){
         // console.log("@@@ from :: ", from);
-        if(from === "html"){
-            document.getElementById("jsonViewerBlock"). style.display = "none";
-            document.getElementById("editable"). style.display = "block";
-        }else if(from === "code"){
-            document.getElementById("jsonViewerBlock"). style.display = "block";
-            document.getElementById("editable"). style.display = "none";
-        }else if(from === 'save'){
-          let sectionData = document.getElementById("jsonViewer").value;
-          console.log("@@@ sectionData :: ", sectionData);
-          //socket.emit("request-generic-portfolio", {apiRef : 'update_section_data', sectionData: sectionData, application: application});
-          const payload = {apiRef : 'update_section_data', sectionData: sectionData, application: application};
-          const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
-
+        try{
+            if(from === "html"){
+                document.getElementById("jsonViewerBlock"). style.display = "none";
+                document.getElementById("editable"). style.display = "block";
+            }else if(from === "code"){
+                document.getElementById("jsonViewerBlock"). style.display = "block";
+                document.getElementById("editable"). style.display = "none";
+            }else if(from === 'save'){
+            let sectionData = document.getElementById("jsonViewer").value;
+            console.log("@@@ sectionData :: ", sectionData);
+            //socket.emit("request-generic-portfolio", {apiRef : 'update_section_data', sectionData: sectionData, application: application});
+            const payload = {apiRef : 'update_section_data', sectionData: sectionData, application: application};
+            const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+            }
+        }catch(err){
+            console.log("========= err : ", err)
         }
     }
 
@@ -2476,7 +2524,8 @@ console.log("============= file : genericFeature.core.client.controller.js =====
     }
 
     window.onClickThreeDotsOption = async function(option){
-          console.log("========= on click three dots options ==========");
+         try{
+                     console.log("========= on click three dots options ==========");
           console.log("@@@ option :: ", option );
           let payload = {
             apiRef : 'update_block_data',
@@ -2575,79 +2624,91 @@ console.log("============= file : genericFeature.core.client.controller.js =====
           }else if(option.includes("section") || option.includes("part")){
               document.getElementById("sectionPopup").style.display = "none";
           }
+         }catch(err){
+            console.log("=========== err : ", err)
+         }
     }
 
     window.onClickSaveStyles = async function(sectionName, sectionIndex, partsIndex, itemIndex, actionType){
-        console.log("===== calling onClickSaveStyles fun =====");
-        console.log("@@@ sectionName : ", sectionName);
-        console.log("@@@ sectionIndex : ", sectionIndex);
-        console.log("@@@ partsIndex : ", partsIndex);
-        console.log("@@@ itemIndex : ", itemIndex);
-        console.log("@@@ actionType : ", actionType);
-        let id = sectionName+'-'+sectionIndex+'-'+partsIndex+'-'+itemIndex;
-        console.log("@@@ id :: ", id);
-        let itemId = 'item_'+id;
-        let inputId = 'input_'+id;
-        let threeDotsId = 'three_dots_'+id;
-        let itemStyle = document.getElementById("itemStyle").value;
-        let secStyle = document.getElementById("sectionStyle").value;
-        itemStyle = convertCSStoStringTemplate(itemStyle);
-        secStyle = convertCSStoStringTemplate(secStyle);
-        if(actionType === "preview"){
-            let item = sectionData.block.sections[sectionIndex].parts[partsIndex].desc[itemIndex];
-            document.getElementById(inputId).style = itemStyle;
-            document.getElementById(itemId).style = secStyle;
-            sectionData.block.sections[sectionIndex].parts[partsIndex].desc[itemIndex].key.style = itemStyle;
-            sectionData.block.sections[sectionIndex].parts[partsIndex].desc[itemIndex].secStyle = secStyle;
-            document.getElementById("editStylePopup").style.display = 'none';
-        }else if(actionType === 'save'){
-            let payload = {
-              apiRef : 'update_block_data',
-              actionType : 'save_updated_style',
-              sectionName : sectionName,
-              sectionIndex: sectionIndex,
-              partsIndex: partsIndex,
-              itemIndex: itemIndex,
-              itemStyle : itemStyle,
-              secStyle : secStyle,
-              propName: null,
-              propValue: null,
-              application: application
-            }
-            document.getElementById(inputId).style = itemStyle;
-            document.getElementById(itemId).style = secStyle;
-            document.getElementById("setupSectionsModal").style.display = 'none';
-            //socket.emit("request-generic-portfolio", payload);
-            const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+        try{
+            console.log("===== calling onClickSaveStyles fun =====");
+            console.log("@@@ sectionName : ", sectionName);
+            console.log("@@@ sectionIndex : ", sectionIndex);
+            console.log("@@@ partsIndex : ", partsIndex);
+            console.log("@@@ itemIndex : ", itemIndex);
+            console.log("@@@ actionType : ", actionType);
+            let id = sectionName+'-'+sectionIndex+'-'+partsIndex+'-'+itemIndex;
+            console.log("@@@ id :: ", id);
+            let itemId = 'item_'+id;
+            let inputId = 'input_'+id;
+            let threeDotsId = 'three_dots_'+id;
+            let itemStyle = document.getElementById("itemStyle").value;
+            let secStyle = document.getElementById("sectionStyle").value;
+            itemStyle = convertCSStoStringTemplate(itemStyle);
+            secStyle = convertCSStoStringTemplate(secStyle);
+            if(actionType === "preview"){
+                let item = sectionData.block.sections[sectionIndex].parts[partsIndex].desc[itemIndex];
+                document.getElementById(inputId).style = itemStyle;
+                document.getElementById(itemId).style = secStyle;
+                sectionData.block.sections[sectionIndex].parts[partsIndex].desc[itemIndex].key.style = itemStyle;
+                sectionData.block.sections[sectionIndex].parts[partsIndex].desc[itemIndex].secStyle = secStyle;
+                document.getElementById("editStylePopup").style.display = 'none';
+            }else if(actionType === 'save'){
+                let payload = {
+                apiRef : 'update_block_data',
+                actionType : 'save_updated_style',
+                sectionName : sectionName,
+                sectionIndex: sectionIndex,
+                partsIndex: partsIndex,
+                itemIndex: itemIndex,
+                itemStyle : itemStyle,
+                secStyle : secStyle,
+                propName: null,
+                propValue: null,
+                application: application
+                }
+                document.getElementById(inputId).style = itemStyle;
+                document.getElementById(itemId).style = secStyle;
+                document.getElementById("setupSectionsModal").style.display = 'none';
+                //socket.emit("request-generic-portfolio", payload);
+                const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
 
-            // document.getElementById("editStylePopup").style.display = 'none';
+                // document.getElementById("editStylePopup").style.display = 'none';
+            }
+            document.getElementById(threeDotsId).style.color = "black";
+            document.getElementById(itemId).style.border = "none";
+        }catch(err){
+            console.log("===== err : ", err)
         }
-        document.getElementById(threeDotsId).style.color = "black";
-        document.getElementById(itemId).style.border = "none";
 
     }
 
      window.onClickAddNewSection = async function(that, event){
-        console.log("======= calling on click add ne section =======");
-        document.getElementById("custom_overlay_block").style.width = "100%";
-        let payload = {
-          apiRef : 'get_section_template',
-          actionType : 'section_template',
-          sectionName : "createNewSectionModal_section",
-          blockId: 'custom_overlay_block',
-          loaderId: 'custom_overlay_loader',
-          templateId: 'custom_overlay_template',
-          edit: false,
-          application: application,
-          fileName: fileName
-        }
-        //socket.emit("request-generic-portfolio", payload);
-        const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
-        renderGenericSections(genericSectionsTemplate)
+            try{
+                console.log("======= calling on click add ne section =======");
+                document.getElementById("custom_overlay_block").style.width = "100%";
+                let payload = {
+                apiRef : 'get_section_template',
+                actionType : 'section_template',
+                sectionName : "createNewSectionModal_section",
+                blockId: 'custom_overlay_block',
+                loaderId: 'custom_overlay_loader',
+                templateId: 'custom_overlay_template',
+                edit: false,
+                application: application,
+                fileName: fileName
+                }
+                //socket.emit("request-generic-portfolio", payload);
+                const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+                renderGenericSections(genericSectionsTemplate)
+            }catch(err){
+                console.log("======= err : ", err)
+            }
     }
 
     window.onClickCreateNewSection1 = async function(that, event){
-        console.log("======= calling on click create new section ========");
+      try{
+              console.log("======= calling on click create new section ========");
         console.log("@@@ id : ", that.id);
         let argument = that.getAttribute("data");
         argument = JSON.parse(argument);
@@ -2671,10 +2732,14 @@ console.log("============= file : genericFeature.core.client.controller.js =====
 
             }
         }
+      }catch(err){
+            console.log("========= err : ", err)
+      }
     }
 
     window.onClickCreateNewSection = async function(that, event){
-        console.log("======= calling on click create new section ========");
+        try{
+                     console.log("======= calling on click create new section ========");
         console.log("@@@ id : ", that.id);
         let argument = that.getAttribute("data");
         argument = JSON.parse(argument);
@@ -2725,6 +2790,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                 renderGenericSections(genericSectionsTemplate)
                 closeNav();
         }
+        }catch(err){
+            console.log("======= err : ", err)
+        }
     }
 
     window.onKeyUpInputs = function(that, event, state){
@@ -2745,15 +2813,19 @@ console.log("============= file : genericFeature.core.client.controller.js =====
     }
 
     window.onclickSynsFile = async function(){
-        console.log("66666666666666666  on click onclickSynsFile  66666666666666666");
-        let payload = {
-          apiRef : 'sync_portfolio_file',
-          actionType : 'update_portfolio_file',
-          application: application
-        }
-        //socket.emit("request-generic-portfolio", payload);
-        const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+        try{
+            console.log("66666666666666666  on click onclickSynsFile  66666666666666666");
+            let payload = {
+            apiRef : 'sync_portfolio_file',
+            actionType : 'update_portfolio_file',
+            application: application
+            }
+            //socket.emit("request-generic-portfolio", payload);
+            const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
 
+        }catch(err){
+            console.log("====== err : ", err)
+        }
     }
 
     window.allowDrop = function(that, ev) {
