@@ -1,8 +1,8 @@
 
 
 // let currentSelectedWorkCategory = "Education";
-let localStorage = {};
-let currentOnClickThreeDotsState = {};
+// let localStorage = {};
+// let currentOnClickThreeDotsState = {};
 let application = 'indStocks';
 var fileName = 'newIndStocksApp';
 

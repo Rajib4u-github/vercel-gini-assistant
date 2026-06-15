@@ -3715,6 +3715,294 @@ let portfolio_data = {
             loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: ''},  style: ''},
             template: {style: ''}
           },
+              {
+            section: {name: 'headerNav', id: '', class: 'header-nav', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; position: relative;  '},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'popular_hindi_albums_listly_utube_Video_Playingonly_Audio', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; padding-right: 20px; margin-top: 18%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'best_of_shaan_listly_utube_Video_Playingonly_Audio', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; padding-right: 20px; margin-top: -8%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'mika_singh_special_listly_utube_Video_Playingonly_Audio', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; padding-right: 20px; margin-top: -8%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'neha_kakkar_special_listly_utube_Video_Playingonly_Audio', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; padding-right: 20px; margin-top: -8%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'rupam_ishlam_special_listly_utube_Video_Playingonly_Audio', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; padding-right: 20px; margin-top: -8%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'sanam_puri_special_listly_utube_Video_Playingonly_Audio', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; padding-right: 20px; margin-top: -8%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'vidya_vox_special_listly_utube_Video_Playingonly_Audio', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; padding-right: 20px; margin-top: -8%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'armaan_malik_special_listly_utube_Video_Playingonly_Audio', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; padding-right: 20px; margin-top: -8%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'bollywood_heartbreaking_listly_utube_Video_Playingonly_Audio', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; padding-right: 20px; margin-top: -8%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'trending_bollywood_songs_listly_utube_Video_Playingonly_Audio', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; padding-right: 20px; margin-top: -8%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'kk_listly_utube_Video_Playingonly_Audio', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; padding-right: 20px; margin-top: -8%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'manna_de_special_listly_utube_Video_Playingonly_Audio', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; padding-right: 20px; margin-top: -8%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'upbeat_bollywood_listly_utube_Video_Playingonly_Audio', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; padding-right: 20px; margin-top: -8%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'utubeVideoPlayingonlyAudio', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; padding-right: 20px; margin-top: -8%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'arijit_singh_special', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; padding-right: 20px; margin-top: -8%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'shreya_ghoshal_mashups_listly_utube_Video_Playingonly_Audio', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; padding-right: 20px; margin-top: -8%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'udit_narayan_special', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; padding-right: 20px; margin-top: -8%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'honey_singh_special_listly_utube_Video_Playingonly_Audio', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; padding-right: 20px; margin-top: -8%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'Jubin_special_listly_utube_Video_Playingonly_Audio', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; padding-right: 20px; margin-top: -8%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'amit_trivedi_listly_utube_Video_Playingonly_Audio', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; padding-right: 20px; margin-top: -8%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'guru_randhawa_special', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; padding-right: 20px; margin-top: -8%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'siddharth_slathia_special', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; padding-right: 20px; margin-top: -8%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'amitabh_bachchan_special', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; padding-right: 20px; margin-top: -8%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'burman_special', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; padding-right: 20px; margin-top: -8%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          //------------
+          // {
+          //   section: {name: 'giniFmV2HomeTopLargeRadio', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; padding-right: 20px;'},
+          //   menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+          //   block: {class: '', style: ''},
+          //   loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+          //   template: {style: ''}
+          // },
+          {
+            section: {name: 'giniFmV2BhagabatGitaRadioStations', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; position: relative;  margin-top: -3%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'giniFmV2RedfmBauaRadioStations', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; position: relative;  margin-top: -3%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'giniFmV2RadioBangonetRadioStations', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; position: relative;  margin-top: -3%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'giniFmV2RadioBangladeshRadioStations', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; position: relative;  margin-top: -3%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'giniFmV2RadioCityRadioStations', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; position: relative;  margin-top: -3%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'giniFmV2PopularPlaylistsRadioStations', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; position: relative;  margin-top: -3%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'giniFmV2MorbidStoriesRadioStations', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; position: relative;  margin-top: -3%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'giniFmV2PopularArtistsRadioStations', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; position: relative;  margin-top: -3%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'giniFmV2RadioMirchiRadioStations', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; position: relative;  margin-top: -3%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          // {
+          //   section: {name: 'giniFmV2IndianNewsRadioStations', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; position: relative;  margin-top: -3%;'},
+          //   menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+          //   block: {class: '', style: ''},
+          //   loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+          //   template: {style: ''}
+          // },
+          {
+            section: {name: 'giniFmV2BollywoodRadioStations', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; position: relative;  margin-top: -3%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'popularVariousArtistSongs', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; position: relative;  margin-top: -3%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          // {
+          //   section: {name: 'popularSongs', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; position: relative;  '},
+          //   menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+          //   block: {class: '', style: ''},
+          //   loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+          //   template: {style: ''}
+          // },
+          {
+            section: {name: 'newAddedRadioStations', id: '', class: 'mob-section-class', style: 'display: inline-block; width: 100%; float: left; padding-left: 20px; position: relative; margin-top: -3%;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'footer', id: '', class: 'mob-section-class footer', style: ''},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/giniFmV2App/loader/blu-music-loader.gif', alt: '', style: 'height: 120px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%;'},  style: ''},
+            template: {style: ''}
+          },
 
         ],
         partStyle: 'background: #F1F3F6;',

@@ -1,5 +1,6 @@
-const rawData =
-[
+const rawData = {
+"count": 25,
+'entries': [
   {
     "text": "Get a full fake rest api with zero coding in less than 30 seconds seriously typicode json server get a full fake rest api with zero coding in less than 30 seconds seriously",
     "heading": "typicode | json-server",
@@ -56,6 +57,7 @@ const rawData =
     "link": "https://dummyapi.io/"
   }
 ]
+}
 
 
 module.exports.rawData = rawData;

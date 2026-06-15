@@ -570,7 +570,7 @@ input[type="checkbox"]:checked+.fas.fa-heart {
   /* background: #040b14; */
   overflow-y: hidden;
   max-height: 600px;
-  overflow: scroll;
+  overflow-x: scroll;
 }
 
 #header .profile img {

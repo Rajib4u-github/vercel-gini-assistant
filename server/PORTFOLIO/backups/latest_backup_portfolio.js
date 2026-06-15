@@ -155,7 +155,7 @@ function getAotAnimation(item){
 }
 
 function getProgressBarTemplate(item, editable, sectionName, sectionIndex, partsIndex, itemIndex){
-    console.log("============ get progress bar template =============");
+    // console.log("============ get progress bar template =============");
     let template = '';
     let animation = '';
     let infoTemplate = '';

@@ -1184,6 +1184,28 @@ let portfolio_data = {
             loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
             template: {style: ''}
           },
+          
+          {
+            section: {name: 'allKontentsApisGlobalSearch', id: '', class: '', style: ''},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: 'height: 100px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'kontestsApisLeftSideBarSearch', id: '', class: 'mob-side-bar-search', style: 'position: relative; top: -60px; width: 18%; display: inline-block; float: left; '},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: 'height: 100px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'allPublicApis', id: '', class: '', style: 'display: inline-block; width: 82%; float: left; padding-left: 10px; position: relative; top: -60px;'},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: 'height: 100px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
 
         ],
         partStyle: 'background: #F1F3F6;',

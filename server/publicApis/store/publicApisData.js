@@ -14,14 +14,14 @@ let default_settings = {
       newsByCategory: 'IN',
 }
 
-let portfolio_data = {
+let sections_data = {
 
     "default_style": {
         themeColor: 'brown',
         themeBgColor: '#D1D5DB',
         themeCardBgColor: '#E8EAED',
-        themeFontColor: '#000000',
-        themePrimaryColor: '#424242',
+        themeFontColor: '#424242',
+        themePrimaryColor: '#666666',
         themeMenuBgColor: '#FFFFFF',
         themeMenuFontColor: '#000000',
         themeMenuOnHoverFontColor: '#000000',
@@ -731,22 +731,27 @@ let portfolio_data = {
                                 eventName : "onClickButton(this, event, 'public_apis_by_category')", 
                                 argument : {
                                   category: 'self',
-                                  sectionName: 'allPublicApisSideBarSearch', 
-                                  targetSectionName: 'allPublicApis'
+                                  sectionName: 'allPublicApis', 
+                                  targetSectionName: 'allPublicApis',
+                                  activeMenuStyleClass: 'workcat-menu-active-selection',
+                                  deActiveMenuStyleClass: 'workcat-menu-de-active-selection',
+                                  applyActiveDeactiveMenuStyleClassMethod: 'activeDeactiveMenuStyleClass',
                                 }, eventType: 'onclick'
                               }], 
                               key: {
                                 name: '', 
-                                class:'default-theme-primary-color', 
-                                style: 'font-size: 16px; padding: 10px 0px 10px 0px; display: block; width: 100%; position: relative; font-weight: 400; border: none !important; outline: none !important; background: brown; color: white;'
+                                applyConditionalStyleClass : {condition: {defaultName: 'All', activeClass: 'public-apis-cat workcat-menu-active-selection', deActiveClass: 'public-apis-cat workcat-menu-de-active-selection'}},
+                                style: 'font-size: 13px; padding: 10px 5px 10px 5px; display: block; width: 100%; position: relative; font-weight: 400; border: none !important; outline: none !important;'
                               }, 
-                              itemStyle: 'white-space: initial;'
+                              itemStyle: 'padding: 3px 3px; '
                             },
                         ],
-                        partStyle: 'width: 100%; display: inline-block; background: white; color black; border-bottom: 1px solid gray; ',
+                        applyConditionalStyleClass : {condition: {defaultName: 'All', activeClass: 'public-apis-cat workcat-menu-active-selection', deActiveClass: 'public-apis-cat workcat-menu-de-active-selection'}},
+                        activeDeactiveStyleClass:{ activeStyleClass: 'public-apis-cat workcat-menu-active-selection', deactiveStyleClass: 'public-apis-cat workcat-menu-de-active-selection'},
+                        partStyle: 'width: 100%; display: inline-block; border-bottom: 0px solid #e5e7eb',
                     },
                 ],
-                sectionClass: '',
+                sectionClass: 'mob-sec-parent-menu',
                 // sectionStyle: 'height: 650px; overflow: scroll; ',
             },
         ],
@@ -788,6 +793,305 @@ let portfolio_data = {
       }
     },
 
+    "allPublicApisDatabase_section": {
+      sectionName : 'allPublicApisDatabase_section',
+      // dataSource: {type: 'API', url: 'https://api.publicapis.org/entries'},
+      dataSource: {type: 'DATA-SERVER', dataFilePath: '/publicApis/store/publicApisDatabase.js'},
+
+      block: {
+          sections: [
+            {
+                animationType: 'fade-up', animationDelay: null,
+                dataSource: {from: 'API', dataPath: 'root>entries', view: 'collection', limit: "none"},
+                parts: [
+                    {
+                        animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        desc: [
+                          // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'text', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 700;'}, itemStyle: 'white-space: nowrap; overflow: hidden; text-overflow: ellipsis;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'heading', class: '', style: 'font-size: 15px; padding-bottom: 3px; '}, itemStyle: 'min-height: 65px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;'},
+                                // {type: 'text', dataSource: 'API', key: {name: 'Category', preHtml: '<span style="font-weight: 600; ">Category : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
+                                // {type: 'text', dataSource: 'API', key: {name: 'Auth', preHtml: '<span style="font-weight: 600; ">Auth : </span>', style: 'font-size: 15px;'}, itemStyle: 'white-space: initial;'},
+                            
+                                {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+                        ],
+
+                        // event: [
+                        //   {
+                        //     eventName : 'onClickRedirectUrl(this, event)',
+                        //     eventType: 'onclick',
+                        //     argument : {dataSource: 'API', key: {name: 'Link', action: 'redirectUrl'}},
+                        //     dataSetName: 'nav-links-data'
+                        //   },
+                        // ],
+                        partClass: 'collection-parts-mob-style  overlay-container',
+                        partStyle: 'display: inline-block; width: 31%; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 15px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                    },
+                ],
+                sectionClass: '',
+                sectionStyle: 'clear: both; margin-left: 15px; '
+                // sectionStyle: 'overflow-x: scroll; overflow-y: hidden; white-space: nowrap;',
+              },
+        ],
+          blockStyle: '',
+      }
+    },
+
+    "allPublicApisJsonBin_section": {
+      sectionName : 'allPublicApisJsonBin_section',
+      // dataSource: {type: 'API', url: 'https://api.publicapis.org/entries'},
+      dataSource: {type: 'DATA-SERVER', dataFilePath: '/publicApis/store/publicApisJsonBin.js'},
+
+      block: {
+          sections: [
+            {
+                animationType: 'fade-up', animationDelay: null,
+                dataSource: {from: 'API', dataPath: 'root>entries', view: 'collection', limit: "none"},
+                parts: [
+                    {
+                        animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        desc: [
+                          // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'heading', class: '', style: 'font-size: 15px; padding-bottom: 3px; '}, itemStyle: 'min-height: 65px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'text', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 700;'}, itemStyle: 'white-space: nowrap; overflow: hidden; text-overflow: ellipsis;'},
+                                // {type: 'text', dataSource: 'API', key: {name: 'Category', preHtml: '<span style="font-weight: 600; ">Category : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
+                                // {type: 'text', dataSource: 'API', key: {name: 'Auth', preHtml: '<span style="font-weight: 600; ">Auth : </span>', style: 'font-size: 15px;'}, itemStyle: 'white-space: initial;'},
+                            
+                                {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+                        ],
+
+                        event: [
+                          {
+                            eventName : 'onClickRedirectUrl(this, event)',
+                            eventType: 'onclick',
+                            argument : {dataSource: 'API', key: {name: 'link', action: 'redirectUrl'}},
+                            dataSetName: 'nav-links-data'
+                          },
+                        ],
+                        partClass: 'collection-parts-mob-style  overlay-container',
+                        partStyle: 'display: inline-block; width: 31%; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 15px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                    },
+                ],
+                sectionClass: '',
+                sectionStyle: 'clear: both; margin-left: 15px; '
+                // sectionStyle: 'overflow-x: scroll; overflow-y: hidden; white-space: nowrap;',
+              },
+        ],
+          blockStyle: '',
+      }
+    },
+
+    "allPublicApisMessageQueue_section": {
+      sectionName : 'allPublicApisMessageQueue_section',
+      // dataSource: {type: 'API', url: 'https://api.publicapis.org/entries'},
+      dataSource: {type: 'DATA-SERVER', dataFilePath: '/publicApis/store/publicApisMessageQueue.js'},
+
+      block: {
+          sections: [
+            {
+                animationType: 'fade-up', animationDelay: null,
+                dataSource: {from: 'API', dataPath: 'root>entries', view: 'collection', limit: "none"},
+                parts: [
+                    {
+                        animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        desc: [
+                          // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'heading', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 700;'}, itemStyle: 'white-space: nowrap; overflow: hidden; text-overflow: ellipsis;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'text', class: '', style: 'font-size: 15px; padding-bottom: 3px; '}, itemStyle: 'min-height: 65px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;'},
+                                // {type: 'icon', key: {name: 'external-link', type: 'font-awesome', class:'', style: 'font-size: 24px;  position: relative;  padding-top: 10px;'}, itemStyle: 'display: inline-block; '},
+                                {
+                                  type: 'button', dataSource: 'API',
+                                  event: {
+                                    eventName : "onClickRedirectUrl(this, event)", 
+                                    eventType: 'onclick'
+                                  }, 
+                                  key: {name: 'heading', showWords: 2, preHtml: `<i class="icon fa fa-external-link    " style="font-size: 24px;  position: relative;  padding-top: 10px; top: 2px; " aria-hidden="true"></i>`, action: 'redirectUrl', class: 'default-outline-color custom-profile ', style: 'font-size: 16px; font-weight: 400; width: 100%; padding: 9px; background: white; border: none;'}, itemStyle: 'display: inline-block; width: 100%; margin-right: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;'},
+                            
+                            {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+                        ],
+
+                        event: [
+                          {
+                            eventName : 'onClickRedirectUrl(this, event)',
+                            eventType: 'onclick',
+                            argument : {dataSource: 'API', key: {name: 'link', action: 'redirectUrl'}},
+                            dataSetName: 'nav-links-data'
+                          },
+                        ],
+                        partClass: 'collection-parts-mob-style  overlay-container',
+                        partStyle: 'display: inline-block; width: 31%; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 15px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                    },
+                ],
+                sectionClass: '',
+                sectionStyle: 'clear: both; margin-left: 15px; '
+                // sectionStyle: 'overflow-x: scroll; overflow-y: hidden; white-space: nowrap;',
+              },
+        ],
+          blockStyle: '',
+      }
+    },
+
+    "allPublicApisMockApiServer_section": {
+      sectionName : 'allPublicApisMockApiServer_section',
+      // dataSource: {type: 'API', url: 'https://api.publicapis.org/entries'},
+      dataSource: {type: 'DATA-SERVER', dataFilePath: '/publicApis/store/publicApisMockApiServer.js'},
+
+      block: {
+          sections: [
+            {
+                animationType: 'fade-up', animationDelay: null,
+                dataSource: {from: 'API', dataPath: 'root>entries', view: 'collection', limit: "none"},
+                parts: [
+                    {
+                        animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        desc: [
+                          // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'heading', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 700;'}, itemStyle: 'white-space: nowrap; overflow: hidden; text-overflow: ellipsis;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'text', class: '', style: 'font-size: 15px; padding-bottom: 3px; '}, itemStyle: 'min-height: 65px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;'},
+                                // {type: 'icon', key: {name: 'external-link', type: 'font-awesome', class:'', style: 'font-size: 24px;  position: relative;  padding-top: 10px;'}, itemStyle: 'display: inline-block; '},
+                                {
+                                  type: 'button', dataSource: 'API',
+                                  event: {
+                                    eventName : "onClickRedirectUrl(this, event)", 
+                                    eventType: 'onclick'
+                                  }, 
+                                  key: {name: 'heading', showWords: 2, preHtml: `<i class="icon fa fa-external-link    " style="font-size: 24px;  position: relative;  padding-top: 10px; top: 2px; " aria-hidden="true"></i>`, action: 'redirectUrl', class: 'default-outline-color custom-profile ', style: 'font-size: 16px; font-weight: 400; width: 100%; padding: 9px; background: white; border: none;'}, itemStyle: 'display: inline-block; width: 100%; margin-right: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;'},
+                            
+                            {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+                        ],
+
+                        event: [
+                          {
+                            eventName : 'onClickRedirectUrl(this, event)',
+                            eventType: 'onclick',
+                            argument : {dataSource: 'API', key: {name: 'link', action: 'redirectUrl'}},
+                            dataSetName: 'nav-links-data'
+                          },
+                        ],
+                        partClass: 'collection-parts-mob-style  overlay-container',
+                        partStyle: 'display: inline-block; width: 31%; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 15px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                    },
+                ],
+                sectionClass: '',
+                sectionStyle: 'clear: both; margin-left: 15px; '
+                // sectionStyle: 'overflow-x: scroll; overflow-y: hidden; white-space: nowrap;',
+              },
+        ],
+          blockStyle: '',
+      }
+    },
+
+    "publicOpenSourceLibraries_section": {
+      sectionName : 'publicOpenSourceLibraries_section',
+      // dataSource: {type: 'API', url: 'https://api.publicapis.org/entries'},
+      dataSource: {type: 'DATA-SERVER', dataFilePath: '/publicApis/store/publicOpenSourceLibraries.js'},
+
+      block: {
+          sections: [
+            {
+                animationType: 'fade-up', animationDelay: null,
+                dataSource: {from: 'API', dataPath: 'root>entries', view: 'collection', limit: "none"},
+                parts: [
+                    {
+                        animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        desc: [
+                          // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 700;'}, itemStyle: 'white-space: nowrap; overflow: hidden; text-overflow: ellipsis;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'description', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: 'min-height: 65px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'author', preHtml: '<span style="font-weight: 600; "> Author: </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
+                                // {type: 'text', dataSource: 'API', key: {name: 'Auth', preHtml: '<span style="font-weight: 600; ">Auth : </span>', style: 'font-size: 15px;'}, itemStyle: 'white-space: initial;'},
+                            {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+                        ],
+
+                        event: [
+                          {
+                            eventName : 'onClickRedirectUrl(this, event)',
+                            eventType: 'onclick',
+                            argument : {dataSource: 'API', key: {name: 'homepage', action: 'redirectUrl'}},
+                            dataSetName: 'nav-links-data'
+                          },
+                        ],
+                        partClass: 'collection-parts-mob-style  overlay-container',
+                        partStyle: 'display: inline-block; width: 31%; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 15px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                    },
+                ],
+                sectionClass: '',
+                sectionStyle: 'clear: both; margin-left: 15px; '
+                // sectionStyle: 'overflow-x: scroll; overflow-y: hidden; white-space: nowrap;',
+              },
+        ],
+          blockStyle: '',
+      }
+    },
+
+    "allPublicApisWebhooks_section": {
+      sectionName : 'allPublicApisWebhooks_section',
+      // dataSource: {type: 'API', url: 'https://api.publicapis.org/entries'},
+      dataSource: {type: 'DATA-SERVER', dataFilePath: '/publicApis/store/publicApisWebhooks.js'},
+
+      block: {
+          sections: [
+            {
+                animationType: 'fade-up', animationDelay: null,
+                dataSource: {from: 'API', dataPath: 'root>entries', view: 'collection', limit: "none"},
+                parts: [
+                    {
+                        animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        desc: [
+                          // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'heading', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 700;'}, itemStyle: 'white-space: nowrap; overflow: hidden; text-overflow: ellipsis;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'text', class: '', style: 'font-size: 15px; padding-bottom: 3px; '}, itemStyle: 'min-height: 65px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;'},
+                                // {type: 'icon', key: {name: 'external-link', type: 'font-awesome', class:'', style: 'font-size: 24px;  position: relative;  padding-top: 10px;'}, itemStyle: 'display: inline-block; '},
+                                {
+                                  type: 'button', dataSource: 'API',
+                                  event: {
+                                    eventName : "onClickRedirectUrl(this, event)", 
+                                    eventType: 'onclick'
+                                  }, 
+                                  key: {name: 'heading', showWords: 2, preHtml: `<i class="icon fa fa-external-link    " style="font-size: 24px;  position: relative;  padding-top: 10px; top: 2px; " aria-hidden="true"></i>`, action: 'redirectUrl', class: 'default-outline-color custom-profile ', style: 'font-size: 16px; font-weight: 400; width: 100%; padding: 9px; background: white; border: none;'}, itemStyle: 'display: inline-block; width: 100%; margin-right: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;'},
+                            
+                            {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+                        ],
+
+                        event: [
+                          {
+                            eventName : 'onClickRedirectUrl(this, event)',
+                            eventType: 'onclick',
+                            argument : {dataSource: 'API', key: {name: 'link', action: 'redirectUrl'}},
+                            dataSetName: 'nav-links-data'
+                          },
+                        ],
+                        partClass: 'collection-parts-mob-style  overlay-container',
+                        partStyle: 'display: inline-block; width: 31%; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 15px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                    },
+                ],
+                sectionClass: '',
+                sectionStyle: 'clear: both; margin-left: 15px; '
+                // sectionStyle: 'overflow-x: scroll; overflow-y: hidden; white-space: nowrap;',
+              },
+        ],
+          blockStyle: '',
+      }
+    },
+
     "allPublicApis_section": {
       sectionName : 'allPublicApis_section',
       // dataSource: {type: 'API', url: 'https://api.publicapis.org/entries'},
@@ -806,7 +1110,7 @@ let portfolio_data = {
                           // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
                             {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
                                 {type: 'text', dataSource: 'API', key: {name: 'API', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 700;'}, itemStyle: 'white-space: nowrap; overflow: hidden; text-overflow: ellipsis;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'Description', class: '', style: 'font-size: 15px; padding-bottom: 3px; '}, itemStyle: ' white-space: nowrap; overflow: hidden; text-overflow: ellipsis;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'Description', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: 'min-height: 65px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;'},
                                 {type: 'text', dataSource: 'API', key: {name: 'Category', preHtml: '<span style="font-weight: 600; ">Category : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
                                 {type: 'text', dataSource: 'API', key: {name: 'Auth', preHtml: '<span style="font-weight: 600; ">Auth : </span>', style: 'font-size: 15px;'}, itemStyle: 'white-space: initial;'},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
@@ -821,12 +1125,12 @@ let portfolio_data = {
                             dataSetName: 'nav-links-data'
                           },
                         ],
-                        partClass: 'collection-parts-mob-style  overlay-container',
-                        partStyle: 'display: inline-block; width: 31%; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: white; color: black; padding: 12px;'
+                        partClass: 'collection-parts-mob-style  overlay-container mob-full-width desktop-width-30',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 15px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
-                sectionClass: '',
-                sectionStyle: 'clear: both; margin-left: 15px; '
+                sectionClass: 'desktop-sec-style mob-sec-style',
+                sectionStyle: 'clear: both;'
                 // sectionStyle: 'overflow-x: scroll; overflow-y: hidden; white-space: nowrap;',
               },
         ],
@@ -861,7 +1165,6 @@ let portfolio_data = {
           blockStyle: '',
       }
     },
-
 
     "allPublicApisWebhooks_section": {
       sectionName : 'allPublicApisWebhooks_section',
@@ -1314,7 +1617,27 @@ let portfolio_data = {
       }
     },
 
-    "headerNav_section": {
+    "openSourceCategory_section": {
+            sectionName : 'openSourceCategory_section',
+            defaultCategory : {name: 'Education', style: 'background: '+default_style.themeColor+'; color: red !important; '},
+            defaultMenuStyle: {activeMenuStyleClass: 'npmcat-menu-active-selection', deActiveMenuStyleClass: 'npmcat-menu-de-active-selection'},
+            activeMenuStyleClass: 'npmcat-menu-active-selection',
+            deActiveMenuStyleClass: 'npmcat-menu-de-active-selection',
+            activeMenuStyle : 'background: blue; color: white;',
+            deActiveMenuStyle : 'background: red; color: white;',
+            lists: [
+              {name : "Public NPM"},
+              {name : "Npm by facebook"},
+              {name : "npm by google"},
+              {name : "npm by twitter"},
+              {name : "npm as a whole"},
+              {name : "npm platforms"},
+   
+            ],
+            partStyle: ''
+    },
+
+    "headerNav_section1": {
         sectionName : 'headerNav_section',
         block: {
             sections: [
@@ -1442,7 +1765,131 @@ let portfolio_data = {
               },
           ],
         }
-      },
+    },
+
+    "headerNav_section": {
+        sectionName : 'headerNav_section',
+        brand: {
+          values: [
+            {type: 'text', key: {name: `Open-Source`, class: '',  style: ''}, itemStyle: ''},
+            // {type: 'image', key: {name: 'static/img/me_portfolio/myImg1.jpg', style: ' border-radius: 5%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
+          ],
+          brandStyle: 'margin-left: -8%;'
+        },
+        navigation: {
+          values: [
+            {
+              type: 'link',
+              key: {
+                name: 'Public Apis', class: '',  style: '', event: [
+                  {
+                    eventName : 'onClickHeaderNavigation(this, event)',
+                    eventType: 'onclick',
+                    argument : {
+                      mapToSections: ['allPublicApisSideBarSearch', 'allPublicApis'],
+                    },
+                    dataSetName: 'nav-links-data'
+                  },
+                ]
+              },
+                   itemStyle: ''
+            },
+            {
+              type: 'link',
+              key: {
+                name: 'Public Database',
+                class: '',
+                style: '',
+                event: [
+                  {
+                    eventName : 'onClickHeaderNavigation(this, event)',
+                    eventType: 'onclick',
+                    argument : {mapToSections: ['allPublicApisDatabase',]},
+                    dataSetName: 'nav-links-data'
+                  },
+                ],
+                itemStyle: ''
+              }
+            },
+            {
+              type: 'link',
+              key: {
+                name: 'Public JsonBin',
+                class: '',
+                style: '',
+                event: [
+                  {
+                    eventName : 'onClickHeaderNavigation(this, event)',
+                    eventType: 'onclick',
+                    argument : {mapToSections: ['allPublicApisJsonBin']},
+                    dataSetName: 'nav-links-data'
+                  },
+                ],
+                itemStyle: ''
+              }
+            },
+            {
+              type: 'link',
+              key: {
+                name: 'Public Message Queue',
+                class: '',
+                style: '',
+                event: [
+                  {
+                    eventName : 'onClickHeaderNavigation(this, event)',
+                    eventType: 'onclick',
+                    argument : {mapToSections: ['allPublicApisMessageQueue']},
+                    dataSetName: 'nav-links-data'
+                  },
+                ],
+                itemStyle: ''
+              }
+            },
+            {
+              type: 'link',
+              key: {
+                name: 'Public Mock Server',
+                class: '',
+                style: '',
+                event: [
+                  {
+                    eventName : 'onClickHeaderNavigation(this, event)',
+                    eventType: 'onclick',
+                    argument : {mapToSections: ['allPublicApisMockApiServer']},
+                    dataSetName: 'nav-links-data'
+                  },
+                ],
+                itemStyle: ''
+              }
+            },
+            // {
+            //   type: 'link',
+            //   key: {
+            //     name: 'Public NPM',
+            //     class: '',
+            //     style: '',
+            //     event: [
+            //       {
+            //         eventName : 'onClickHeaderNavigation(this, event)',
+            //         eventType: 'onclick',
+            //         argument : {mapToSections: ['openSourceCategory', 'publicOpenSourceLibraries']},
+            //         dataSetName: 'nav-links-data'
+            //       },
+            //     ],
+            //     itemStyle: ''
+            //   }
+            // },
+          ],
+          navStyle: 'margin-left: 10%;',
+        },
+        //   custom: {
+        //     values: [
+        //       {type: 'link', key: {name: 'TECHIE', class: '',  style: ''}, itemStyle: ''},
+        //     ],
+        //     customStyle: '',
+        // }
+        containerStyle: 'background: var(--default-theme-color); padding: 10px 0px;'
+    },
 
 
 
@@ -1454,6 +1901,57 @@ let portfolio_data = {
             section: {name: 'whydYoutubePopMusic', id: '', class: '', style: ''},
             menu: {name: '', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
             block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'allPublicApisDatabase', id: '', class: '', style: ''},
+            menu: {name: '', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: 'position: relative; top: 105px; width: 90; margin-left: 5%; '},
+            loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'allPublicApisJsonBin', id: '', class: '', style: ''},
+            menu: {name: '', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: 'position: relative; top: 105px; width: 90; margin-left: 5%; '},
+            loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'openSourceCategory', id: '', class: '', style: ''},
+            menu: {name: '', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: 'position: relative; top: 105px; width: 90; margin-left: 5%;'},
+            loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+            template: {style: ''}
+          },
+          
+          {
+            section: {name: 'allPublicApisMessageQueue', id: '', class: '', style: ''},
+            menu: {name: '', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: 'position: relative; top: 105px; width: 90; margin-left: 5%; '},
+            loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'allPublicApisWebhooks', id: '', class: '', style: ''},
+            menu: {name: '', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: 'position: relative; top: 105px; width: 90; margin-left: 5%; '},
+            loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+            template: {style: ''}
+          },
+          
+          {
+            section: {name: 'allPublicApisMockApiServer', id: '', class: '', style: ''},
+            menu: {name: '', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: 'position: relative; top: 105px; width: 90; margin-left: 5%; '},
+            loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+            template: {style: ''}
+          },
+           {
+            section: {name: 'publicOpenSourceLibraries', id: '', class: '', style: ''},
+            menu: {name: '', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: 'position: relative; top: 105px; width: 90; margin-left: 5%;'},
             loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
             template: {style: ''}
           },
@@ -1478,6 +1976,49 @@ let portfolio_data = {
             loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
             template: {style: ''}
           },
+          {
+            section: {name: 'headerNav', id: '', class: '', style: ''},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+            template: {style: ''}
+          },
+          {
+            section: {name: 'allPublicApisDescription', id: '', class: '', style: ''},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: 'position: relative; top: 105px; width: 90%; margin-left: 5%;'},
+            loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: 'height: 100px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          //  {
+          //   section: {name: 'allPublicApisSideBarSearch', id: '', class: 'mob-side-bar-search', style: 'position: relative; width: 20%; float: left; '},
+          //   menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+          //   block: {class: '', style: ''},
+          //   loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: 'height: 100px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+          //   template: {style: ''}
+          // },
+          // { 
+          //   section: {name: 'allPublicApis', id: '', class: '', style: 'display: inline-block; width: 75%; float: left; padding-left: 5px;'},
+          //   menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+          //   block: {class: '', style: ''},
+          //   loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: 'height: 100px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+          //   template: {style: ''}
+          // },
+
+          {
+            section: {name: 'allPublicApisSideBarSearch', id: '', class: 'mob-side-bar-search-section desktop-side-bar-search-section', style: ''},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: 'height: 100px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
+          { 
+            section: {name: 'allPublicApis', id: '', class: 'desktop-main-section-width-80 mob-full-width main-content-sec-position', style: 'display: inline-block; float: right; '},
+            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: '', style: ''},
+            loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: 'height: 100px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            template: {style: ''}
+          },
 
         ],
         partStyle: 'background: #F1F3F6;',
@@ -1490,23 +2031,23 @@ let portfolio_data = {
             section: {name: 'headerNav', id: '', class: '', style: ''},
             menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
             block: {class: '', style: ''},
-            loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: 'height: 100px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+            loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
             template: {style: ''}
           },
-          {
-            section: {name: 'allPublicApisGlobalSearch', id: '', class: '', style: ''},
-            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
-            block: {class: '', style: ''},
-            loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: 'height: 100px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
-            template: {style: ''}
-          },
-          {
-            section: {name: 'allPublicApisDescription', id: '', class: '', style: ''},
-            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
-            block: {class: '', style: ''},
-            loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: 'height: 100px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
-            template: {style: ''}
-          },
+          // {
+          //   section: {name: 'allPublicApisGlobalSearch', id: '', class: '', style: ''},
+          //   menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+          //   block: {class: '', style: ''},
+          //   loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: 'height: 100px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+          //   template: {style: ''}
+          // },
+          // {
+          //   section: {name: 'allPublicApisDescription', id: '', class: '', style: ''},
+          //   menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+          //   block: {class: '', style: ''},
+          //   loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: 'height: 100px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
+          //   template: {style: ''}
+          // },
           // {
           //   section: {name: 'publicApisTopNavigation', id: '', class: '', style: 'display: inline-block; width: 100%;'},
           //   menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
@@ -1524,26 +2065,27 @@ let portfolio_data = {
           // },
 
           {
-            section: {name: 'allPublicApisSideBarSearch', id: '', class: 'mob-side-bar-search', style: 'position: relative; width: 20%; float: left; '},
+            section: {name: 'allPublicApisSideBarSearch', id: '', class: 'mob-side-bar-search-section desktop-side-bar-search-section', style: ''},
             menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
             block: {class: '', style: ''},
             loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: 'height: 100px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
             template: {style: ''}
           },
           { 
-            section: {name: 'allPublicApis', id: '', class: '', style: 'display: inline-block; width: 75%; float: left; padding-left: 5px;'},
+            section: {name: 'allPublicApis', id: '', class: 'desktop-main-section-width-80 mob-full-width main-content-sec-position', style: 'display: inline-block; float: right; '},
             menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
             block: {class: '', style: ''},
             loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: 'height: 100px; width: 100px; margin-left: 45%; position: relative; margin-top: 15%; background: transparent; border-radius: 50px;'},  style: ''},
             template: {style: ''}
           },
+          
 
         ],
         partStyle: 'background: #F1F3F6;',
     },
 }
 
-module.exports.portfolio_data = portfolio_data;
+module.exports.sections_data = sections_data;
 module.exports.default_style = default_style;
 module.exports.default_settings = default_settings;
 

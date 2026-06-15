@@ -2,7 +2,7 @@
 
 console.log("============= file : genericFeature.core.client.controller.js =============");
 
-    const socket = io();
+    // const socket = io();
 
     // (function(){
     //   if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
@@ -19,20 +19,30 @@ console.log("============= file : genericFeature.core.client.controller.js =====
     //   }
     // })();
 
-    socket.on("response-initial-sections-data", (data) => {
-        console.log("************* calling socket response-initial-sections-data ************");
-        // let allSectionsData = data.allSectionsData;
-        console.log("@@@@ all initial sections data :: ", data);
-        localStorage.allSectionData = data.allSectionsData;
-        localStorage.activeSectionsData = data.allSectionsData;
-        localStorage.default_style = data.defaultStyle;
-        setup_default_theme(data.defaultStyle);
-        inittial_setup(data.allSectionsData, false);
 
-    });
+
+    // socket.on("response-initial-sections-data", (data) => {
+    //     console.log("************* calling socket response-initial-sections-data ************");
+    //     // let allSectionsData = data.allSectionsData;
+    //     console.log("@@@@ all initial sections data :: ", data);
+    //     localStorage.allSectionData = data.allSectionsData;
+    //     localStorage.activeSectionsData = data.allSectionsData;
+    //     localStorage.default_style = data.defaultStyle;
+    //     setup_default_theme(data.defaultStyle);
+    //     inittial_setup(data.allSectionsData, false);
+
+    // });
     let flag = 0;
-    socket.on("response-generic-portfolio", (data) => {
-        console.log("!!! data.apiref :: ", data.apiRef);
+
+    const renderGenericSections = (requestPayload) => {
+        console.log("33333333333333333333333333333333333333333333333")
+        console.log("I am from wocket.io(response_generic_portfolio.......)");
+        console.log("!!! data :: ", requestPayload);
+        if(requestPayload && requestPayload?.payload === undefined ){
+            console.log("44444444444444444444444444444444444444444")
+            console.log("======= requestPayload : ", requestPayload)
+        }
+        const data = requestPayload?.payload;
         flag = flag + 1;
         // if(data.apiRef === 'custom_search'){
         //     console.log("############### data : ", data);
@@ -40,32 +50,56 @@ console.log("============= file : genericFeature.core.client.controller.js =====
         //     document.getElementById(data.templateId).innerHTML = data.template;
         //     return;
         // }
-        if(data.apiRef === 'settings_section'){
-          // console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
-          console.log("!!!!@@@@ data : ", data );
-          console.log("@@@ loader id : data.loaderId :: ", data.loaderId);
-          let x = document.getElementById(data.loaderId);
-          console.log("@@@ x : ", x);
-          document.getElementById(data.loaderId).style.display = "none";
 
-          // openSectionsSetupModal();
-          // document.getElementById("setupSectionsBlock").innerHTML = data.template;
-          // return;
+        // if(data && data?.apiRef === 'settings_section' && data.template !== ''){
+        //   // console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+        //   console.log("!!!!@@@@ data : ", data );
+        //   console.log("@@@ loader id : data.loaderId :: ", data.loaderId);
+        //   let x = document.getElementById(data.loaderId);
+        //   console.log("@@@ x : ", x);
+        //   document.getElementById(data.loaderId).style.display = "none";
+
+        // //   openSectionsSetupModal();
+        // //   document.getElementById("setupSectionsBlock").innerHTML = data.template;
+        //   return;
+        // }
+
+
+        if(data?.apiRef === 'settings_section' && data?.template !== ''){
+          // console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+          // console.log("!!!!@@@@ data : ", data );
+
+          document.getElementById("custom_settings_block").style.display = "none";
+          document.getElementById("setupSectionsBlock").innerHTML = data.template;
+          return;
         }
 
-        if(data.apiRef === 'headerNav_section'){
+        if(data && data?.apiRef === 'headerNav_section'){
             console.log("===================&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&==================");
-            console.log("data.template : ", data.template);
+            // console.log("data.template : ", data.template);
             document.getElementById("header").innerHTML = data.template;
             // setupCustomAudioPlayer(null);
             return ;
         }
 
-        if(data.apiRef === "typed_section"){
+        if(data?.apiRef === 'theme_section' && data.template !== ''){
+            console.log("!!!! theme section data : ", data );
+            document.getElementById("setupThemeBlock").innerHTML = '';
+            document.getElementById("setupThemeBlock").innerHTML = data.template;
+            return;
+        }
+
+        if(data && data?.apiRef === "typed_section"){
             createTypedSection(data);
             return;
         }
-        if(data.edit){
+        if(data?.apiRef === "create_new_profile"){
+          document.getElementById(data.blockId).innerHTML = '';
+          document.getElementById(data.blockId).innerHTML = data.template;
+            return;
+        }
+        if(data && data?.edit){
+            console.log("================= 55555555555555 ================")
             sectionData = data.templateData;
             console.log("@@@@ edit section template data : ", data);
             let inputId = "input_"+data.elementId;
@@ -77,13 +111,13 @@ console.log("============= file : genericFeature.core.client.controller.js =====
             //
             // }
         }
-        if(data.apiRef === "update_initial_sections"){
+        if(data && data?.apiRef === "update_initial_sections"){
           updateSettingsBlock();
           return;
         }
-        if(data.apiRef === 'request_initial_sections'){
-            console.log("!!! initSections :: ", data.initSections);
-            console.log("777777777777777777777777777 allSectionsData :: ", data.allSectionsData);
+        if(data && data?.apiRef === 'request_initial_sections'){
+            console.log("!!! initSections :: 88888888888888 : ", data.initSections);
+            console.log("8888888888888888888888888 allSectionsData :: ", data.allSectionsData);
 
             localStorage.allSectionsData = data.allSectionsData;
             localStorage.activeSectionsData = data.allSectionsData;
@@ -94,50 +128,152 @@ console.log("============= file : genericFeature.core.client.controller.js =====
         }
 
 
-        if(data.blockId !== null && data.blockId !== undefined){
+        if(data && data?.blockId !== null && data.blockId !== undefined){
 
         }
-        if(data.loaderId !== null && data.loaderId !== undefined && data.loaderId !== ''){
+        if(data && data?.loaderId !== null && data?.loaderId !== undefined && data?.loaderId !== ''){
             if(document.getElementById(data.loaderId) !== null){
                 document.getElementById(data.loaderId).style.display = "none";
             }
         }
-        if(data.templateId !== null && data.templateId !== undefined && data.templateId !== ''){
+        if(data && data?.templateId !== null && data.templateId !== undefined && data.templateId !== ''){
             if(document.getElementById(data.templateId)){
                 document.getElementById(data.templateId).style.display = "block";
                 document.getElementById(data.templateId).innerHTML = '';
                 document.getElementById(data.templateId).innerHTML = data.template;
             }
         }
-    })
+    }
 
-    socket.on("response-action-edit-style", (data) => {
-        console.log("@@@@@ data :: ", data);
-        let style = data.style.split(";");
-        localStorage.currentEditedStyleArr = style;
-        let template = convertRawStyleToEditedStyleTemplate(style);
-        showEditStylePopup(template);
-    });
-
-     socket.on("response-generic-askchatgptai", (data) => {
-        console.log("@@@@@ ask chat gpt ai response data :: ", data);
-        let responseTargetId = data.requestData.targetId;
-        let dynamicLoaderImageId = 'dynamicChatGptLoader';
-        let childNode = document.getElementById("dynamicChatGptLoader")
-        // newLoaderImage.src = 'static/img/generic_portfolio_image/loader/loader_wait.gif'; // Replace with your image path
-        let parentNode = document.getElementById('part_customMusicPlayerWithLyrics_section-0-0'); // Assuming a div with id="myContainer"
-        if(parentNode && childNode){
-            parentNode.removeChild(childNode);
-        }
-        if(data.requestData.targetId && data.requestData.targetId !== ''){
-            document.getElementById(data.requestData.targetId).innerHTML = '';
-            document.getElementById(data.requestData.targetId).innerHTML = data.responseTemplate;
-            document.getElementById(data.requestData.textInputById).value = '';
-            document.getElementById(data.requestData.textInputById).focus = true;
-
+    const renderToEditStylegenericSections = (toEditStyleResponse) => {
+        console.log("@@@@@ data :: ", toEditStyleResponse);
+        if(toEditStyleResponse && toEditStyleResponse.payload && toEditStyleResponse.payload.style){
+            let style = toEditStyleResponse.payload.style.split(";");
+            localStorage.currentEditedStyleArr = style;
+            let template = convertRawStyleToEditedStyleTemplate(style);
+            showEditStylePopup(template);
         }
         
-    });
+    }
+
+    // socket.on("response-action-edit-style", (data) => {
+    //     console.log("@@@@@ data :: ", data);
+    //     let style = data.style.split(";");
+    //     localStorage.currentEditedStyleArr = style;
+    //     let template = convertRawStyleToEditedStyleTemplate(style);
+    //     showEditStylePopup(template);
+    // });
+
+
+    // socket.on("response-generic-portfolio", (data) => {
+    //     // console.log("!!! data.apiref :: ", data.apiRef);
+    //     flag = flag + 1;
+    //     // if(data.apiRef === 'custom_search'){
+    //     //     console.log("############### data : ", data);
+    //     //     document.getElementById(data.templateId).innerHTML = '';
+    //     //     document.getElementById(data.templateId).innerHTML = data.template;
+    //     //     return;
+    //     // }
+    //     if(data?.apiRef === 'settings_section'){
+    //       // console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+    //       console.log("!!!!@@@@ data : ", data );
+    //       console.log("@@@ loader id : data.loaderId :: ", data.loaderId);
+    //       let x = document.getElementById(data.loaderId);
+    //       console.log("@@@ x : ", x);
+    //       document.getElementById(data.loaderId).style.display = "none";
+
+    //       // openSectionsSetupModal();
+    //       // document.getElementById("setupSectionsBlock").innerHTML = data.template;
+    //       // return;
+    //     }
+
+    //     // if(data.apiRef === 'headerNav_section'){
+    //     //     console.log("===================&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&==================");
+    //     //     console.log("data.template : ", data.template);
+    //     //     document.getElementById("header").innerHTML = data.template;
+    //     //     // setupCustomAudioPlayer(null);
+    //     //     return ;
+    //     // }
+
+    //     if(data?.apiRef === "typed_section"){
+    //         createTypedSection(data);
+    //         return;
+    //     }
+    //     if(data.edit){
+    //         sectionData = data.templateData;
+    //         console.log("@@@@ edit section template data : ", data);
+    //         let inputId = "input_"+data.elementId;
+    //         console.log("@@@@ inputid : ", inputId);
+    //         var elmnt = document.getElementById(inputId);
+    //         console.log("@@@ elmnt : ", elmnt);
+    //         // if(elmnt !== null){
+    //         //   elmnt.scrollIntoView();
+    //         //
+    //         // }
+    //     }
+    //     if(data?.apiRef === "update_initial_sections"){
+    //       updateSettingsBlock();
+    //       return;
+    //     }
+    //     // if(data.apiRef === 'request_initial_sections'){
+    //     //     console.log("!!! initSections :: 88888888888888 : ", data.initSections);
+    //     //     console.log("8888888888888888888888888 allSectionsData :: ", data.allSectionsData);
+
+    //     //     localStorage.allSectionsData = data.allSectionsData;
+    //     //     localStorage.activeSectionsData = data.allSectionsData;
+    //     //     localStorage.default_style = data.defaultStyle;
+
+    //     //     setup_default_theme(data.defaultStyle);
+    //     //     inittial_setup(data.initSections, false);
+    //     // }
+
+
+    //     if(data.blockId !== null && data.blockId !== undefined){
+
+    //     }
+    //     if(data.loaderId !== null && data.loaderId !== undefined && data.loaderId !== ''){
+    //         if(document.getElementById(data.loaderId) !== null){
+    //             document.getElementById(data.loaderId).style.display = "none";
+    //         }
+    //     }
+    //     if(data.templateId !== null && data.templateId !== undefined && data.templateId !== ''){
+    //         if(document.getElementById(data.templateId)){
+    //             document.getElementById(data.templateId).style.display = "block";
+    //             document.getElementById(data.templateId).innerHTML = '';
+    //             document.getElementById(data.templateId).innerHTML = data.template;
+    //         }
+    //     }
+    // })
+
+    // socket.on("response-action-edit-style", (data) => {
+    //     console.log("@@@@@ data :: ", data);
+    //     let style = data.style.split(";");
+    //     localStorage.currentEditedStyleArr = style;
+    //     let template = convertRawStyleToEditedStyleTemplate(style);
+    //     showEditStylePopup(template);
+    // });
+
+   
+
+    //  socket.on("response-generic-askchatgptai", (data) => {
+    //     console.log("@@@@@ ask chat gpt ai response data :: ", data);
+    //     let responseTargetId = data.requestData.targetId;
+    //     let dynamicLoaderImageId = 'dynamicChatGptLoader';
+    //     let childNode = document.getElementById("dynamicChatGptLoader")
+    //     // newLoaderImage.src = 'static/img/generic_portfolio_image/loader/loader_wait.gif'; // Replace with your image path
+    //     let parentNode = document.getElementById('part_customMusicPlayerWithLyrics_section-0-0'); // Assuming a div with id="myContainer"
+    //     if(parentNode && childNode){
+    //         parentNode.removeChild(childNode);
+    //     }
+    //     if(data.requestData.targetId && data.requestData.targetId !== ''){
+    //         document.getElementById(data.requestData.targetId).innerHTML = '';
+    //         document.getElementById(data.requestData.targetId).innerHTML = data.responseTemplate;
+    //         document.getElementById(data.requestData.textInputById).value = '';
+    //         document.getElementById(data.requestData.textInputById).focus = true;
+
+    //     }
+        
+    // });
 
     
 
@@ -158,9 +294,46 @@ console.log("============= file : genericFeature.core.client.controller.js =====
     }
     // test();
 
-    function inittial_setup(sections, edit){
+    async function postData(request, payload) {
+        const url = request?.url || '';
+        const data = (payload === null || payload === undefined) ? null : payload;
+        try {
+                const response = await fetch(url, {
+                method: request.method, // Specify the request method
+                headers: {
+                "Content-Type": "application/json", // Tell the server you're sending JSON
+                },
+                body: JSON.stringify(data), // Convert your JS object to a JSON string
+            });
+            // const data1 = await response.text()
+            // console.log("********** response data1 : ", data1)
+
+            // Check if the request was successful (status 200-299)
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }else{
+                if(response){
+                    const result = await response.json(); // Parse the response body as JSON
+                    // const result = await response.text(); // Parse the response body as JSON
+
+                    console.log("in client Success:", result);
+                    return result
+                }
+            }
+
+            // const result = await response.json(); // Parse the response body as JSON
+            // console.log("in client Success:", result);
+        } catch (error) {
+        console.error("Error:", error);
+        }
+    }
+
+    async function inittial_setup(sections, edit, fromFun){
         console.log("################## calling cli ent side init function ===============");
         console.log("################## sections :: ", sections);
+        console.log("======= from function its called : ", fromFun);
+        console.log("======= from function its edit : ", edit);
+
         let dynamicHeaderMenus = [];
         let sectionsTemplate = '';
         sections.values.forEach((item, index) => {
@@ -168,10 +341,12 @@ console.log("============= file : genericFeature.core.client.controller.js =====
               dynamicHeaderMenus.push(item.section.name);
             }
         });
-        sections.values.forEach((item, index) => {
+
+        sections.values.forEach(async (item, index) => {
             let loaderTemplate = '';
             let category = null;
             let request_section_data  = null;
+            const genericSectionsTemplate = null;
 
             if(item === undefined && item === null ){
               return ;
@@ -189,12 +364,17 @@ console.log("============= file : genericFeature.core.client.controller.js =====
             }
             if(item && item.section && item.section.name === 'menu'){
                   // request_section_data.logoCategory = "starter";
-                  // socket.emit("request-generic-portfolio", {apiRef : 'menu_section', sectionName: 'menu_section', blockId: 'custom_menu_block', templateId: 'custom_menu_template', loaderId: 'custom_menu_block', category : "starter", application: application});
-                  socket.emit("request-generic-portfolio", {apiRef : item.section.name+'_section', sectionName: item.section.name+'_section', blockId: 'custom_'+item.section.name+'_block', templateId: 'custom_'+item.section.name+'_template', loaderId: 'custom_'+item.section.name+'_loader', edit: edit, category : "debt", application: application, fileName: fileName});
-            }
+                  //socket.emit("request-generic-portfolio", {apiRef : item.section.name+'_section', sectionName: item.section.name+'_section', blockId: 'custom_'+item.section.name+'_block', templateId: 'custom_'+item.section.name+'_template', loaderId: 'custom_'+item.section.name+'_loader', edit: edit, category : "debt", application: application, fileName: fileName});
+                  const request_sections_template_payload =  {apiRef : item.section.name+'_section', sectionName: item.section.name+'_section', blockId: 'custom_'+item.section.name+'_block', templateId: 'custom_'+item.section.name+'_template', loaderId: 'custom_'+item.section.name+'_loader', edit: edit, category : "debt", application: application, fileName: fileName}
+                  const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, request_sections_template_payload)
+                  console.log("222222222222 genericSectionsData :: ", genericSectionsTemplate);
+                  renderGenericSections(genericSectionsTemplate)
+                }
             if(item && item.section && item.section.name === 'typed' ){
                 request_section_data = {apiRef : item.section.name+'_section', sectionName: item.section.name+'_section', blockId: null, templateId: null, loaderId: null, edit: edit, application: application, fileName: fileName}
-                socket.emit("request-generic-portfolio", request_section_data);
+                //socket.emit("request-generic-portfolio", request_section_data);
+                const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, request_section_data)
+                renderGenericSections(genericSectionsTemplate)
 
             }
             // if(item.section.name === 'typed' || item.section.name === 'settings'){
@@ -218,10 +398,18 @@ console.log("============= file : genericFeature.core.client.controller.js =====
               `;
               request_section_data.dynamic_header_menus = dynamicHeaderMenus;
               request_section_data.dynamic_sections = sections;
-              socket.emit("request-generic-portfolio", request_section_data);
+              //socket.emit("request-generic-portfolio", request_section_data);
+               const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, request_section_data)
+               console.log("222222222222 genericSectionsTemplate :: ", genericSectionsTemplate);
+               renderGenericSections(genericSectionsTemplate)
             }else if(item && item.section.name === 'headerNav'){
+                    //request_section_data = {apiRef : item.section.name+'_section', sectionName: item.section.name+'_section', blockId: null, templateId: 'header', loaderId: null, edit: edit, application: application, fileName: fileName};
                     request_section_data = {apiRef : item.section.name+'_section', sectionName: item.section.name+'_section', blockId: null, templateId: 'header', loaderId: null, edit: edit, application: application, fileName: fileName};
-                    socket.emit("request-generic-portfolio", request_section_data);
+                    console.log("XXXXXXXXXXXXXXXXXXXXXX request_section_data :: ", request_section_data);
+                    //socket.emit("request-generic-portfolio", request_section_data);
+                    const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, request_section_data)
+                    console.log("222222222222 genericSectionsTemplate :: ", genericSectionsTemplate);
+                    renderGenericSections(genericSectionsTemplate)
             }else if(item && (
                     item.section.name === 'menu'
                     || item.section.name === 'specialMenuContainer'
@@ -236,8 +424,6 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                     || item.section.name === "hereMapPlacesByAccomodationPlacesCategoryContainer"
                     || item.section.name === "hereMapPlacesByEmmergencyServicePlacesCategoryContainer"
                     || item.section.name === "hereMapPlacesByShoppingCategoryContainer"
-
-
                     )){
                     if(item.section.defaultCategory !== undefined && item.section.defaultCategory !== null && item.section.defaultCategory !== ''){
                         localStorage[item.section.name] = {category : item.section.defaultCategory};
@@ -258,10 +444,14 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                     // if(item.section.name === 'specialMenuContainer'){
                     //     category = "special_1";
                     // }
-                    socket.emit("request-generic-portfolio", {apiRef : item.section.name+'_section', sectionName: item.section.name+'_section', blockId: 'custom_'+item.section.name+'_block', templateId: 'custom_'+item.section.name+'_template', loaderId: 'custom_'+item.section.name+'_loader', edit: edit, category : item.section.defaultCategory, application: application, fileName: fileName});
-
+                    //socket.emit("request-generic-portfolio", {apiRef : item.section.name+'_section', sectionName: item.section.name+'_section', blockId: 'custom_'+item.section.name+'_block', templateId: 'custom_'+item.section.name+'_template', loaderId: 'custom_'+item.section.name+'_loader', edit: edit, category : item.section.defaultCategory, application: application, fileName: fileName});
+                    const fetchGenericSectionsTemplatePayload = {apiRef : item.section.name+'_section', sectionName: item.section.name+'_section', blockId: 'custom_'+item.section.name+'_block', templateId: 'custom_'+item.section.name+'_template', loaderId: 'custom_'+item.section.name+'_loader', edit: edit, category : item.section.defaultCategory, application: application, fileName: fileName}
+                    const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, fetchGenericSectionsTemplatePayload)
+                    // console.log("222222222222 genericSectionsTemplate :: ", genericSectionsTemplate);
+                    renderGenericSections(genericSectionsTemplate)
                     // socket.emit("request-generic-portfolio", request_section_data);
             }else if(item && item.section.name !== 'header'){
+            console.log("==== request_section_data : ", request_section_data)
               sectionsTemplate += `
                   <section id="`+item.section.name+`" class="`+item.section.class+`" style="`+item.section.style+`">
                       <div class="custom-`+item.section.name+`-block " id="custom_`+item.section.name+`_block" style="`+item.block.style+`">
@@ -272,8 +462,10 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                       </div>
                   </section>
               `;
-              socket.emit("request-generic-portfolio", request_section_data);
-
+              //socket.emit("request-generic-portfolio", request_section_data);
+              const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, request_section_data)
+              //console.log("222222222222 genericSectionsTemplate :: ", genericSectionsTemplate);
+              renderGenericSections(genericSectionsTemplate)
             }
 
         })
@@ -288,11 +480,120 @@ console.log("============= file : genericFeature.core.client.controller.js =====
 
     };
 
-    (function init(){
-        // socket.emit("request-final-portfolio-sections", {});
-        // socket.emit("request-gini-home-initial-sections", {});
-        socket.emit("request-generic-portfolio", {apiRef: 'request_initial_sections', application: application, fileName: fileName});
+  
+    // (async function init(){
+    //     // socket.emit("request-final-portfolio-sections", {});
+    //     socket.emit("request-gini-home-initial-sections", {});
+    //     // if(application === 'gini_home'){
+    //     //     console.log("=================================================================")
+    //     //     // postData({method: 'POST', url: '/fetchInitSections'}, {application: application, fileName: fileName})
+    //     //     socket.emit("request-gini-home-initial-sections", {});
+    //     // }else{
+    //     //     socket.emit("request-generic-portfolio", {apiRef: 'request_initial_sections', application: application, fileName: fileName});
+    //     // }
+    // })();
+
+     (async function init(){
+        if(application === 'gini_home'){
+            const initSectionsData = await postData({method: 'POST', url: '/fetchInitSections'}, {application: application, fileName: fileName})
+            console.log("=================== initSectionsData ::: ", initSectionsData);
+            const data = initSectionsData.payload;
+            localStorage.allSectionsData = data.allSectionsData;
+            localStorage.activeSectionsData = data.allSectionsData;
+            localStorage.default_style = data.defaultStyle;
+            setup_default_theme(data.defaultStyle);
+            inittial_setup(data.initSections, false, "I am from init function...");
+            // socket.emit("request-gini-home-initial-sections", {});
+            //socket.emit("request-generic-portfolio", {apiRef: 'request_initial_sections', application: application, fileName: fileName});
+        }else{
+            //socket.emit("request-generic-portfolio", {apiRef: 'request_initial_sections', application: application, fileName: fileName});
+            const initSectionsData = await postData({method: 'POST', url: '/fetchInitSections'}, {application: application, fileName: fileName})
+            console.log("=================== initSectionsData ::: ", initSectionsData);
+            const data = initSectionsData.payload;
+            localStorage.allSectionsData = data.allSectionsData;
+            localStorage.activeSectionsData = data.allSectionsData;
+            localStorage.default_style = data.defaultStyle;
+                    console.log("88888888888888888888888888888888888888888888")
+
+            setup_default_theme(data.defaultStyle);
+            inittial_setup(data.initSections, false, "I am from init function...");
+        }
     })();
+
+    
+    // function inittial_setup(sections, edit){
+    //     console.log("################## calling cli ent side init function ===============");
+    //     console.log("################## sections :: ", sections);
+    //     let dynamicHeaderMenus = [];
+    //     let sectionsTemplate = '';
+    //     sections.values.forEach((item, index) => {
+    //         dynamicHeaderMenus.push(item.section.name);
+    //     });
+    //     sections.values.forEach((item, index) => {
+    //         let loaderTemplate = '';
+    //         let request_section_data = {apiRef : item.section.name+'_section', sectionName: item.section.name+'_section', blockId: 'custom_'+item.section.name+'_block', templateId: 'custom_'+item.section.name+'_template', loaderId: 'custom_'+item.section.name+'_loader', edit: edit, myPortfolio: true, application: application};
+
+    //         if(item.loader.img !== undefined && item.loader.img !== null){
+    //             loaderTemplate += `<img class="loader-img" src="`+item.loader.img.imgUrl+`"  alt="`+item.loader.alt+`" style="`+item.loader.img.style+`">`;
+    //         }
+    //         if(item.section.name === 'work'){
+    //               request_section_data.logoCategory = "Education";
+    //         }
+
+    //         if(item.section.name === 'typed' || item.section.name === 'settings'){
+    //             // request_section_data = {apiRef : item.section.name+'_section', blockId: null, templateId: null, loaderId: null, edit: edit}
+    //             // socket.emit("request-generic-portfolio", request_section_data);
+
+    //         }else if(item.section.name === 'header'){
+    //           sectionsTemplate += `
+    //                   <div class="custom-`+item.section.name+`-block " id="custom_`+item.section.name+`_block" style="`+item.block.style+`">
+    //                       <div class="loader-block" id="custom_`+item.section.name+`_loader" style="display: block; `+item.loader.style+`">
+    //                           `+loaderTemplate+`
+    //                       </div>
+    //                       <div class="custom-`+item.section.name+`-template `+item.template.class+`" id="custom_`+item.section.name+`_template" style="display: none; `+item.template.style+`"></div>
+    //                   </div>
+    //           `;
+    //           request_section_data.dynamic_header_menus = dynamicHeaderMenus;
+    //           request_section_data.dynamic_sections = sections;
+    //           socket.emit("request-generic-portfolio", request_section_data);
+    //         }else if(item.section.name === 'headerNav'){
+    //                 request_section_data = {apiRef : item.section.name+'_section', sectionName: item.section.name+'_section', blockId: null, templateId: 'mobileSideNavBar', loaderId: null, edit: edit, application: application};
+    //                 socket.emit("request-generic-portfolio", request_section_data);
+    //         }else if(item.section.name === 'mobileSideNavBar'){
+    //                 request_section_data = {apiRef : item.section.name+'_section', sectionName: item.section.name+'_section', blockId: null, templateId: 'mobileSideNavBar', loaderId: null, edit: edit, application: application};
+    //                 socket.emit("request-generic-portfolio", request_section_data);
+    //         }else if(item.section.name !== 'header'){
+    //           sectionsTemplate += `
+    //               <section id="`+item.section.name+`" class="`+item.section.name+`" style="`+item.section.style+`">
+    //                   <div class="custom-`+item.section.name+`-block " id="custom_`+item.section.name+`_block" style="`+item.block.style+`">
+    //                       <div class="loader-block" id="custom_`+item.section.name+`_loader" style="display: block; `+item.loader.style+`">
+    //                             `+loaderTemplate+`
+    //                       </div>
+    //                       <div class="custom-`+item.section.name+`-template `+item.template.class+`" id="custom_`+item.section.name+`_template" style="display: none; `+item.template.style+`"></div>
+    //                   </div>
+    //               </section>
+    //           `;
+    //           socket.emit("request-generic-portfolio", request_section_data);
+
+    //         }
+
+    //     })
+    //     // console.log("@@@ sectionsTemplate : ", sectionsTemplate);
+    //     {
+    //       document.getElementById("sections_block").innerHTML = '';
+    //       document.getElementById("sections_block").innerHTML = sectionsTemplate;
+    //       // if(sections.sectionStyle && sections.sectionStyle !== ''){
+    //       //   document.getElementById("sections_block").style = sections.sectionStyle;
+    //       // }
+    //     }
+
+    // };
+
+    // (function init(){
+    //     // socket.emit("request-final-portfolio-sections", {});
+    //     socket.emit("request-gini-home-initial-sections", {});
+    //     // socket.emit("request-generic-portfolio", {apiRef: 'request_initial_sections', application: 'gini_home'});
+    // })();
 
     function setup_default_theme(defaultStyle){
         console.log("============ calling default style function =============");
@@ -331,7 +632,7 @@ console.log("============= file : genericFeature.core.client.controller.js =====
         var typed = new Typed('.element', typedOptions);
     }
 
-    function syncData(){
+    async function syncData(){
         let payload = {
           apiRef : 'update_block_data',
           actionType : 'save_updated_style',
@@ -349,11 +650,13 @@ console.log("============= file : genericFeature.core.client.controller.js =====
         document.getElementById(inputId).style = itemStyle;
         document.getElementById(itemId).style = secStyle;
         document.getElementById("editStylePopup").style.display = 'none';
-        socket.emit("request-generic-portfolio", payload);
+        // socket.emit("request-generic-portfolio", payload);
+        const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+
         document.getElementById("editStylePopup").style.display = 'none';
     }
 
-    function applyNewTheme(theme){
+    async function applyNewTheme(theme){
         console.log("======== calling the apply New Theme =========");
         console.log("@@@ theme : ", theme);
         let payload = {
@@ -364,10 +667,12 @@ console.log("============= file : genericFeature.core.client.controller.js =====
           fileName: fileName
 
         }
-        socket.emit("request-generic-portfolio", payload);
+        // socket.emit("request-generic-portfolio", payload);
+        const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+
     }
 
-    function onClickSettings1(that , event, eventState){
+    async function onClickSettings1(that , event, eventState){
         // console.log("******** on click function on click item ********");
         // console.log("@@@@ EVENT :: ", event);
         // console.log("@@@ that ::  ", that);
@@ -458,16 +763,18 @@ console.log("============= file : genericFeature.core.client.controller.js =====
         // document.getElementById("setupSectionsModal").style.display = 'none';
         $('#setupSectionsModal').modal('hide');
         document.getElementById("sections_block").style.bckground = localStorage.themeBgColor;
-        socket.emit("request-generic-portfolio", payload);
+        //socket.emit("request-generic-portfolio", payload);
+        const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+
     }
 
-    function onClickSettings(that , event, eventState){
+    async function onClickSettings(that , event, eventState){
         // console.log("******** on click function on click item ********");
         // console.log("@@@@ EVENT :: ", event);
         // console.log("@@@ that ::  ", that);
         // console.log("@@@ eventState ::  ", eventState);
         let updatedSetupArr = [];
-        let x = document.getElementById("custom_settings_template").querySelectorAll(".custom-part");
+        let x = document.getElementById("setupSectionsBlock").querySelectorAll(".custom-part");
         x.forEach((item, index) => {
             if(item.dataset.all !== undefined){
                 let dataset = item.dataset.all;
@@ -559,12 +866,17 @@ console.log("============= file : genericFeature.core.client.controller.js =====
         console.log("@@@@@ !!!!!!!!!!!! payload : ", payload);
         $('#setupSectionsModal').modal('hide');
         document.getElementById("sections_block").style.bckground = localStorage.themeBgColor;
-        socket.emit("request-generic-portfolio", payload);
+        //socket.emit("request-generic-portfolio", payload);
+        const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+        renderGenericSections(genericSectionsTemplate)
     }
 
-    function updateSettingsBlock(){
+    async function updateSettingsBlock(){
         console.log("===== calling update settings block =====");
-        socket.emit("request-generic-portfolio", {apiRef : 'settings_section', sectionName: 'settings_section', blockId: 'custom_settings_block', templateId: 'custom_settings_template', loaderId: 'custom_settings_loader', application: application});
+        const payload = {apiRef : 'settings_section', sectionName: 'settings_section', blockId: 'custom_settings_block', templateId: 'custom_settings_template', loaderId: 'custom_settings_loader', application: application, fileName: fileName};
+        //socket.emit("request-generic-portfolio", {apiRef : 'settings_section', sectionName: 'settings_section', blockId: 'custom_settings_block', templateId: 'custom_settings_template', loaderId: 'custom_settings_loader', application: application});
+        const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+        renderGenericSections(genericSectionsTemplate)
     }
 
     function createUpdateBtn(sectionName){
@@ -815,9 +1127,7 @@ console.log("============= file : genericFeature.core.client.controller.js =====
           document.getElementById("sectionPopup").style.top = top;
           document.getElementById("sectionPopup").style.zIndex = "99";
           document.getElementById(partId).style.outline = "2px solid var(--default-theme-color)";
-
-
-      }
+    }
 
     function getPartIndexById(id){
         console.log("===== calling get part index by id =====");
@@ -868,7 +1178,7 @@ console.log("============= file : genericFeature.core.client.controller.js =====
         //}
     }
 
-    window.onClickEditStyle = function(state, index){
+    window.onClickEditStyle = async function(state, index){
         console.log("========= calling on click edit style =========");
         console.log("@@@ index : ", index);
         console.log("@@@@ state : ", state);
@@ -929,7 +1239,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                   fileName: fileName
               }
               closeEditStylePopup()
-              socket.emit("request-generic-portfolio", payload);
+              //socket.emit("request-generic-portfolio", payload);
+              const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+
         }else if(state === "save_part_style"){
               let style = localStorage.currentEditedStyleArr.join(" ; ");
               let payload = {
@@ -944,7 +1256,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                 fileName: fileName
 
               }
-              socket.emit("request-generic-portfolio", payload);
+              //socket.emit("request-generic-portfolio", payload);
+              const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+
               let partId = localStorage.current_Part_Threedots_state.partId;
               document.getElementById(partId).style.outline = "none";
               closeEditStylePopup()
@@ -997,11 +1311,60 @@ console.log("============= file : genericFeature.core.client.controller.js =====
     //   // socket.emit("request-generic-portfolio", {apiRef : 'work_by_category', blockId: 'custom_new_latest_work_block', templateId: 'custom_new_latest_work_template', loaderId: 'custom_new_latest_work_loader', logoCategory : id});
     // }
 
-    window.onClickWorkCatItem = function(that,event){
+    windowActions = {
+        activeDeactiveMenuStyleClass: function(that, argument){
+            const actionName = 'hello';
+            // windowActions[actionName]();
+            console.log("777777777777777777777777777777777777777777777777777777777777777777777");
+            console.log("======== style : ", that.style)
+            const activeMenuStyleClass = argument.activeMenuStyleClass;
+            const deActiveMenuStyleClass = argument.deActiveMenuStyleClass;
+            console.log("====== activeMenuStyleClass : ", activeMenuStyleClass)
+            console.log("====== deActiveMenuStyleClass : ", deActiveMenuStyleClass)
+            let querySelectorClass = '.'+activeMenuStyleClass;
+            console.log('=== querySelectorClass : ', querySelectorClass)
+            let eleList = document.querySelectorAll(querySelectorClass);
+            console.log("@@@@@@ ele style : ", eleList)
+            if(eleList){
+                eleList[0]?.classList.remove(activeMenuStyleClass);
+                eleList[0]?.classList.add(deActiveMenuStyleClass);
+                that.classList?.remove(deActiveMenuStyleClass);
+                that.classList?.add(activeMenuStyleClass);
+            }
+        }
+    }
+
+    // window.activeDeactiveMenuStyleClass = function (that, argument){
+    //     const actionName = 'hello';
+    //     windowActions[actionName]();
+    //      console.log("777777777777777777777777777777777777777777777777777777777777777777777");
+    //         console.log("======== style : ", that.style)
+    //         const activeMenuStyleClass = argument.activeMenuStyleClass;
+    //         const deActiveMenuStyleClass = argument.deActiveMenuStyleClass;
+    //         console.log("====== activeMenuStyleClass : ", activeMenuStyleClass)
+    //         console.log("====== deActiveMenuStyleClass : ", deActiveMenuStyleClass)
+    //         let querySelectorClass = '.'+activeMenuStyleClass;
+    //         let eleList = document.querySelectorAll(querySelectorClass);
+    //         console.log("@@@@@@ ele style : ", eleList)
+    //         if(eleList){
+    //             eleList[0]?.classList.remove(activeMenuStyleClass);
+    //             eleList[0]?.classList.add(deActiveMenuStyleClass);
+    //             that.classList?.remove(deActiveMenuStyleClass);
+    //             that.classList?.add(activeMenuStyleClass);
+    //         }
+            
+
+    // }
+
+    window.onClickWorkCatItem = async function(that,event){
         console.log("@@@ that : ", that);
-        console.log("@@@ event id: ", event.target.id);
+        console.log("@@@ event : ", event);
+
+        console.log("@@@ event id: ", that?.target?.id);
         console.log("@@@ localstorage :: ", localStorage);
-        let argument = JSON.parse(that.getAttribute("data"));
+        // let argument1 = that?.getAttribute("data");
+        // console.log("==== argument1 : ", argument1)
+        let argument = JSON.parse(that?.getAttribute("data"));
         let category = argument.category;
         let sectionName = argument.sectionName;
         let currentId = event.target.id;
@@ -1014,7 +1377,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                 ele[0].classList.remove("menu-active-selection");
             }
             that.classList.add("menu-active-selection");
-            socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+            //socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+            const payload = {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application};
+            const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
 
         }else if(argument.sectionName === 'specialMenuContainer'){
             let ele = document.querySelectorAll(".special-active-selection");
@@ -1023,7 +1388,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                 ele[0].classList.remove("special-active-selection");
             }
             that.classList.add("special-active-selection");
-            socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+            //socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+            const payload = {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application};
+            const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
 
         }else if(argument.sectionName === 'entertainmentNewsByCategoryContainer' ){
             let ele = document.querySelectorAll(".entertainment-news-cat .menu-active-selection");
@@ -1032,7 +1399,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                 ele[0].classList.remove("menu-active-selection");
             }
             that.classList.add("menu-active-selection");
-            socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+            //socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+            const payload = {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application};
+            const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
 
         }else if(argument.sectionName === 'hereMapPlacesByCategoryContainer' ){
             let ele = document.querySelectorAll(".near-by-places-cat-general .menu-active-selection");
@@ -1041,7 +1410,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                 ele[0].classList.remove("menu-active-selection");
             }
             that.classList.add("menu-active-selection");
-            socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+            //socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+            const payload = {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application};
+            const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
 
         }else if(argument.sectionName === 'hereMapPlacesByAccomodationPlacesCategoryContainer' ){
             let ele = document.querySelectorAll(".near-by-accommodation-cat .menu-active-selection");
@@ -1050,7 +1421,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                 ele[0].classList.remove("menu-active-selection");
             }
             that.classList.add("menu-active-selection");
-            socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+            //socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+            const payload = {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application};
+            const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
 
         }else if(argument.sectionName === 'hereMapPlacesByTransportPlacesCategoryContainer' ){
             let ele = document.querySelectorAll(".near-by-places-cat-transport .menu-active-selection");
@@ -1059,7 +1432,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                 ele[0].classList.remove("menu-active-selection");
             }
             that.classList.add("menu-active-selection");
-            socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+            //socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+            const payload = {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application};
+            const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
 
         }else if(argument.sectionName === "educationalNewsByCategoryContainer"){ hereMapPlacesByTransportPlacesCategoryContainer_section
             console.log("777777777777777777777777777777777777777777777777777777777777777777777");
@@ -1069,7 +1444,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                 ele[0].classList.remove("menu-active-selection");
             }
             that.classList.add("menu-active-selection");
-            socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+            //socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+            const payload = {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application};
+            const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
 
         }else if(argument.sectionName === "hereMapPlacesByEmmergencyServicePlacesCategoryContainer"){
             console.log("777777777777777777777777777777777777777777777777777777777777777777777");
@@ -1079,7 +1456,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                 ele[0].classList.remove("menu-active-selection");
             }
             that.classList.add("menu-active-selection");
-            socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+            //socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+            const payload = {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application};
+            const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
 
         }else if(argument.sectionName === "hereMapPlacesByShoppingCategoryContainer"){
             console.log("777777777777777777777777777777777777777777777777777777777777777777777");
@@ -1089,7 +1468,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                 ele[0].classList.remove("menu-active-selection");
             }
             that.classList.add("menu-active-selection");
-            socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+            //socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+            const payload = {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application};
+            const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
 
         }else if(argument.sectionName === "medicalNewsByCategoryContainer"){
             console.log("777777777777777777777777777777777777777777777777777777777777777777777");
@@ -1099,7 +1480,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                 ele[0].classList.remove("menu-active-selection");
             }
             that.classList.add("menu-active-selection");
-            socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+            //socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+            const payload = {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application};
+            const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
 
         }else if(argument.sectionName === "newsApiTopArticlesNewsByCategoryContainer"){
             console.log("777777777777777777777777777777777777777777777777777777777777777777777");
@@ -1109,7 +1492,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                 ele[0].classList.remove("menu-active-selection");
             }
             that.classList.add("menu-active-selection");
-            socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+            //socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+            const payload = {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application};
+            const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
 
         }else if(argument.sectionName === "newsApiTopJournalNewsByCategoryContainer"){
             console.log("777777777777777777777777777777777777777777777777777777777777777777777");
@@ -1119,7 +1504,23 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                 ele[0].classList.remove("menu-active-selection");
             }
             that.classList.add("menu-active-selection");
-            socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+            //socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+            const payload = {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application};
+            const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+
+        }else if(argument.sectionName === "work" || argument.sectionName === 'latest_work' || argument.sectionName === 'workcat'){
+
+            const actionName = argument.applyActiveDeactiveMenuStyleClassMethod;
+            console.log("==== action name : ", actionName)
+
+            windowActions[actionName](that,argument);
+            let category = argument.category.replace(/\s+/g, '_');
+            console.log("===== category : ", category)
+            //socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
+            //const payload = {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, logoCategory : category, application: application, fileName: fileName};
+            const payload = {apiRef : argument.targetSectionName+'_section', sectionName: argument.targetSectionName+'_section', blockId: 'custom_'+argument.targetSectionName+'_block', templateId: 'custom_'+argument.targetSectionName+'_template', loaderId: 'custom_'+argument.targetSectionName+'_loader', edit: false, logoCategory : category, targetProperty: argument?.rawDataTargetProperty, application: application, fileName: fileName};
+            const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+            renderGenericSections(genericSectionsTemplate)
 
         }
     }
@@ -1163,7 +1564,6 @@ console.log("============= file : genericFeature.core.client.controller.js =====
       console.log("================= on click onClickGiniProducts ==================");
       let argument = JSON.parse(that.getAttribute("data"));
       console.log("@@@ argument  : ", argument);
-
     }
 
     window.onClickParts = function(that, event){
@@ -1271,7 +1671,7 @@ console.log("============= file : genericFeature.core.client.controller.js =====
       return Math.round(m) / 100 * Math.sign(num);
     }
 
-    window.onClickButton = function(that, event, state){
+    window.onClickButton = async function(that, event, state){
         console.log("@@@ that : ", that);
         console.log("@@@ id : ", that.id);
         console.log("@@@ state : ", state);
@@ -1324,6 +1724,15 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                 let apis = argument.sectionName;
                 let targetSectionName = argument.targetSectionName;
                 console.log("############### targetSectionName : ", targetSectionName);
+                console.log("############### category : ", category);
+                // console.log("argument.applyActiveDeactiveMenuStyleClassMethod : ", argument.applyActiveDeactiveMenuStyleClassMethod)
+
+                // const actionName = argument.applyActiveDeactiveMenuStyleClassMethod;
+                // windowActions[actionName](that,argument);
+
+                const actionName = argument.applyActiveDeactiveMenuStyleClassMethod;
+                windowActions[actionName](that,argument);
+
                 let payload = {
                     apiRef : 'allPublicApis_section',
                     actionType : 'public_apis_by_category',
@@ -1338,7 +1747,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                 }
                 console.log("############### targetSectionName : ", payload);
 
-                socket.emit("request-generic-portfolio", payload);
+                //socket.emit("request-generic-portfolio", payload);
+                const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+                renderGenericSections(genericSectionsTemplate)
             }
         }else if(state === 'kontests_by_site' || state === 'all_kontests'){
           console.log("@@@ argument.category : ", argument.category);
@@ -1377,7 +1788,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                   }
                   payload.actionType = '';
               }
-              socket.emit("request-generic-portfolio", payload);
+              //socket.emit("request-generic-portfolio", payload);
+              const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+
           }
         }else if(state === 'indian_radio_stations'){
             let url = argument.key.name;
@@ -1496,7 +1909,27 @@ console.log("============= file : genericFeature.core.client.controller.js =====
         }
     }
 
-    window.onClickAskChatGptAiButton = function(that, event, state){
+    const processAskChatGptAiGenericResponse = (askGptResponse) => {
+        const data = askGptResponse.payload;
+        console.log("@@@@@ ask chat gpt ai response data :: ", data);
+        let responseTargetId = data.requestData.targetId;
+        let dynamicLoaderImageId = 'dynamicChatGptLoader';
+        let childNode = document.getElementById("dynamicChatGptLoader")
+        // newLoaderImage.src = 'static/img/generic_portfolio_image/loader/loader_wait.gif'; // Replace with your image path
+        let parentNode = document.getElementById('part_customMusicPlayerWithLyrics_section-0-0'); // Assuming a div with id="myContainer"
+        if(parentNode && childNode){
+            parentNode.removeChild(childNode);
+        }
+        if(data.requestData.targetId && data.requestData.targetId !== ''){
+            document.getElementById(data.requestData.targetId).innerHTML = '';
+            document.getElementById(data.requestData.targetId).innerHTML = data.responseTemplate;
+            document.getElementById(data.requestData.textInputById).value = '';
+            document.getElementById(data.requestData.textInputById).focus = true;
+
+        }
+    }
+
+    window.onClickAskChatGptAiButton = async function(that, event, state){
         let textInputBydValue = '';
         
         console.log("@@@ that : ", that);
@@ -1525,8 +1958,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
             textInputById: argument.textInputById
         };
         
-        socket.emit("request-generic-askchatgptai", payload);
-      
+        //socket.emit("request-generic-askchatgptai", payload);
+        const askGptResponse = await postData({method: 'POST', url: '/askChatGpt'}, payload)
+        processAskChatGptAiGenericResponse(askGptResponse)
     }
 
 
@@ -1554,16 +1988,19 @@ console.log("============= file : genericFeature.core.client.controller.js =====
     //     document.getElementById("sections_block").style.bckground = localStorage.themeBgColor;
     //     socket.emit("request-generic-portfolio", payload);
 
-    window.onKeyUpInput = function(that, event, state){
+    window.onKeyUpInput = async function(that, event, state){
         console.log("=========== that : ", that);
         console.log("=========== that.id : ", that.id);
         console.log("=========== event : ", event);
         console.log("=========== state : ", state);
         let inputVal = document.getElementById(that.id).value;
+        let argument = that.getAttribute("data");
+        argument = JSON.parse(argument);
+        console.log("@@@ argument : ", argument);
         console.log("=========== inputVal : ", inputVal);
         let apis = state.split("_")[1];
         if((event.keyCode === 13 && inputVal.length >=3) || (event.keyCode === 8)){
-            console.log("=== currentKontestsApiCategory : ", currentKontestsApiCategory);
+            // console.log("=== currentKontestsApiCategory : ", currentKontestsApiCategory);
             let targetSectionName = 'allPublicApis'
             if(apis === 'allKontestsApis'){
                 let payload = {
@@ -1587,21 +2024,124 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                 if(currentKontestsApiCategory === 'kontests_by_site'){
                     payload.sectionName = "kontestsApisLeftSideBarSearch_section"
                 }
-                socket.emit("request-generic-portfolio", payload);
+                //socket.emit("request-generic-portfolio", payload);
+                const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+
+            }
+
+            if(argument?.action === 'global_filter_by_text'){
+                console.log("===== calling global filter by text ====")
+                // let payload = {
+                //     apiRef : argument?.apiRef,
+                //     actionType : argument?.action,
+                //     sectionName: argument?.targetSectionName+'_section',
+                //     sectionId: 'custom_'+targetSectionName+'_section',
+                //     blockId: 'custom_'+argument?.targetSectionName+'_block',
+                //     loaderId: 'custom_'+argument?.targetSectionName+'_loader',
+                //     templateId: 'custom_'+argument?.targetSectionName+'_template',
+                //     application: application,
+                //     fileName: fileName,
+                //     searchQuery : inputVal,
+                // }
+                let payload = {
+                    apiRef : argument?.apiRef,
+                    actionType : argument?.action,
+                    sectionName: `${argument?.targetSectionName}_section`,
+                    sectionId: `custom_${argument?.targetSectionName}_section`,
+                    blockId: `custom_${argument?.targetSectionName}_block`,
+                    loaderId: `custom_${argument?.targetSectionName}_loader`,
+                    templateId: `custom_${argument?.targetSectionName}_template`,
+                    application: application,
+                    fileName: fileName,
+                    searchQuery : inputVal,
+                    editable: argument?.editable
+                }
+                const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+                renderGenericSections(genericSectionsTemplate)
             }
         }
 
     }
 
-    window.onClickSetupProfile = function(that, event, state){
+    window.onClickSetupProfile = async function(that, event, state){
           console.log("********  call on click edit profile  *********");
           if(state === 'edit_profile'){
               console.log(" eeddiitt localStorage.activeSectionsData : ", localStorage.activeSectionsData);
               // document.getElementById("menu_editProfile").style.display = 'none';
               // document.getElementById("menu_previewProfile").style.display = 'block';
 
-              localStorage.activeSectionsData.values.splice(localStorage.activeSectionsData.values.length - 1, 1);
-              inittial_setup(localStorage.activeSectionsData, true);
+              localStorage?.activeSectionsData?.splice(localStorage.activeSectionsData.length - 1, 1);
+              let filteredActiveSectionsData = localStorage.activeSectionsData.slice(0, 3);
+              let testData = [
+                {
+        "section": {
+            "name": "header",
+            "id": "",
+            "class": "",
+            "style": ""
+        },
+        "menu": {
+            "name": "Header",
+            "style": "",
+            "method": "",
+            "icon": {
+                "name": "header",
+                "type": "bx",
+                "style": ""
+            }
+        },
+        "block": {
+            "class": "",
+            "style": ""
+        },
+        "loader": {
+            "img": {
+                "imgUrl": "static/img/generic_portfolio_image/loader/loader_wait.gif",
+                "alt": "",
+                "style": ""
+            },
+            "style": ""
+        },
+        "template": {
+            "style": ""
+        }
+    },
+    {
+        "section": {
+            "name": "about",
+            "id": "",
+            "class": "",
+            "style": ""
+        },
+        "menu": {
+            "name": "About Me",
+            "style": "",
+            "method": "",
+            "icon": {
+                "name": "user",
+                "type": "bx",
+                "style": ""
+            }
+        },
+        "block": {
+            "class": "",
+            "style": ""
+        },
+        "loader": {
+            "img": {
+                "imgUrl": "static/img/generic_portfolio_image/loader/loader_wait.gif",
+                "alt": "",
+                "style": ""
+            },
+            "style": ""
+        },
+        "template": {
+            "style": ""
+        }
+    }]
+              let initSections = {values: localStorage?.activeSectionsData, sectionStyle: 'background: #F1F3F6;'}
+              console.log("++++++++++++++++++ before ca;; init section in edit section +++++++++++++")
+              inittial_setup(initSections, true);
               // window.open('http://localhost:4000/edit', "_blank", );
           }else if(state === 'preview_profile'){
               console.log("==== preview prifile ====");
@@ -1614,8 +2154,79 @@ console.log("============= file : genericFeature.core.client.controller.js =====
               };
               // document.getElementById("menu_editProfile").style.display = 'block';
               // document.getElementById("menu_previewProfile").style.display = 'none';
-              localStorage.activeSectionsData.values.push(settingSection);
-              inittial_setup(localStorage.activeSectionsData, false);
+               let testData = [
+                {
+        "section": {
+            "name": "header",
+            "id": "",
+            "class": "",
+            "style": ""
+        },
+        "menu": {
+            "name": "Header",
+            "style": "",
+            "method": "",
+            "icon": {
+                "name": "header",
+                "type": "bx",
+                "style": ""
+            }
+        },
+        "block": {
+            "class": "",
+            "style": ""
+        },
+        "loader": {
+            "img": {
+                "imgUrl": "static/img/generic_portfolio_image/loader/loader_wait.gif",
+                "alt": "",
+                "style": ""
+            },
+            "style": ""
+        },
+        "template": {
+            "style": ""
+        }
+    },
+    {
+        "section": {
+            "name": "about",
+            "id": "",
+            "class": "",
+            "style": ""
+        },
+        "menu": {
+            "name": "About Me",
+            "style": "",
+            "method": "",
+            "icon": {
+                "name": "user",
+                "type": "bx",
+                "style": ""
+            }
+        },
+        "block": {
+            "class": "",
+            "style": ""
+        },
+        "loader": {
+            "img": {
+                "imgUrl": "static/img/generic_portfolio_image/loader/loader_wait.gif",
+                "alt": "",
+                "style": ""
+            },
+            "style": ""
+        },
+        "template": {
+            "style": ""
+        }
+                }]
+              localStorage.activeSectionsData.push(settingSection);
+              let initSections = {values: localStorage.activeSectionsData, sectionStyle: 'background: #F1F3F6;'}
+            //   localStorage.activeSectionsData.values.push(settingSection);
+                initSections.values.push(settingSection);
+
+              inittial_setup(initSections, false);
           }else if(state === 'open_profile'){
               console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
               // console.log("@@@@ activeSectionsData : ", localStorage.activeSectionsData);
@@ -1623,24 +2234,28 @@ console.log("============= file : genericFeature.core.client.controller.js =====
 
           }else if(state === 'setup_theme'){
               console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-              socket.emit("request-generic-portfolio", {apiRef : 'theme_section', sectionName: 'theme_section', blockId: null, templateId: null, loaderId: null, edit: false, application: application});
+              //socket.emit("request-generic-portfolio", {apiRef : 'theme_section', sectionName: 'theme_section', blockId: null, templateId: null, loaderId: null, edit: false, application: application});
+              const payload = {apiRef : 'theme_section', sectionName: 'theme_section', blockId: null, templateId: null, loaderId: null, edit: false, application: application, fileName: fileName};
+              const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
               $("#setupThemeModal").modal();
+              renderGenericSections(genericSectionsTemplate)
+             
 
           }else if(state === 'close-themeing-modal'){
             console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             $('#setupThemeModal').modal('hide');
 
           }else if(state === 'apply_theme_changes'){
-            let themeColor = document.getElementById("defaultThemeColor").value;
-            let themeBgColor = document.getElementById("defaultThemeBgColor").value;
+            let themeColor = document.getElementById("defaultThemeColor")?.value;
+            let themeBgColor = document.getElementById("defaultThemeBgColor")?.value;
             localStorage.themeBgColor = themeBgColor;
-            let themeCardBgColor = document.getElementById("themeCardBgColor").value;
-            let themeFontColor = document.getElementById("defaultThemeFontColor").value;
-            let themeMenuFontColor = document.getElementById("defaultThemeMenuFontColor").value;
-            let themeMenuBgColor = document.getElementById("defaultThemeMenuBgColor").value;
-            let themeMenuOnHoverFontColor = document.getElementById("themeMenuOnHoverFontColor").value;
-            let themeMenuOnHoverBgColor = document.getElementById("themeMenuOnHoverBgColor").value;
-            let themePrimaryColor = document.getElementById("themePrimaryColor").value;
+            let themeCardBgColor = document.getElementById("themeCardBgColor")?.value;
+            let themeFontColor = document.getElementById("defaultThemeFontColor")?.value;
+            let themeMenuFontColor = document.getElementById("defaultThemeMenuFontColor")?.value;
+            let themeMenuBgColor = document.getElementById("defaultThemeMenuBgColor")?.value;
+            let themeMenuOnHoverFontColor = document.getElementById("themeMenuOnHoverFontColor")?.value;
+            let themeMenuOnHoverBgColor = document.getElementById("themeMenuOnHoverBgColor")?.value;
+            let themePrimaryColor = document.getElementById("themePrimaryColor")?.value;
 
               // console.log("@@@ themeColor : ", themeColor);
               // console.log("@@@ themeBgColor : ", themeBgColor);
@@ -1685,7 +2300,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                 application: application
               }
               console.log("@@@ payload : ", payload);
-              socket.emit("request-generic-portfolio", payload);
+              //socket.emit("request-generic-portfolio", payload);
+              const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+              renderGenericSections(genericSectionsTemplate)
           }else if(state === 'custom_theme_section'){
               console.log("@@@ btn id : ", that.id);
               let tempid = that.id.split("-");
@@ -1704,10 +2321,13 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                 sectionIndex: parseInt(tempid[1]),
                 partsIndex: parseInt(tempid[2]),
                 itemIndex: parseInt(tempid[3]),
-                application: application
+                application: application,
+                fileName: fileName
               }
               console.log("@@@ payload : ", payload);
-              socket.emit("request-generic-portfolio", payload);
+              //socket.emit("request-generic-portfolio", payload);
+              const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+              renderGenericSections(genericSectionsTemplate)
           }else if(state === 'custom_theme_store'){
               console.log("@@@ btn id : ", that.id);
               let tempid = that.id.split("-");
@@ -1728,21 +2348,27 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                 sectionIndex: parseInt(tempid[1]),
                 partsIndex: parseInt(tempid[2]),
                 itemIndex: parseInt(tempid[3]),
-                application: application
+                application: application,
+                fileName: fileName
               }
               console.log("@@@ payload : ", payload);
-              socket.emit("request-generic-portfolio", payload);
+              //socket.emit("request-generic-portfolio", payload);
+              const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+              renderGenericSections(genericSectionsTemplate)
           }
-      }
+    }
 
-    window.onClickUpdateSection = function(sectionName){
+    window.onClickUpdateSection = async function(sectionName){
         console.log("=== on click update section ===");
         console.log("@@@ section name : ", sectionName);
         console.log("@@@ section data :: ", sectionData);
-        socket.emit("request-generic-portfolio", {apiRef : 'update_section_data', sectionName: sectionName, sectionData: sectionData, application: application});
+        //socket.emit("request-generic-portfolio", {apiRef : 'update_section_data', sectionName: sectionName, sectionData: sectionData, application: application});
+        const payload = {apiRef : 'update_section_data', sectionName: sectionName, sectionData: sectionData, application: application};
+        const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+
     }
 
-    window.onKeyUpInputProperties = function(event, sectionName, sectionIndex, partsIndex, itemIndex, propName){
+    window.onKeyUpInputProperties = async function(event, sectionName, sectionIndex, partsIndex, itemIndex, propName){
         console.log("====== on key up input properties =======");
         console.log("@@@ sectionName :: ", sectionName);
         console.log("@@@ secIndex :: ", sectionIndex);
@@ -1750,10 +2376,13 @@ console.log("============= file : genericFeature.core.client.controller.js =====
         console.log("@@@ itemIndex :: ", itemIndex);
         console.log("@@@ propName :: ", propName);
 
-        socket.emit("request-generic-portfolio", {apiRef : 'update_block_data', actionType: 'edit_block_item', sectionName : sectionName, sectionIndex: sectionIndex, partsIndex: partsIndex,  itemIndex: itemIndex, propName: propName, propValue: event.target.value, application: application});
+        //socket.emit("request-generic-portfolio", {apiRef : 'update_block_data', actionType: 'edit_block_item', sectionName : sectionName, sectionIndex: sectionIndex, partsIndex: partsIndex,  itemIndex: itemIndex, propName: propName, propValue: event.target.value, application: application});
+        const payload = {apiRef : 'update_block_data', actionType: 'edit_block_item', sectionName : sectionName, sectionIndex: sectionIndex, partsIndex: partsIndex,  itemIndex: itemIndex, propName: propName, propValue: event.target.value, application: application, fileName: fileName};
+        const genericSectionsTemplateResponse = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+        renderGenericSections(genericSectionsTemplateResponse)
     }
 
-    window.oncickEditJson = function(event, from){
+    window.oncickEditJson = async function(event, from){
         // console.log("@@@ from :: ", from);
         if(from === "html"){
             document.getElementById("jsonViewerBlock"). style.display = "none";
@@ -1764,7 +2393,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
         }else if(from === 'save'){
           let sectionData = document.getElementById("jsonViewer").value;
           console.log("@@@ sectionData :: ", sectionData);
-          socket.emit("request-generic-portfolio", {apiRef : 'update_section_data', sectionData: sectionData, application: application});
+          //socket.emit("request-generic-portfolio", {apiRef : 'update_section_data', sectionData: sectionData, application: application});
+          const payload = {apiRef : 'update_section_data', sectionData: sectionData, application: application};
+          const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
 
         }
     }
@@ -1844,7 +2475,7 @@ console.log("============= file : genericFeature.core.client.controller.js =====
         }
     }
 
-    window.onClickThreeDotsOption = function(option){
+    window.onClickThreeDotsOption = async function(option){
           console.log("========= on click three dots options ==========");
           console.log("@@@ option :: ", option );
           let payload = {
@@ -1857,7 +2488,8 @@ console.log("============= file : genericFeature.core.client.controller.js =====
             itemIndex: currentOnClickThreeDotsState.itemIndex,
             propName: null,
             propValue: null,
-            application: application
+            application: application,
+            fileName: fileName
           }
           if(option === 'delete_item'){
               let id = currentOnClickThreeDotsState.id;
@@ -1865,12 +2497,20 @@ console.log("============= file : genericFeature.core.client.controller.js =====
               console.log("id :: ", id);
               let threeDotsId = "three_dots_"+id;
               document.getElementById(itemId).style.display = "none";
-              socket.emit("request-generic-portfolio", payload);
+              //socket.emit("request-generic-portfolio", payload);
+              const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+              renderGenericSections(genericSectionsTemplate)
           }else if(option === "add_item_on_top" || option === "add_item_on_below" || option === "add_similar_item_on_top" || option === "add_similar_item_on_below"){
-              socket.emit("request-generic-portfolio", payload);
+              //socket.emit("request-generic-portfolio", payload);
+              const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+              renderGenericSections(genericSectionsTemplate)
           }else if(option === "edit_item_style" ){
               localStorage.currentStyleEditorType = "item";
-              socket.emit("request-generic-portfolio", payload);
+              //socket.emit("request-generic-portfolio", payload);
+              const genericSectionsTemplateResponse = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+              //renderGenericSections(genericSectionsTemplate)
+              renderToEditStylegenericSections(genericSectionsTemplateResponse)
+              
               // socket.on("response-action-edit-style", (data) => {
               //     console.log("@@@@@ data :: ", data);
               //     let style = data.style.split(";");
@@ -1891,12 +2531,16 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                 itemIndex: null,
                 propName: null,
                 propValue: null,
-                application: application
+                application: application,
+                fileName: fileName
               }
 
               document.getElementById("sectionPopup").style.display = "none";
               console.log("@@@ payload :: ", payload);
-              socket.emit("request-generic-portfolio", payload);
+              //socket.emit("request-generic-portfolio", payload);
+              const genericSectionsTemplateResponse = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+              renderGenericSections(genericSectionsTemplateResponse)
+              //renderToEditStylegenericSections(genericSectionsTemplateResponse)
           }else if(option === "edit_part_style"){
               console.log("44444444444444444444444444444444444444444444444444444");
               if(localStorage.current_Part_Threedots_state !== undefined && localStorage.current_Part_Threedots_state !== null && localStorage.current_Part_Threedots_state !== ''){
@@ -1910,11 +2554,16 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                     itemIndex: null,
                     propName: null,
                     propValue: null,
-                    application: application
+                    application: application,
+                    fileName: fileName
                   }
                   console.log("@@@ payload :: ", payload);
                   localStorage.currentStyleEditorType = "part";
-                  socket.emit("request-generic-portfolio", payload);
+                  //socket.emit("request-generic-portfolio", payload);
+                  const genericSectionsTemplateResponse = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+                //   renderGenericSections(genericSectionsTemplate)
+                  renderToEditStylegenericSections(genericSectionsTemplateResponse)
+
               }
 
                     // let template = "I am part style for edit...."
@@ -1926,11 +2575,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
           }else if(option.includes("section") || option.includes("part")){
               document.getElementById("sectionPopup").style.display = "none";
           }
+    }
 
-
-      }
-
-    window.onClickSaveStyles = function(sectionName, sectionIndex, partsIndex, itemIndex, actionType){
+    window.onClickSaveStyles = async function(sectionName, sectionIndex, partsIndex, itemIndex, actionType){
         console.log("===== calling onClickSaveStyles fun =====");
         console.log("@@@ sectionName : ", sectionName);
         console.log("@@@ sectionIndex : ", sectionIndex);
@@ -1970,15 +2617,17 @@ console.log("============= file : genericFeature.core.client.controller.js =====
             document.getElementById(inputId).style = itemStyle;
             document.getElementById(itemId).style = secStyle;
             document.getElementById("setupSectionsModal").style.display = 'none';
-            socket.emit("request-generic-portfolio", payload);
+            //socket.emit("request-generic-portfolio", payload);
+            const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+
             // document.getElementById("editStylePopup").style.display = 'none';
         }
         document.getElementById(threeDotsId).style.color = "black";
         document.getElementById(itemId).style.border = "none";
 
-      }
+    }
 
-    window.onClickAddNewSection = function(that, event){
+     window.onClickAddNewSection = async function(that, event){
         console.log("======= calling on click add ne section =======");
         document.getElementById("custom_overlay_block").style.width = "100%";
         let payload = {
@@ -1989,12 +2638,15 @@ console.log("============= file : genericFeature.core.client.controller.js =====
           loaderId: 'custom_overlay_loader',
           templateId: 'custom_overlay_template',
           edit: false,
-          application: application
+          application: application,
+          fileName: fileName
         }
-        socket.emit("request-generic-portfolio", payload);
+        //socket.emit("request-generic-portfolio", payload);
+        const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+        renderGenericSections(genericSectionsTemplate)
     }
 
-    window.onClickCreateNewSection = function(that, event){
+    window.onClickCreateNewSection1 = async function(that, event){
         console.log("======= calling on click create new section ========");
         console.log("@@@ id : ", that.id);
         let argument = that.getAttribute("data");
@@ -2012,10 +2664,66 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                   application: application
                 }
                 closeNav();
-                socket.emit("request-generic-portfolio", payload);
+                //socket.emit("request-generic-portfolio", payload);
+                const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+
                 $('#setupSectionsModal').modal('hide');
 
             }
+        }
+    }
+
+    window.onClickCreateNewSection = async function(that, event){
+        console.log("======= calling on click create new section ========");
+        console.log("@@@ id : ", that.id);
+        let argument = that.getAttribute("data");
+        argument = JSON.parse(argument);
+        console.log("@@@ argument : ", argument);
+        let refSection = "dummyNewSectionTemplate_section";
+        let onSelectRefsectionValue = document.getElementById("createNewSection_allSections").value;
+        console.log("============ onSelectRefsectionValue : ", onSelectRefsectionValue);
+        if(onSelectRefsectionValue !== "Select an section"){
+            refSection = onSelectRefsectionValue+"_section";
+        }
+        if(argument.state === 'create_new_section'){
+            if(argument.mapToId !== undefined && argument.mapToId !== ''){
+                let mapToIdVal = document.getElementById(argument.mapToId).value;
+                console.log("@@@@ mapToIdVal : ", mapToIdVal);
+                mapToIdVal.replace(/ /g, "_");
+                let payload = {
+                  apiRef : 'create_new_section',
+                  actionType : 'save_new_section_data',
+                  referenceSection: refSection,
+                  sectionName : mapToIdVal,
+                  application: application,
+                  fileName: fileName
+                }
+                closeNav();
+                //socket.emit("request-generic-portfolio", payload);
+                const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+                renderGenericSections(genericSectionsTemplate)
+                $('#setupSectionsModal').modal('hide');
+
+            }
+        }else if(argument.state === 'create_new_profile'){
+                console.log("============ create_new_profile =============");
+                let newProfileName = document.getElementById("input_new_profile_name").value;
+                newProfileName = newProfileName.replace(/ /g, '_');
+                console.log("==== newProfileName : ", newProfileName);
+
+                let payload = {
+                  apiRef : 'create_new_profile',
+                  actionType : 'create_new_profile',
+                  referenceSection: '',
+                  sectionName : 'create_new_profile',
+                  fileName: newProfileName,
+                  application: application,
+                  fileName: fileName
+                }
+                //socket.emit("request-generic-portfolio", payload);
+                const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+                renderGenericSections(genericSectionsTemplate)
+                closeNav();
         }
     }
 
@@ -2036,14 +2744,16 @@ console.log("============= file : genericFeature.core.client.controller.js =====
         }
     }
 
-    window.onclickSynsFile = function(){
+    window.onclickSynsFile = async function(){
         console.log("66666666666666666  on click onclickSynsFile  66666666666666666");
         let payload = {
           apiRef : 'sync_portfolio_file',
           actionType : 'update_portfolio_file',
           application: application
         }
-        socket.emit("request-generic-portfolio", payload);
+        //socket.emit("request-generic-portfolio", payload);
+        const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+
     }
 
     window.allowDrop = function(that, ev) {
@@ -2063,7 +2773,7 @@ console.log("============= file : genericFeature.core.client.controller.js =====
 
     }
 
-    window.drop = function(that, ev) {
+    window.drop = async function(that, ev) {
       console.log("!!!!!!!!!!!!! calling drop fun...");
       // console.log("!!!!! drop event : ", ev);
       // console.log("!!!!! drop that : ", that);
@@ -2091,7 +2801,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
 
       }
       console.log("@@@ payload : ", payload);
-      socket.emit("request-generic-portfolio", payload);
+      //socket.emit("request-generic-portfolio", payload);
+      const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+
       // ev.target.appendChild(document.getElementById(data));
     }
 
@@ -2120,7 +2832,7 @@ console.log("============= file : genericFeature.core.client.controller.js =====
 
     }
 
-    window.onChangeDefaultSettings = function(that, event){
+    window.onChangeDefaultSettings = async function(that, event){
         console.log("=========== on click on change default settings ============");
         console.log("@@@ that :: ", that);
         console.log("@@@ that name :: ", that.name);
@@ -2143,7 +2855,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
             edit: false
           }
           console.log("@@@ payload : ", payload);
-          socket.emit("request-generic-portfolio", payload);
+          //socket.emit("request-generic-portfolio", payload);
+          const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
+
         }
 
     }

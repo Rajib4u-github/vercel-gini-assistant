@@ -1,4 +1,6 @@
-const rawData = [
+const rawData = {
+  "count": 25,
+  "entries": [
   {
     "heading": "Redis json provides fast in memory manipulation of json documents at high velocity and volume",
     "text": "RedisJSON | Redis Labs"
@@ -112,6 +114,7 @@ const rawData = [
     "text": "Product"
   }
 ]
+}
 
 
 module.exports.rawData = rawData;

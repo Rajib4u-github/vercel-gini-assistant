@@ -9,7 +9,7 @@
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
-  <script src="/socket.io/socket.io.js"></script>
+  <!-- <script src="/socket.io/socket.io.js"></script> -->
 
   <!-- Favicons -->
   <link href="static/img/favicon.png" rel="icon">
@@ -335,24 +335,22 @@
     }
 }
 
-window.onClickWorkCatItem = function(event){
-    document.getElementById(currentSelectedWorkCategory).style.background = "#E8EAED";
-    document.getElementById(currentSelectedWorkCategory).style.color = "black";
-    let id = event.target.id;
-    currentSelectedWorkCategory = id;
-    document.getElementById(currentSelectedWorkCategory).style.background = "var(--default-theme-color)";
-    document.getElementById(currentSelectedWorkCategory).style.color = "white";
-    socket.emit("request-generic-portfolio", {apiRef : 'work_section', blockId: 'custom_work_block', templateId: 'custom_work_template', loaderId: 'custom_work_loader', logoCategory : id});
+    window.onClickWorkCatItem = function(event){
+        document.getElementById(currentSelectedWorkCategory).style.background = "#E8EAED";
+        document.getElementById(currentSelectedWorkCategory).style.color = "black";
+        let id = event.target.id;
+        currentSelectedWorkCategory = id;
+        document.getElementById(currentSelectedWorkCategory).style.background = "var(--default-theme-color)";
+        document.getElementById(currentSelectedWorkCategory).style.color = "white";
+        socket.emit("request-generic-portfolio", {apiRef : 'work_section', blockId: 'custom_work_block', templateId: 'custom_work_template', loaderId: 'custom_work_loader', logoCategory : id});
 
-    // socket.emit("request-generic-portfolio", {apiRef : 'work_by_category', blockId: 'custom_new_latest_work_block', templateId: 'custom_new_latest_work_template', loaderId: 'custom_new_latest_work_loader', logoCategory : id});
-}
+        // socket.emit("request-generic-portfolio", {apiRef : 'work_by_category', blockId: 'custom_new_latest_work_block', templateId: 'custom_new_latest_work_template', loaderId: 'custom_new_latest_work_loader', logoCategory : id});
+    }
 
-window.onClickRedirectUrl = function(url){
-    // console.log("==== on click redirect url function ====");
-    window.open(url, "_blank", );
-}
-
-
+    window.onClickRedirectUrl = function(url){
+        // console.log("==== on click redirect url function ====");
+        window.open(url, "_blank", );
+    }
 
   </script>
 

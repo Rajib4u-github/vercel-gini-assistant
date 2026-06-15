@@ -1,5 +1,6 @@
-const rawData =
-[
+const rawData = {
+"count": 25,
+"entries":[
   {
     "text": "Fully managed message queues for microservices distributed systems and serverless applications",
     "heading": "Amazon Simple Queue Service",
@@ -105,6 +106,6 @@ const rawData =
 
 ]
 
-
+}
 
 module.exports.rawData = rawData;

@@ -30,14 +30,14 @@ var NEW_PROJECT_APP_DATA = require(ROOT_DIR+'/server/NEW_PROJECT/store/new_proje
 
 
 var IND_STOCKS_APP_DATA = require(ROOT_DIR+'/server/IND_STOCKS/store/indStocksData.js').sections_data;
-
+const PORTFOLIO_APP_SERVICES = require(ROOT_DIR+'/server/PORTFOLIO/controllers/portfolio.server.controller.js');
 
 console.log("@@@@@@ MUSIC_APP_DEFAULTS_SETTINGS_DATA : ", MUSIC_APP_DEFAULTS_SETTINGS_DATA);
 
 
 
 //***********************  ACCESSED  DUMMY  PORTFOLIO  FILE  **************************
-let portfolio_data = generic_portfolio_data.portfolio_data;
+let portfolio_data = generic_portfolio_data.sections_data;
 // let default_style = generic_portfolio_data.portfolio_data["default_style"];
 
 //***********************  ACCESSED  LOCAL DB  PORTFOLIO  FILE  **************************
@@ -137,7 +137,7 @@ function get_application_default_style(request){
         srcFile = ROOT_DIR+'/server/'+request.application+'/store/'+request.fileName+'.js';
       }
       let default_style = require(srcFile).portfolio_data["default_style"];
-      console.log("@@@@ ======= sectionData :: ", default_style);
+    //   console.log("@@@@ ======= sectionData :: ", default_style);
       return default_style;
   }
 }
@@ -191,7 +191,7 @@ function create_new_portfolio_file(fileName){
 function update_portfolio_file(filePath){
     let p = new Promise(function(resolve, reject){
         try {
-            let data = JSON.stringify(portfolio_data);
+            let data = JSON.stringify(_data);
             fs.writeFile(filePath, data, (err) => {
                 if(err){
                     console.log("@@@@ error occured when writting to portfolio file ....");
@@ -291,7 +291,7 @@ function getAotAnimation(item){
 }
 
 function getProgressBarTemplate(item, editable, sectionName, sectionIndex, partsIndex, itemIndex){
-    console.log("============ get progress bar template =============");
+    // console.log("============ get progress bar template =============");
     let template = '';
     let animation = '';
     let infoTemplate = '';
@@ -348,12 +348,14 @@ function getProgressBarTemplate(item, editable, sectionName, sectionIndex, parts
 
 }
 
-function getColorPallateTemplate(ele, application){
+function getColorPallateTemplate(ele, application, request){
     console.log("====== calling get color pallate template ======");
+    console.log("==== request : ", request)
+    // console.log("==== request : ", JSON.stringify(request))
+
     let template = '';
     // let default_style = portfolio_data["default_style"];
-    let default_style = new_get_section_data({application: application, sectionName: "default_style"});
-    // console.log("\n\n@@@ default_style: ", default_style);
+    let default_style = new_get_section_data({application: application, sectionName: "default_style", fileName: request.fileName});
     if(ele.key.type === 'custom'){
         let key = ele.key.name.split(".");
         let propValue = null;
@@ -366,11 +368,12 @@ function getColorPallateTemplate(ele, application){
           template += '<input type="color" id="'+ele.key.id+'" name="favcolor" value="'+ele.key.name+'" style="'+ele.key.style+'">';
       }
     }
-
     return template;
 }
 
-function getThemeStoreData(application){
+function getThemeStoreData(application, request){
+        // console.log("==== getThemeStoreData  request : ", request)
+
     if(application !== undefined && application !== null && application !== ''){
       if(application === 'gini_home'){
           return gini_home_data["theme_store"];
@@ -384,18 +387,24 @@ function getThemeStoreData(application){
           return SHOPPING_APP_DATA["theme_store"];
       }else if(application === 'new_project'){
           return NEW_PROJECT_APP_DATA["theme_store"];
+      }else if(application === 'PORTFOLIO'){
+          request.sectionName = 'theme_store'
+          let themeStoreData = new_get_section_data(request)
+          console.log("==== themeStoreData : ", themeStoreData)
+          return themeStoreData;
       }
     }else{
       return portfolio_data["theme_store"];
     }
 }
 
-function getThemeTemplate(ele, elementId, method, application){
+function getThemeTemplate(ele, elementId, method, application, request){
+    // console.log("===== request : ", request)
     let template = '';
     let themeStore = null;
     let name = ele.key.name.split(".");
     // let theme = portfolio_data[name[0]][name[1]];
-    themeStore = getThemeStoreData(application);
+    themeStore = getThemeStoreData(application, request);
     let theme = themeStore[name[1]];
     theme = JSON.stringify(theme);
     let dataset = `data='`+theme+`'`;
@@ -687,8 +696,8 @@ function _getSectionDataBySectionName(sectionName){
 }
 
 function getGridTemplate(data, sectionName, sectionIndex, partsIndex, application, request){
- console.log("222222 ######## data : ", data );
- console.log("222222 ######## request : ", request );
+//  console.log("222222 ######## data : ", data );
+//  console.log("222222 ######## request : ", request );
 
   let template = '';
   data.forEach((ele, index) => {
@@ -703,6 +712,8 @@ function getGridTemplate(data, sectionName, sectionIndex, partsIndex, applicatio
     let additionClass = '';
     let elementClass = '';
     let itemClass = '';
+
+    if(ele.visibility === false) return;
 
     if(ele.key.id !== undefined && ele.key.id !== ''){
         inputId = ele.key.id;
@@ -798,6 +809,8 @@ function getGridTemplate(data, sectionName, sectionIndex, partsIndex, applicatio
     if(ele.addClass !== undefined && ele.addClass !== null){
         elementClass += ' '+ele.addClass.expResult;
     }
+
+
     if(ele.addStyle !== undefined && ele.addStyle !== null){
         ele.key.style += ' '+ele.addStyle.expResult;
     }
@@ -916,9 +929,19 @@ function getGridTemplate(data, sectionName, sectionIndex, partsIndex, applicatio
         if(ele.key.class !== undefined || ele.key.class !== ''){
             classTemplate = ele.key.class+' '+elementClass+' ';
         }
+
+        if(ele.key.applyConditionalStyleClass !== undefined && ele.key.applyConditionalStyleClass !== ''){
+            if(ele.key.name === ele.key.applyConditionalStyleClass?.condition?.defaultName){
+                classTemplate += ' '+ele.key.applyConditionalStyleClass.condition.activeClass;
+            }else{
+                classTemplate += ' '+ele.key.applyConditionalStyleClass.condition.deActiveClass;
+            }
+        }
+
         if(ele.key.disabled !== undefined && ele.key.disabled === true){
             disabled += 'disabled';
         }
+        
         subTemplate += `
             <button type="button" id="`+elementId+`" `+method+` name="" class="`+classTemplate+`" style="`+ele.key.style+`"  `+disabled+`>`+ele.key.name+`</button>
         `;
@@ -1114,10 +1137,10 @@ function getGridTemplate(data, sectionName, sectionIndex, partsIndex, applicatio
       // if(ele.key.name !== undefined || ele.key.name !== ''){
       //     subTemplate += '<input type="color" id="'+ele.key.id+'" name="favcolor" value="'+ele.key.name+'" style="'+ele.key.style+'">';
       // }
-      subTemplate += getColorPallateTemplate(ele, application);
+      subTemplate += getColorPallateTemplate(ele, application, request);
 
     }else if(ele.type === 'theme'){
-        subTemplate += getThemeTemplate(ele, elementId, method, application);
+        subTemplate += getThemeTemplate(ele, elementId, method, application, request);
     }else if(ele.type === 'wrap-open'){
         subTemplate += '<'+ele.key.name+' id="'+ele.key.id+'" class="'+ele.key.class+'"  style=" '+ele.key.style+'">';
 
@@ -1138,6 +1161,7 @@ function getGridTemplate(data, sectionName, sectionIndex, partsIndex, applicatio
     }
 
   });
+//   console.log("2222222222222 ########## request response template :: ", template)
   // template += '</div>';
   template += '';
 
@@ -1147,6 +1171,7 @@ function getGridTemplate(data, sectionName, sectionIndex, partsIndex, applicatio
 function getGridEditTemplate(data, sectionName, sectionIndex, partsIndex){
   let template = '<div style="width: 100%;">';
   data.forEach((ele, itemIndex) => {
+    // console.log("\n\n+++++++++++++++ ele.key.name : ", ele.key.name)
     let subTemplate = '';
     let id = sectionName+'-'+sectionIndex+'-'+partsIndex+'-'+itemIndex;
     let itemId = 'item_'+id;
@@ -1171,6 +1196,7 @@ function getGridEditTemplate(data, sectionName, sectionIndex, partsIndex){
         }
 
     }else if(ele.type === "button"){
+
         subTemplate += `
           <button type="button" id="`+itemId+`" name="" style="`+ele.key.style+`">`+ele.key.name+`</button>
         `;
@@ -1235,6 +1261,8 @@ function sections_template(data, editable, sectionName, sectionIndex, partsIndex
   }else{
     template += getGridTemplate(data, sectionName, sectionIndex, partsIndex, application, request);
   }
+//   console.log("3333333333333333 ########## request response template :: ", template)
+  
   return template;
 }
 
@@ -1350,12 +1378,15 @@ function getNewPartsDescSchema(request, section, dataSourceData, partsSchema, it
           if(ele.addClass !== undefined && ele.addClass !== null && ele.addClass !== ''){
               ele.addClass.expResult = eval(ele.addClass.exp);
           }
+
           if(ele.addStyle !== undefined && ele.addStyle !== null && ele.addStyle !== ''){
               ele.addStyle.expResult = eval(ele.addStyle.exp);
           }
+
           if(ele.applyFilter !== undefined && ele.applyFilter !== null && ele.applyFilter !== ''){
               ele.applyFilter.expResult = eval(ele.applyFilter.exp);
           }
+
           if(ele.dataSource !== undefined && ele.dataSource !== null && ele.dataSource !== '' && ele.dataSource === "API"){
               let dataSourceValue = null;
               let localItem = JSON.parse(JSON.stringify(item));
@@ -1410,9 +1441,7 @@ function getNewPartsDescSchema(request, section, dataSourceData, partsSchema, it
                     dataSourceValue = commaSeparatednamesValue;
                     ele.key.name = commaSeparatednamesValue;
               }
-
               
-
               if(ele.key.name.indexOf(">") !== -1){
                   let splitDataPath = ele.key.name.split(">");
                   // console.log("8888 splitDataPath arr : ", splitDataPath);
@@ -1462,13 +1491,29 @@ function getNewPartsDescSchema(request, section, dataSourceData, partsSchema, it
 
               if((dataSourceValue === undefined || dataSourceValue === null || dataSourceValue === '' || dataSourceValue === "None" || dataSourceValue === "none")){
                   if((ele.key.defaultValue !== undefined && ele.key.defaultValue !== null && ele.key.defaultValue !== '')){
-                    ele.key.name = ele.key.defaultValue;
+                        ele.key.name = ele.key.defaultValue;
                   }else{
-                      ele.key.name = ele.key.name;
+                        ele.key.name = ele.key.name;
                   }
               }else{
                   ele.key.name = dataSourceValue;
               }
+
+              if(ele.key.showWords !== undefined && ele.key.showWords !== ''){
+                    console.log("==== ele.key.name : ", ele.key.name)
+                    let wordsArr = ele.key.name.split(" ");
+                    console.log("=== wordsArr : ", wordsArr)
+                    let showWord = ''
+                    if(wordsArr.length >= ele.key.showWords){
+                        for(let i = 0; i< ele.key.showWords; i++){
+                            showWord += wordsArr[i]+' '
+                        }
+                    }else if(wordsArr.length === 1){
+                        showWord = wordsArr[0];
+                    }
+                    ele.key.name = showWord;
+              }
+
               newPartsDesc.push(ele);
           }else if(ele.dataSource === undefined ){
               newPartsDesc.push(ele);
@@ -1505,8 +1550,8 @@ function getDataPathSplitedData(section, dataSourceData){
     let localDataSourceData = JSON.parse(JSON.stringify(dataSourceData));
 
     console.log("111====== splitDataPath : ", splitDataPath);
-    console.log("111====== dataSourceData : ", dataSourceData);
-    for (var i = 1; i < splitDataPath.length; i++) {
+    // console.log("111====== dataSourceData : ", dataSourceData);
+    for (let i = 1; i < splitDataPath.length; i++) {
         // console.log("222====== splitDataPath[i].toString() : ", splitDataPath[i].toString());
         if(localDataSourceData){
             if(localDataSourceData[splitDataPath[i].toString()]){
@@ -1519,6 +1564,129 @@ function getDataPathSplitedData(section, dataSourceData){
 }
 
 function get_schema_to_section_data(section, dataSourceData, sectionName, request, sectionIndex){
+    console.log("99999999999999999999999999999999999999999999999999999999999999999999999999");
+    // console.log("####### section :: ", section);
+    // console.log("####### request :: ", request);
+    // console.log("####### dataSourceData :: ", dataSourceData);
+    let filteredParts = [];
+    let localDataSourceData = JSON.parse(JSON.stringify(dataSourceData));
+    if(request && request.sectionData && request.sectionData.dataSource && request.sectionData.dataSource.data){
+        localDataSourceData = request.sectionData.dataSource.data;
+    }
+    // console.log("####### localDataSourceData :: ", localDataSourceData);
+
+    if(section.dataSource !== undefined && section.dataSource !== '' && section.dataSource.dataPath !== undefined && section.dataSource.dataPath !== ''){
+        if(section.dataSource.dataPath === 'root'){
+            // console.log("@@@ section.dataSource.dataPath  === root:: ", section.dataSource.dataPath);
+        }else{
+          if(localDataSourceData){
+              localDataSourceData = getDataPathSplitedData(section, localDataSourceData);
+          }
+        }
+    }
+    // console.log("==== localDataSourceData : ", localDataSourceData);
+    if(section.dataSource.from !== undefined && section.dataSource.from !== null && section.dataSource.from !== '' && (section.dataSource.from === "API" || section.dataSource.from === "DATA-SERVER")){
+        // console.log("111111111111111111111111111111111111111111111111111111")
+        // console.log("111111111111111111111111111111111111111111111111111111")
+        // console.log("111111111111111111111111111111111111111111111111111111")
+        // console.log("111111111111111111111111111111111111111111111111111111")
+        // console.log("111111111111111111111111111111111111111111111111111111")
+
+        if(section.dataSource.view !== undefined && section.dataSource.view !== null && section.dataSource.view === 'collection'){
+          let partsSchema = section.parts[0];
+
+          if(localDataSourceData !== undefined && localDataSourceData !== null && localDataSourceData !== ''){
+              if(Array.isArray(localDataSourceData)){
+                    if(section.dataSource.limit === "none"){
+                          localDataSourceData = localDataSourceData;
+                    }else if(localDataSourceData.length > 10 && section.dataSource.limit !== undefined && section.dataSource.limit !== null && section.dataSource.limit !== ''){
+                          localDataSourceData = localDataSourceData.slice(0, section.dataSource.limit);
+                    }
+              }
+
+              if(section.dataSource.dataType !== undefined && section.dataSource.defaultAnimationType !== null && section.dataSource.dataType === "Array of elements"){
+                  localDataSourceData.forEach((item, i) => {
+                    console.log("999999 item : ", item)
+
+                    // if(partsSchema.addClass !== undefined && partsSchema.addClass !== '' && partsSchema.addClass.exp !== undefined && partsSchema.addClass.exp !== ''){
+                    //     let result = eval(partsSchema.addClass.exp);
+                    //     console.log("####### ====== result :: ", result);
+                    // }
+                    let newPartsSchema = JSON.parse(JSON.stringify(partsSchema));
+                    let newPartsDesc = [];
+                    if(newPartsSchema.desc !== undefined && newPartsSchema.desc !== null  && newPartsSchema.desc !== '' && ((Array.isArray(newPartsSchema.desc)) && (newPartsSchema.desc.length > 0))){
+                        newPartsSchema.desc.forEach((ele, eleIndex) => {
+                            ele.key.name = item;
+                            if(ele && ele.event && ele.event.argument && ele.event.argument.category ){
+                                ele.event.argument.category = item.toString();
+                            }
+                            // ele?.event?.argument?.category = item.toString();
+                            newPartsDesc.push(ele);
+                        })
+                    }
+                    if((newPartsSchema.event !== undefined && newPartsSchema.event !== null  && newPartsSchema.event !== '') && ((Array.isArray(newPartsSchema.event)) && (newPartsSchema.event.length > 0))){
+                          newPartsSchema.event.map((event, index) => {
+                              console.log("9999999999999999999 Array.isArray(event.argument) :: ", Array.isArray(event.argument));
+                              if((event.argument !== undefined && event.argument !== '') && (event.argument.dataSource !== undefined && event.argument.dataSource !== '' && (event.argument.dataSource === "API" || event.argument.dataSource === "DATA-SERVER"))){
+                                if(event.argument.innerDataPath !== undefined){
+                                    let youtubeIdVal = item[event.argument.innerDataPath.toString()];
+                                    let youtubeId = youtubeIdVal.split("/")[2];
+                                    let redirectUrl = 'https://www.youtube.com/watch?v='+youtubeId.toString();
+                                    item["newurl"] = redirectUrl;
+                                    event.argument.key.name = item["newurl"];
+                                }else{
+                                    if(event.argument.key.name){
+                                        console.log("===== event.argument.key.name : ", event.argument.key.name);
+                                        console.log("===== item :  ", item);
+                                        event.argument.key.name = item[event.argument.key.name.toString()];
+                                    }
+                                }
+                              }else if(Array.isArray(event.argument)){
+
+                              }
+                          })
+                    }
+
+                    newPartsSchema.desc = newPartsDesc;
+                    filteredParts.push(newPartsSchema);
+                  });
+              }else{
+                localDataSourceData.forEach((item, itemIndex) => {
+                  let result;
+                    if(partsSchema.addClass !== undefined && partsSchema.addClass !== ''){
+                        if(partsSchema.addClass.exp !==undefined && partsSchema.addClass.exp !== ''){
+                            partsSchema.addClass.expResult = eval(partsSchema.addClass.exp);
+                            result = eval(partsSchema.addClass.exp);
+                        }
+                    }
+                    if(partsSchema.addStyle !== undefined && partsSchema.addStyle !== null){
+                      if(partsSchema.addStyle.exp !== undefined && partsSchema.addStyle.exp !== ''){
+                          partsSchema.addStyle.expResult = eval(partsSchema.addStyle.exp);
+                          result = eval(partsSchema.addStyle.exp);
+                      }
+                    }
+
+                    let newPartsSchema1 = getNewPartsDescSchema(request, section, localDataSourceData, partsSchema, item, itemIndex)
+                    filteredParts.push(newPartsSchema1);
+                })
+              }
+          }
+        }else if(section.dataSource.view !== undefined && section.dataSource.view !== null && section.dataSource.view === 'paragraph'){
+            let partsSchema = section.parts[0];
+            let newPartsSchema1 = getNewPartsDescSchema(request, section, localDataSourceData, partsSchema, localDataSourceData, 0);
+            filteredParts.push(newPartsSchema1);
+
+      }
+              console.log("111111111111111111111111111111111111111111111111111111")
+
+      return filteredParts;
+    }else{
+      return filteredParts
+    }
+
+}
+
+function get_schema_to_section_data1(section, dataSourceData, sectionName, request, sectionIndex){
     // console.log("99999999999999999999999999999999999999999999999999999999999999999999999999");
     // console.log("####### section :: ", section);
     console.log("####### dataSourceData :: ", dataSourceData);
@@ -1539,9 +1707,7 @@ function get_schema_to_section_data(section, dataSourceData, sectionName, reques
         console.log("111111111111111111111111111111111111111111111111111111")
         console.log("111111111111111111111111111111111111111111111111111111")
         console.log("111111111111111111111111111111111111111111111111111111")
-        console.log("111111111111111111111111111111111111111111111111111111")
-        console.log("111111111111111111111111111111111111111111111111111111")
-
+        
         if(section.dataSource.view !== undefined && section.dataSource.view !== null && section.dataSource.view === 'collection'){
           let partsSchema = section.parts[0];
 
@@ -1644,17 +1810,34 @@ function get_section_template(sectionName, editable, data, application, request)
     // if(data !== undefined && data.dataSource !== undefined && data.dataSource.data !== undefined && data.dataSource.data !== null && data.dataSource.data !== ''){
     //       dataSourceData = data.dataSource.data;
     // }
-    if(request.apiRef !== 'custom_search' && data !== undefined && data.dataSource !== undefined && data.dataSource.data !== undefined && data.dataSource.data !== null && data.dataSource.data !== ''){
-          dataSourceData = data.dataSource.data;
-    }else if(request.apiRef === 'custom_search'){
-          dataSourceData = data.dataSource.data;
+    // if(request.apiRef !== 'custom_search' && data !== undefined && data.dataSource !== undefined && data.dataSource.data !== undefined && data.dataSource.data !== null && data.dataSource.data !== ''){
+    //       dataSourceData = data.dataSource.data;
+    // }else if(request.apiRef === 'custom_search'){
+    //       dataSourceData = data.dataSource.data;
+    // }
+
+     if(request && request.sectionData && request.sectionData.dataSource && request.sectionData.dataSource.data){
+        dataSourceData = request.sectionData.dataSource.data;
     }
 
-    console.log("######### dataSourceData : ", dataSourceData);
+    // if(data !== undefined && data.dataSource !== undefined && data.dataSource.data !== undefined && data.dataSource.data !== null && data.dataSource.data !== ''){
+    //       dataSourceData = data;
+    // }
+    // if(request.apiRef !== 'custom_search' && data !== undefined && data.dataSource !== undefined && data.dataSource.data !== undefined && data.dataSource.data !== null && data.dataSource.data !== ''){
+    //       dataSourceData = data;
+    // }else if(request.apiRef === 'custom_search'){
+    //       dataSourceData = data;
+    // }
 
-    if(request.apiRef === 'headerNav_section'){
-        console.log("######### dataSourceData : ", JSON.stringify(dataSourceData));
-    }
+    // if(data && data.sectionName && data.block){
+    //      dataSourceData = data;
+    // }
+
+    // console.log("######### dataSourceData : ", dataSourceData);
+
+    // if(request.apiRef === 'headerNav_section'){
+    //     console.log("######### dataSourceData : ", JSON.stringify(dataSourceData));
+    // }
     let template = '';
     let progressTemplate = '';
     let additionalSkillsetTemplate = '';
@@ -1696,11 +1879,15 @@ function get_section_template(sectionName, editable, data, application, request)
                       isSectionVisibleStyle += 'display: none;';
                   }
             }
+            // console.log("============= 111111111111111111111 ==================")
             if(section.dataSource !== undefined && section.dataSource !== null && section.dataSource !== ''){
                 let newPartsSchema = get_schema_to_section_data(section, dataSourceData, sectionName, request, sectionIndex);
                 section.parts = newPartsSchema;
             }
+            // console.log("============= 22222222222222222222222 ==================")
+
             section.parts.forEach((ele, partsIndex) => {
+                // console.log("\n\n ++++++++++++ ele : ", ele)
                   let partsTemplate = '';
                   let id = "part_"+sectionName+'-'+sectionIndex+'-'+partsIndex;
                   let method = '';
@@ -1724,12 +1911,17 @@ function get_section_template(sectionName, editable, data, application, request)
                   if(ele.partStyle !== undefined && ele.partStyle !== ''){
                       style += ele.partStyle;
                   }
+                  
                   if(ele.addStyle !== undefined && ele.addStyle !== null){
                       style += ' '+ele.addStyle.expResult;
                   }
                   if(ele.partClass !== undefined && ele.partClass !== ''){
                       secClass += ele.partClass;
                   }
+                  if(ele.activeDeactiveStyle !== undefined && ele.activeDeactiveStyle !== ''){
+                      secClass += ele.activeDeactiveStyle.activeStyleClass;
+                  }
+                //   if(ele.applyConditionalStyleClass)
                   if(ele.addClass !== undefined && ele.addClass !== null){
                       secClass += ' '+ele.addClass.expResult;
                   }
@@ -1751,6 +1943,17 @@ function get_section_template(sectionName, editable, data, application, request)
                             additionalClass += ele.isConditionalStyles.class.split("?")[1];
                         }
                   }
+                  if(ele.useAsPartStyle && ele.useAsPartStyle.active){
+                        ele.useAsPartStyle.elementValue = ele.desc[ele.useAsPartStyle.elementIndex].key.name;
+                        // console.log("====== ele.desc[ele.useAsPartStyle.elementIndex] : ", ele.desc[ele.useAsPartStyle.elementIndex])
+                        // console.log("====== ele.desc[ele.useAsPartStyle.elementIndex] : ", ele.desc[2])
+
+                        // console.log("============= ele.useAsPartStyle.elementValue : ", ele.useAsPartStyle.elementValue)
+                        let newStyle = ele.useAsPartStyle.style.property + ':' + ele.useAsPartStyle.elementValue;
+                        // console.log("==== newstyle : ", newStyle)
+                        style += newStyle;
+
+                  }
                   if(ele.dataset !== undefined && ele.dataset !== ''){
                       ele.dataset.isSectionToggle = {};
                       ele.dataset.isSectionToggle.state = ele.isSectionToggle.state;
@@ -1761,7 +1964,7 @@ function get_section_template(sectionName, editable, data, application, request)
                         draggableTemplate += 'draggable="true"';
                   }
                   if(ele.event !== undefined && ele.event !== null && ele.event !== ''){
-                      method += get_event_template(ele.event, application);
+                      method += get_event_template(ele.event, application, request);
                   }
                   if(editable){
                       let onMouseHoverAndMouseOutMethod = 'onmouseover="showHideThreeDotsbtn(this, \''+'mouse_over'+'\')" onmouseout="showHideThreeDotsbtn(this, \''+'mouse_out'+'\')"';
@@ -1802,6 +2005,8 @@ function get_section_template(sectionName, editable, data, application, request)
                       `;
                   }
             });
+            console.log("============= 333333333333333333333333333 ==================")
+
             if(section.slider !== undefined && section.slider !== null && section.slider !== ''){
                 let indicatorsTemplate = '';
                 let navigationTemplate = '';
@@ -1888,6 +2093,7 @@ function get_section_template(sectionName, editable, data, application, request)
             }
         })
     }
+            console.log("=============4444 333333333333333333333333333 ==================")
 
     template += `
           <div class="container" style="`+containerStyle+`">
@@ -1900,8 +2106,11 @@ function get_section_template(sectionName, editable, data, application, request)
         template += ''+data.postHTML;
     }
     if(editable){
+                    // console.log("============= 444444444444444444444444 ==================")
+
       return {template : template, templateData: data};
     }else{
+        // console.log("444444444444444444 ############## request response :: template :: ", template)
       return template;
     }
 }
@@ -2033,7 +2242,7 @@ function backup_get_section_template(sectionName, editable, data, application, r
                   }
 
                   if(ele.event !== undefined && ele.event !== ''){
-                      method += get_event_template(ele.event, application);
+                      method += get_event_template(ele.event, application, request);
                   }
 
                   if(editable){
@@ -2491,16 +2700,17 @@ async function get_custom_section_template(sectionName, editable, data, applicat
 
 }
 
-function work_section(sectionName, category){
-    console.log("======= calling work section function ========");
+function work_section(request){
+    // console.log("======= calling work section function ========");
     let template = '';
-    // let data = portfolio_data[sectionName];
-    console.log("@@@ sectionName : ", sectionName);
-    console.log("@@@ category : ", category);
-
-    let data = getPortfolioData(sectionName);
-
-    let workByCatData = data.latestWork[category];
+    const sectionName = request.sectionName;
+    const category = request.category;
+    let sectionData = request.sectionData
+    // console.log("@@@ sectionName : ", sectionName);
+    // console.log("@@@ category : ", category);
+    // console.log("88888888888888888888 request : ", request);
+    // let data = getPortfolioData(sectionName);
+    let workByCatData = sectionData.latestWork[category];
     let eachItemTemplate = '';
     let animationDelay = 0;
     workByCatData.forEach((item, index) => {
@@ -2524,37 +2734,161 @@ function work_section(sectionName, category){
 
 }
 
-function workcat_list_section(sectionName){
+function scrollSpySection (request){
+return (
+`
+    <div data-spy="scroll" data-target=".navbar" data-offset="50">
+        <div class="navbar navbar-expand-sm bg-dark navbar-dark ">  
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#section1">Section 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#section2">Section 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#section3">Section 3</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Section 4
+                </a>
+                <div class="dropdown-menu">
+                <a class="dropdown-item" href="#section41">Link 1</a>
+                <a class="dropdown-item" href="#section42">Link 2</a>
+                </div>
+            </li>
+            </ul>
+        </div>
+        <div id="section1" class="container-fluid bg-success" style="padding-top:70px;padding-bottom:70px">
+            <h1>Section 1</h1>
+            <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        </div>
+        <div id="section2" class="container-fluid bg-warning" style="padding-top:70px;padding-bottom:70px">
+            <h1>Section 2</h1>
+            <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        </div>
+        <div id="section3" class="container-fluid bg-secondary" style="padding-top:70px;padding-bottom:70px">
+            <h1>Section 3</h1>
+            <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        </div>
+        <div id="section41" class="container-fluid bg-danger" style="padding-top:70px;padding-bottom:70px">
+            <h1>Section 4 Submenu 1</h1>
+            <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        </div>
+        <div id="section42" class="container-fluid bg-info" style="padding-top:70px;padding-bottom:70px">
+            <h1>Section 4 Submenu 2</h1>
+            <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        </div>
+    </div>
+`
+)
+}
+
+function workcat_list_section(request){
+  console.log("########## request : ", request)
   let template = '';
   let itemsTemplate = '';
+  const sectionName = request.apiRef; 
   // let data = portfolio_data[sectionName];
-  let data = getPortfolioData(sectionName);
+//   let data = getPortfolioData(sectionName);
+  let data = request.sectionData;
+  const activeMenuStyleClass = data.defaultMenuStyle.activeMenuStyleClass;
+  const deActiveMenuStyleClass = data.defaultMenuStyle.deActiveMenuStyleClass;
+
+//   console.log("data list ============= :: deActiveMenuStyleClass ", deActiveMenuStyleClass)
+//   console.log("data list ============= :: activeMenuStyleClass ", activeMenuStyleClass)
 
   data.lists.forEach((item, index) => {
-      let id = item.name.replace(/\s+/g, '_');
-      let defaultCategoryStyle = '';
-      if(data.defaultCategory && data.defaultCategory.name !== '' && data.defaultCategory.name === item.name){
+    let id = item.name.replace(/\s+/g, '_');
+    let defaultCategoryStyle = '';
+    let argument = '';
+    let eventTemplate = '';
+    let argumentSectionName = request.sectionName.split('_')[0]
+    let argument1 = JSON.stringify({sectionName: argumentSectionName, category: item.name, activeMenuStyleClass : activeMenuStyleClass, deActiveMenuStyleClass: deActiveMenuStyleClass, applyActiveDeactiveMenuStyleClassMethod: 'activeDeactiveMenuStyleClass'});
+    if(request.sectionData && request.sectionData.passByArgument){
+        argument = JSON.stringify({
+            ...request.sectionData.passByArgument,
+            category: item.name
+        })
+    }
+    // let argument = JSON.stringify({sectionName: argumentSectionName, category: item.name, activeMenuStyleClass : activeMenuStyleClass, deActiveMenuStyleClass: deActiveMenuStyleClass, applyActiveDeactiveMenuStyleClassMethod: 'activeDeactiveMenuStyleClass'});
+    let dataArgument = `data='`+argument+`'`; 
+    if(data.defaultCategory && data.defaultCategory.name !== '' && data.defaultCategory.name === item.name && item.type === 'list'){
         defaultCategoryStyle = data.defaultCategory.style;
-        // itemsTemplate += '<a href="#" onclick="return false;" style=""> <div id="'+id+'" class="category-item" onclick="onClickWorkCatItem(event)" style="'+data.defa+'"> '+item.name+'</div> </a>';
-      }
-        itemsTemplate += '<a href="#" onclick="return false;" style=""> <div id="'+id+'" class="category-item" onclick="onClickWorkCatItem(event)" style="'+defaultCategoryStyle+'"> '+item.name+'</div> </a>';
+        // itemsTemplate += '<a href="#" onclick="return false;" style=""> <div id="'+id+'" class="category-item '+activeMenuStyleClass+'" onclick="onClickWorkCatItem(this,event)" '+dataArgument+' style="'+defaultCategoryStyle+'"> '+item.name+'</div> </a>';
+        itemsTemplate += '<a href="#" onclick="return false;" style=""> <div id="'+id+'" class="category-item '+activeMenuStyleClass+'" onclick="onClickWorkCatItem(this,event)" '+dataArgument+' > '+item.name+'</div> </a>';
+
+    }else if(item.type === 'input-type-text'){
+        if(item.event){
+            eventTemplate += get_event_template(item.event, request.application, request)
+        }
+        itemsTemplate += `
+            <a href="#" onclick="return false;" style=""> 
+                <div id="">
+                    <input type="text" id="${item?.id}"  ${eventTemplate}  style="${item.style}" placeholder="${item.name}"/>
+                </div>
+            </a>
+        `;
+
+    }else{
+        // itemsTemplate += '<a href="#" onclick="return false;" style=""> <div id="'+id+'" class="category-item '+deActiveMenuStyleClass+'" onclick="onClickWorkCatItem(this,event)" '+dataArgument+' style="'+defaultCategoryStyle+'"> '+item.name+'</div> </a>';
+        itemsTemplate += '<a href="#" onclick="return false;" style=""> <div id="'+id+'" class="category-item '+deActiveMenuStyleClass+'" onclick="onClickWorkCatItem(this,event)" '+dataArgument+'> '+item.name+'</div> </a>';
+
+    }
+     
   })
 
-  template += `
-      <div class="work-cat-block" data-aos="fade-up" style="width: 100%;">
-          <div  class="work-cat-left-arrow-block" style="" >
-              <i id="workCategory_left_arrow" class="fa fa-angle-left workCategory-left-arrow" onclick="onClickworkCategoryArrowIcon(event, 'left_arrow')" style="font-size: 30px;position: relative;"   aria-hidden="true"></i>
-          </div>
-          <div class="work-cat-items-block" style="width: 90%; display: inline-block;">
-              <div class="work-category scrollmenu" id="workCategory">
+template += `
+      <div class="cat-block" data-aos="fade-up" style="width: 100%;">
+          <div class="cat-items-block" style="width: 90%; display: inline-block; ">
+              <div class="scrollmenu" id="" style="padding: 5px;">
                 `+itemsTemplate+`
               </div>
           </div>
-          <div class="work-cat-right-arrow-block" style="" >
-              <i id="workCategory_right_arrow" class="fa fa-angle-right workCategory-right-arrow" onclick="onClickworkCategoryArrowIcon(event, 'right_arrow')" style="font-size: 30px;position: relative;"   aria-hidden="true"></i>
-          </div>
       </div>
   `;
+
+  let sectionHeading = '';
+  if(request?.sectionData && request?.sectionData.sectionHeading){
+        sectionHeading += `
+            <div style="${request?.sectionData.sectionHeading.style}">
+                ${request?.sectionData.sectionHeading.text}
+            </div>
+            ${template}
+        `
+        return sectionHeading;
+  }
+
+  if(request?.sectionData && request?.sectionData.sectionStyle !== '' ){
+    let sectionStyle = `
+            ${sectionHeading}
+            <div style="`+request.sectionData.sectionStyle+`">
+                    `+template+`
+            </div>
+    `;
+    return sectionStyle;
+  }
+//   template += `
+//       <div class="work-cat-block" data-aos="fade-up" style="width: 100%;">
+//           <div  class="work-cat-left-arrow-block" style="" >
+//               <i id="workCategory_left_arrow" class="fa fa-angle-left workCategory-left-arrow" onclick="onClickworkCategoryArrowIcon(event, 'left_arrow')" style="font-size: 30px;position: relative;"   aria-hidden="true"></i>
+//           </div>
+//           <div class="work-cat-items-block" style="width: 90%; display: inline-block;">
+//               <div class="work-category scrollmenu" id="workCategory">
+//                 `+itemsTemplate+`
+//               </div>
+//           </div>
+//           <div class="work-cat-right-arrow-block" style="" >
+//               <i id="workCategory_right_arrow" class="fa fa-angle-right workCategory-right-arrow" onclick="onClickworkCategoryArrowIcon(event, 'right_arrow')" style="font-size: 30px;position: relative;"   aria-hidden="true"></i>
+//           </div>
+//       </div>
+//   `;
 
   return template;
 
@@ -2804,10 +3138,9 @@ function _getCustomFixedMenuSidebar_section_template(request){
     return template;
 }
 
-
-function header_section(request){
+function header_section1(request){
   console.log("============ call header section ==============");
-  // console.log("@@@ request:: ", request);
+  console.log("@@@ request:: ", request);
   let template = '';
   let profileTemplate = '';
   let menusTemplate = '';
@@ -2818,8 +3151,10 @@ function header_section(request){
   let dynamicSections = request.dynamic_sections;
   let profilesTemplate = '';
   // let data = portfolio_data[sectionName];
-  let data = _getSectionDataBySectionName(sectionName);
-
+  const data = PORTFOLIO_APP_SERVICES.app_services.get_section_data(request)
+  console.log("&&&&&&&&&&&&&&&&&& portfolio_service_data : ", data)
+//   let data = _getSectionDataBySectionName(sectionName);
+    // console.log("============ header section get section data : portfolio_service_data : ", portfolio_service_data)
   let myProfiles = getPortfolioData("myProfiles_section").profiles;
   // console.log("------------ editable  :: ", editable);
   // console.log("++++++++ dynamicSections : ", dynamicSections);
@@ -2840,12 +3175,16 @@ function header_section(request){
               <h1 class="text-light "><a href="index.html" class="custom-profile" >`+data.profile.profileName.name+`</a></h1>
             </div>
         `;
-    }
+  }
 
-    if(dynamicSections && dynamicSections !== '' && dynamicSections.values.length > 0){
+  if(dynamicSections && dynamicSections !== '' && dynamicSections.values.length > 0){
         console.log("====== calling the create header section ========");
+        console.log("============ dynamicSections : ", dynamicSections)
+        console.log("============ dynamicSections : ", JSON.stringify(dynamicSections))
+
         let menuTemplate = '';
         dynamicSections.values.forEach((item, index) => {
+                console.log("================ dynamic sections item : ", item)
                 if(item.section.name !== "header"){
                     // let item = item.menu
                     let iconTemplate = '';
@@ -2875,7 +3214,200 @@ function header_section(request){
                         menuTemplate += listTemplate;
                     }
                 }
+
+                console.log("===== listTemplate : ", listTemplate)
+                console.log("===== menuTemplate : ", menuTemplate)
+
         })
+
+        console.log("555555555555555555555555555555555555555555555555555")
+        //  add the edit manu block
+        if(request.myPortfolio === undefined){
+            if(editable !== 'my_portfolio'){
+                let editMethod = 'onclick="onClickSetupProfile(this, event, \''+'edit_profile'+'\')"';
+                let createProfileMethod = 'onclick="onClickSetupProfile(this, event, \''+'create_new_profile'+'\')"';
+
+                let editThemeMethod = 'onclick="onClickSetupProfile(this, event, \''+'setup_theme'+'\')"';
+                let previewMethod = 'onclick="onClickSetupProfile(this, event, \''+'preview_profile'+'\')"';
+                let openProfileMethod = 'onclick="onClickSetupProfile(this, event, \''+'open_profile'+'\')"';
+                let iconTemplate = '<i class="fa fa-pencil-square-o custom-menu-icon" style=" font-size: 22px;" aria-hidden="true"></i>';
+                let previewIconTemplate = '<i class="fa fa-pencil-square-o custom-menu-icon" style="font-size: 22px;" aria-hidden="true"></i>';
+
+                if(editable){
+                    menuTemplate += '<li id="menu_previewProfile" class=" custom-menu-font custom-menu default-background-color" '+previewMethod+' style=" color: white; border-radius: 50px;"><a class="default-theme-menu-font-color" href="#" onclick="return false;"> '+previewIconTemplate+' <span style="">Preview Profile</span></a></li>';
+                }else{
+                    menuTemplate += '<li id="menu_editProfile" class="custom-menu-font custom-menu default-background-color" '+editThemeMethod+' style=" color: white; border-radius: 50px;"><a class="default-theme-menu-font-color" href="#" onclick="return false;"> '+iconTemplate+' <span style="">Setup Theme</span></a></li>';
+                    menuTemplate += '<li id="menu_editProfile" class="custom-menu-font custom-menu default-background-color" '+createProfileMethod+' style=" color: white; border-radius: 50px;"><a class="default-theme-menu-font-color" href="#" onclick="return false;"> '+iconTemplate+' <span style="">Create New Profile</span></a></li>';
+                    menuTemplate += '<li id="menu_editProfile" class="custom-menu-font custom-menu default-background-color" '+editMethod+' style=" color: white; border-radius: 50px;"><a class="default-theme-menu-font-color" href="#" onclick="return false;"> '+iconTemplate+' <span style="">Edit Profile</span></a></li>';
+                    menuTemplate += '<li id="OpenProfileUrlMenu" class="custom-menu-font custom-menu default-background-color" '+openProfileMethod+' style=" color: white; border-radius: 50px;"><a class="default-theme-menu-font-color" href="#" onclick="return false;"> '+previewIconTemplate+' <span style="">Open My Profile</span></a></li>';
+                    menuTemplate += '<li id="OpenProfileUrlMenu" class="custom-menu-font custom-menu default-background-color" onclick="onclickSynsFile()" style=" color: white; border-radius: 50px;"><a class="default-theme-menu-font-color" href="#" onclick="return false;"> '+previewIconTemplate+' <span style="">Sync File</span></a></li>';
+
+                }
+            }
+        }
+
+                console.log("6666666666666666666666666666666666666666666666666666666666666666666666666")
+
+
+        // if(myProfiles.length > 0){
+        //     let optionsTemplate = '';
+        //     myProfiles.forEach((profile) => {
+        //         optionsTemplate += '<option>'+profile+'</option>';
+        //     });
+        //     profilesTemplate += `
+        //     <div id="profilesBlock">
+        //       <div class="form-group">
+        //           <label for="sel1">My Profiles:</label>
+        //           <select class="form-control custom-profiles" id="profiles" onchange="onChangeMyProfiles(this,event)">
+        //             `+optionsTemplate+`
+        //           </select>
+        //        </div>
+        //      </div>
+        //     `;
+        // }
+
+        //================================================= rajib
+        let dirPath = ROOT_DIR+'/server/PORTFOLIO/store';
+        let optionsTemplate = '';
+        fs.readdirSync(dirPath).forEach(file => {
+            console.log("===== file: ",file);
+            file = file.split(".")[0];
+                optionsTemplate += '<option>'+file+'</option>';
+        });
+        profilesTemplate += `
+        <div id="profilesBlock">
+            <div class="form-group">
+                <label for="sel1">My Profiles:</label>
+                <select class="form-control custom-profiles" id="profiles" onchange="onChangeMyProfiles(this,event)">
+                `+optionsTemplate+`
+                </select>
+            </div>
+            </div>
+        `;
+
+
+        //=================================================
+                console.log("7777777777777777777777777777777777777777777777777777777777")
+
+        menusTemplate += `
+            <nav class="nav-menu">
+            <ul>
+                `+menuTemplate+`
+            </ul>
+            `+profilesTemplate+`
+            </nav>
+        `;
+  }
+
+    template += `
+      <header id="header" class="default-theme-menu-bg-color">
+        <div class="d-flex flex-column">
+          <div>`+profileTemplate+`</div>
+          <div>`+menusTemplate+`</div>
+          <div class="profile" style="margin-top: 50px;">
+              <div class="social-links mt-3 text-center">`+socialTemplate+`</div>
+          </div>
+        </div>
+      </header>
+    `;
+                    console.log("888888888888888888888888888888888888888888888888888888888888")
+
+    console.log("=== header section response template :: ", template)
+    return template;
+}
+
+function header_section(request){
+  console.log("============ call header section ==============");
+  console.log("@@@ request:: ", request);
+  let template = '';
+  let profileTemplate = '';
+  let menusTemplate = '';
+  let socialTemplate = '';
+  let sectionName = request.apiRef;
+  let requestMenus = request.dynamic_header_menus;
+  let editable = request.edit;
+  let dynamicSections = request.dynamic_sections;
+  let profilesTemplate = '';
+  let headerSectionStyle = '';
+  // let data = portfolio_data[sectionName];
+  const data = PORTFOLIO_APP_SERVICES.app_services.get_section_data(request)
+  console.log("&&&&&&&&&&&&&&&&&& portfolio_service_data : ", data)
+//   let data = _getSectionDataBySectionName(sectionName);
+    // console.log("============ header section get section data : portfolio_service_data : ", portfolio_service_data)
+  let myProfiles = getPortfolioData("myProfiles_section").profiles;
+  // console.log("------------ editable  :: ", editable);
+  // console.log("++++++++ dynamicSections : ", dynamicSections);
+  // console.log("++++++++ dynamicSections stringify : ", JSON.stringify(dynamicSections));
+
+  if(data.profile && data.profile !== '' && data.profile.socialLinks.length > 0){
+        data.profile.socialLinks.forEach((item, index) => {
+          let iconTemplate = '';
+          if(item.icon && item.icon !== '' && item.icon.type === 'bxl'){
+              iconTemplate += '<i class="bx bxl-'+item.icon.name+' " style="'+item.icon.name+'"> </i>';
+          }
+          socialTemplate += '<a href="#" class="custom-social-links '+item.name+'" style="'+item.style+'">'+iconTemplate+'</a>';
+
+        })
+        profileTemplate += `
+            <div class="profile">
+              <img src="`+data.profile.profileImg.imgUrl+`" alt="" class="img-fluid rounded-circle" style="`+data.profile.profileImg.style+`">
+              <h1 class="text-light "><a href="index.html" class="custom-profile" >`+data.profile.profileName.name+`</a></h1>
+            </div>
+        `;
+    }
+
+    if(dynamicSections && dynamicSections !== '' && dynamicSections.values.length > 0){
+        console.log("====== calling the create header section ========");
+        console.log("====== calling the create header section ========");
+        console.log("============ dynamicSections : ", dynamicSections)
+        console.log("============ dynamicSections : ", JSON.stringify(dynamicSections))
+        let menuTemplate = '';
+        dynamicSections.values.forEach((item, index) => {
+                // console.log("============ item : ", item)
+                if(item && (item.section?.name !== "header" && item.section?.name !== 'myProfiles')){
+                    // let item = item.menu
+                    let iconTemplate = '';
+                    let listTemplate = '';
+                    if(item.menu && item.menu.icon && item.menu.icon !== '' && item.menu.icon.type === 'bx'){
+                        iconTemplate += '<i class="bx bx-'+item.menu.icon.name+' custom-menu-icon" style="'+item.menu.icon.style+'"></i>';
+                    }
+
+                    if(editable !== 'my_portfolio' && (request.myPortfolio === undefined)){
+                        if(item.section.name.toLowerCase() === 'settings'){
+                            let method = 'onclick="openSectionsSetupModal()"';
+                            let iconTemplate = '<i class="bx bx-'+item.menu.icon.name+' custom-menu-icon" style="'+item.menu.icon.style+'"></i>';
+                            listTemplate += '<li '+method+' class=" aaa custom-menu custom-menu-font default-background-color" style=" color: white; border-radius: 50px; "><a href="#" class="default-theme-menu-font-color" onclick="return false;"> '+iconTemplate+' <span style="">'+item.menu.name+'</span></a></li>';
+                        }else{
+                            listTemplate += '<li class="aaa custom-menu custom-menu-font"><a href="#'+item.section.name.toLowerCase()+'" class="default-theme-menu-font-color"> '+iconTemplate+' <span style="">'+item.menu.name+'</span></a></li>';
+                        }
+                    }else{
+                        if(item.section.name.toLowerCase() !== 'settings'){
+                            listTemplate += '<li class="aaa custom-menu custom-menu-font"><a href="#'+item.section.name.toLowerCase()+'" class="default-theme-menu-font-color"> '+iconTemplate+' <span style="">'+item.menu.name+'</span></a></li>';
+                        }
+                    }
+
+                    if(item && item.section.name === "Home"){
+                        menuTemplate += '<li class="custom-menu custom-menu-font active"><a class="default-theme-menu-font-color" href="index.html"> '+iconTemplate+' <span style="">'+item.menu.name+'</span></a></li>';
+                    }else{
+                        menuTemplate += listTemplate;
+                    }
+                }
+        })
+
+        if(data.defaultMenus && data.defaultMenus.length){
+            data.defaultMenus.forEach((item, index) => {
+                let iconTemplate = '';
+                let listTemplate = '';
+                if(item && item.visible && item.icon && item.icon !== '' && item.icon.type === 'bx'){
+                    iconTemplate += '<i class="bx bx-'+item.icon.name+' custom-menu-icon" style="'+item.icon.style+'"></i>';
+                    let method = 'onclick="openSectionsSetupModal()"';
+                    // let iconTemplate = '<i class="bx bx-'+item.menu.icon.name+' custom-menu-icon" style="'+item.menu.icon.style+'"></i>';
+                    listTemplate += '<li '+method+' class=" aaa custom-menu custom-menu-font default-background-color" style=" color: white; border-radius: 50px; "><a href="#" class="default-theme-menu-font-color" onclick="return false;"> '+iconTemplate+' <span style="">'+item.name+'</span></a></li>';
+                    menuTemplate += listTemplate;
+                }
+            })
+        }
+
         //  add the edit manu block
         if(request.myPortfolio === undefined){
             if(editable !== 'my_portfolio'){
@@ -2950,8 +3482,11 @@ function header_section(request){
         `;
     }
 
+    if(request && request.sectionData && request.sectionData.sectionStyle){
+        headerSectionStyle += ''+ request.sectionData.sectionStyle +'';
+    }
     template += `
-      <header id="header" class="default-theme-menu-bg-color">
+      <header id="header" class="default-theme-menu-bg-color" style="${headerSectionStyle}">
         <div class="d-flex flex-column">
           <div>`+profileTemplate+`</div>
           <div>`+menusTemplate+`</div>
@@ -2963,6 +3498,166 @@ function header_section(request){
     `;
     return template;
 }
+
+
+// function header_section(request){
+//   console.log("============ call header section ==============");
+//   // console.log("@@@ request:: ", request);
+//   let template = '';
+//   let profileTemplate = '';
+//   let menusTemplate = '';
+//   let socialTemplate = '';
+//   let sectionName = request.apiRef;
+//   let requestMenus = request.dynamic_header_menus;
+//   let editable = request.edit;
+//   let dynamicSections = request.dynamic_sections;
+//   let profilesTemplate = '';
+//   // let data = portfolio_data[sectionName];
+//   let data = _getSectionDataBySectionName(sectionName);
+
+//   let myProfiles = getPortfolioData("myProfiles_section").profiles;
+//   // console.log("------------ editable  :: ", editable);
+//   // console.log("++++++++ dynamicSections : ", dynamicSections);
+//   // console.log("++++++++ dynamicSections stringify : ", JSON.stringify(dynamicSections));
+
+//   if(data.profile && data.profile !== '' && data.profile.socialLinks.length > 0){
+//         data.profile.socialLinks.forEach((item, index) => {
+//           let iconTemplate = '';
+//           if(item.icon && item.icon !== '' && item.icon.type === 'bxl'){
+//               iconTemplate += '<i class="bx bxl-'+item.icon.name+' " style="'+item.icon.name+'"> </i>';
+//           }
+//           socialTemplate += '<a href="#" class="custom-social-links '+item.name+'" style="'+item.style+'">'+iconTemplate+'</a>';
+
+//         })
+//         profileTemplate += `
+//             <div class="profile">
+//               <img src="`+data.profile.profileImg.imgUrl+`" alt="" class="img-fluid rounded-circle" style="`+data.profile.profileImg.style+`">
+//               <h1 class="text-light "><a href="index.html" class="custom-profile" >`+data.profile.profileName.name+`</a></h1>
+//             </div>
+//         `;
+//     }
+
+//     if(dynamicSections && dynamicSections !== '' && dynamicSections.values.length > 0){
+//         console.log("====== calling the create header section ========");
+//         let menuTemplate = '';
+//         dynamicSections.values.forEach((item, index) => {
+//                 if(item.section.name !== "header"){
+//                     // let item = item.menu
+//                     let iconTemplate = '';
+//                     let listTemplate = '';
+//                     if(item.menu && item.menu.icon && item.menu.icon !== '' && item.menu.icon.type === 'bx'){
+//                         iconTemplate += '<i class="bx bx-'+item.menu.icon.name+' custom-menu-icon" style="'+item.menu.icon.style+'"></i>';
+//                     }
+
+//                     if(editable !== 'my_portfolio' && (request.myPortfolio === undefined)){
+//                         if(item.section.name.toLowerCase() === 'settings'){
+//                             let method = 'onclick="openSectionsSetupModal()"';
+//                             let iconTemplate = '<i class="bx bx-'+item.menu.icon.name+' custom-menu-icon" style="'+item.menu.icon.style+'"></i>';
+//                             listTemplate += '<li '+method+' class=" aaa custom-menu custom-menu-font default-background-color" style=" color: white; border-radius: 50px; "><a href="#" class="default-theme-menu-font-color" onclick="return false;"> '+iconTemplate+' <span style="">'+item.menu.name+'</span></a></li>';
+//                         }else{
+//                             listTemplate += '<li class="aaa custom-menu custom-menu-font"><a href="#'+item.section.name.toLowerCase()+'" class="default-theme-menu-font-color"> '+iconTemplate+' <span style="">'+item.menu.name+'</span></a></li>';
+//                         }
+//                     }else{
+//                         if(item.section.name.toLowerCase() !== 'settings'){
+//                             listTemplate += '<li class="aaa custom-menu custom-menu-font"><a href="#'+item.section.name.toLowerCase()+'" class="default-theme-menu-font-color"> '+iconTemplate+' <span style="">'+item.menu.name+'</span></a></li>';
+//                         }
+//                     }
+
+
+//                     if(item && item.section.name === "Home"){
+//                         menuTemplate += '<li class="custom-menu custom-menu-font active"><a class="default-theme-menu-font-color" href="index.html"> '+iconTemplate+' <span style="">'+item.menu.name+'</span></a></li>';
+//                     }else{
+//                         menuTemplate += listTemplate;
+//                     }
+//                 }
+//         })
+//         //  add the edit manu block
+//         if(request.myPortfolio === undefined){
+//             if(editable !== 'my_portfolio'){
+//                 let editMethod = 'onclick="onClickSetupProfile(this, event, \''+'edit_profile'+'\')"';
+//                 let createProfileMethod = 'onclick="onClickSetupProfile(this, event, \''+'create_new_profile'+'\')"';
+
+//                 let editThemeMethod = 'onclick="onClickSetupProfile(this, event, \''+'setup_theme'+'\')"';
+//                 let previewMethod = 'onclick="onClickSetupProfile(this, event, \''+'preview_profile'+'\')"';
+//                 let openProfileMethod = 'onclick="onClickSetupProfile(this, event, \''+'open_profile'+'\')"';
+//                 let iconTemplate = '<i class="fa fa-pencil-square-o custom-menu-icon" style=" font-size: 22px;" aria-hidden="true"></i>';
+//                 let previewIconTemplate = '<i class="fa fa-pencil-square-o custom-menu-icon" style="font-size: 22px;" aria-hidden="true"></i>';
+
+//                 if(editable){
+//                   menuTemplate += '<li id="menu_previewProfile" class=" custom-menu-font custom-menu default-background-color" '+previewMethod+' style=" color: white; border-radius: 50px;"><a class="default-theme-menu-font-color" href="#" onclick="return false;"> '+previewIconTemplate+' <span style="">Preview Profile</span></a></li>';
+//                 }else{
+//                   menuTemplate += '<li id="menu_editProfile" class="custom-menu-font custom-menu default-background-color" '+editThemeMethod+' style=" color: white; border-radius: 50px;"><a class="default-theme-menu-font-color" href="#" onclick="return false;"> '+iconTemplate+' <span style="">Setup Theme</span></a></li>';
+//                   menuTemplate += '<li id="menu_editProfile" class="custom-menu-font custom-menu default-background-color" '+createProfileMethod+' style=" color: white; border-radius: 50px;"><a class="default-theme-menu-font-color" href="#" onclick="return false;"> '+iconTemplate+' <span style="">Create New Profile</span></a></li>';
+//                   menuTemplate += '<li id="menu_editProfile" class="custom-menu-font custom-menu default-background-color" '+editMethod+' style=" color: white; border-radius: 50px;"><a class="default-theme-menu-font-color" href="#" onclick="return false;"> '+iconTemplate+' <span style="">Edit Profile</span></a></li>';
+//                   menuTemplate += '<li id="OpenProfileUrlMenu" class="custom-menu-font custom-menu default-background-color" '+openProfileMethod+' style=" color: white; border-radius: 50px;"><a class="default-theme-menu-font-color" href="#" onclick="return false;"> '+previewIconTemplate+' <span style="">Open My Profile</span></a></li>';
+//                   menuTemplate += '<li id="OpenProfileUrlMenu" class="custom-menu-font custom-menu default-background-color" onclick="onclickSynsFile()" style=" color: white; border-radius: 50px;"><a class="default-theme-menu-font-color" href="#" onclick="return false;"> '+previewIconTemplate+' <span style="">Sync File</span></a></li>';
+
+//                 }
+//             }
+//         }
+
+//         // if(myProfiles.length > 0){
+//         //     let optionsTemplate = '';
+//         //     myProfiles.forEach((profile) => {
+//         //         optionsTemplate += '<option>'+profile+'</option>';
+//         //     });
+//         //     profilesTemplate += `
+//         //     <div id="profilesBlock">
+//         //       <div class="form-group">
+//         //           <label for="sel1">My Profiles:</label>
+//         //           <select class="form-control custom-profiles" id="profiles" onchange="onChangeMyProfiles(this,event)">
+//         //             `+optionsTemplate+`
+//         //           </select>
+//         //        </div>
+//         //      </div>
+//         //     `;
+//         // }
+
+//         //================================================= rajib
+//         let dirPath = ROOT_DIR+'/server/PORTFOLIO/store';
+//         let optionsTemplate = '';
+//         fs.readdirSync(dirPath).forEach(file => {
+//            console.log("===== file: ",file);
+//            file = file.split(".")[0];
+//                optionsTemplate += '<option>'+file+'</option>';
+//         });
+//         profilesTemplate += `
+//         <div id="profilesBlock">
+//           <div class="form-group">
+//               <label for="sel1">My Profiles:</label>
+//               <select class="form-control custom-profiles" id="profiles" onchange="onChangeMyProfiles(this,event)">
+//                 `+optionsTemplate+`
+//               </select>
+//            </div>
+//          </div>
+//         `;
+
+
+//         //=================================================
+
+//         menusTemplate += `
+//           <nav class="nav-menu">
+//             <ul>
+//               `+menuTemplate+`
+//             </ul>
+//             `+profilesTemplate+`
+//           </nav>
+//         `;
+//     }
+
+//     template += `
+//       <header id="header" class="default-theme-menu-bg-color">
+//         <div class="d-flex flex-column">
+//           <div>`+profileTemplate+`</div>
+//           <div>`+menusTemplate+`</div>
+//           <div class="profile" style="margin-top: 50px;">
+//               <div class="social-links mt-3 text-center">`+socialTemplate+`</div>
+//           </div>
+//         </div>
+//       </header>
+//     `;
+//     return template;
+// }
 
 function typed_section(sectionName){
     // let data = portfolio_data[sectionName];
@@ -3155,44 +3850,58 @@ function new_get_section_data(request){
                     return IND_STOCKS_APP_SERVICES.app_services.get_section_data(request.sectionName);
                 }
       }else if(request.application === 'PORTFOLIO'){
+        //   console.log("++++++++++++++ request : ", request)
           let srcFile = null;
-          if(request.fileName === "default"){
+          if(request?.fileName === "default"){
             srcFile = ROOT_DIR+'/server/'+request.application+'/store/generic_portfolio_data.js';
           }else{
             srcFile = ROOT_DIR+'/server/'+request.application+'/store/'+request.fileName+'.js';
           }
-          let sectionData = require(srcFile).portfolio_data[request.sectionName];
-          console.log("@@@@ ======= sectionData :: ", sectionData);
+          let sectionData = require(srcFile).sections_data[request.sectionName];
+        //   console.log("@@@@ ======= sectionData :: ", sectionData);
           return sectionData;
       }else if(request.application === 'GINIMUSIC'){
             // './server/GINIMUSIC/store/giniMusicApp.js';
-            let filePath = ROOT_DIR+'/server/'+request.application+'/store/'+request.fileName+'.js';
+            let filePath = ROOT_DIR+'/server/'+request.application+'/store/'+request.fileName+'Data.js';
             console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
             console.log("+++++++ request :: ", request);
             console.log("++++++++  filePath : ", filePath);
             // let filePath = './server/GINIMUSIC/store/giniMusicApp.js';
-            let GINI_MUSIC_DATA = require(filePath).portfolio_data;
+            let GINI_MUSIC_DATA = require(filePath).sections_data;
             if(request.sectionName !== undefined && request.sectionName !== null && request.sectionName !== ''){
                 return GINI_MUSIC_DATA[request.sectionName];
             }
+      }else if(request.application === 'publicApis'){
+            let filePath = ROOT_DIR+'/server/'+request.application+'/store/'+request.fileName+'Data.js';
+            console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+            console.log("+++++++ request :: ", request);
+            console.log("++++++++  filePath : ", filePath);
+            // let filePath = './server/GINIMUSIC/store/giniMusicApp.js';
+            let PUBLIC_APIS_DATA = require(filePath).sections_data;
+            if(request.sectionName !== undefined && request.sectionName !== null && request.sectionName !== ''){
+                console.log("===== PUBLIC_APIS_DATA[request.sectionName] : ", PUBLIC_APIS_DATA[request.sectionName])
+                return PUBLIC_APIS_DATA[request.sectionName];
+            }
       }else{
-            let filePath = ROOT_DIR+'/server/'+request.application+'/store/'+request.application+'Data.js';
-            let DATA = require(filePath).portfolio_data;
+            let filePath = ROOT_DIR+'/server/'+request.application+'/store/'+request.fileName+'Data.js';
+            // let filePath = ROOT_DIR+'/server/'+request.application+'/store/'+request.application+'Data.js';
+            let DATA = require(filePath).sections_data;
             if(request.sectionName !== undefined && request.sectionName !== null && request.sectionName !== ''){
                 return DATA[request.sectionName];
             }
       }
   }else{
       if(request.sectionName !== undefined && request.sectionName !== null && request.sectionName !== ''){
-          return portfolio_data[request.sectionName];
+          return sections_data[request.sectionName];
       }
   }
 }
 
 function update_initial_sections(request){
     console.log("===== calling update initial sections =====");
+    // console.log("====== request :: ", request)
     let sections = request.updatedSections;
-    let data = null;
+    let data = request?.sectionData;
     let sectionData = null;
     let srcFile = null;
     console.log("====== sections : ", sections);
@@ -3211,12 +3920,12 @@ function update_initial_sections(request){
             }else{
               srcFile = ROOT_DIR+'/server/'+request.application+'/store/'+request.fileName+'.js';
             }
-            data = require(srcFile).portfolio_data[request.sectionName];
+            data = require(srcFile).sections_data[request.sectionName];
             sectionData = data;
         }
     }else{
         if(request.sectionName !== undefined && request.sectionName !== null && request.sectionName !== ''){
-            data =  portfolio_data[request.sectionName];
+            data =  sections_data[request.sectionName];
         }
     }
     if(data){
@@ -3231,6 +3940,8 @@ function update_initial_sections(request){
           }
       });
     }
+
+    console.log("===== 777777777777777 ===========")
 
     // console.log("!!!!!!!!!! after updating the initial sections data:: \n\n", portfolio_data[request.sectionName].block.sections[0].parts);
     return "Successfully Update Initial Sections"
@@ -3332,7 +4043,7 @@ function create_new_section(request){
         }else{
           srcFile = ROOT_DIR+'/server/'+request.application+'/store/'+request.fileName+'.js';
         }
-        portfolio_data = require(srcFile).portfolio_data;
+        portfolio_data = require(srcFile).sections_data;
     }
 
 
@@ -3405,30 +4116,42 @@ function get_nav_link_template(item){
     return template;
 }
 
-function get_map_to_sections_data(sections, application){
+function get_map_to_sections_data(sections, application, request){
+    console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+    console.log("$$$$$ request : ", request)
     let allSectionsData = null;
+    let allSectionsData1 = null;
+
     let filteredSectionsData = [];
 
-    if(application === 'gini_home'){
-        allSectionsData = GINI_HOME.gini_home_processing.get_section_data("all_sections").values;
-    }else if(application === 'restaurant_home'){
-        allSectionsData = RESTAURANT_APP_SERVICES.restaurant_app_services.get_section_data("all_sections").values;
-    }else if(application === 'music_home'){
-        allSectionsData = MUSIC_APP_SERVICES.music_app_services.get_section_data("all_sections").values;
-    }else if(application === 'gini_nearby_app'){
-        allSectionsData = NEARBY_APP_DATA.nearby_app_services.get_section_data("all_sections").values;
-    }else if(application === 'shopping_home'){
-        allSectionsData = SHOPPING_APP_SERVICES.shopping_app_services.get_section_data("all_sections").values;
-    }else if(application === 'new_project'){
-        allSectionsData = NEW_PROJECT_APP_SERVICES.app_services.get_section_data("all_sections").values;
-    }else if(application === 'indStocks'){
-        allSectionsData = IND_STOCKS_APP_SERVICES.app_services.get_section_data("all_sections").values;
-    }else{
-        allSectionsData = portfolio_data["all_sections"];
-    }
+    // if(application === 'gini_home'){
+    //     allSectionsData = GINI_HOME.gini_home_processing.get_section_data("all_sections").values;
+    // }else if(application === 'restaurant_home'){
+    //     allSectionsData = RESTAURANT_APP_SERVICES.restaurant_app_services.get_section_data("all_sections").values;
+    // }else if(application === 'music_home'){
+    //     allSectionsData = MUSIC_APP_SERVICES.music_app_services.get_section_data("all_sections").values;
+    // }else if(application === 'gini_nearby_app'){
+    //     allSectionsData = NEARBY_APP_DATA.nearby_app_services.get_section_data("all_sections").values;
+    // }else if(application === 'shopping_home'){
+    //     allSectionsData = SHOPPING_APP_SERVICES.shopping_app_services.get_section_data("all_sections").values;
+    // }else if(application === 'new_project'){
+    //     allSectionsData = NEW_PROJECT_APP_SERVICES.app_services.get_section_data("all_sections").values;
+    // }else if(application === 'indStocks'){
+    //     allSectionsData = IND_STOCKS_APP_SERVICES.app_services.get_section_data("all_sections").values;
+    //     console.log("$$$$$$$$$$$ allSectionsData : ", allSectionsData)
+    // }else if(application === 'publicApis'){
+    //         // let dataFileName = request.application;
+    //         // let dataFilePath = './../../server/'+request.application+'/store/'+request.application+'Data.js';
+    //     // allSectionsData = IND_STOCKS_APP_SERVICES.app_services.get_section_data("all_sections").values;
+    // }else{
+    //     allSectionsData = portfolio_data["all_sections"];
+    // }
 
     // console.log("=================== ************* allSectionsData :: ", allSectionsData);
-
+    if(request.dependentSectionsData !== undefined && request.dependentSectionsData !== ''){
+        allSectionsData = request.dependentSectionsData[request.dependentSectionName].values;
+        // console.log("$$$$$$$$$$$ allSectionsData1 : ", allSectionsData)
+    }
     if(Array.isArray(sections)){
         sections.forEach((item, index) => {
             allSectionsData.forEach((ele, index) => {
@@ -3448,8 +4171,8 @@ function get_map_to_sections_data(sections, application){
     return filteredSectionsData;
 }
 
-function get_event_template(event, application){
-  console.log("****************** calling get_event_template ***********************");get_event_template
+function get_event_template(event, application, request){
+//   console.log("****************** calling get_event_template ***********************");get_event_template
   let methodTemplate = '';
 
   if(Array.isArray(event)){
@@ -3459,7 +4182,7 @@ function get_event_template(event, application){
             methodTemplate += ' ';
             let mapTosections = ev.argument.mapToSections;
             if(ev.argument.mapToSections !== undefined && ev.argument.mapToSections !== null && ev.argument.mapToSections !== ''){
-                let map_to_sections_data = get_map_to_sections_data(ev.argument.mapToSections, application);
+                let map_to_sections_data = get_map_to_sections_data(ev.argument.mapToSections, application, request);
                 ev.argument.mapToSectionsData = map_to_sections_data;
             }
             let argument = JSON.stringify(ev.argument);
@@ -3483,7 +4206,7 @@ function get_event_template(event, application){
   return methodTemplate;
 }
 
-function get_header_navigation_template(nav, application){
+function get_header_navigation_template(nav, application, request){
     console.log("========== calling the header nav section  ===========");
     let navTemplate = '';
     let brandTemplate = '';
@@ -3496,11 +4219,11 @@ function get_header_navigation_template(nav, application){
     }
 
     if(nav.brand !== undefined && nav.brand !== null && nav.brand !== '' && nav.brand.values.length > 0){
-        brandTemplate += '<div class="" style="'+nav.brand.brandStyle+'">';
+        brandTemplate += '<div class="mob-header-brand-block" style="'+nav.brand.brandStyle+'">';
 
         nav.brand.values.forEach((item, index) => {
           if(item.type === 'text'){
-            brandTemplate += '<h1 class="logo mr-auto"><a href="index.html" style="'+item.key.style+'">'+item.key.name+'</a></h1>';
+            brandTemplate += '<h1 class="logo mr-auto mob-header-brand-block-text"><a href="index.html" style="'+item.key.style+'">'+item.key.name+'</a></h1>';
           }
         });
         brandTemplate += '</div>';
@@ -3511,19 +4234,19 @@ function get_header_navigation_template(nav, application){
         nav.navigation.values.forEach((item, index) => {
         let navMethodTemplate = '';
               if(item.key.event !== undefined && item.key.event !== null && item.key.event !== ''){
-                  navMethodTemplate += get_event_template(item.key.event, application);
+                  navMethodTemplate += get_event_template(item.key.event, application, request);
                   // console.log("@@@ navMethodTemplate : ", navMethodTemplate);
               }
 
               if(index === 0 ){
                   if(item.type === 'link'){
-                    subNavTemplate += '<li class="active" '+navMethodTemplate+'><a href="#" class="custom-nav-menu" >'+item.key.name+'</a></li>'
+                    subNavTemplate += '<li class="active" '+navMethodTemplate+' style="outline: none !important;"><a href="#" class="custom-nav-menu" >'+item.key.name+'</a></li>'
                   }
               }else{
                   if(item.type === 'link'){
-                    subNavTemplate += '<li '+navMethodTemplate+'><a href="#" class="custom-nav-menu" >'+item.key.name+'</a></li>'
+                    subNavTemplate += '<li '+navMethodTemplate+' style="outline: none !important;" ><a href="#" class="custom-nav-menu" >'+item.key.name+'</a></li>'
                   }else if(item.type === 'dropDown'){
-                      subNavTemplate += '  <li class="drop-down" class="custom-nav-menu" '+navMethodTemplate+'><a href="#" >'+item.key.name+'</a>';
+                      subNavTemplate += '  <li class="drop-down" class="custom-nav-menu" style="outline: none !important;" '+navMethodTemplate+'><a href="#" >'+item.key.name+'</a>';
                       subNavTemplate += get_nav_drop_down_template(item.links);
                       subNavTemplate += '  </li>';
 
@@ -3533,8 +4256,8 @@ function get_header_navigation_template(nav, application){
         subNavTemplate += '</ul>';
 
         navigationTemplate += `
-            <div style="`+nav.navigation.navStyle+`">
-              <nav class="nav-menu d-none d-lg-block">
+            <div class="mob-header-nav-block" style="`+nav.navigation.navStyle+`">
+              <nav class="nav-menu d-lg-block d-sm-block">
                 `+subNavTemplate+`
               </nav>
             </div>
@@ -3555,7 +4278,7 @@ function get_header_navigation_template(nav, application){
     navTemplate += `
       <div class="container-fluid custom-mob-header-block" style=" `+containerStyle+`">
         <div class="row justify-content-center">
-            <div class="col-xl-9 d-flex align-items-center" style="">
+            <div class="col-xl-12 align-items-center" style="">
                 `+brandTemplate+`
                 `+navigationTemplate+`
                 `+customTemplate+`

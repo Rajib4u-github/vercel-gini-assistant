@@ -114,7 +114,7 @@ function get_schema_tosection_data(){
       // })
 
 
-let nearby_app_services = {
+const nearby_app_services = {
 
     get_section_data : get_section_data,
 

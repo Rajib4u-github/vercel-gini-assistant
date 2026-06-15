@@ -1,5 +1,6 @@
-const rawData =
-[
+const rawData ={
+"count": 25,
+"entries":[
   {
     "text": "A free json storage a json hosting service which is ideal for web and mobile apps and also for json mocking",
     "heading": "JSONBin",
@@ -32,6 +33,7 @@ const rawData =
   },
 
 ]
+}
 
 
 module.exports.rawData = rawData;

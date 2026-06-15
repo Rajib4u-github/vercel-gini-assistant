@@ -275,7 +275,7 @@ function getAotAnimation(item){
 }
 
 function getProgressBarTemplate(item, editable, sectionName, sectionIndex, partsIndex, itemIndex){
-    console.log("============ get progress bar template =============");
+    // console.log("============ get progress bar template =============");
     let template = '';
     let animation = '';
     let infoTemplate = '';
@@ -2295,7 +2295,7 @@ function new_get_section_data(request){
             srcFile = ROOT_DIR+'/server/'+request.application+'/store/'+request.fileName+'.js';
           }
           let sectionData = require(srcFile).portfolio_data[request.sectionName];
-          console.log("@@@@ ======= sectionData :: ", sectionData);
+        //   console.log("@@@@ ======= sectionData :: ", sectionData);
           return sectionData;
       }else if(request.application === 'GINIMUSIC'){
             // './server/GINIMUSIC/store/giniMusicApp.js';

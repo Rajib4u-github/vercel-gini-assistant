@@ -1,4 +1,6 @@
-const rawData =[
+const rawData = {
+"count": 25,
+"entries": [
   {
     "text": "Hosted hooks helps you ship production ready webhooks in under a day with our api and integrations",
     "heading": "HostedHooks",
@@ -60,5 +62,7 @@ const rawData =[
     "link": "https://ifttt.com/maker_webhooks"
   }
 ]
+
+}
 
 module.exports.rawData = rawData;

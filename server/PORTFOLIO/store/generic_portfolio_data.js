@@ -10,11 +10,12 @@ let default_style = {
 }
 
 
-let portfolio_data = {
+let sections_data = {
 
     "default_style": {
         themeColor: '#6264A7',
         themeBgColor: '#F5F5F5',
+        themeCardBgColor: '#E8EAED',
         themeFontColor: '#000000',
         themePrimaryColor: '#424242',
         themeMenuBgColor: '#FFFFFF',
@@ -194,6 +195,7 @@ let portfolio_data = {
                                       {type: 'text', key: {name: 'consequuntur quae', style: 'font-size: 16px; background: white;'}, itemStyle: 'display: inline-block;'},
 
                                     ],
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                                 },
                                 {
@@ -207,6 +209,7 @@ let portfolio_data = {
                                       {type: 'text', key: {name: 'consequuntur quae', style: ' font-size: 16px; background: white;'}, itemStyle: 'display: inline-block;'},
 
                                     ],
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                                 },
                                 {
@@ -220,6 +223,7 @@ let portfolio_data = {
                                       {type: 'text', key: {name: 'consequuntur quae', style: ' font-size: 16px; background: white;'}, itemStyle: 'display: inline-block;'},
 
                                     ],
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                                 },
                                 {
@@ -233,6 +237,7 @@ let portfolio_data = {
                                       {type: 'text', key: {name: 'consequuntur quae', style: ' font-size: 16px; background: white;'}, itemStyle: 'display: inline-block;'},
 
                                     ],
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                                 },
 
@@ -271,13 +276,14 @@ let portfolio_data = {
                                 },
                                 {
                                     desc: [
-                                      {type: 'progress-bar', key: {name: 'JAVASCRIPT', style: 'background: white;'}, value: {name: '85', style: 'background: white; width: 13%; float: right;'}, name : 'JAVASCRIPT', percent: '90', class: 'default-outline-color progress-bar-theme ',  progressBarStyle: ' ', animationType: 'fade-up', animationDelay: null, style: 'width: 48%; margin-right: 1rem; padding: 16px; margin-bottom: 1rem; background: white; padding-bottom: 60px; float: left; '},
-                                      {type: 'progress-bar', key: {name: 'HTML5', style: 'background: white;'}, value: {name: '90', style: 'background: white; width: 13%; float: right;'},  name : 'HTML5', percent: '90', class: 'default-outline-color progress-bar-theme ',  progressBarStyle: '', animationType: 'fade-up', animationDelay: null, style: 'width: 48%; margin-right: 1rem; padding: 16px; margin-bottom: 1rem; background: white; padding-bottom: 60px; float: left; '},
-                                      {type: 'progress-bar', key: {name: 'ANGULAR JS', style: 'background: white;'}, value: {name: '90', style: 'background: white; width: 13%; float: right;'}, name : 'ANGULAR JS', percent: '90', class: 'default-outline-color progress-bar-theme ',  progressBarStyle: '', animationType: 'fade-up', animationDelay: null, style: 'width: 48%; margin-right: 1rem; padding: 16px; margin-bottom: 1rem; background: white; padding-bottom: 60px; float: left; '},
-                                      {type: 'progress-bar', key: {name: 'REACT JS', style: 'background: white;'}, value: {name: '80', style: 'background: white; width: 13%; float: right;'}, name : 'REACT JS', percent: '90', class: 'default-outline-color progress-bar-theme ',  progressBarStyle: '', animationType: 'fade-up', animationDelay: null, style: 'width: 48%; margin-right: 1rem; padding: 16px; margin-bottom: 1rem; background: white; padding-bottom: 60px; float: left; '},
-                                      {type: 'progress-bar', key: {name: 'NODE JS', style: 'background: white;'}, value: {name: '80', style: 'background: white; width: 13%; float: right;'}, name : 'NODE JS', percent: '90', class: 'default-outline-color progress-bar-theme ',  progressBarStyle: '', animationType: 'fade-up', animationDelay: null, style: 'width: 48%; margin-right: 1rem; padding: 16px; margin-bottom: 1rem; background: white; padding-bottom: 60px; float: left; '},
-                                      {type: 'progress-bar', key: {name: 'CSS3', style: 'background: white;'}, value: {name: '90', style: 'background: white; width: 13%; float: right;'}, name : 'CSS3', percent: '90', class: 'default-outline-color progress-bar-theme ',  progressBarStyle: ' ', animationType: 'fade-up', animationDelay: null, style: 'width: 48%; margin-right: 1rem; padding: 16px; margin-bottom: 1rem; background: white; padding-bottom: 60px; float: left; '},
+                                      {type: 'progress-bar', key: {name: 'JAVASCRIPT', style: 'background: white;'}, value: {name: '85', style: 'background: white; width: 13%; float: right;'}, name : 'JAVASCRIPT', percent: '90', class: 'default-outline-color progress-bar-theme ',  progressBarStyle: ' ', animationType: 'fade-up', animationDelay: null, style: 'width: 48%; margin-right: 1rem; padding: 16px; margin-bottom: 1rem; background: white; padding-bottom: 60px; float: left; border: solid #e5e7eb;'},
+                                      {type: 'progress-bar', key: {name: 'HTML5', style: 'background: white;'}, value: {name: '90', style: 'background: white; width: 13%; float: right;'},  name : 'HTML5', percent: '90', class: 'default-outline-color progress-bar-theme ',  progressBarStyle: '', animationType: 'fade-up', animationDelay: null, style: 'width: 48%; margin-right: 1rem; padding: 16px; margin-bottom: 1rem; background: white; padding-bottom: 60px; float: left;border: solid #e5e7eb; '},
+                                      {type: 'progress-bar', key: {name: 'ANGULAR JS', style: 'background: white;'}, value: {name: '90', style: 'background: white; width: 13%; float: right;'}, name : 'ANGULAR JS', percent: '90', class: 'default-outline-color progress-bar-theme ',  progressBarStyle: '', animationType: 'fade-up', animationDelay: null, style: 'width: 48%; margin-right: 1rem; padding: 16px; margin-bottom: 1rem; background: white; padding-bottom: 60px; float: left; border: solid #e5e7eb;'},
+                                      {type: 'progress-bar', key: {name: 'REACT JS', style: 'background: white;'}, value: {name: '80', style: 'background: white; width: 13%; float: right;'}, name : 'REACT JS', percent: '90', class: 'default-outline-color progress-bar-theme ',  progressBarStyle: '', animationType: 'fade-up', animationDelay: null, style: 'width: 48%; margin-right: 1rem; padding: 16px; margin-bottom: 1rem; background: white; padding-bottom: 60px; float: left; border: solid #e5e7eb;'},
+                                      {type: 'progress-bar', key: {name: 'NODE JS', style: 'background: white;'}, value: {name: '80', style: 'background: white; width: 13%; float: right;'}, name : 'NODE JS', percent: '90', class: 'default-outline-color progress-bar-theme ',  progressBarStyle: '', animationType: 'fade-up', animationDelay: null, style: 'width: 48%; margin-right: 1rem; padding: 16px; margin-bottom: 1rem; background: white; padding-bottom: 60px; float: left; border: solid #e5e7eb;'},
+                                      {type: 'progress-bar', key: {name: 'CSS3', style: 'background: white;'}, value: {name: '90', style: 'background: white; width: 13%; float: right;'}, name : 'CSS3', percent: '90', class: 'default-outline-color progress-bar-theme ',  progressBarStyle: ' ', animationType: 'fade-up', animationDelay: null, style: 'width: 48%; margin-right: 1rem; padding: 16px; margin-bottom: 1rem; background: white; padding-bottom: 60px; float: left; border: solid #e5e7eb;'},
                                     ],
+                                    
                                     partStyle: 'display: inline-block; width: 100%; margin-right: 1rem; margin-bottom: 1rem; padding: 20px; '
                                 },
                             ],
@@ -304,7 +310,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: ' background: white;'}, value: {name: 'Latest', style: 'background: white;'}},
                                     ],
                                     sectionClass: 'custom-theme-border',
-                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
+                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px; border: solid #e5e7eb; '
                                 },
                                 {
                                     animationType: 'fade-up', animationDelay: 50,
@@ -317,7 +323,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: ' background: white;'}, value: {name: 'Latest', style: ' background: white;'}},
                                     ],
                                     sectionClass: 'custom-theme-border',
-                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
+                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  border: solid #e5e7eb; '
                                 },
                                 {
                                     animationType: 'fade-up', animationDelay: 100,
@@ -330,7 +336,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: ' background: white;'}, value: {name: '20', style: 'font-weight: 400; background: white;'}},
                                     ],
                                     sectionClass: 'custom-theme-border',
-                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
+                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px; border: solid #e5e7eb; '
                                 },
                                 {
                                     animationType: 'fade-up', animationDelay: 150,
@@ -343,7 +349,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: ' background: white;'}, value: {name: 'Latest', style: 'font-weight: 400; background: white;'}},
                                     ],
                                     sectionClass: 'custom-theme-border',
-                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
+                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px; border: solid #e5e7eb;  '
                                 },
                                 {
                                     animationType: 'fade-up', animationDelay: 200,
@@ -356,7 +362,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: 'background: white;'}, value: {name: 'Latest', style: 'background: white;'}},
                                     ],
                                     sectionClass: 'custom-theme-border',
-                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
+                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px; border: solid #e5e7eb; '
                                 }
                             ]
 
@@ -382,7 +388,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: ' background: white;'}, value: {name: 'Latest', style: ' background: white;'}},
                                     ],
                                     sectionClass: 'custom-theme-border',
-                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
+                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px; border: solid #e5e7eb;'
 
                                 },
                                 {
@@ -395,7 +401,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: 'background: white;'}, value: {name: 'Latest', style: ' background: white;'}},
                                     ],
                                     sectionClass: 'custom-theme-border',
-                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
+                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px; border: solid #e5e7eb; '
 
                                 },
                                 {
@@ -408,7 +414,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: ' background: white;'}, value: {name: 'Latest', style: ' background: white;'}},
                                     ],
                                     sectionClass: 'custom-theme-border',
-                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
+                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px; border: solid #e5e7eb;'
 
                                 },
                                 {
@@ -421,7 +427,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: ' background: white;'}, },
                                     ],
                                     sectionClass: 'custom-theme-border',
-                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
+                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px; border: solid #e5e7eb; '
 
                                 }
                             ]
@@ -449,7 +455,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: ' background: white;'}, },
                                     ],
                                     sectionClass: 'custom-theme-border',
-                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
+                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px; border: solid #e5e7eb; '
 
                                 },
                                 {
@@ -463,7 +469,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: ' background: white;'}, },
                                     ],
                                     sectionClass: 'custom-theme-border',
-                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
+                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px; border: solid #e5e7eb; '
 
                                 },
                                 {
@@ -477,7 +483,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: ' background: white;'}, },
                                     ],
                                     sectionClass: 'custom-theme-border',
-                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
+                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px; border: solid #e5e7eb; '
 
                                 },
                                 {
@@ -491,7 +497,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: ' background: white;'}, },
                                     ],
                                     sectionClass: 'custom-theme-border',
-                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
+                                    partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px; border: solid #e5e7eb; '
 
                                 }
                             ]
@@ -530,7 +536,8 @@ let portfolio_data = {
                                     ],
                                     sectionClass: 'custom-theme-border',
                                     partStyle: 'width: 46%;display: inline-block;  padding-left: 25px; margin-left: 10px; background: white; margin-right: 1rem; margin-bottom: 10px; ',
-                                },
+                                    partClass: 'custom-bordered-part',
+                                  },
                                 {
                                     animationType: 'fade-up', animationDelay: 50,
                                     isDraggable  : true,
@@ -542,6 +549,7 @@ let portfolio_data = {
                                       {type: 'text', key: {name: 'R.V. College Of Engineering', style: ' font-style: italic; margin-top: 15px; margin-top: 10px; font-size: 18px; display: block; padding-bottom: 20px; width: 95%;background: white;'}, itemStyle: ' display: block;'},
 
                                     ],
+                                    partClass: 'custom-bordered-part',
                                     sectionClass: 'custom-theme-border',
                                     partStyle: 'width: 46%;display: inline-block;  padding-left: 25px; margin-left: 10px; background: white; margin-right: 1rem; margin-bottom: 10px; ',
                                 },
@@ -557,6 +565,7 @@ let portfolio_data = {
 
                                     ],
                                     sectionClass: 'custom-theme-border',
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'width: 46%;display: inline-block;  padding-left: 25px; margin-left: 10px; background: white; margin-right: 1rem; margin-bottom: 10px; ',
                                 },
 
@@ -595,6 +604,7 @@ let portfolio_data = {
 
                                         ],
                                         sectionClass: 'custom-theme-border',
+                                        partClass: 'custom-bordered-part',
                                         partStyle: 'width: 46%;display: inline-block;  padding-left: 25px; margin-left: 10px; background: white; margin-right: 1rem; margin-bottom: 10px; ',
                                     },
                                     {
@@ -607,6 +617,7 @@ let portfolio_data = {
 
                                         ],
                                         sectionClass: 'custom-theme-border',
+                                        partClass: 'custom-bordered-part',
                                         partStyle: 'width: 46%;display: inline-block;  padding-left: 25px; margin-left: 10px; background: white; margin-right: 1rem; margin-bottom: 10px; ',
                                     },
                                     {
@@ -619,6 +630,7 @@ let portfolio_data = {
 
                                         ],
                                         sectionClass: 'custom-theme-border',
+                                        partClass: 'custom-bordered-part',
                                         partStyle: 'width: 46%;display: inline-block;  padding-left: 25px; margin-left: 10px; background: white; margin-right: 1rem; margin-bottom: 10px; ',
                                     },
                                     {
@@ -631,6 +643,7 @@ let portfolio_data = {
 
                                         ],
                                         sectionClass: 'custom-theme-border',
+                                        partClass: 'custom-bordered-part',
                                         partStyle: 'width: 46%;display: inline-block;  padding-left: 25px; margin-left: 10px; background: white; margin-right: 1rem; margin-bottom: 10px; ',
                                     },
 
@@ -641,7 +654,7 @@ let portfolio_data = {
               ],
                 style: '',
             }
-        },
+    },
 
     "work_section": {
           sectionName : 'work_section',
@@ -811,35 +824,35 @@ let portfolio_data = {
               "Education": [
                 {imgUrl: "static/img/final_portfolio/logo_by_industries/education_and_religious/logo1.png", style: '', filterName: 'education'},
                 {imgUrl: "static/img/final_portfolio/logo_by_industries/education_and_religious/logo2.jpg", style: '', filterName: 'education'},
-                {imgUrl: "static/img/final_portfolio/logo_by_industries/education_and_religious/logo3.jpg", style: '', filterName: 'education'},
-                {imgUrl: "static/img/final_portfolio/logo_by_industries/education_and_religious/logo4.jpg", style: '', filterName: 'education'},
-                {imgUrl: "static/img/final_portfolio/logo_by_industries/education_and_religious/logo5.png", style: '', filterName: 'education'},
+                // {imgUrl: "static/img/final_portfolio/logo_by_industries/education_and_religious/logo3.jpg", style: '', filterName: 'education'},
+                // {imgUrl: "static/img/final_portfolio/logo_by_industries/education_and_religious/logo4.jpg", style: '', filterName: 'education'},
+                // {imgUrl: "static/img/final_portfolio/logo_by_industries/education_and_religious/logo5.png", style: '', filterName: 'education'},
               ],
               "Beauty": [
                 {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty1.jpg", style: '', filterName: 'beauty'},
                 {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty2.jpg", style: '', filterName: 'beauty'},
-                {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty3.jpg", style: '', filterName: 'beauty'},
-                {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty4.jpg", style: '', filterName: 'beauty'},
-                {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty5.jpg", style: '', filterName: 'beauty'},
-                {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty6.jpg", style: '', filterName: 'beauty'},
-                {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty7.jpg", style: '', filterName: 'beauty'},
-                {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty8.jpg", style: '', filterName: 'beauty'},
-                {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty9.jpg", style: '', filterName: 'beauty'},
-                {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty10.jpg", style: '', filterName: 'beauty'},
-                {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty11.jpg", style: '', filterName: 'beauty'},
-                {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty12.jpg", style: '', filterName: 'beauty'},
-                {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty13.jpg", style: '', filterName: 'beauty'},
-                {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty14.jpg", style: '', filterName: 'beauty'},
-                {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty15.jpg", style: '', filterName: 'beauty'},
-                {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty16.jpg", style: '', filterName: 'beauty'},
+                // {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty3.jpg", style: '', filterName: 'beauty'},
+                // {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty4.jpg", style: '', filterName: 'beauty'},
+                // {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty5.jpg", style: '', filterName: 'beauty'},
+                // {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty6.jpg", style: '', filterName: 'beauty'},
+                // {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty7.jpg", style: '', filterName: 'beauty'},
+                // {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty8.jpg", style: '', filterName: 'beauty'},
+                // {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty9.jpg", style: '', filterName: 'beauty'},
+                // {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty10.jpg", style: '', filterName: 'beauty'},
+                // {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty11.jpg", style: '', filterName: 'beauty'},
+                // {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty12.jpg", style: '', filterName: 'beauty'},
+                // {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty13.jpg", style: '', filterName: 'beauty'},
+                // {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty14.jpg", style: '', filterName: 'beauty'},
+                // {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty15.jpg", style: '', filterName: 'beauty'},
+                // {imgUrl: "static/img/final_portfolio/logo_by_industries/beauty/beauty16.jpg", style: '', filterName: 'beauty'},
               ],
               "Consulting_And_Accounting": [
                 {imgUrl: "static/img/final_portfolio/logo_by_industries/consulting_and_accounting/accounts1.jpg", style: '', filterName: 'accounts'},
-                {imgUrl: "static/img/final_portfolio/logo_by_industries/consulting_and_accounting/accounts2.jpg", style: '', filterName: 'accounts'},
-                {imgUrl: "static/img/final_portfolio/logo_by_industries/consulting_and_accounting/accounts3.jpg", style: '', filterName: 'accounts'},
-                {imgUrl: "static/img/final_portfolio/logo_by_industries/consulting_and_accounting/accounts4.jpg", style: '', filterName: 'accounts'},
-                {imgUrl: "static/img/final_portfolio/logo_by_industries/consulting_and_accounting/accounts5.jpg", style: '', filterName: 'accounts'},
-                {imgUrl: "static/img/final_portfolio/logo_by_industries/consulting_and_accounting/accounts6.jpg", style: '', filterName: 'accounts'},
+                // {imgUrl: "static/img/final_portfolio/logo_by_industries/consulting_and_accounting/accounts2.jpg", style: '', filterName: 'accounts'},
+                // {imgUrl: "static/img/final_portfolio/logo_by_industries/consulting_and_accounting/accounts3.jpg", style: '', filterName: 'accounts'},
+                // {imgUrl: "static/img/final_portfolio/logo_by_industries/consulting_and_accounting/accounts4.jpg", style: '', filterName: 'accounts'},
+                // {imgUrl: "static/img/final_portfolio/logo_by_industries/consulting_and_accounting/accounts5.jpg", style: '', filterName: 'accounts'},
+                // {imgUrl: "static/img/final_portfolio/logo_by_industries/consulting_and_accounting/accounts6.jpg", style: '', filterName: 'accounts'},
               ],
               "Nature_Source": [
                 {imgUrl: "static/img/final_portfolio/logo_by_industries/nature/nature1.jpg", style: '', filterName: 'nature'},
@@ -953,7 +966,7 @@ let portfolio_data = {
               ],
 
           }
-        },
+    },
 
     "services_section" : {
             sectionName : 'services_section',
@@ -981,6 +994,7 @@ let portfolio_data = {
                                             {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white;'},  itemStyle: 'display: inline-block; width: 100%;'},
 
                                         ],
+                                        partClass: 'custom-bordered-part',
                                         partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                                     },
                                     {
@@ -993,6 +1007,7 @@ let portfolio_data = {
                                           {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: ' background: white;'},  itemStyle: 'display: inline-block; width: 100%;'},
 
                                         ],
+                                        partClass: 'custom-bordered-part',
                                         partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                                     },
                                     {
@@ -1005,6 +1020,7 @@ let portfolio_data = {
                                           {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: ' background: white;'},  itemStyle: 'display: inline-block; width: 100%;'},
 
                                         ],
+                                        partClass: 'custom-bordered-part',
                                         partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                                     },
                                     {
@@ -1017,6 +1033,7 @@ let portfolio_data = {
                                           {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: ' background: white;'},  itemStyle: 'display: inline-block; width: 100%;'},
 
                                         ],
+                                        partClass: 'custom-bordered-part',
                                         partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                                     },
                                     {
@@ -1029,6 +1046,7 @@ let portfolio_data = {
                                           {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: ' background: white;'},  itemStyle: 'display: inline-block; width: 100%;'},
 
                                         ],
+                                        partClass: 'custom-bordered-part',
                                         partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                                     },
                                     {
@@ -1041,6 +1059,7 @@ let portfolio_data = {
                                           {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: ' background: white;'},  itemStyle: 'display: inline-block; width: 100%;'},
 
                                         ],
+                                        partClass: 'custom-bordered-part',
                                         partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                                     }
                                 ]
@@ -1050,7 +1069,7 @@ let portfolio_data = {
               ],
                 style: '',
             }
-        },
+    },
 
     "testimonials_section": {
               sectionName : 'testimonials_section',
@@ -1079,6 +1098,7 @@ let portfolio_data = {
                                             {type: 'text', key: {name: 'John Larson', class: 'default-theme-color default-outline-colo',  style: 'background: white;'}, itemStyle: 'text-align: center;'},
                                             {type: 'text', key: {name: 'Entrepreneur', class:'default-theme-primary-color custom-primary-font-weight', style: ' background: white;'}, itemStyle: 'text-align: center;'},
                                         ],
+                                        partClass: 'custom-bordered-part',
                                         partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px; '
                                     },
 
@@ -1092,6 +1112,7 @@ let portfolio_data = {
                                             {type: 'text', key: {name: 'John Larson', class: 'default-theme-color default-outline-color',  style: ' background: white;'}, value: {name: '', style: 'font-weight: 400;'}, itemStyle: 'text-align: center;'},
                                             {type: 'text', key: {name: 'Entrepreneur', class:'default-theme-primary-color custom-primary-font-weight', style: ' background: white;'}, value: {name: '', style: 'font-weight: 400; background: white;'}, itemStyle: 'text-align: center;'},
                                         ],
+                                        partClass: 'custom-bordered-part',
                                         partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px; '
                                     },
                                     {
@@ -1104,6 +1125,7 @@ let portfolio_data = {
                                             {type: 'text', key: {name: 'John Larson', class: 'default-theme-color default-outline-color', style: ' background: white;'}, itemStyle: 'text-align: center;'},
                                             {type: 'text', key: {name: 'Entrepreneur', class:'default-theme-primary-color custom-primary-font-weight', style: ' background: white;'}, itemStyle: 'text-align: center;'},
                                         ],
+                                        partClass: 'custom-bordered-part',
                                         partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;'
                                     },
                                     {
@@ -1116,6 +1138,7 @@ let portfolio_data = {
                                             {type: 'text', key: {name: 'John Larson', class: 'default-theme-color default-outline-color',  style: 'background: white;'}, itemStyle: 'text-align: center;'},
                                             {type: 'text', key: {name: 'Entrepreneur', class:'default-theme-primary-color custom-primary-font-weight', style: 'background: white;'}, itemStyle: 'text-align: center;'},
                                         ],
+                                        partClass: 'custom-bordered-part',
                                         partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px; '
                                     },
                                     {
@@ -1128,6 +1151,7 @@ let portfolio_data = {
                                             {type: 'text', key: {name: 'John Larson', class: 'default-theme-color default-outline-color',  style: ' background: white;'}, itemStyle: 'text-align: center;'},
                                             {type: 'text', key: {name: 'Entrepreneur', class:'default-theme-primary-color custom-primary-font-weight', style: 'background: white;'}, itemStyle: 'text-align: center;'},
                                         ],
+                                        partClass: 'custom-bordered-part',
                                         partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px; '
                                     },
                                 ]
@@ -1137,7 +1161,7 @@ let portfolio_data = {
               ],
                 style: '',
             }
-          },
+    },
 
     "languages_section": {
             sectionName : 'languages_section',
@@ -1166,6 +1190,7 @@ let portfolio_data = {
                                             {type: 'icon', key: {name: 'check', type: 'font-awesome', class: 'default-theme-color default-outline-color', style: 'font-size: 30px; '}, itemStyle: 'display: inline-block; float: right;'},
 
                                         ],
+                                        partClass: 'custom-bordered-part',
                                         partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px; '
                                     },
                                     {
@@ -1179,6 +1204,7 @@ let portfolio_data = {
                                             {type: 'icon', key: {name: 'times', type: 'font-awesome', style: 'font-size: 30px; color: red; '}, itemStyle: 'display: inline-block; float: right;'},
 
                                         ],
+                                        partClass: 'custom-bordered-part',
                                         partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px; '
                                     },
                                     {
@@ -1192,6 +1218,7 @@ let portfolio_data = {
                                             {type: 'icon', key: {name: 'times', type: 'font-awesome', style: 'font-size: 30px; color: red; '}, itemStyle: 'display: inline-block; float: right;'},
 
                                         ],
+                                        partClass: 'custom-bordered-part',
                                         partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px; '
                                     },
 
@@ -1201,7 +1228,7 @@ let portfolio_data = {
               ],
                 style: '',
             }
-          },
+    },
 
     "contacts_section": {
                 sectionName : 'contacts_section',
@@ -1234,6 +1261,7 @@ let portfolio_data = {
                                               {type: 'iframe', key: {name: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621', style: ''}, itemStyle: 'display: inline-block; width: 95%; margin-top: 10px;'},
 
                                             ],
+                                            partClass: 'custom-bordered-part',
                                             partStyle: 'width: 47%;display: inline-block;  padding-left: 25px; margin-left: 10px; background: white; margin-right: 1rem; margin-bottom: 10px; float: left; padding: 20px; ',
                                         },
                                         {
@@ -1249,6 +1277,7 @@ let portfolio_data = {
                                               {type: 'input-type-textarea', key: {name: '', style: 'background: white; padding: 8px;'}, itemStyle: ' display: block; height: 220px; '},
 
                                             ],
+                                            partClass: 'custom-bordered-part',
                                             partStyle: 'width: 47%;display: inline-block;  padding-left: 25px; margin-left: 10px; background: white; margin-right: 1rem; margin-bottom: 10px; float: right; padding: 20px;',
                                         },
 
@@ -1257,11 +1286,23 @@ let portfolio_data = {
                   ],
                     style: '',
                 }
-            },
+    },
 
     "workcat_section": {
         sectionName : 'workcat_section',
         defaultCategory : {name: 'Education', style: 'background: '+default_style.themeColor+'; color: white;'},
+        defaultMenuStyle: {activeMenuStyleClass: 'workcat-menu-active-selection', deActiveMenuStyleClass: 'workcat-menu-de-active-selection'},
+        activeMenuStyleClass: 'workcat-menu-active-selection',
+        deActiveMenuStyleClass: 'workcat-menu-de-active-selection',
+        activeMenuStyle : 'background: blue; color: white;',
+        deActiveMenuStyle : 'background: red; color: white;',
+        passByArgument: {
+              sectionName: 'workcat',
+              activeMenuStyleClass: 'workcat-menu-active-selection',
+              deActiveMenuStyleClass: 'workcat-menu-de-active-selection',
+              applyActiveDeactiveMenuStyleClassMethod: 'activeDeactiveMenuStyleClass',
+              targetSectionName: 'work',
+        },
         lists: [
           {name : "Education"},
           {name : "Consulting And Accounting"},
@@ -1325,8 +1366,10 @@ let portfolio_data = {
           "contacts": {name: 'contacts', icon: {name: 'envelope',type: 'bx', style: ''}, style: ''},
 
         },
-
-        partStyle: '',
+        defaultMenus: [
+          {visible: true, name: 'Setup Sections', links: '', icon: {name: 'home',type: 'bx', style: ''}, style: ''}
+        ],
+        sectionStyle: 'overflow-y: scroll;',
     },
 
     "typed_section1": {
@@ -1430,6 +1473,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Domain', class:'default-theme-primary-color custom-primary-font-weight', style: ' background: white;'}, },
                                     ],
                                     sectionClass: 'custom-theme-border',
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                                 },
                                 {
@@ -1440,6 +1484,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Domain', class:'default-theme-primary-color custom-primary-font-weight', style: ' background: white;'}, },
                                     ],
                                     sectionClass: 'custom-theme-border',
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                                 },
                                 {
@@ -1449,6 +1494,7 @@ let portfolio_data = {
                                     desc: [
                                         {type: 'text', key: {name: 'Domain', class:'default-theme-primary-color custom-primary-font-weight', style: 'background: white;'}, },
                                     ],
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                                 },
                                 {
@@ -1459,6 +1505,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Domain', class:'default-theme-primary-color custom-primary-font-weight', style: ' background: white;'}, },
                                     ],
                                     sectionClass: 'custom-theme-border',
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                                 },
                                 {
@@ -1469,6 +1516,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Domain', class:'default-theme-primary-color custom-primary-font-weight', style: ' background: white;'}, },
                                     ],
                                     sectionClass: 'custom-theme-border',
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                                 },
                                 {
@@ -1479,6 +1527,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Domain', class:'default-theme-primary-color custom-primary-font-weight', style: 'background: white;'}, },
                                     ],
                                     sectionClass: 'custom-theme-border',
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                                 },
                             ]
@@ -1506,6 +1555,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: 'background: white;'}, },
                                     ],
                                     sectionClass: 'custom-theme-border',
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                                 },
                                 {
@@ -1519,6 +1569,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: 'background: white;'}, },
                                     ],
                                     sectionClass: 'custom-theme-border',
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                                 },
                                 {
@@ -1532,6 +1583,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: ' background: white;'}, },
                                     ],
                                     sectionClass: 'custom-theme-border',
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                                 },
                                 {
@@ -1545,6 +1597,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: 'background: white;'}, },
                                     ],
                                     sectionClass: 'custom-theme-border',
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                                 },
                                 {
@@ -1558,6 +1611,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: ' background: white;'}, },
                                     ],
                                     sectionClass: 'custom-theme-border',
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                                 }
                             ]
@@ -1584,6 +1638,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: 'background: white;'}, },
                                     ],
                                     sectionClass: 'custom-theme-border',
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
 
                                 },
@@ -1597,6 +1652,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: ' background: white;'}, },
                                     ],
                                     sectionClass: 'custom-theme-border',
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
 
                                 },
@@ -1610,6 +1666,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: ' background: white;'}, },
                                     ],
                                     sectionClass: 'custom-theme-border',
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
 
                                 },
@@ -1623,6 +1680,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: 'background: white;'}, },
                                     ],
                                     sectionClass: 'custom-theme-border',
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
 
                                 }
@@ -1651,6 +1709,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: 'background: white;'}, },
                                     ],
                                     sectionClass: 'custom-theme-border',
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px; '
 
                                 },
@@ -1665,6 +1724,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: ' background: white;'}, },
                                     ],
                                     sectionClass: 'custom-theme-border',
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px; '
 
                                 },
@@ -1679,6 +1739,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: 'font-weight: 600; background: white;'}, },
                                     ],
                                     sectionClass: 'custom-theme-border',
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;'
 
                                 },
@@ -1693,6 +1754,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Version', style: ' background: white;'}, },
                                     ],
                                     sectionClass: 'custom-theme-border',
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px; '
 
                                 }
@@ -1740,6 +1802,7 @@ let portfolio_data = {
                                   {type: 'text', key: {name: 'Hobby one ', class:'default-theme-primary-color custom-primary-font-weight', style: ' background: white;'}, },
 
                               ],
+                              partClass: 'custom-bordered-part',
                               partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                           },
                           {
@@ -1750,6 +1813,7 @@ let portfolio_data = {
                                 {type: 'text', key: {name: 'Hobby two', class:'default-theme-primary-color custom-primary-font-weight', style: ' background: white;'}, },
 
                               ],
+                              partClass: 'custom-bordered-part',
                               partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                           },
                           {
@@ -1760,6 +1824,7 @@ let portfolio_data = {
                                 {type: 'text', key: {name: 'Hobby three', class:'default-theme-primary-color custom-primary-font-weight', style: ' background: white;'}, },
 
                               ],
+                              partClass: 'custom-bordered-part',
                               partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                           },
                           {
@@ -1770,6 +1835,7 @@ let portfolio_data = {
                                 {type: 'text', key: {name: 'Hobby four', class:'default-theme-primary-color custom-primary-font-weight', style: ' background: white;'}, },
 
                               ],
+                              partClass: 'custom-bordered-part',
                               partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                           },
                           {
@@ -1780,6 +1846,7 @@ let portfolio_data = {
                                 {type: 'text', key: {name: 'Hobby five', class:'default-theme-primary-color custom-primary-font-weight', style: ' background: white;'}, },
 
                               ],
+                              partClass: 'custom-bordered-part',
                               partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 20px;  '
                           }
 
@@ -1806,6 +1873,7 @@ let portfolio_data = {
                                         {type: 'text', key: {name: 'Certificate One', class: 'default-theme-primary-color custom-primary-font-weight', style: 'width: 100%; background: white;'},  itemStyle: 'text-align: center; padding: 20px; '},
 
                                     ],
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; '
                                 },
                                 {
@@ -1817,6 +1885,7 @@ let portfolio_data = {
                                       {type: 'text', key: {name: 'Certificate Two', class: 'default-theme-primary-color custom-primary-font-weight',  style: 'width: 100%; background: white;'}, itemStyle: 'text-align: center; padding: 20px; '},
 
                                     ],
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem;'
                                 },
                                 {
@@ -1828,6 +1897,7 @@ let portfolio_data = {
                                       {type: 'text', key: {name: 'Certificate Three', class: 'default-theme-primary-color custom-primary-font-weight', style: 'width: 100%; background: white;'},  itemStyle: 'text-align: center; padding: 20px; '},
 
                                     ],
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem;  '
                                 },
                                 {
@@ -1839,6 +1909,7 @@ let portfolio_data = {
                                       {type: 'text', key: {name: 'Certificate Four', class: 'default-theme-primary-color custom-primary-font-weight', style: ' width: 100%; background: white;'},  itemStyle: 'text-align: center; padding: 20px; '},
 
                                     ],
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; '
                                 },
                                 {
@@ -1850,6 +1921,7 @@ let portfolio_data = {
                                       {type: 'text', key: {name: 'Certificate Five', class: 'default-theme-primary-color custom-primary-font-weight', style: ' width: 100%; background: white;'},  itemStyle: 'text-align: center; padding: 20px; '},
 
                                     ],
+                                    partClass: 'custom-bordered-part',
                                     partStyle: 'display: inline-block; width: 31%; background: white; margin-right: 1rem; margin-bottom: 1rem; '
                                 }
                             ]
@@ -1900,7 +1972,7 @@ let portfolio_data = {
                                     {eventName : 'drag(this, event)', eventType: 'ondragstart'},
 
                                   ],
-                                  partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center;',
+                                  partStyle: 'display: inline-block; width: 30%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center;',
                               },
                               {
                                   mapToSection : 'facts',
@@ -1924,7 +1996,7 @@ let portfolio_data = {
                                     {eventName : 'drag(this, event)', eventType: 'ondragstart'},
 
                                   ],
-                                  partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center;',
+                                  partStyle: 'display: inline-block; width: 30%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center;',
 
                               },
                               {
@@ -1949,7 +2021,7 @@ let portfolio_data = {
                                     {eventName : 'drag(this, event)', eventType: 'ondragstart'},
 
                                   ],
-                                  partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center;',
+                                  partStyle: 'display: inline-block; width: 30%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center;',
                               },
                               {
                                   mapToSection : 'education',
@@ -1973,7 +2045,7 @@ let portfolio_data = {
                                     {eventName : 'drag(this, event)', eventType: 'ondragstart'},
 
                                   ],
-                                  partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center;',
+                                  partStyle: 'display: inline-block; width: 30%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center;',
                               },
                               {
                                   mapToSection : 'workexp',
@@ -1997,7 +2069,7 @@ let portfolio_data = {
                                     {eventName : 'drag(this, event)', eventType: 'ondragstart'},
 
                                   ],
-                                  partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center;',
+                                  partStyle: 'display: inline-block; width: 30%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center;',
                               },
                               {
                                   mapToSection : 'projects',
@@ -2021,7 +2093,7 @@ let portfolio_data = {
                                     {eventName : 'drag(this, event)', eventType: 'ondragstart'},
 
                                   ],
-                                  partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms; border-radius: 2px; text-align: center;',
+                                  partStyle: 'display: inline-block; width: 30%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center;',
                               },
                               {
                                   mapToSection : 'workcat',
@@ -2045,7 +2117,7 @@ let portfolio_data = {
                                     {eventName : 'drag(this, event)', eventType: 'ondragstart'},
 
                                   ],
-                                  partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center;',
+                                  partStyle: 'display: inline-block; width: 30%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center;',
                               },
                               {
                                   mapToSection : 'work',
@@ -2069,7 +2141,7 @@ let portfolio_data = {
                                     {eventName : 'drag(this, event)', eventType: 'ondragstart'},
 
                                   ],
-                                  partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms; border-radius: 2px; text-align: center;',
+                                  partStyle: 'display: inline-block; width: 30%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center;',
                               },
                               {
                                   mapToSection : 'languages',
@@ -2093,7 +2165,7 @@ let portfolio_data = {
                                     {eventName : 'drag(this, event)', eventType: 'ondragstart'},
 
                                   ],
-                                  partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center;',
+                                  partStyle: 'display: inline-block; width: 30%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center;',
                               },
                               {
                                   mapToSection : 'testimonials',
@@ -2117,7 +2189,7 @@ let portfolio_data = {
                                     {eventName : 'drag(this, event)', eventType: 'ondragstart'},
 
                                   ],
-                                  partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center;',
+                                  partStyle: 'display: inline-block; width: 30%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center;',
                               },
                               {
                                   mapToSection : 'services',
@@ -2141,7 +2213,7 @@ let portfolio_data = {
                                     {eventName : 'drag(this, event)', eventType: 'ondragstart'},
 
                                   ],
-                                  partStyle: 'display: inline-block; width: 31%; margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms; border-radius: 2px; text-align: center;',
+                                  partStyle: 'display: inline-block; width: 30%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center;',
                               },
                               {
                                   mapToSection : 'typed',
@@ -2165,7 +2237,7 @@ let portfolio_data = {
                                     {eventName : 'drag(this, event)', eventType: 'ondragstart'},
 
                                   ],
-                                  partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center;',
+                                  partStyle: 'display: inline-block; width: 30%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center;',
                               },
                               {
                                   mapToSection : 'contacts',
@@ -2189,7 +2261,7 @@ let portfolio_data = {
                                     {eventName : 'drag(this, event)', eventType: 'ondragstart'},
 
                                   ],
-                                  partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms; border-radius: 2px; text-align: center;',
+                                  partStyle: 'display: inline-block; width: 30%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center;',
                               },
                               {
                                   mapToSection : 'activities',
@@ -2213,7 +2285,7 @@ let portfolio_data = {
                                     {eventName : 'drag(this, event)', eventType: 'ondragstart'},
 
                                   ],
-                                  partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center;',
+                                  partStyle: 'display: inline-block; width: 30%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center;',
                               },
                               {
                                   animationType: 'fade-up', animationDelay: 150,
@@ -2304,7 +2376,7 @@ let portfolio_data = {
                                   {type: 'color', key: {type: 'custom', name: "default_style.themeBgColor", id: "defaultThemeBgColor", style: 'display: block; border: none !important; width: 100%; height: 100px; '}, itemStyle: 'display: inline-block; width: 100%; padding: 10px 0px; float: left;'},
 
                                 ],
-                                partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px;',
+                                partStyle: 'display: inline-block; width: 30%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px;',
                             },
                             {
                                 // animationType: 'fade-up', animationDelay: null,
@@ -2314,7 +2386,7 @@ let portfolio_data = {
                                   {type: 'color', key: {type: 'custom', name: "default_style.themeColor", id: "defaultThemeColor", style: 'display: block; border: none !important; width: 100%; height: 100px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 10px 0px; float: left;'},
 
                                 ],
-                                partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px;',
+                                partStyle: 'display: inline-block; width: 30%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px;',
                             },
                             {
                                 // animationType: 'fade-up', animationDelay: null,
@@ -2324,7 +2396,7 @@ let portfolio_data = {
                                   {type: 'color', key: {type: 'custom', name: "default_style.themeFontColor", id: "defaultThemeFontColor", style: 'display: block; border: none !important; width: 100%; height: 100px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 10px 0px; float: left;'},
 
                                 ],
-                                partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px;',
+                                partStyle: 'display: inline-block; width: 30%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px;',
                             },
                             {
                                 // animationType: 'fade-up', animationDelay: null,
@@ -2334,7 +2406,7 @@ let portfolio_data = {
                                   {type: 'color', key: {type: 'custom', name: "default_style.themePrimaryColor", id: "themePrimaryColor", style: 'display: block; border: none !important; width: 100%; height: 100px; '}, itemStyle: 'display: inline-block; width: 100%; padding: 10px 0px; float: left;'},
 
                                 ],
-                                partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px;',
+                                partStyle: 'display: inline-block; width: 30%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px;',
                             },
                             {
                                 // animationType: 'fade-up', animationDelay: null,
@@ -2352,7 +2424,7 @@ let portfolio_data = {
                                   {type: 'color', key: {type: 'custom', name: "default_style.themeMenuBgColor", id: "defaultThemeMenuBgColor", style: 'display: block; border: none !important; width: 100%; height: 100px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 10px 0px; float: left;'},
 
                                 ],
-                                partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px;',
+                                partStyle: 'display: inline-block; width: 30%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px;',
                             },
                             {
                                 // animationType: 'fade-up', animationDelay: null,
@@ -2362,7 +2434,7 @@ let portfolio_data = {
                                   {type: 'color', key: {type: 'custom', name: "default_style.themeMenuFontColor", id: "defaultThemeMenuFontColor", style: 'display: block; border: none !important; width: 100%; height: 100px; '}, itemStyle: 'display: inline-block; width: 100%; padding: 10px 0px; float: left;'},
 
                                 ],
-                                partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px;',
+                                partStyle: 'display: inline-block; width: 30%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px;',
                             },
                             {
                                 // animationType: 'fade-up', animationDelay: null,
@@ -2372,7 +2444,7 @@ let portfolio_data = {
                                   {type: 'color', key: {type: 'custom', name: "default_style.themeMenuOnHoverBgColor", id: "themeMenuOnHoverBgColor", style: 'display: block; border: none !important; width: 100%; height: 100px; '}, itemStyle: 'display: inline-block; width: 100%; padding: 10px 0px; float: left;'},
 
                                 ],
-                                partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px;',
+                                partStyle: 'display: inline-block; width: 30%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px;',
                             },
                             {
                                 // animationType: 'fade-up', animationDelay: null,
@@ -2382,14 +2454,14 @@ let portfolio_data = {
                                   {type: 'color', key: {type: 'custom', name: "default_style.themeMenuOnHoverFontColor", id: "themeMenuOnHoverFontColor", style: 'display: block; border: none !important; width: 100%; height: 100px; '}, itemStyle: 'display: inline-block; width: 100%; padding: 10px 0px; float: left;'},
 
                                 ],
-                                partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px;',
+                                partStyle: 'display: inline-block; width: 30%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px;',
                             },
 
                               {
                                   // animationType: 'fade-up', animationDelay: 150,
                                   desc: [
-                                    {type: 'button', event: {eventName : "onClickSetupProfile(this, event, 'close-themeing-modal')", eventType: 'onclick'}, key: {name: 'Cancel', class: 'default-outline-color custom-profile default-theme-border ', style: 'font-size: 20px; font-weight: 500; width: 100%; padding: 12px; background: white; '}, itemStyle: 'display: inline-block; width: 49%; margin-right: 10px;'},
-                                    {type: 'button', event: {eventName : "onClickSetupProfile(this, event, 'apply_theme_changes')", eventType: 'onclick'}, key: {name: 'Apply Theme', class: 'default-background-color default-outline-color ', style: 'font-size: 20px; font-weight: 500; width: 100%; padding: 12px;  border: none; color: white; '}, itemStyle: 'display: inline-block; width: 49%;'},
+                                    {type: 'button', event: {eventName : "onClickSetupProfile(this, event, 'close-themeing-modal')", eventType: 'onclick'}, key: {name: 'Cancel', class: 'default-outline-color custom-profile default-theme-border ', style: 'font-size: 20px; font-weight: 500; width: 100%; padding: 12px; background: white; '}, itemStyle: 'display: inline-block; width: 48%; margin-right: 10px;'},
+                                    {type: 'button', event: {eventName : "onClickSetupProfile(this, event, 'apply_theme_changes')", eventType: 'onclick'}, key: {name: 'Apply Theme', class: 'default-background-color default-outline-color ', style: 'font-size: 20px; font-weight: 500; width: 100%; padding: 12px;  border: none; color: white; '}, itemStyle: 'display: inline-block; width: 48%;'},
 
                                   ],
                                   partStyle: 'display: inline-block; width: 100%; background: white; margin-right: 1rem; margin-bottom: 1rem; padding: 10px; ',
@@ -2426,7 +2498,7 @@ let portfolio_data = {
 
                                   ],
                                   isConditionalStyles : {state: false, class: '', style: 'border: 2px solid red; ? '},
-                                  partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px;',
+                                  partStyle: 'display: inline-block; width: 30%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px;',
                               },
                               {
                                   // animationType: 'fade-up', animationDelay: null,
@@ -2439,7 +2511,7 @@ let portfolio_data = {
 
                                   ],
                                   isConditionalStyles : {state: false, class: '', style: 'border: 2px solid red; ? '},
-                                  partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px;',
+                                  partStyle: 'display: inline-block; width: 30%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px;',
                               },
                               {
                                   // animationType: 'fade-up', animationDelay: null,
@@ -2452,7 +2524,7 @@ let portfolio_data = {
 
                                   ],
                                   isConditionalStyles : {state: false, class: '', style: 'border: 2px solid red; ? '},
-                                  partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px;',
+                                  partStyle: 'display: inline-block; width: 30%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px;',
                               },
 
                               //====================================================================================
@@ -2477,131 +2549,6 @@ let portfolio_data = {
 
     "myProfiles_section": {
         profiles: ["generic_portfolio_data", "dream_portfolio_two", "dream_portfolio_three", "my_dream_portfolio"]
-    },
-
-    "all_sections" : {
-        values: [
-            {
-              section: {name: 'header',  id: '', class: '', style: ''},
-              menu: {name: 'Header', style: '', method: '', icon: {name: 'header',type: 'bx', style: ''}},
-              block: {class: '', style: ''},
-              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
-              template: {style: ''}
-            },
-            {
-              section: {name: 'typed', id: '', class: '', style: ''},
-              menu: {name: 'Introduction ', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
-              block: {class: '', style: ''},
-              loader: {img: {imgUrl: '', alt: '', style: ''},  style: ''},
-              template: {style: ''}
-            },
-            {
-              section: {name: 'about', id: '', class: '', style: ''},
-              menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
-              block: {class: '', style: ''},
-              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
-              template: {style: ''}
-            },
-            {
-              section: {name: 'myProfiles', id: '', class: '', style: ''},
-              menu: {name: 'My Profiles', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
-              block: {class: '', style: ''},
-              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
-              template: {style: ''}
-            },
-            {
-              section: {name: 'skills', id: 'skills', class: 'skills', style: ''},
-              menu: {name: 'My Skills', style: '', method: '', icon: {name: 'file-blank',type: 'bx', style: ''}},
-              block: {class: '', style: ''},
-              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
-              template: {style: ''}
-            },
-            {
-              section: {name: 'activities', id: '', class: '', style: ''},
-              menu: {name: 'Extra Curricular Activities', style: '', method: '', icon: {name: 'server',type: 'bx', style: ''}},
-              block: {class: '', style: ''},
-              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
-              template: {style: ''}
-            },
-            {
-              section: {name: 'education', id: '', class: '', style: ''},
-              menu: {name: 'My Education', style: '', method: '', icon: {name: 'file-blank',type: 'bx', style: ''}},
-              block: {class: '', style: ''},
-              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
-              template: {style: ''}
-            },
-            {
-              section: {name: 'workexp', id: '', class: '', style: ''},
-              menu: {name: 'My Work Experience', style: '', method: '', icon: {name: 'file-blank',type: 'bx', style: ''}},
-              block: {class: '', style: ''},
-              loader: {img: null,  style: ''},
-              template: {style: ''}
-            },
-            {
-              section: {name: 'projects', id: '', class: '', style: ''},
-              menu: {name: 'Projects Done By Me', style: '', method: '', icon: {name: 'server',type: 'bx', style: ''}},
-              block: {class: '', style: ''},
-              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
-              template: {style: ''}
-            },
-            {
-              section: {name: 'workcat', id: '', class: '', style: ''},
-              menu: {name: 'Work Category', style: '', method: '', icon: {name: 'file-blank',type: 'bx', style: ''}},
-              block: {class: '', style: 'width: 90%; margin: auto;'},
-              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
-              template: {style: ''}
-            },
-            {
-              section: {name: 'work', id: '', class: '', style: 'padding-top: 0px;'},
-              menu: {name: 'My Work', style: '', method: '', icon: {name: 'file-blank',type: 'bx', style: ''}},
-              block: {class: '', style: 'width: 90%; margin: auto;'},
-              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
-              template: {id: 'custom_services_template', class: 'custom-services-template', style: ''}
-            },
-            {
-              section: {name: 'services', id: 'services', class: 'services', style: ''},
-              menu: {name: 'Services I Provide', style: '', method: '', icon: {name: 'server',type: 'bx', style: ''}},
-              block: {id: 'custom_services_block', class: 'custom-services-block', style: ''},
-              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
-              template: {id: 'custom_services_template', class: 'custom-services-template', style: ''}
-            },
-            {
-              section: {name: 'facts', id: '', class: ' services facts', style: ''},
-              menu: {name: 'My Valuable Clients', style: '', method: '', icon: {name: 'server',type: 'bx', style: ''}},
-              block: {class: '', style: ''},
-              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
-              template: {style: ''}
-            },
-            {
-              section: {name: 'languages', id: '', class: '', style: ''},
-              menu: {name: 'Languages I knew', style: '', method: '', icon: {name: 'book-content',type: 'bx', style: ''}},
-              block: {class: '', style: ''},
-              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
-              template: {style: ''}
-            },
-            {
-              section: {name: 'testimonials', id: '', class: 'testimonials ', style: ''},
-              menu: {name: 'People Working With Me', style: '', method: '', icon: {name: 'book-content',type: 'bx', style: ''}},
-              block: {name: '', class: '', style: ''},
-              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
-              template: {style: ''}
-            },
-            {
-              section: {name: 'contacts', id: '', class: '', style: ''},
-              menu: {name: 'Contact key', style: '', method: '', icon: {name: 'envelope',type: 'bx', style: ''}},
-              block: {class: '', style: ''},
-              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
-              template: {style: ''}
-            },
-            {
-              section: {name: 'settings', id: '', class: '', style: ''},
-              menu: {name: 'Sections You Like', style: '', method: '', icon: {name: 'envelope',type: 'bx', style: ''}},
-              block: {class: '', style: ''},
-              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
-              template: {style: ''}
-            },
-        ],
-        partStyle: 'background: #F1F3F6;',
     },
 
     "createNewSectionModal_section": {
@@ -3229,12 +3176,268 @@ let portfolio_data = {
           // blockStyle: 'background: white; padding: 20px 100px;',
           blockStyle: '',
       }
-    }
+    },
+
+    "all_sections" : {
+        values: [
+            {
+              section: {name: 'header',  id: '', class: '', style: ''},
+              menu: {name: 'Header', style: '', method: '', icon: {name: 'header',type: 'bx', style: ''}},
+              block: {class: '', style: ''},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'typed', id: '', class: '', style: ''},
+              menu: {name: 'Introduction ', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+              block: {class: '', style: ''},
+              loader: {img: {imgUrl: '', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'about', id: '', class: '', style: ''},
+              menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+              block: {class: '', style: ''},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'myProfiles', id: '', class: '', style: ''},
+              menu: {name: 'My Profiles', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+              block: {class: '', style: ''},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'skills', id: 'skills', class: 'skills', style: ''},
+              menu: {name: 'My Skills', style: '', method: '', icon: {name: 'file-blank',type: 'bx', style: ''}},
+              block: {class: '', style: ''},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'activities', id: '', class: '', style: ''},
+              menu: {name: 'Extra Curricular Activities', style: '', method: '', icon: {name: 'server',type: 'bx', style: ''}},
+              block: {class: '', style: ''},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'education', id: '', class: '', style: ''},
+              menu: {name: 'My Education', style: '', method: '', icon: {name: 'file-blank',type: 'bx', style: ''}},
+              block: {class: '', style: ''},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'workexp', id: '', class: '', style: ''},
+              menu: {name: 'My Work Experience', style: '', method: '', icon: {name: 'file-blank',type: 'bx', style: ''}},
+              block: {class: '', style: ''},
+              loader: {img: null,  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'projects', id: '', class: '', style: ''},
+              menu: {name: 'Projects Done By Me', style: '', method: '', icon: {name: 'server',type: 'bx', style: ''}},
+              block: {class: '', style: ''},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'workcat', id: '', class: '', style: ''},
+              menu: {name: 'Work Category', style: '', method: '', icon: {name: 'file-blank',type: 'bx', style: ''}},
+              block: {class: '', style: 'width: 90%; margin: auto;'},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'work', id: '', class: '', style: 'padding-top: 0px;'},
+              menu: {name: 'My Work', style: '', method: '', icon: {name: 'file-blank',type: 'bx', style: ''}},
+              block: {class: '', style: 'width: 90%; margin: auto;'},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {id: 'custom_services_template', class: 'custom-services-template', style: ''}
+            },
+            {
+              section: {name: 'services', id: 'services', class: 'services', style: ''},
+              menu: {name: 'Services I Provide', style: '', method: '', icon: {name: 'server',type: 'bx', style: ''}},
+              block: {id: 'custom_services_block', class: 'custom-services-block', style: ''},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {id: 'custom_services_template', class: 'custom-services-template', style: ''}
+            },
+            {
+              section: {name: 'facts', id: '', class: ' services facts', style: ''},
+              menu: {name: 'My Valuable Clients', style: '', method: '', icon: {name: 'server',type: 'bx', style: ''}},
+              block: {class: '', style: ''},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'languages', id: '', class: '', style: ''},
+              menu: {name: 'Languages I knew', style: '', method: '', icon: {name: 'book-content',type: 'bx', style: ''}},
+              block: {class: '', style: ''},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'testimonials', id: '', class: 'testimonials ', style: ''},
+              menu: {name: 'People Working With Me', style: '', method: '', icon: {name: 'book-content',type: 'bx', style: ''}},
+              block: {name: '', class: '', style: ''},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'contacts', id: '', class: '', style: ''},
+              menu: {name: 'Contact key', style: '', method: '', icon: {name: 'envelope',type: 'bx', style: ''}},
+              block: {class: '', style: ''},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'settings', id: '', class: '', style: ''},
+              menu: {name: 'Sections You Like', style: '', method: '', icon: {name: 'envelope',type: 'bx', style: ''}},
+              block: {class: '', style: ''},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+        ],
+        partStyle: 'background: #F1F3F6;',
+    },
+
+    "init_sections" : {
+        values: [
+             {
+              section: {name: 'header',  id: '', class: '', style: ''},
+              menu: {name: 'Header', style: '', method: '', icon: {name: 'header',type: 'bx', style: ''}},
+              block: {class: '', style: ''},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'typed', id: '', class: '', style: ''},
+              menu: {name: 'Introduction ', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+              block: {class: '', style: ''},
+              loader: {img: {imgUrl: '', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'about', id: '', class: '', style: ''},
+              menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+              block: {class: '', style: 'padding: 12px;'},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'myProfiles', id: '', class: '', style: ''},
+              menu: {name: 'My Profiles', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+              block: {class: '', style: ''},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'skills', id: 'skills', class: 'skills', style: ''},
+              menu: {name: 'My Skills', style: '', method: '', icon: {name: 'file-blank',type: 'bx', style: ''}},
+              block: {class: '', style: 'padding: 12px;'},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'activities', id: '', class: '', style: ''},
+              menu: {name: 'Extra Curricular Activities', style: '', method: '', icon: {name: 'server',type: 'bx', style: ''}},
+              block: {class: '', style: 'padding: 12px;'},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'education', id: '', class: '', style: ''},
+              menu: {name: 'My Education', style: '', method: '', icon: {name: 'file-blank',type: 'bx', style: ''}},
+              block: {class: '', style: 'padding: 12px;'},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'workexp', id: '', class: '', style: ''},
+              menu: {name: 'My Work Experience', style: '', method: '', icon: {name: 'file-blank',type: 'bx', style: ''}},
+              block: {class: '', style: 'padding: 12px;'},
+              loader: {img: null,  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'projects', id: '', class: '', style: ''},
+              menu: {name: 'Projects Done By Me', style: '', method: '', icon: {name: 'server',type: 'bx', style: ''}},
+              block: {class: '', style: 'padding: 12px;'},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'workcat', id: '', class: '', style: ''},
+              menu: {name: 'Work Category', style: '', method: '', icon: {name: 'file-blank',type: 'bx', style: ''}},
+              block: {class: '', style: 'padding: 12px; width: 90%; margin: auto; scrollbar-color: var(--default-theme-color) white;'},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'work', id: '', class: '', style: 'padding-top: 0px;'},
+              menu: {name: 'My Work', style: '', method: '', icon: {name: 'file-blank',type: 'bx', style: ''}},
+              block: {class: '', style: 'width: 90%; margin: auto; padding: 12px;'},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {id: 'custom_services_template', class: 'custom-services-template', style: ''}
+            },
+            {
+              section: {name: 'services', id: 'services', class: 'services', style: ''},
+              menu: {name: 'Services I Provide', style: '', method: '', icon: {name: 'server',type: 'bx', style: ''}},
+              block: {id: 'custom_services_block', class: 'custom-services-block', style: 'padding: 12px;'},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {id: 'custom_services_template', class: 'custom-services-template', style: ''}
+            },
+            {
+              section: {name: 'facts', id: '', class: ' services facts', style: ''},
+              menu: {name: 'My Valuable Clients', style: '', method: '', icon: {name: 'server',type: 'bx', style: ''}},
+              block: {class: '', style: 'padding: 12px;'},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'languages', id: '', class: '', style: ''},
+              menu: {name: 'Languages I knew', style: '', method: '', icon: {name: 'book-content',type: 'bx', style: ''}},
+              block: {class: '', style: 'padding: 12px;'},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'testimonials', id: '', class: 'testimonials ', style: ''},
+              menu: {name: 'Testimonials', style: '', method: '', icon: {name: 'book-content',type: 'bx', style: ''}},
+              block: {name: '', class: '', style: 'padding: 12px;'},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'contacts', id: '', class: '', style: ''},
+              menu: {name: 'Contact key', style: '', method: '', icon: {name: 'envelope',type: 'bx', style: ''}},
+              block: {class: '', style: 'padding: 12px;'},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+            {
+              section: {name: 'settings', id: '', class: '', style: ''},
+              menu: {name: 'Sections You Like', style: '', method: '', icon: {name: 'envelope',type: 'bx', style: ''}},
+              block: {class: '', style: 'padding: 12px;'},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+            },
+        ],
+        partStyle: 'background: #F1F3F6;',
+    },
 
 }
 
-module.exports.portfolio_data = portfolio_data;
+const get_section_data = (sectionName) => {
+  if(sectionName)  return sections_data[sectionName];
+  else return '';
+}
+
+const sectionData = get_section_data('init_sections');
+console.log("===== sectionData : ", sectionData)
+
+module.exports.sections_data = sections_data;
 module.exports.default_style = default_style;
-
-
-//sakal 11.40am,tula lagna, narogon, mesh rashi, khatrio,
+module.exports.get_section_data = get_section_data;

@@ -56,6 +56,26 @@ let sections_data = {
           themeMenuFontColor: '#000000',
           themeMenuOnHoverFontColor: '#000000',
           themeMenuOnHoverBgColor: '#F0F2F5',
+        },
+        "themeFour":{
+          themeName : 'Brazilian Theme',
+          themeColor: '#d5e617ff',
+          themeBgColor: '#022861ff',
+          themeFontColor: '#000000',
+          themeMenuBgColor: '#FFFFFF',
+          themeMenuFontColor: '#000000',
+          themeMenuOnHoverFontColor: '#000000',
+          themeMenuOnHoverBgColor: '#F0F2F5',
+        },
+        "themeFive":{
+          themeName : 'Indian Theme',
+          themeColor: '#f4850eff',
+          themeBgColor: '#022861ff',
+          themeFontColor: '#000000',
+          themeMenuBgColor: '#FFFFFF',
+          themeMenuFontColor: '#000000',
+          themeMenuOnHoverFontColor: '#000000',
+          themeMenuOnHoverBgColor: '#F0F2F5',
         }
     },
 
@@ -2391,6 +2411,34 @@ let sections_data = {
                                   partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px;',
                               },
 
+                              // {
+                              //     // animationType: 'fade-up', animationDelay: null,
+                              //     desc: [
+                              //       {type: 'icon', key: {name: 'paint-brush', type: 'font-awesome', class: 'default-theme-color', style: 'font-size: 24px;  position: relative; '}, itemStyle: 'display: inline-block; width: 15%; float: left;  '},
+                              //       {type: 'text', key: {name: 'Brazilian Theme', style: 'font-size: 16px; font-weight: 600; display: block; width: 100%; position: relative;'}, itemStyle: 'display: inline-block; width: 85%; float: left; '},
+                              //       // {type: 'wrap-open', key: {name: 'div', class: 'default-theme-color default-outline-color', style: 'display: inline-block; width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left; margin-top: 20px; border: 2px solid orange; '},
+                              //       {type: 'theme', event: {eventName : "onClickSetupProfile(this, event, 'apply_store_theme')", eventType: 'onclick'}, key: { name: "theme_store.themeFour",  style: 'display: block; border: none !important; width: 100%; height: 100px; '}, itemStyle: 'display: inline-block; width: 100%; padding: 10px 0px; float: left;'},
+                              //       // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+                              //     ],
+                              //     isConditionalStyles : {state: false, class: '', style: 'border: 2px solid red; ? '},
+                              //     partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px;',
+                              // },
+
+                              // {
+                              //     // animationType: 'fade-up', animationDelay: null,
+                              //     desc: [
+                              //       {type: 'icon', key: {name: 'paint-brush', type: 'font-awesome', class: 'default-theme-color', style: 'font-size: 24px;  position: relative; '}, itemStyle: 'display: inline-block; width: 15%; float: left;  '},
+                              //       {type: 'text', key: {name: 'Indian Theme', style: 'font-size: 16px; font-weight: 600; display: block; width: 100%; position: relative;'}, itemStyle: 'display: inline-block; width: 85%; float: left; '},
+                              //       // {type: 'wrap-open', key: {name: 'div', class: 'default-theme-color default-outline-color', style: 'display: inline-block; width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left; margin-top: 20px; border: 2px solid orange; '},
+                              //       {type: 'theme', event: {eventName : "onClickSetupProfile(this, event, 'apply_store_theme')", eventType: 'onclick'}, key: { name: "theme_store.themeFive",  style: 'display: block; border: none !important; width: 100%; height: 100px; '}, itemStyle: 'display: inline-block; width: 100%; padding: 10px 0px; float: left;'},
+                              //       // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+                              //     ],
+                              //     isConditionalStyles : {state: false, class: '', style: 'border: 2px solid red; ? '},
+                              //     partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 20px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px;',
+                              // },
+
                               //====================================================================================
                               // {
                               //     // animationType: 'fade-up', animationDelay: 150,
@@ -2411,32 +2459,126 @@ let sections_data = {
       }
     },
 
+    "headerNav_section": {
+        sectionName : 'headerNav_section',
+        dependentSectionsName: ['all_sections'],
+        brand: {
+          values: [
+            {type: 'text', key: {name: `Gini`, class: '',  style: ''}, itemStyle: ''},
+            // {type: 'image', key: {name: 'static/img/me_portfolio/myImg1.jpg', style: ' border-radius: 5%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
+          ],
+          brandStyle: 'margin-left: -8%;'
+        },
+        navigation: {
+          values: [
+            {
+              type: 'link',
+              key: {
+                name: 'Services', class: '',  style: '', event: [
+                  {
+                    eventName : 'onClickHeaderNavigation(this, event)',
+                    eventType: 'onclick',
+                    argument : {
+                      mapToSections: ['products'],
+                    },
+                    dataSetName: 'nav-links-data'
+                  },
+                ]
+              },
+                   itemStyle: ''
+            },
+            // {
+            //   type: 'link',
+            //   key: {
+            //     name: 'Public Database',
+            //     class: '',
+            //     style: '',
+            //     event: [
+            //       {
+            //         eventName : 'onClickHeaderNavigation(this, event)',
+            //         eventType: 'onclick',
+            //         argument : {mapToSections: ['allPublicApisDatabase',]},
+            //         dataSetName: 'nav-links-data'
+            //       },
+            //     ],
+            //     itemStyle: ''
+            //   }
+            // },
+            // {
+            //   type: 'link',
+            //   key: {
+            //     name: 'Public JsonBin',
+            //     class: '',
+            //     style: '',
+            //     event: [
+            //       {
+            //         eventName : 'onClickHeaderNavigation(this, event)',
+            //         eventType: 'onclick',
+            //         argument : {mapToSections: ['allPublicApisJsonBin']},
+            //         dataSetName: 'nav-links-data'
+            //       },
+            //     ],
+            //     itemStyle: ''
+            //   }
+            // },
+            // {
+            //   type: 'link',
+            //   key: {
+            //     name: 'Public Message Queue',
+            //     class: '',
+            //     style: '',
+            //     event: [
+            //       {
+            //         eventName : 'onClickHeaderNavigation(this, event)',
+            //         eventType: 'onclick',
+            //         argument : {mapToSections: ['allPublicApisMessageQueue']},
+            //         dataSetName: 'nav-links-data'
+            //       },
+            //     ],
+            //     itemStyle: ''
+            //   }
+            // },
+            // {
+            //   type: 'link',
+            //   key: {
+            //     name: 'Public Mock Server',
+            //     class: '',
+            //     style: '',
+            //     event: [
+            //       {
+            //         eventName : 'onClickHeaderNavigation(this, event)',
+            //         eventType: 'onclick',
+            //         argument : {mapToSections: ['allPublicApisMockApiServer']},
+            //         dataSetName: 'nav-links-data'
+            //       },
+            //     ],
+            //     itemStyle: ''
+            //   }
+            // },
+          ],
+          navStyle: 'margin-left: 10%;',
+        },
+        containerStyle: 'background: var(--default-theme-color); padding: 10px 0px;'
+    },
+
     "all_sections" : {
         values: [
           {
             section: {name: 'headerNav', id: '', class: '', style: ''},
-            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            menu: {name: 'headerNav', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
             block: {class: '', style: ''},
             loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
             template: {style: ''}
           },
-
+          // {
+          //   section: {name: 'theme', id: '', class: '', style: ''},
+          //   menu: {name: '', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+          //   block: {class: '', style: ''},
+          //   loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+          //   template: {style: ''}
+          // },
           {
-            section: {name: 'theme', id: '', class: '', style: ''},
-            menu: {name: '', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
-            block: {class: '', style: ''},
-            loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
-            template: {style: ''}
-          },
-          {
-            section: {name: 'products', id: '', class: '', style: ''},
-            menu: {name: 'Products', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
-            block: {class: '', style: ''},
-            loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
-            template: {style: ''}
-          },
-          {
-            section: {name: 'mobileSideNavBar', id: '', class: '', style: ''},
+            section: {name: 'products', id: '', class: 'desktop-main-section-width-90 mob-full-width main-content-sec-position', style: 'display: block; width: 90%; margin: auto; position: relative; top: 80px; padding-top: 0px; ' },
             menu: {name: 'Products', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
             block: {class: '', style: ''},
             loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
@@ -2450,30 +2592,24 @@ let sections_data = {
         values: [
           {
             section: {name: 'headerNav', id: '', class: '', style: ''},
-            menu: {name: 'About Me', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            menu: {name: 'Header Nav', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
             block: {class: '', style: ''},
             loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
             template: {style: ''}
           },
           {
-            section: {name: 'products', id: '', class: '', style: ''},
+            section: {name: 'products', id: '', class: 'desktop-main-section-width-90 mob-full-width main-content-sec-position', style: 'display: block; width: 90%; margin: auto; position: relative; top: 120px; padding-top: 0px; ' },
             menu: {name: 'Products', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
             block: {class: '', style: ''},
             loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
             template: {style: ''}
           },
-          {
-            section: {name: 'mobileSideNavBar', id: '', class: '', style: ''},
-            menu: {name: 'Products', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
-            block: {class: '', style: ''},
-            loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
-            template: {style: ''}
-          },
+          
         ],
         partStyle: 'background: #F1F3F6;',
     },
 
-    "headerNav_section": {
+    "headerNav_section1": {
         sectionName : 'header_navigation',
         brand: {
           values: [
@@ -2502,40 +2638,57 @@ let sections_data = {
                 itemStyle: ''
               }
             },
-            // {
-            //   type: 'link',
-            //   key: {
-            //     name: 'ACTIVITIES',
-            //     class: '',
-            //     style: '',
-            //     event: [
-            //       {
-            //         eventName : 'onClickHeaderNavigation(this, event)',
-            //         eventType: 'onclick',
-            //         argument : {mapToSections: ['activities',]},
-            //         dataSetName: 'nav-links-data'
-            //       },
-            //     ],
-            //     itemStyle: ''
-            //   }
-            // },
-            // {
-            //   type: 'link',
-            //   key: {
-            //     name: 'WORK',
-            //     class: '',
-            //     style: '',
-            //     event: [
-            //       {
-            //         eventName : 'onClickHeaderNavigation(this, event)',
-            //         eventType: 'onclick',
-            //         argument : {mapToSections: ['workcat','work']},
-            //         dataSetName: 'nav-links-data'
-            //       },
-            //     ],
-            //     itemStyle: ''
-            //   }
-            // },
+            {
+              type: 'link',
+              key: {
+                name: 'RAJIB KARMAKAR PORTFOLIO',
+                class: '',
+                style: '',
+                event: [
+                  {
+                    eventName : 'onClickHeaderNavigation(this, event)',
+                    eventType: 'onclick',
+                    argument : {mapToSections: ['about','education','workexp','activities','skills','facts']},
+                    dataSetName: 'nav-links-data'
+                  },
+                ],
+                itemStyle: ''
+              }
+            },
+            {
+              type: 'link',
+              key: {
+                name: 'ACTIVITIES',
+                class: '',
+                style: '',
+                event: [
+                  {
+                    eventName : 'onClickHeaderNavigation(this, event)',
+                    eventType: 'onclick',
+                    argument : {mapToSections: ['activities',]},
+                    dataSetName: 'nav-links-data'
+                  },
+                ],
+                itemStyle: ''
+              }
+            },
+            {
+              type: 'link',
+              key: {
+                name: 'WORK',
+                class: '',
+                style: '',
+                event: [
+                  {
+                    eventName : 'onClickHeaderNavigation(this, event)',
+                    eventType: 'onclick',
+                    argument : {mapToSections: ['workcat','work']},
+                    dataSetName: 'nav-links-data'
+                  },
+                ],
+                itemStyle: ''
+              }
+            },
             {
               type: 'link',
               key: {
@@ -2553,7 +2706,6 @@ let sections_data = {
                 itemStyle: ''
               }
             },
-
             // {
             //   type: 'dropDown', key: {name: 'TECHIE', class: '',  style: '', mapToSections: ['about','skills','facts']}, itemStyle: '', links: [
             //       {type: 'link', key: {name: 'TECHIE', class: '',  style: '', mapToSections: ['about','skills','facts']}, itemStyle: ''},
@@ -2641,7 +2793,7 @@ let sections_data = {
                   ],
                     style: '',
                 }
-            },
+    },
 
     "products_section": {
        sectionName : 'products_section',
@@ -2653,7 +2805,7 @@ let sections_data = {
                                {
                                    animationType: 'fade-up', animationDelay: null,
                                    desc: [
-                                     {type: 'text', key: {name: 'Services', class: 'default-theme-color default-outline-color', style: 'display: inline-block; font-size: 28px;font-weight: 700;width: 100%; '}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left; margin: 40px 0px; '},
+                                     {type: 'text', key: {name: 'Services we provide...', class: 'default-theme-color default-outline-color', style: 'display: inline-block; font-size: 28px;font-weight: 700;width: 100%; '}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left; '},
                                      {type: 'text', key: {name: 'Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; '}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left; margin-bottom: 30px;'},
 
                                    ],
@@ -2664,10 +2816,10 @@ let sections_data = {
                                    mapToSection : 'about',
                                    animationType: 'fade-up', animationDelay: null,
                                    desc: [
-                                     {type: 'image', key: {name: 'static/img/gini_products_screenshots/giniChatBotHome.PNG', style: ' border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
+                                     {type: 'image', key: {name: 'static/img/giniHomeServices/publicApisPageScreenshot.png', style: ' border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
                                      // {type: 'wrap-open', key: {name: 'div', class: 'default-theme-color default-outline-color', style: 'display: inline-block; width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left; margin-top: 20px; border: 2px solid red; '},
                                      {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
-                                     {type: 'text', key: {name: 'Gini Chat Bot', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
+                                     {type: 'text', key: {name: 'Explore Public Apis', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
                                      {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white; '},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
                                      // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
@@ -2676,7 +2828,7 @@ let sections_data = {
                                      {
                                        eventName : 'onClickGiniHomeProducts(this, event)',
                                        eventType: 'onclick',
-                                       argument : {redirectUrl: 'http://localhost:3000'},
+                                       argument : {redirectUrl: '/npm-info'},
                                        dataSetName: 'nav-links-data'
                                      },
                                    ],
@@ -2686,10 +2838,10 @@ let sections_data = {
                                    mapToSection : 'activities',
                                    animationType: 'fade-up', animationDelay: 150,
                                    desc: [
-                                     {type: 'image', key: {name: 'static/img/gini_products_screenshots/giniChatBotAiPreview1.PNG', style: ' border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
+                                     {type: 'image', key: {name: 'static/img/giniHomeServices/publicLibrariesPageScreenshot.PNG', style: ' border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
                                      // {type: 'wrap-open', key: {name: 'div', class: 'default-theme-color default-outline-color', style: 'display: inline-block; width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left; margin-top: 20px; border: 2px solid red; '},
                                      {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
-                                     {type: 'text', key: {name: 'Chat Bot AI Engine', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
+                                     {type: 'text', key: {name: 'Explore Public Libraries', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
                                      {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white;'},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
                                      // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
@@ -2698,7 +2850,7 @@ let sections_data = {
                                      {
                                        eventName : 'onClickGiniHomeProducts(this, event)',
                                        eventType: 'onclick',
-                                       argument : {redirectUrl: 'http://gini-assistant.herokuapp.com/ai'},
+                                       argument : {redirectUrl: '/public-apis'},
                                        dataSetName: 'nav-links-data'
                                      },
                                    ],
