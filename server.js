@@ -7,7 +7,6 @@ var cors = require('cors');
 var app = express();
 app.use(cors());
 const http = require("http").Server(app);
-const io = require('socket.io')(http);
 const promise = require("promise");
 const request = require('request');
 var bodyParser = require('body-parser');
