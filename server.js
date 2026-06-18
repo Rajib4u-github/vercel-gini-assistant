@@ -80,17 +80,16 @@ function createTestFileAsync(){
     }
 }
 
-// createTestFileAsync().then(function(data){
-//     console.log("======= return from create file promise =======");
-//     console.log("77777777777777777777777777777777777777");
-//     CUSTOM_PORTFOLIO_SERVICE = require('./server/PORTFOLIO/portfolio.js');
-//     let file = {path: './server/PORTFOLIO/LOCAL_DB/test.json', type: "utf8"};
-//     console.log("+======================= ACCESS LOCAL DB PORTFOLIO FILE  +=========================");
+createTestFileAsync().then(function(data){
+    console.log("======= return from create file promise =======");
+    CUSTOM_PORTFOLIO_SERVICE = require('./server/PORTFOLIO/portfolio.js');
+    let file = {path: './server/PORTFOLIO/LOCAL_DB/test.json', type: "utf8"};
+    console.log("+======================= ACCESS LOCAL DB PORTFOLIO FILE  +=========================");
 
-//     // CUSTOM_PORTFOLIO_SERVICE.generic_portfolio_functionality_mapping.read_portfolio_file_data(file).then(function(data){
-//     //     console.log("8888888888888888888888888888888888888888888");
-//     // });
-// });
+    // CUSTOM_PORTFOLIO_SERVICE.generic_portfolio_functionality_mapping.read_portfolio_file_data(file).then(function(data){
+    //     console.log("8888888888888888888888888888888888888888888");
+    // });
+});
 
 app.use(bodyParser.json());
 
