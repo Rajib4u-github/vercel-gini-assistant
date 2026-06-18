@@ -1598,9 +1598,10 @@ console.log("============= file : genericFeature.core.client.controller.js =====
     }
 
     window.onClickGiniHomeProducts = function(that, event){
-      console.log("================= on click onClickGiniProducts ==================");
       let argument = JSON.parse(that.getAttribute("data"));
-      console.log("@@@ argument  : ", argument);
+      if(argument.redirectUrl){
+            window.open(argument.redirectUrl, "_blank", );
+      }
     }
 
     window.onClickParts = function(that, event){

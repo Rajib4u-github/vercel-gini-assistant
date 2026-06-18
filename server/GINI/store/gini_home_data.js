@@ -2828,7 +2828,7 @@ let sections_data = {
                                      {
                                        eventName : 'onClickGiniHomeProducts(this, event)',
                                        eventType: 'onclick',
-                                       argument : {redirectUrl: '/npm-info'},
+                                       argument : {redirectUrl: '/public-apis'},
                                        dataSetName: 'nav-links-data'
                                      },
                                    ],
@@ -2838,7 +2838,7 @@ let sections_data = {
                                    mapToSection : 'activities',
                                    animationType: 'fade-up', animationDelay: 150,
                                    desc: [
-                                     {type: 'image', key: {name: 'static/img/giniHomeServices/publicLibrariesPageScreenshot.PNG', style: ' border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
+                                     {type: 'image', key: {name: 'static/img/giniHomeServices/publicLibrariesPageScreenshot.png', style: ' border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
                                      // {type: 'wrap-open', key: {name: 'div', class: 'default-theme-color default-outline-color', style: 'display: inline-block; width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left; margin-top: 20px; border: 2px solid red; '},
                                      {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
                                      {type: 'text', key: {name: 'Explore Public Libraries', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
@@ -2850,433 +2850,57 @@ let sections_data = {
                                      {
                                        eventName : 'onClickGiniHomeProducts(this, event)',
                                        eventType: 'onclick',
-                                       argument : {redirectUrl: '/public-apis'},
+                                       argument : {redirectUrl: '/npm-info'},
                                        dataSetName: 'nav-links-data'
                                      },
                                    ],
                                    partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 10px 5px 20px 5px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center; background: white; float: left;',
                                },
-                               {
-                                   mapToSection : 'about',
-                                   animationType: 'fade-up', animationDelay: null,
-                                   desc: [
-                                     {type: 'image', key: {name: 'static/img/gini_products_screenshots/giniCamera.PNG', style: ' border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
-                                     {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
-                                     {type: 'text', key: {name: 'Camera', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
-                                     {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white; '},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
-
-                                   ],
-                                   event: [
-                                     {
-                                       eventName : 'onClickGiniHomeProducts(this, event)',
-                                       eventType: 'onclick',
-                                       argument : {redirectUrl: 'http://gini-assistant.herokuapp.com/camera'},
-                                       dataSetName: 'nav-links-data'
-                                     },
-                                   ],
-                                   partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 10px 5px 20px 5px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center; background: white; float: left;',
-                               },
-                               {
-                                   mapToSection : 'facts',
-                                   animationType: 'fade-up', animationDelay: 50,
-                                   desc: [
-                                     {type: 'image', key: {name: 'static/img/gini_products_screenshots/giniCamera.PNG', style: ' border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
-                                     {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
-                                     {type: 'text', key: {name: 'Dual Camera ', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
-                                     {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white; '},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
-
-                                   ],
-                                   event: [
-                                     {
-                                       eventName : 'onClickGiniHomeProducts(this, event)',
-                                       eventType: 'onclick',
-                                       argument : {redirectUrl: 'http://gini-assistant.herokuapp.com/dualcamera'},
-                                       dataSetName: 'nav-links-data'
-                                     },
-                                   ],
-                                   partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 10px 5px 20px 5px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center; background: white; float: left;',
-
-                               },
-                               {
-                                   mapToSection : 'skills',
-                                   animationType: 'fade-up', animationDelay: 100,
-                                   desc: [
-                                     {type: 'image', key: {name: 'static/img/gini_products_screenshots/giniBooks.PNG', style: ' border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
-                                     {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
-                                     {type: 'text', key: {name: 'Books', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
-                                     {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white; '},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
-
-                                   ],
-                                   event: [
-                                     {
-                                       eventName : 'onClickGiniHomeProducts(this, event)',
-                                       eventType: 'onclick',
-                                       argument : {redirectUrl: 'http://gini-assistant.herokuapp.com/books'},
-                                       dataSetName: 'nav-links-data'
-                                     },
-                                   ],
-                                   partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 10px 5px 20px 5px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center; background: white; float: left;',
-                               },
-                               {
-                                   mapToSection : 'education',
-                                   animationType: 'fade-up', animationDelay: 150,
-                                   desc: [
-                                     {type: 'image', key: {name: 'static/img/gini_products_screenshots/giniChatBotHome.PNG', style: ' border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
-                                     {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
-                                     {type: 'text', key: {name: 'Football Live Updates ', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
-                                     {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white; '},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
-
-                                   ],
-                                   event: [
-                                     {
-                                       eventName : 'onClickGiniHomeProducts(this, event)',
-                                       eventType: 'onclick',
-                                       argument : {redirectUrl: 'http://gini-assistant.herokuapp.com/score'},
-                                       dataSetName: 'nav-links-data'
-                                     },
-                                   ],
-                                   partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 10px 5px 20px 5px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center; background: white; float: left;',
-                               },
-                               {
-                                   mapToSection : 'workexp',
-                                   animationType: 'fade-up', animationDelay: 150,
-                                   desc: [
-                                     {type: 'image', key: {name: 'static/img/gini_products_screenshots/giniNews.PNG', style: ' border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
-                                     {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
-                                     {type: 'text', key: {name: 'General News', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
-                                     {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white; '},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
-
-                                   ],
-                                   event: [
-                                     {
-                                       eventName : 'onClickGiniHomeProducts(this, event)',
-                                       eventType: 'onclick',
-                                       argument : {redirectUrl: 'http://gini-assistant.herokuapp.com/news'},
-                                       dataSetName: 'nav-links-data'
-                                     },
-                                   ],
-                                   partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 10px 5px 20px 5px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center; background: white; float: left;',
-                               },
-                               {
-                                   mapToSection : 'projects',
-                                   animationType: 'fade-up', animationDelay: 150,
-                                   desc: [
-                                     {type: 'image', key: {name: 'static/img/gini_products_screenshots/giniChatBotHome.PNG', style: ' border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
-                                     {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
-                                     {type: 'text', key: {name: 'Widgets', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
-                                     {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white; '},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
-
-                                   ],
-                                   event: [
-                                     {
-                                       eventName : 'onClickGiniHomeProducts(this, event)',
-                                       eventType: 'onclick',
-                                       argument : {redirectUrl: 'http://gini-assistant.herokuapp.com/widgets'},
-                                       dataSetName: 'nav-links-data'
-                                     },
-                                   ],
-                                   partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 10px 5px 20px 5px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center; background: white; float: left;',
-                               },
-                               {
-                                   mapToSection : 'workcat',
-                                   animationType: 'fade-up', animationDelay: 150,
-                                   desc: [
-                                     {type: 'image', key: {name: 'static/img/gini_products_screenshots/giniNewsApp.PNG', style: ' border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
-                                     {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
-                                     {type: 'text', key: {name: 'News App', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
-                                     {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white; '},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
-
-                                   ],
-                                   event: [
-                                     {
-                                       eventName : 'onClickGiniHomeProducts(this, event)',
-                                       eventType: 'onclick',
-                                       argument : {redirectUrl: 'http://gini-assistant.herokuapp.com/newsapp'},
-                                       dataSetName: 'nav-links-data'
-                                     },
-                                   ],
-                                   partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 10px 5px 20px 5px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center; background: white; float: left;',
-                               },
-                               {
-                                   mapToSection : 'work',
-                                   animationType: 'fade-up', animationDelay: 150,
-                                   desc: [
-                                     {type: 'image', key: {name: 'static/img/gini_products_screenshots/giniChatBotHome.PNG', style: ' border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
-                                     {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
-                                     {type: 'text', key: {name: 'NASA', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
-                                     {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white; '},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
-
-                                   ],
-                                   event: [
-                                     {
-                                       eventName : 'onClickGiniHomeProducts(this, event)',
-                                       eventType: 'onclick',
-                                       argument : {redirectUrl: 'http://gini-assistant.herokuapp.com/nasa'},
-                                       dataSetName: 'nav-links-data'
-                                     },
-                                   ],
-                                   partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 10px 5px 20px 5px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center; background: white; float: left;',
-                               },
-                               {
-                                   mapToSection : 'languages',
-                                   animationType: 'fade-up', animationDelay: 150,
-                                   desc: [
-                                     {type: 'image', key: {name: 'static/img/gini_products_screenshots/giniOpenSourcePagePNG.PNG', style: ' border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
-                                     {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
-                                     {type: 'text', key: {name: 'Open Source Library', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
-                                     {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white; '},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
-
-                                   ],
-                                   event: [
-                                     {
-                                       eventName : 'onClickGiniHomeProducts(this, event)',
-                                       eventType: 'onclick',
-                                       argument : {redirectUrl: 'http://gini-assistant.herokuapp.com/opensource'},
-                                       dataSetName: 'nav-links-data'
-                                     },
-                                   ],
-                                   partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 10px 5px 20px 5px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center; background: white; float: left;',
-                               },
-                               {
-                                   mapToSection : 'testimonials',
-                                   animationType: 'fade-up', animationDelay: 150,
-                                   desc: [
-                                     {type: 'image', key: {name: 'static/img/gini_products_screenshots/giniOpenSourceLibraryApp.PNG', style: ' border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
-                                     {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
-                                     {type: 'text', key: {name: 'Open Source Library Application', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
-                                     {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white; '},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
-
-                                   ],
-                                   event: [
-                                     {
-                                       eventName : 'onClickGiniHomeProducts(this, event)',
-                                       eventType: 'onclick',
-                                       argument : {redirectUrl: 'http://gini-assistant.herokuapp.com/open-source'},
-                                       dataSetName: 'nav-links-data'
-                                     },
-                                   ],
-                                   partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 10px 5px 20px 5px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center; background: white; float: left;',
-                               },
-                               {
-                                   mapToSection : 'testimonials',
-                                   animationType: 'fade-up', animationDelay: 150,
-                                   desc: [
-                                     {type: 'image', key: {name: 'static/img/gini_products_screenshots/giniCovidApp.PNG', style: ' border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
-                                     {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
-                                     {type: 'text', key: {name: 'Covid 19 Application', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
-                                     {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white; '},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
-
-                                   ],
-                                   event: [
-                                     {
-                                       eventName : 'onClickGiniHomeProducts(this, event)',
-                                       eventType: 'onclick',
-                                       argument : {redirectUrl: 'http://gini-assistant.herokuapp.com/covid'},
-                                       dataSetName: 'nav-links-data'
-                                     },
-                                   ],
-                                   partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 10px 5px 20px 5px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center; background: white; float: left;',
-                               },
-                               {
-                                   mapToSection : 'services',
-                                   animationType: 'fade-up', animationDelay: 150,
-                                   desc: [
-                                     {type: 'image', key: {name: 'static/img/gini_products_screenshots/giniMyPortfolio.PNG', style: 'border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
-                                     {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
-                                     {type: 'text', key: {name: 'My Portfolio', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
-                                     {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white; '},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
-
-                                   ],
-                                   event: [
-                                     {
-                                       eventName : 'onClickGiniHomeProducts(this, event)',
-                                       eventType: 'onclick',
-                                       argument : {redirectUrl: 'http://gini-assistant.herokuapp.com/portfolio_rajib'},
-                                       dataSetName: 'nav-links-data'
-                                     },
-                                   ],
-                                   partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 10px 5px 20px 5px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center; background: white; float: left;',
-                               },
-                               {
-                                   mapToSection : 'services',
-                                   animationType: 'fade-up', animationDelay: 150,
-                                   desc: [
-                                     {type: 'image', key: {name: 'static/img/gini_products_screenshots/giniPortfolioCreator.PNG', style: ' border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
-                                     {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
-                                     {type: 'text', key: {name: 'Portfolio Creator', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
-                                     {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white; '},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
-
-                                   ],
-                                   event: [
-                                     {
-                                       eventName : 'onClickGiniHomeProducts(this, event)',
-                                       eventType: 'onclick',
-                                       argument : {redirectUrl: 'http://gini-assistant.herokuapp.com/'},
-                                       dataSetName: 'nav-links-data'
-                                     },
-                                   ],
-                                   partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 10px 5px 20px 5px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center; background: white; float: left;',
-                               },
-                               {
-                                   mapToSection : 'typed',
-                                   animationType: 'fade-up', animationDelay: 150,
-                                   desc: [
-                                     {type: 'image', key: {name: 'static/img/gini_products_screenshots/giniChatBotHome.PNG', style: 'border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
-                                     {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
-                                     {type: 'text', key: {name: 'Sound Cloud Music', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
-                                     {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white; '},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
-
-                                   ],
-                                   event: [
-                                     {
-                                       eventName : 'onClickGiniHomeProducts(this, event)',
-                                       eventType: 'onclick',
-                                       argument : {redirectUrl: 'http://gini-assistant.herokuapp.com/soundcloud'},
-                                       dataSetName: 'nav-links-data'
-                                     },
-                                   ],
-                                   partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 10px 5px 20px 5px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center; background: white; float: left;',
-                               },
-                               {
-                                   mapToSection : 'contacts',
-                                   animationType: 'fade-up', animationDelay: 150,
-                                   desc: [
-                                     {type: 'image', key: {name: 'static/img/gini_products_screenshots/giniChatBotHome.PNG', style: 'border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
-                                     {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
-                                     {type: 'text', key: {name: 'Audio DB Application', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
-                                     {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white; '},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
-
-                                   ],
-                                   event: [
-                                     {
-                                       eventName : 'onClickGiniHomeProducts(this, event)',
-                                       eventType: 'onclick',
-                                       argument : {redirectUrl: 'http://gini-assistant.herokuapp.com/audiodb'},
-                                       dataSetName: 'nav-links-data'
-                                     },
-                                   ],
-                                   partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 10px 5px 20px 5px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center; background: white; float: left;',
-                               },
-                               {
+                                {
                                    mapToSection : 'activities',
                                    animationType: 'fade-up', animationDelay: 150,
                                    desc: [
-                                     {type: 'image', key: {name: 'static/img/gini_products_screenshots/giniMusic.PNG', style: ' border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
+                                     {type: 'image', key: {name: 'static/img/giniHomeServices/portfolioScreenshot.png', style: ' border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
+                                     // {type: 'wrap-open', key: {name: 'div', class: 'default-theme-color default-outline-color', style: 'display: inline-block; width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left; margin-top: 20px; border: 2px solid red; '},
                                      {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
-                                     {type: 'text', key: {name: 'Music Application', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
-                                     {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white; '},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
+                                     {type: 'text', key: {name: 'Portfolio Creator', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
+                                     {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white;'},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
+                                     // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                                    ],
                                    event: [
                                      {
                                        eventName : 'onClickGiniHomeProducts(this, event)',
                                        eventType: 'onclick',
-                                       argument : {redirectUrl: 'http://gini-assistant.herokuapp.com/music'},
+                                       argument : {redirectUrl: '/portfolio'},
                                        dataSetName: 'nav-links-data'
                                      },
                                    ],
                                    partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 10px 5px 20px 5px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center; background: white; float: left;',
                                },
-                               {
+                                {
                                    mapToSection : 'activities',
                                    animationType: 'fade-up', animationDelay: 150,
                                    desc: [
-                                     {type: 'image', key: {name: 'static/img/gini_products_screenshots/giniMovie.PNG', style: ' border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
+                                     {type: 'image', key: {name: 'static/img/giniHomeServices/restaurantScreenshot.png', style: ' border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
+                                     // {type: 'wrap-open', key: {name: 'div', class: 'default-theme-color default-outline-color', style: 'display: inline-block; width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left; margin-top: 20px; border: 2px solid red; '},
                                      {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
-                                     {type: 'text', key: {name: 'Movie Application', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
-                                     {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white; '},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
+                                     {type: 'text', key: {name: 'Restaurant Brand', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
+                                     {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white;'},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
+                                     // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                                    ],
                                    event: [
                                      {
                                        eventName : 'onClickGiniHomeProducts(this, event)',
                                        eventType: 'onclick',
-                                       argument : {redirectUrl: 'http://gini-assistant.herokuapp.com/movie'},
+                                       argument : {redirectUrl: '/restaurant'},
                                        dataSetName: 'nav-links-data'
                                      },
                                    ],
                                    partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 10px 5px 20px 5px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center; background: white; float: left;',
                                },
-                               {
-                                   mapToSection : 'activities',
-                                   animationType: 'fade-up', animationDelay: 150,
-                                   desc: [
-                                     {type: 'image', key: {name: 'static/img/gini_products_screenshots/giniQuiz.PNG', style: ' border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
-                                     {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
-                                     {type: 'text', key: {name: 'Quiz Application', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
-                                     {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white; '},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
-
-                                   ],
-                                   event: [
-                                     {
-                                       eventName : 'onClickGiniHomeProducts(this, event)',
-                                       eventType: 'onclick',
-                                       argument : {redirectUrl: 'http://gini-assistant.herokuapp.com/quiz'},
-                                       dataSetName: 'nav-links-data'
-                                     },
-                                   ],
-                                   partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 10px 5px 20px 5px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center; background: white; float: left;',
-                               },
-                               {
-                                   mapToSection : 'activities',
-                                   animationType: 'fade-up', animationDelay: 150,
-                                   desc: [
-                                     {type: 'image', key: {name: 'static/img/gini_products_screenshots/giniZomato.PNG', style: 'border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
-                                     {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
-                                     {type: 'text', key: {name: 'Zomato Application', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
-                                     {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white; '},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
-
-                                   ],
-                                   event: [
-                                     {
-                                       eventName : 'onClickGiniHomeProducts(this, event)',
-                                       eventType: 'onclick',
-                                       argument : {redirectUrl: 'http://gini-assistant.herokuapp.com/zomato'},
-                                       dataSetName: 'nav-links-data'
-                                     },
-                                   ],
-                                   partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 10px 5px 20px 5px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center; background: white; float: left;',
-                               },
-                               {
-                                   mapToSection : 'activities',
-                                   animationType: 'fade-up', animationDelay: 150,
-                                   desc: [
-                                     {type: 'image', key: {name: 'static/img/gini_products_screenshots/giniChatBotHome.PNG', style: 'border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
-                                     {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
-                                     {type: 'text', key: {name: 'Here Map Application', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
-                                     {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white; '},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
-
-                                   ],
-                                   event: [
-                                     {
-                                       eventName : 'onClickGiniHomeProducts(this, event)',
-                                       eventType: 'onclick',
-                                       argument : {redirectUrl: 'http://gini-assistant.herokuapp.com/heremap'},
-                                       dataSetName: 'nav-links-data'
-                                     },
-                                   ],
-                                   partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 10px 5px 20px 5px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center; background: white; float: left;',
-                               },
-                               {
-                                   mapToSection : 'activities',
-                                   animationType: 'fade-up', animationDelay: 150,
-                                   desc: [
-                                     {type: 'image', key: {name: 'static/img/gini_products_screenshots/giniOmdb.PNG', style: 'border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
-                                     {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
-                                     {type: 'text', key: {name: 'OMDB Application', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
-                                     {type: 'text', key: {name: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', style: 'background: white; '},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
-
-                                   ],
-                                   event: [
-                                     {
-                                       eventName : 'onClickGiniHomeProducts(this, event)',
-                                       eventType: 'onclick',
-                                       argument : {redirectUrl: 'http://gini-assistant.herokuapp.com/omdb'},
-                                       dataSetName: 'nav-links-data'
-                                     },
-                                   ],
-                                   partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 10px 5px 20px 5px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center; background: white; float: left;',
-                               },
+                              
                            ]
                        },
            ],
