@@ -260,7 +260,7 @@
     .fwcup26-dashboard-stats-widget-img{ height: 140px;}
     /* .fwcup26-top-scorer-widget-img{ position: relative; top: 32px;} */
     .fwcup26-top-scorer-layout {position: relative; top: -25px; }
-    .fwcup26-dashboard-todays-matches-widget-img {}
+    .fwcup26-dashboard-todays-matches-widget-img {height: 170px !important;}
     .fwcup26-round32-widget-img { height: 310px !important; position: relative; top: 0px; }
     .fwcup26-round32-widget-section{ position: relative; top: -25px;}
     .fwcup26-large-groups-widget-img{ height: 240px !important; }
