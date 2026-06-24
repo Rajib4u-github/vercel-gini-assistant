@@ -116,6 +116,8 @@
   /* DESKTOP-CARD-STYLE */
 
   .desktop-width-30{ width: 31%; }
+  .desktop-width-25{ width: 25%; }
+  .desktop-width-22{ width: 22%; }
   .desktop-sec-style {margin-left: 15px;}
   .desktop-main-section-width-80 {width: 80%; }
   .desktop-main-section-width-90 {width: 90%; }
@@ -130,7 +132,7 @@
 
   .npmcat-menu-active-selection{background: brown !important; color: black}
   .npmkcat-menu-de-active-selection{background: blue !important; color: dimgrey;}
-  .main-content-sec-position{ position: relative; top: 105px; left: 3%;}
+  .main-content-sec-position{ position: relative; top: 105px; left: 1%;}
     
   .mob-header-brand-block{margin-left: 10% !important}
   .mob-header-nav-block{margin-left: 10% !important}
@@ -174,7 +176,7 @@
     .mob-full-width {width: 100%;}
     .mob-sec-style{margin-left: 10px; margin-right: 10px;}
     .workcat-menu-de-active-selection{background: ghostwhite !important; color: black; border-radius: 20px; padding: 8px 15px !important; border: none;}
-    .workcat-menu-active-selection{background: var(--default-theme-color) !important; color: white; border-radius: 20px; padding: 8px 15px !important; border: none;}
+    .workcat-menu-active-selection{background: var(--default-theme-color) !important; color: white; border-radius: 20px; padding: 8px 15px !important; border: none; font-weight: 700; }
     .desktop-side-bar-search-section{background: transparent;}
     .main-content-sec-position{ position: relative; top: 85px; left: 1px;}
   }
@@ -432,8 +434,8 @@ section {
 }
 a{color: white;}
 a:hover {
-  color: var(--default-theme-color);
-  text-decoration: none;
+  color: white;
+  text-decoration: none !important;
 }
 .onhover-img:hover{transform: scale(1.3); transition: all ease-in-out 0.4s;}
 .menu-onhover-img:hover{transform: scale(1.2); transition: all ease-in-out 0.5s;}

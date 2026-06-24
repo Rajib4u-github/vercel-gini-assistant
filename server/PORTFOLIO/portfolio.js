@@ -2404,306 +2404,304 @@ function backup_get_section_template(sectionName, editable, data, application, r
 }
 
 async function get_custom_section_template(sectionName, editable, data, application){
-   try{
 
-        console.log("==== calling get_custom_section_template function () ====");
-        console.log("#### editable: ", editable);
-        console.log("#### sectionName: ", sectionName);
-        console.log("#### 444444 section data : ", data);
+    try{
+console.log("==== calling get_custom_section_template function () ====");
+    console.log("#### editable: ", editable);
+    console.log("#### sectionName: ", sectionName);
+    console.log("#### 444444 section data : ", data);
 
-        let template = '';
-        // let data = portfolio_data[sectionName];
-        // let data = getPortfolioData(sectionName);
-        let progressTemplate = '';
-        let additionalSkillsetTemplate = '';
-        let blockTemplate = '';
-        let containerStyle = '';
-        let blockStyle = '';
-        let sectionCount = 0;
+    let template = '';
+    // let data = portfolio_data[sectionName];
+    // let data = getPortfolioData(sectionName);
+    let progressTemplate = '';
+    let additionalSkillsetTemplate = '';
+    let blockTemplate = '';
+    let containerStyle = '';
+    let blockStyle = '';
+    let sectionCount = 0;
 
-        if(data && data.containerStyle !== undefined && data.containerStyle !== null && data.containerStyle !== ''){
-            containerStyle += data.containerStyle;
-        }
-        if(data && data.block && data.block.blockStyle !== undefined && data.block.blockStyle !== ''){
-            blockStyle += data.block.blockStyle;
-        }
-        if(data && data.block && data.block.sections && data.block.sections.length > 0){
+    if(data && data.containerStyle !== undefined && data.containerStyle !== null && data.containerStyle !== ''){
+        containerStyle += data.containerStyle;
+    }
+    if(data && data.block && data.block.blockStyle !== undefined && data.block.blockStyle !== ''){
+        blockStyle += data.block.blockStyle;
+    }
+    if(data && data.block && data.block.sections && data.block.sections.length > 0){
 
-            data.block.sections.forEach((section, sectionIndex) => {
-                let animation = '';
-                let newlyAddedSectionStyle = '';
-                let sectionsTemplate = '';
-                let sectionClass = '';
-                let sectionStyle = '';
-                let customSectionId = '';
-                let isSectionVisibleStyle = '';
-                let sectionId = 'section_'+sectionName+'-'+sectionIndex;
+        data.block.sections.forEach((section, sectionIndex) => {
+            let animation = '';
+            let newlyAddedSectionStyle = '';
+            let sectionsTemplate = '';
+            let sectionClass = '';
+            let sectionStyle = '';
+            let customSectionId = '';
+            let isSectionVisibleStyle = '';
+            let sectionId = 'section_'+sectionName+'-'+sectionIndex;
 
-                sectionCount++;
+            sectionCount++;
 
-                animation += getAotAnimation(section);
+            animation += getAotAnimation(section);
 
-                if(section.sectionClass !== undefined && section.sectionClass !== ''){
-                    sectionClass += section.sectionClass;
-                }
+            if(section.sectionClass !== undefined && section.sectionClass !== ''){
+                  sectionClass += section.sectionClass;
+            }
 
-                if(section.sectionStyle !== undefined && section.sectionStyle !== '' && section.sectionStyle !== ''){
-                    sectionStyle += section.sectionStyle;
-                }
+            if(section.sectionStyle !== undefined && section.sectionStyle !== '' && section.sectionStyle !== ''){
+                  sectionStyle += section.sectionStyle;
+            }
 
-                if(section.preHTML !== undefined && section.preHTML !== null && section.preHTML !== ''){
-                        sectionsTemplate += ''+section.preHTML;
-                }
+            if(section.preHTML !== undefined && section.preHTML !== null && section.preHTML !== ''){
+                    sectionsTemplate += ''+section.preHTML;
+            }
 
-                if(section.isSectionVisible !== undefined && section.isSectionVisible !== ''){
-                    if(section.isSectionVisible.state){
-                        isSectionVisibleStyle += 'display: block;';
-                    }else{
-                        isSectionVisibleStyle += 'display: none;';
-                    }
-                }
+            if(section.isSectionVisible !== undefined && section.isSectionVisible !== ''){
+                  if(section.isSectionVisible.state){
+                      isSectionVisibleStyle += 'display: block;';
+                  }else{
+                      isSectionVisibleStyle += 'display: none;';
+                  }
+            }
 
-                if(section.dataSource !== undefined && section.dataSource !== null && section.dataSource !== ''){
-                    // let parts = get_schema_to_section_data(section);
-                    get_schema_to_section_data(section).then((section) => {
-                    console.log("@@@@@ 8888888888888888888888888888888888888888888888888888888888888888 parts data :: \n\n", section);
+            if(section.dataSource !== undefined && section.dataSource !== null && section.dataSource !== ''){
+                // let parts = get_schema_to_section_data(section);
+                get_schema_to_section_data(section).then((section) => {
+                  console.log("@@@@@ 8888888888888888888888888888888888888888888888888888888888888888 parts data :: \n\n", section);
 
-                    section.parts.forEach((ele, partsIndex) => {
-                            let partsTemplate = '';
-                            let id = "part_"+sectionName+'-'+sectionIndex+'-'+partsIndex;
-                            let method = '';
-                            let dataset = '';
-                            let data = '';
-                            let style = '';
-                            let classTemplate = '';
-                            let additionalClass = '';
-                            let additionalStyle = '';
-                            let secClass = '';
-                            let newlyAddedSectionStyle = '';
-                            let draggableTemplate = '';
-                            if(ele.desc !== undefined && ele.desc !== null && ele.desc && ele.desc.length > 0){
-                                partsTemplate += sections_template(ele.desc, editable, sectionName, sectionIndex, partsIndex, application, request);
+                  section.parts.forEach((ele, partsIndex) => {
+                        let partsTemplate = '';
+                        let id = "part_"+sectionName+'-'+sectionIndex+'-'+partsIndex;
+                        let method = '';
+                        let dataset = '';
+                        let data = '';
+                        let style = '';
+                        let classTemplate = '';
+                        let additionalClass = '';
+                        let additionalStyle = '';
+                        let secClass = '';
+                        let newlyAddedSectionStyle = '';
+                        let draggableTemplate = '';
+                        if(ele.desc !== undefined && ele.desc !== null && ele.desc && ele.desc.length > 0){
+                            partsTemplate += sections_template(ele.desc, editable, sectionName, sectionIndex, partsIndex, application, request);
+                        }
+
+                        if(ele.isNewlyAdded !== undefined && ele.isNewlyAdded === true){
+                            ele.isNewlyAdded = false;
+                        }
+
+                        if(ele.partStyle !== undefined && ele.partStyle !== ''){
+                            style += ele.partStyle;
+                        }
+
+                        if(ele.partClass !== undefined && ele.partClass !== ''){
+                            secClass += ele.partClass;
+                        }
+
+                        if((ele.isSectionToggle !== undefined && ele.isSectionToggle !== null && ele.isSectionToggle !== '')){
+                              if(ele.isSectionToggle.state === true){
+                                  additionalStyle += ele.isSectionToggle.style.split("?")[0];
+                                  additionalClass += ele.isSectionToggle.class.split("?")[0];
+                              }else if(ele.isSectionToggle.state === false){
+                                  additionalStyle += ele.isSectionToggle.style.split("?")[1];
+                                  additionalClass += ele.isSectionToggle.class.split("?")[1];
+                              }
+                        }
+
+                        if((ele.isConditionalStyles !== undefined && ele.isConditionalStyles !== null && ele.isConditionalStyles !== '')){
+                              if(ele.isConditionalStyles.state === true){
+                                  additionalStyle += ele.isConditionalStyles.style.split("?")[0];
+                                  additionalClass += ele.isConditionalStyles.class.split("?")[0];
+                              }else if(ele.isConditionalStyles.state === false){
+                                  additionalStyle += ele.isConditionalStyles.style.split("?")[1];
+                                  additionalClass += ele.isConditionalStyles.class.split("?")[1];
+                              }
+                        }
+
+                        if(ele.dataset !== undefined && ele.dataset !== ''){
+                            ele.dataset.isSectionToggle = {};
+                            ele.dataset.isSectionToggle.state = ele.isSectionToggle.state;
+                            let obj = JSON.stringify(ele.dataset);
+                            dataset += `data-all='`+obj+`'`;
+                        }
+
+                        if((ele.draggable !== undefined && ele.draggable !== null && ele.draggable === true)){
+                              draggableTemplate += 'draggable="true"';
+                        }
+
+                        if(ele.event !== undefined && ele.event !== ''){
+                            method += get_event_template(ele.event, application);
+                        }
+
+                        if(editable){
+                            let onMouseHoverAndMouseOutMethod = 'onmouseover="showHideThreeDotsbtn(this, \''+'mouse_over'+'\')" onmouseout="showHideThreeDotsbtn(this, \''+'mouse_out'+'\')"';
+                            let threeDotsId = 'part_three_dots_'+sectionName+'-'+sectionIndex+'-'+partsIndex;
+                            let threeDotsMethod = 'onclick="onClickSectionThreeDotsBtn(this, event, \''+id+'\', \''+sectionName+'\', \''+sectionIndex+'\', \''+partsIndex+'\')"'
+                            if((ele.isDraggable !== undefined && ele.isDraggable !== null && ele.isDraggable === true)){
+                                draggableTemplate += 'draggable="true" ondrop="drop(this, event)" ondragover="allowDrop(this, event)" ondragstart="drag(this, event)"';
                             }
-
-                            if(ele.isNewlyAdded !== undefined && ele.isNewlyAdded === true){
-                                ele.isNewlyAdded = false;
-                            }
-
-                            if(ele.partStyle !== undefined && ele.partStyle !== ''){
-                                style += ele.partStyle;
-                            }
-
-                            if(ele.partClass !== undefined && ele.partClass !== ''){
-                                secClass += ele.partClass;
-                            }
-
-                            if((ele.isSectionToggle !== undefined && ele.isSectionToggle !== null && ele.isSectionToggle !== '')){
-                                if(ele.isSectionToggle.state === true){
-                                    additionalStyle += ele.isSectionToggle.style.split("?")[0];
-                                    additionalClass += ele.isSectionToggle.class.split("?")[0];
-                                }else if(ele.isSectionToggle.state === false){
-                                    additionalStyle += ele.isSectionToggle.style.split("?")[1];
-                                    additionalClass += ele.isSectionToggle.class.split("?")[1];
-                                }
-                            }
-
-                            if((ele.isConditionalStyles !== undefined && ele.isConditionalStyles !== null && ele.isConditionalStyles !== '')){
-                                if(ele.isConditionalStyles.state === true){
-                                    additionalStyle += ele.isConditionalStyles.style.split("?")[0];
-                                    additionalClass += ele.isConditionalStyles.class.split("?")[0];
-                                }else if(ele.isConditionalStyles.state === false){
-                                    additionalStyle += ele.isConditionalStyles.style.split("?")[1];
-                                    additionalClass += ele.isConditionalStyles.class.split("?")[1];
-                                }
-                            }
-
-                            if(ele.dataset !== undefined && ele.dataset !== ''){
-                                ele.dataset.isSectionToggle = {};
-                                ele.dataset.isSectionToggle.state = ele.isSectionToggle.state;
-                                let obj = JSON.stringify(ele.dataset);
-                                dataset += `data-all='`+obj+`'`;
-                            }
-
-                            if((ele.draggable !== undefined && ele.draggable !== null && ele.draggable === true)){
-                                draggableTemplate += 'draggable="true"';
-                            }
-
-                            if(ele.event !== undefined && ele.event !== ''){
-                                method += get_event_template(ele.event, application);
-                            }
-
-                            if(editable){
-                                let onMouseHoverAndMouseOutMethod = 'onmouseover="showHideThreeDotsbtn(this, \''+'mouse_over'+'\')" onmouseout="showHideThreeDotsbtn(this, \''+'mouse_out'+'\')"';
-                                let threeDotsId = 'part_three_dots_'+sectionName+'-'+sectionIndex+'-'+partsIndex;
-                                let threeDotsMethod = 'onclick="onClickSectionThreeDotsBtn(this, event, \''+id+'\', \''+sectionName+'\', \''+sectionIndex+'\', \''+partsIndex+'\')"'
-                                if((ele.isDraggable !== undefined && ele.isDraggable !== null && ele.isDraggable === true)){
-                                    draggableTemplate += 'draggable="true" ondrop="drop(this, event)" ondragover="allowDrop(this, event)" ondragstart="drag(this, event)"';
-                                }
-                                sectionsTemplate += `
-                                    <div class=" custom-part" id="`+id+`"  `+animation+` `+draggableTemplate+` style="float: left; `+style+` ; `+newlyAddedSectionStyle+`">
-                                        <div  style="display: inline-block; width: 95%; float: left;">`+partsTemplate+`</div>
-                                        <div style="display: inline-block; width: 3%; float: right;">
-                                            <i id="`+threeDotsId+`" `+threeDotsMethod+` class="fa fa-ellipsis-v default-theme-color" aria-hidden="true" style=" display: block; width: 21px; text-align: center; padding: 3px; border-radius: 50px;"></i>
-                                        </div>
-                                    </div>
-                                `;
-
-                            }
-                            // else if(sectionName === 'products_section'){
-                            //     let img = 'static/img/gini_products_screenshots/giniChatBotHome.PNG';
-                            // }
-                            else if(section.slider !== undefined && section.slider !== null && section.slider !== ''){
-                            if(partsIndex === 0){
-                                sectionsTemplate += `
-                                <div class="item active">
-                                    <div>`+partsTemplate+`</div>
-                                </div>
-                                `;
-                            }else{
-                                sectionsTemplate += `
-                                <div class="item ">
-                                    <div>`+partsTemplate+`</div>
-                                </div>
-                                `;
-                            }
-
-
-                            }else{
-                                sectionsTemplate += `
-                                    <div class=" custom-part `+classTemplate+`  `+secClass+`  `+additionalClass+`" id="`+id+`" `+dataset+` `+animation+` `+method+` `+draggableTemplate+`  style="`+style+`  `+additionalStyle+`">
-                                        <div>`+partsTemplate+`</div>
-                                    </div>
-                                `;
-                            }
-                    });
-
-                    if(section.slider !== undefined && section.slider !== null && section.slider !== ''){
-                        let indicatorsTemplate = '';
-                        let navigationTemplate = '';
-
-                        if(section.slider.indicators){
-                            let indicatorsLength = section.parts.length;
-                            if(indicatorsLength === 1){
-                                indicatorsTemplate += `
-                                <ol class="carousel-indicators">
-                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                </ol>
-                                `;
-                            }else{
-                                let inActiveIndicatorsTemplate = '';
-                                let activeIndicatorsTemplate = '<li data-target="#myCarousel" data-slide-to="0" class="active"></li>'
-                                for (var i = 1; i < indicatorsLength; i++) {
-                                    inActiveIndicatorsTemplate += '<li data-target="#myCarousel" data-slide-to="'+i+'"></li>';
-                                }
-                                indicatorsTemplate += `
-                                    <ol class="carousel-indicators">
-                                        `+activeIndicatorsTemplate+`
-                                        `+inActiveIndicatorsTemplate+`
-                                    </ol>
-                                `;
-                            }
+                            sectionsTemplate += `
+                                  <div class=" custom-part" id="`+id+`"  `+animation+` `+draggableTemplate+` style="float: left; `+style+` ; `+newlyAddedSectionStyle+`">
+                                      <div  style="display: inline-block; width: 95%; float: left;">`+partsTemplate+`</div>
+                                      <div style="display: inline-block; width: 3%; float: right;">
+                                        <i id="`+threeDotsId+`" `+threeDotsMethod+` class="fa fa-ellipsis-v default-theme-color" aria-hidden="true" style=" display: block; width: 21px; text-align: center; padding: 3px; border-radius: 50px;"></i>
+                                      </div>
+                                  </div>
+                            `;
 
                         }
-                        if(section.slider.navigation){
-                            let leftNavigation = '';
-                            let rightNavigation = '';
-                            if(section.slider.navigation.type === 'glyphicon'){
-                                let leftStyle = '';
-                                if(section.slider.navigation.left.style !== undefined && section.slider.navigation.left.style !== '' && section.slider.navigation.left.style !== null){
-                                    leftStyle += section.slider.navigation.left.style;
-                                }
-                                leftNavigation += '<span class="glyphicon '+section.slider.navigation.left.icon+'" style="color: var(--default-theme-color); '+leftStyle+'"></span>'
+                        // else if(sectionName === 'products_section'){
+                        //     let img = 'static/img/gini_products_screenshots/giniChatBotHome.PNG';
+                        // }
+                        else if(section.slider !== undefined && section.slider !== null && section.slider !== ''){
+                          if(partsIndex === 0){
+                            sectionsTemplate += `
+                              <div class="item active">
+                                  <div>`+partsTemplate+`</div>
+                              </div>
+                            `;
+                          }else{
+                            sectionsTemplate += `
+                              <div class="item ">
+                                  <div>`+partsTemplate+`</div>
+                              </div>
+                            `;
+                          }
 
-                                let rightStyle = '';
-                                if(section.slider.navigation.right.style !== undefined && section.slider.navigation.right.style !== '' && section.slider.navigation.right.style !== null){
-                                    rightStyle += section.slider.navigation.right.style;
-                                }
-                                rightNavigation += '<span class="glyphicon '+section.slider.navigation.right.icon+'" style="color: var(--default-theme-color); '+rightStyle+'"></span>'
 
-                            }else if(section.slider.navigation.type === 'fontAwesome'){
-                                let leftStyle = '';
-                                if(section.slider.navigation.left.style !== undefined && section.slider.navigation.left.style !== '' && section.slider.navigation.left.style !== null){
-                                    leftStyle += section.slider.navigation.left.style;
-                                }
-                                // leftNavigation += '<span class="glyphicon '+section.slider.navigation.left.icon+'" style="color: var(--default-theme-color); '+style+'"></span>';
-                                leftNavigation += `  <i class="fa `+section.slider.navigation.left.icon+`" style="color: var(--default-theme-color); font-family: 'fontawesome'; `+leftStyle+`" aria-hidden="true"></i>`;
-                                let rightStyle = '';
-                                if(section.slider.navigation.right.style !== undefined && section.slider.navigation.right.style !== '' && section.slider.navigation.right.style !== null){
-                                    rightStyle += section.slider.navigation.right.style;
-                                }
-                                // rightNavigation += '<span class="glyphicon '+section.slider.navigation.right.icon+'" style="color: var(--default-theme-color); '+style+'"></span>'
-                                rightNavigation += `  <i class="fa `+section.slider.navigation.right.icon+`" style="color: var(--default-theme-color); font-family: 'fontawesome'; `+rightStyle+`" aria-hidden="true"></i>`;
-
-                            }
-                            navigationTemplate += `
-                                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                                `+leftNavigation+`
-                                <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                                `+rightNavigation+`
-                                <span class="sr-only">Next</span>
-                                </a>
+                        }else{
+                            sectionsTemplate += `
+                                  <div class=" custom-part `+classTemplate+`  `+secClass+`  `+additionalClass+`" id="`+id+`" `+dataset+` `+animation+` `+method+` `+draggableTemplate+`  style="`+style+`  `+additionalStyle+`">
+                                      <div>`+partsTemplate+`</div>
+                                  </div>
                             `;
                         }
-                        if(section.slider.type === "carousel"){
-                            blockTemplate = `
-                                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                    `+indicatorsTemplate+`
-                                    <div class="carousel-inner">`+sectionsTemplate+`</div>
-                                    `+navigationTemplate+`
-                                </div>
-                            `
-                        }
-                        // <div class="carousel-indicators">`+indicatorsTemplate+`</div>
-                        // <div class="carousel-inner">`+sectionsTemplate+`</div>
-                        // <div class="carousel-navigation">`+navigationTemplate+`</div>
-                    }else{
-                        if(section.postHTML !== undefined && section.postHTML !== null && section.postHTML !== ''){
-                            sectionsTemplate += ''+section.postHTML;
-                        }
-                        blockTemplate += `
-                            <div id="`+sectionId+` " class="`+sectionClass+`" style=" `+sectionStyle+`  `+isSectionVisibleStyle+`">
-                            `+sectionsTemplate+`
+                  });
+
+                  if(section.slider !== undefined && section.slider !== null && section.slider !== ''){
+                      let indicatorsTemplate = '';
+                      let navigationTemplate = '';
+
+                      if(section.slider.indicators){
+                          let indicatorsLength = section.parts.length;
+                          if(indicatorsLength === 1){
+                            indicatorsTemplate += `
+                              <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                              </ol>
+                            `;
+                          }else{
+                              let inActiveIndicatorsTemplate = '';
+                              let activeIndicatorsTemplate = '<li data-target="#myCarousel" data-slide-to="0" class="active"></li>'
+                              for (var i = 1; i < indicatorsLength; i++) {
+                                  inActiveIndicatorsTemplate += '<li data-target="#myCarousel" data-slide-to="'+i+'"></li>';
+                              }
+                              indicatorsTemplate += `
+                                <ol class="carousel-indicators">
+                                      `+activeIndicatorsTemplate+`
+                                      `+inActiveIndicatorsTemplate+`
+                                </ol>
+                              `;
+                          }
+
+                      }
+                      if(section.slider.navigation){
+                          let leftNavigation = '';
+                          let rightNavigation = '';
+                          if(section.slider.navigation.type === 'glyphicon'){
+                              let leftStyle = '';
+                              if(section.slider.navigation.left.style !== undefined && section.slider.navigation.left.style !== '' && section.slider.navigation.left.style !== null){
+                                  leftStyle += section.slider.navigation.left.style;
+                              }
+                              leftNavigation += '<span class="glyphicon '+section.slider.navigation.left.icon+'" style="color: var(--default-theme-color); '+leftStyle+'"></span>'
+
+                              let rightStyle = '';
+                              if(section.slider.navigation.right.style !== undefined && section.slider.navigation.right.style !== '' && section.slider.navigation.right.style !== null){
+                                  rightStyle += section.slider.navigation.right.style;
+                              }
+                              rightNavigation += '<span class="glyphicon '+section.slider.navigation.right.icon+'" style="color: var(--default-theme-color); '+rightStyle+'"></span>'
+
+                          }else if(section.slider.navigation.type === 'fontAwesome'){
+                              let leftStyle = '';
+                              if(section.slider.navigation.left.style !== undefined && section.slider.navigation.left.style !== '' && section.slider.navigation.left.style !== null){
+                                  leftStyle += section.slider.navigation.left.style;
+                              }
+                              // leftNavigation += '<span class="glyphicon '+section.slider.navigation.left.icon+'" style="color: var(--default-theme-color); '+style+'"></span>';
+                              leftNavigation += `  <i class="fa `+section.slider.navigation.left.icon+`" style="color: var(--default-theme-color); font-family: 'fontawesome'; `+leftStyle+`" aria-hidden="true"></i>`;
+                              let rightStyle = '';
+                              if(section.slider.navigation.right.style !== undefined && section.slider.navigation.right.style !== '' && section.slider.navigation.right.style !== null){
+                                  rightStyle += section.slider.navigation.right.style;
+                              }
+                              // rightNavigation += '<span class="glyphicon '+section.slider.navigation.right.icon+'" style="color: var(--default-theme-color); '+style+'"></span>'
+                              rightNavigation += `  <i class="fa `+section.slider.navigation.right.icon+`" style="color: var(--default-theme-color); font-family: 'fontawesome'; `+rightStyle+`" aria-hidden="true"></i>`;
+
+                          }
+                          navigationTemplate += `
+                            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                              `+leftNavigation+`
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                              `+rightNavigation+`
+                              <span class="sr-only">Next</span>
+                            </a>
+                          `;
+                      }
+                      if(section.slider.type === "carousel"){
+                         blockTemplate = `
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                  `+indicatorsTemplate+`
+                                  <div class="carousel-inner">`+sectionsTemplate+`</div>
+                                  `+navigationTemplate+`
                             </div>
-                        `;
+                          `
+                      }
+                      // <div class="carousel-indicators">`+indicatorsTemplate+`</div>
+                      // <div class="carousel-inner">`+sectionsTemplate+`</div>
+                      // <div class="carousel-navigation">`+navigationTemplate+`</div>
+                  }else{
+                    if(section.postHTML !== undefined && section.postHTML !== null && section.postHTML !== ''){
+                        sectionsTemplate += ''+section.postHTML;
                     }
-                    })
-                }
-            })
-        }
-
-        if(data && data.preHTML !== undefined && data.preHTML !== null && data.preHTML !== ''){
-            template += ''+data.preHTML;
-        }
-
-        // 3ft/3ft 18mm ply + 1.5 inch perek 100gm + half inch perek 5 takar + 3/4 channel 8ft + 25m;.                       ,             <                   ;///////////kkkkkkkkkkkkkkkppppppppppppppp0gm fevicol + 4pcs allmunium kona + headless perek 50gm + kacher klip 12 pcs + fivet screw +
-
-        if(data && data.block && data.block.sections && data.block.sections.length === sectionCount){
-        template += `
-                <div class="container" style="`+containerStyle+`">
-                    <div class="skills-content" style="width: 100%; `+blockStyle+`" data-aos="fade-up" >
-                        `+blockTemplate+`
-                    </div>
-                </div>
-        `;
-
-        if(data && data.postHTML !== undefined && data.postHTML !== null && data.postHTML !== ''){
-            template += ''+data.postHTML;
-        }
-
-        if(editable){
-            return {template : template, templateData: data};
-        }else{
-            return template;
-        }
+                    blockTemplate += `
+                        <div id="`+sectionId+` " class="`+sectionClass+`" style=" `+sectionStyle+`  `+isSectionVisibleStyle+`">
+                          `+sectionsTemplate+`
+                        </div>
+                    `;
+                  }
+                })
+            }
+        })
     }
 
+    if(data && data.preHTML !== undefined && data.preHTML !== null && data.preHTML !== ''){
+        template += ''+data.preHTML;
+    }
 
-   }catch(err){
-        console.log("=============== err : ", err)
-   }
+    // 3ft/3ft 18mm ply + 1.5 inch perek 100gm + half inch perek 5 takar + 3/4 channel 8ft + 25m;.                       ,             <                   ;///////////kkkkkkkkkkkkkkkppppppppppppppp0gm fevicol + 4pcs allmunium kona + headless perek 50gm + kacher klip 12 pcs + fivet screw +
 
+    if(data && data.block && data.block.sections && data.block.sections.length === sectionCount){
+      template += `
+            <div class="container" style="`+containerStyle+`">
+                <div class="skills-content" style="width: 100%; `+blockStyle+`" data-aos="fade-up" >
+                    `+blockTemplate+`
+                </div>
+            </div>
+      `;
+
+    if(data && data.postHTML !== undefined && data.postHTML !== null && data.postHTML !== ''){
+        template += ''+data.postHTML;
+    }
+
+    if(editable){
+        return {template : template, templateData: data};
+    }else{
+        return template;
+    }
+}
+    }catch(err){
+        console.log("======= err : ", err)
+    }
+    
 }
 
 function work_section(request){
@@ -4246,11 +4244,11 @@ function get_header_navigation_template(nav, application, request){
 
               if(index === 0 ){
                   if(item.type === 'link'){
-                    subNavTemplate += '<li class="active" '+navMethodTemplate+' style="outline: none !important;"><a href="#" class="custom-nav-menu" >'+item.key.name+'</a></li>'
+                    subNavTemplate += '<li class="active custom-mob-header-tabs" '+navMethodTemplate+' style="outline: none !important;"><a href="#" class="custom-nav-menu" >'+item.key.name+'</a></li>'
                   }
               }else{
                   if(item.type === 'link'){
-                    subNavTemplate += '<li '+navMethodTemplate+' style="outline: none !important;" ><a href="#" class="custom-nav-menu" >'+item.key.name+'</a></li>'
+                    subNavTemplate += '<li class="custom-mob-header-tabs" '+navMethodTemplate+' style="outline: none !important;" ><a href="#" class="custom-nav-menu" >'+item.key.name+'</a></li>'
                   }else if(item.type === 'dropDown'){
                       subNavTemplate += '  <li class="drop-down" class="custom-nav-menu" style="outline: none !important;" '+navMethodTemplate+'><a href="#" >'+item.key.name+'</a>';
                       subNavTemplate += get_nav_drop_down_template(item.links);

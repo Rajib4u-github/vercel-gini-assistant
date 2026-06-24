@@ -8613,7 +8613,7 @@ let sections_data = {
     //   }
     // },
 
-     "indianApiIndStocksNSEMostActive_section": {
+    "indianApiIndStocksNSEMostActive_section": {
       sectionName : 'indianApiIndStocksNSEMostActive_section', 
       dataSource: {
         type: 'API', 

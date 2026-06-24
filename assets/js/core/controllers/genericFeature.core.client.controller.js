@@ -453,9 +453,10 @@ console.log("============= file : genericFeature.core.client.controller.js =====
                     // socket.emit("request-generic-portfolio", request_section_data);
             }else if(item && item.section.name !== 'header'){
             console.log("==== request_section_data : ", request_section_data)
+            const customBlockClass = ((item.block.class !== '' || item.block.class !== null) ? item.block.class : '');
               sectionsTemplate += `
                   <section id="`+item.section.name+`" class="`+item.section.class+`" style="`+item.section.style+`">
-                      <div class="custom-`+item.section.name+`-block " id="custom_`+item.section.name+`_block" style="`+item.block.style+`">
+                      <div class="custom-`+item.section.name+`-block ${customBlockClass} " id="custom_`+item.section.name+`_block" style="`+item.block.style+`">
                           <div class="loader-block" id="custom_`+item.section.name+`_loader" style="display: block; `+item.loader.style+`">
                                 `+loaderTemplate+`
                           </div>
@@ -1598,10 +1599,13 @@ console.log("============= file : genericFeature.core.client.controller.js =====
     }
 
     window.onClickGiniHomeProducts = function(that, event){
+      console.log("================= on click onClickGiniProducts ==================");
       let argument = JSON.parse(that.getAttribute("data"));
+      console.log("@@@ argument  : ", argument);
       if(argument.redirectUrl){
             window.open(argument.redirectUrl, "_blank", );
       }
+      
     }
 
     window.onClickParts = function(that, event){

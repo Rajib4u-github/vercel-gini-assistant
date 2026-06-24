@@ -1,4 +1,4 @@
-var rawData = {
+const rawData = {
     "count": 25,
     'entries': [
     {

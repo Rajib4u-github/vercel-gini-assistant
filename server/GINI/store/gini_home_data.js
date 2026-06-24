@@ -2816,6 +2816,28 @@ let sections_data = {
                                    mapToSection : 'about',
                                    animationType: 'fade-up', animationDelay: null,
                                    desc: [
+                                     {type: 'image', key: {name: 'static/img/giniHomeServices/fworldcup26AppScreenshot.png', style: ' border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
+                                     // {type: 'wrap-open', key: {name: 'div', class: 'default-theme-color default-outline-color', style: 'display: inline-block; width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left; margin-top: 20px; border: 2px solid red; '},
+                                     {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
+                                     {type: 'text', key: {name: 'FIFA World Cup 2026', style: 'font-size: 18px; font-weight: 600; display: block; width: 100%; position: relative; top: 10px;'}, itemStyle: 'display: inline-block; width: 100%;'},
+                                     {type: 'text', key: {name: 'FIFA World Cup 2026 currently on live from 3 different country with 16 stadium, you can watch the Live stream now.', style: 'background: white; '},  itemStyle: 'display: inline-block; width: 100%; padding-top: 10px;'},
+                                     // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+                                   ],
+                                   event: [
+                                     {
+                                       eventName : 'onClickGiniHomeProducts(this, event)',
+                                       eventType: 'onclick',
+                                       argument : {redirectUrl: '/fworldcup26'},
+                                       dataSetName: 'nav-links-data'
+                                     },
+                                   ],
+                                   partStyle: 'display: inline-block; width: 31%;  margin-right: 1rem; margin-bottom: 1rem; padding: 10px 5px 20px 5px; color: black; box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2); transition: box-shadow 83ms;  border-radius: 2px; text-align: center; background: white; float: left;',
+                               },
+                               {
+                                   mapToSection : 'about',
+                                   animationType: 'fade-up', animationDelay: null,
+                                   desc: [
                                      {type: 'image', key: {name: 'static/img/giniHomeServices/publicApisPageScreenshot.png', style: ' border-radius: 0%; width: 100%; height: 225px;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
                                      // {type: 'wrap-open', key: {name: 'div', class: 'default-theme-color default-outline-color', style: 'display: inline-block; width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left; margin-top: 20px; border: 2px solid red; '},
                                      {type: 'icon', key: {name: 'product-hunt', type: 'font-awesome', style: "font-size: 24px; color: red;  position: relative;  padding-top: 10px; font-family: 'FontAwesome'; color: var(--default-theme-color);" }, itemStyle: 'display: inline-block; '},
