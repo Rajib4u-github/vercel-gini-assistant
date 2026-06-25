@@ -1655,7 +1655,7 @@ let sections_data = {
                             {type: 'text', key: {name: 'GROUP A', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px; '}, itemStyle: 'display: inline-block; width: 100% !important; float: left;'},
 
                           ],
-                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px; margin-left: -10px;',
+                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px;',
                       },
                   ],
                   sectionClass: '',
@@ -1674,7 +1674,7 @@ let sections_data = {
                                 {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
                                 {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
                                 // {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 600; ">Group : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
-                                {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: 'display: inline-block; width: 40%; position: absolute; top: 8%; right: 2%;'},
+                                {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: ''},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -1697,7 +1697,7 @@ let sections_data = {
                             {type: 'text', key: {name: 'GROUP B', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px;'}, itemStyle: 'display: inline-block; width: 100% !important; float: left;'},
 
                           ],
-                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px; margin-left: -10px;',
+                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px;',
                       },
                   ],
                   sectionClass: '',
@@ -1716,7 +1716,7 @@ let sections_data = {
                                 {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
                                 {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
                                 // {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 600; ">Group : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
-                                {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: 'display: inline-block; width: 40%; position: absolute; top: 8%; right: 2%;'},
+                                {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: ''},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -1739,7 +1739,7 @@ let sections_data = {
                             {type: 'text', key: {name: 'GROUP C', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px; '}, itemStyle: 'display: inline-block; width: 100% !important; float: left;'},
 
                           ],
-                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px; margin-left: -10px;',
+                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px;',
                       },
                   ],
                   sectionClass: '',
@@ -1758,7 +1758,7 @@ let sections_data = {
                                 {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
                                 {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
                                 // {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 600; ">Group : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
-                                {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: 'display: inline-block; width: 40%; position: absolute; top: 8%; right: 2%;'},
+                                {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: ''},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -1781,7 +1781,7 @@ let sections_data = {
                             {type: 'text', key: {name: 'GROUP D', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px;'}, itemStyle: 'display: inline-block; width: 100% !important; float: left;'},
 
                           ],
-                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px; margin-left: -10px;',
+                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px;',
                       },
                   ],
                   sectionClass: '',
@@ -1800,7 +1800,7 @@ let sections_data = {
                                 {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
                                 {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
                                 // {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 600; ">Group : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
-                                {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: 'display: inline-block; width: 40%; position: absolute; top: 8%; right: 2%;'},
+                                {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: ''},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -1823,7 +1823,7 @@ let sections_data = {
                             {type: 'text', key: {name: 'GROUP E', class: 'default-outline-color', style: 'display: inline-block; font-size: 22px; '}, itemStyle: 'display: inline-block; width: 100% !important; float: left;'},
 
                           ],
-                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px; margin-left: -10px;',
+                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px;',
                       },
                   ],
                   sectionClass: '',
@@ -1842,7 +1842,7 @@ let sections_data = {
                                 {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
                                 {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
                                 // {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 600; ">Group : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
-                                {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: 'display: inline-block; width: 40%; position: absolute; top: 8%; right: 2%;'},
+                                {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: ''},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -1865,7 +1865,7 @@ let sections_data = {
                             {type: 'text', key: {name: 'GROUP F', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px; '}, itemStyle: 'display: inline-block; width: 100% !important; float: left;'},
 
                           ],
-                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px; margin-left: -10px;',
+                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px;',
                       },
                   ],
                   sectionClass: '',
@@ -1884,7 +1884,7 @@ let sections_data = {
                                 {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
                                 {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
                                 // {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 600; ">Group : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
-                                {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: 'display: inline-block; width: 40%; position: absolute; top: 8%; right: 2%;'},
+                                {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: ''},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -1907,7 +1907,7 @@ let sections_data = {
                             {type: 'text', key: {name: 'GROUP G', class: 'default-outline-color', style: 'display: inline-block; font-size: 22px;'}, itemStyle: 'display: inline-block; width: 100% !important; float: left;'},
 
                           ],
-                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px; margin-left: -10px;',
+                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px;',
                       },
                   ],
                   sectionClass: '',
@@ -1926,7 +1926,7 @@ let sections_data = {
                                 {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
                                 {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
                                 // {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 600; ">Group : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
-                                {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: 'display: inline-block; width: 40%; position: absolute; top: 8%; right: 2%;'},
+                                {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: ''},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -1949,7 +1949,7 @@ let sections_data = {
                             {type: 'text', key: {name: 'GROUP H', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px;'}, itemStyle: 'display: inline-block; width: 100% !important; float: left;'},
 
                           ],
-                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px; margin-left: -10px;',
+                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px;',
                       },
                   ],
                   sectionClass: '',
@@ -1968,7 +1968,7 @@ let sections_data = {
                                 {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
                                 {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
                                 // {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 600; ">Group : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
-                                {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: 'display: inline-block; width: 40%; position: absolute; top: 8%; right: 2%;'},
+                                {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: ''},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -1991,7 +1991,7 @@ let sections_data = {
                             {type: 'text', key: {name: 'GROUP I', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px;'}, itemStyle: 'display: inline-block; width: 100% !important; float: left;'},
 
                           ],
-                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px; margin-left: -10px;',
+                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px;',
                       },
                   ],
                   sectionClass: '',
@@ -2010,7 +2010,7 @@ let sections_data = {
                                 {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
                                 {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
                                 // {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 600; ">Group : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
-                                {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: 'display: inline-block; width: 40%; position: absolute; top: 8%; right: 2%;'},
+                                {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: ''},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -2033,7 +2033,7 @@ let sections_data = {
                             {type: 'text', key: {name: 'GROUP J', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px; '}, itemStyle: 'display: inline-block; width: 100% !important; float: left;'},
 
                           ],
-                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px; margin-left: -10px;',
+                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px;',
                       },
                   ],
                   sectionClass: '',
@@ -2052,7 +2052,7 @@ let sections_data = {
                                 {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
                                 {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
                                 // {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 600; ">Group : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
-                                {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: 'display: inline-block; width: 40%; position: absolute; top: 8%; right: 2%;'},
+                                {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: ''},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -2075,7 +2075,7 @@ let sections_data = {
                             {type: 'text', key: {name: 'GROUP K', class: 'default-outline-color', style: 'display: inline-block; font-size: 22px;'}, itemStyle: 'display: inline-block; width: 100% !important; float: left;'},
 
                           ],
-                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px; margin-left: -10px;',
+                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px;',
                       },
                   ],
                   sectionClass: '',
@@ -2094,7 +2094,7 @@ let sections_data = {
                                 {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
                                 {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
                                 // {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 600; ">Group : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
-                                {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: 'display: inline-block; width: 40%; position: absolute; top: 8%; right: 2%;'},
+                                {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: ''},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -2117,7 +2117,7 @@ let sections_data = {
                             {type: 'text', key: {name: 'GROUP L', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px;'}, itemStyle: 'display: inline-block; width: 100% !important; float: left;'},
 
                           ],
-                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px; margin-left: -10px;',
+                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px;',
                       },
                   ],
                   sectionClass: '',
@@ -2136,7 +2136,7 @@ let sections_data = {
                                 {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
                                 {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
                                 // {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 600; ">Group : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
-                                {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: 'display: inline-block; width: 40%; position: absolute; top: 8%; right: 2%;'},
+                                {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: ''},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
