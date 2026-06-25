@@ -2169,7 +2169,7 @@ let sections_data = {
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
                             {type: 'text', key: {name: 'Next Match Portugal', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
-                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=POR&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
+                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=POR&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -2191,7 +2191,7 @@ let sections_data = {
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
                             {type: 'text', key: {name: 'Next Match Brazil', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
-                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=BRA&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
+                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=BRA&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -2213,7 +2213,7 @@ let sections_data = {
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
                             {type: 'text', key: {name: 'Next Match Argentina', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
-                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=ARG&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
+                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=ARG&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -2235,7 +2235,7 @@ let sections_data = {
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
                             {type: 'text', key: {name: 'Next Match France', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
-                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=FRA&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
+                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=FRA&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -2258,7 +2258,7 @@ let sections_data = {
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
                             {type: 'text', key: {name: 'Next Match England', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
-                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=ENG&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
+                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=ENG&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -2280,7 +2280,7 @@ let sections_data = {
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
                             {type: 'text', key: {name: 'Next Match Belgium', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
-                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=BEL&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
+                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=BEL&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -2302,7 +2302,7 @@ let sections_data = {
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
                             {type: 'text', key: {name: 'Next Match Colombia', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
-                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=COL&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
+                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=COL&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -2324,7 +2324,7 @@ let sections_data = {
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
                             {type: 'text', key: {name: 'Next Match Croatia', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
-                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=CRO&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
+                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=CRO&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -2348,7 +2348,7 @@ let sections_data = {
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
                             {type: 'text', key: {name: 'Next Match Germany', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
-                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=GER&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
+                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=GER&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -2370,7 +2370,7 @@ let sections_data = {
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
                             {type: 'text', key: {name: 'Next Match Ghana', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
-                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=GHA&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
+                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=GHA&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -2392,7 +2392,7 @@ let sections_data = {
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
                             {type: 'text', key: {name: 'Next Match Japan', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
-                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=JPN&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
+                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=JPN&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -2414,7 +2414,7 @@ let sections_data = {
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
                             {type: 'text', key: {name: 'Next Match Netherland', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
-                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=NED&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
+                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=NED&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -2438,7 +2438,7 @@ let sections_data = {
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
                             {type: 'text', key: {name: 'Next Match Mexico', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
-                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=MEX&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
+                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=MEX&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -2460,7 +2460,7 @@ let sections_data = {
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
                             {type: 'text', key: {name: 'Next Match Morocco', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
-                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=MAR&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
+                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=MAR&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -2482,7 +2482,7 @@ let sections_data = {
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
                             {type: 'text', key: {name: 'Next Match Spain', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
-                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=ESP&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
+                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=ESP&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -2504,7 +2504,7 @@ let sections_data = {
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
                             {type: 'text', key: {name: 'Next Match Switzerland', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
-                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=SUI&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
+                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=SUI&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -2536,7 +2536,7 @@ let sections_data = {
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
                             {type: 'text', key: {name: 'Todays Upcomming Match', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px;'},
-                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/match?tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
+                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/match?tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-upcomming-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
@@ -2647,7 +2647,7 @@ let sections_data = {
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
                             {type: 'text', key: {name: 'Round Of 32 Tracker', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
-                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/r32', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img fwcup26-top-scorer-widget-img fwcup26-round32-widget-img ',  style: ''}, itemStyle: 'display: inline-block; '},
+                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/r32', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img fwcup26-round32-widget-img ',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
