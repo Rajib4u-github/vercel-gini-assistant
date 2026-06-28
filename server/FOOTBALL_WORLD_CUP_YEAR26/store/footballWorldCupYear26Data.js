@@ -1652,10 +1652,10 @@ let sections_data = {
                           isDraggable  : true,
                           desc: [
                             // {type: 'text', key: {name: 'FOOTBALL WORLD CUP 2026 GROUP DETAILS', class: 'default-theme-color default-outline-color custom-primary-font-color', style: 'display: inline-block; font-size: 28px; width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 0px 16px 0px; float: left;'},
-                            {type: 'text', key: {name: 'GROUP A', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px; '}, itemStyle: 'display: inline-block; width: 100% !important; float: left;'},
+                            {type: 'text', key: {name: 'Group A', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px; '}, itemStyle: 'display: inline-block; width: 100% !important; '},
 
                           ],
-                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px;',
+                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 9px; margin-left: 10px; margin-top: -5px; color: black;',
                       },
                   ],
                   sectionClass: '',
@@ -1671,15 +1671,15 @@ let sections_data = {
                         desc: [
                           // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
                             {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
+                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 12px; padding-bottom: 3px; '}, itemStyle: ''},
                                 // {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 600; ">Group : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
                                 {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: ''},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1694,10 +1694,10 @@ let sections_data = {
                           animationType: 'fade-up', animationDelay: null,
                           isDraggable  : true,
                           desc: [
-                            {type: 'text', key: {name: 'GROUP B', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px;'}, itemStyle: 'display: inline-block; width: 100% !important; float: left;'},
+                            {type: 'text', key: {name: 'Group B', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px;'}, itemStyle: 'display: inline-block; width: 100% !important;'},
 
                           ],
-                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px;',
+                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 9px; margin-left: 10px; margin-top: -5px; color: black;',
                       },
                   ],
                   sectionClass: '',
@@ -1710,18 +1710,18 @@ let sections_data = {
                     {
                         animationType: 'fade-up', animationDelay: null,
                         isDraggable  : false,
-                         desc: [
+                        desc: [
                           // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
                             {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
+                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 12px; padding-bottom: 3px; '}, itemStyle: ''},
                                 // {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 600; ">Group : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
                                 {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: ''},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1736,10 +1736,10 @@ let sections_data = {
                           animationType: 'fade-up', animationDelay: null,
                           isDraggable  : true,
                           desc: [
-                            {type: 'text', key: {name: 'GROUP C', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px; '}, itemStyle: 'display: inline-block; width: 100% !important; float: left;'},
+                            {type: 'text', key: {name: 'Group C', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px; '}, itemStyle: 'display: inline-block; width: 100% !important;'},
 
                           ],
-                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px;',
+                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 9px; margin-left: 10px; margin-top: -5px; color: black;',
                       },
                   ],
                   sectionClass: '',
@@ -1752,18 +1752,18 @@ let sections_data = {
                     {
                         animationType: 'fade-up', animationDelay: null,
                         isDraggable  : false,
-                         desc: [
+                        desc: [
                           // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
                             {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
+                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 12px; padding-bottom: 3px; '}, itemStyle: ''},
                                 // {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 600; ">Group : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
                                 {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: ''},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1778,10 +1778,10 @@ let sections_data = {
                           animationType: 'fade-up', animationDelay: null,
                           isDraggable  : true,
                           desc: [
-                            {type: 'text', key: {name: 'GROUP D', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px;'}, itemStyle: 'display: inline-block; width: 100% !important; float: left;'},
+                            {type: 'text', key: {name: 'Group D', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px;'}, itemStyle: 'display: inline-block; width: 100% !important;'},
 
                           ],
-                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px;',
+                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 9px; margin-left: 10px; margin-top: -5px; color: black;',
                       },
                   ],
                   sectionClass: '',
@@ -1794,18 +1794,18 @@ let sections_data = {
                     {
                         animationType: 'fade-up', animationDelay: null,
                         isDraggable  : false,
-                         desc: [
+                        desc: [
                           // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
                             {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
+                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 12px; padding-bottom: 3px; '}, itemStyle: ''},
                                 // {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 600; ">Group : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
                                 {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: ''},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1820,10 +1820,10 @@ let sections_data = {
                           animationType: 'fade-up', animationDelay: null,
                           isDraggable  : true,
                           desc: [
-                            {type: 'text', key: {name: 'GROUP E', class: 'default-outline-color', style: 'display: inline-block; font-size: 22px; '}, itemStyle: 'display: inline-block; width: 100% !important; float: left;'},
+                            {type: 'text', key: {name: 'Group E', class: 'default-outline-color', style: 'display: inline-block; font-size: 22px; '}, itemStyle: 'display: inline-block; width: 100% !important;'},
 
                           ],
-                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px;',
+                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 9px; margin-left: 10px; margin-top: -5px; color: black;',
                       },
                   ],
                   sectionClass: '',
@@ -1836,18 +1836,18 @@ let sections_data = {
                     {
                         animationType: 'fade-up', animationDelay: null,
                         isDraggable  : false,
-                         desc: [
+                        desc: [
                           // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
                             {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
+                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 12px; padding-bottom: 3px; '}, itemStyle: ''},
                                 // {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 600; ">Group : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
                                 {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: ''},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1862,10 +1862,10 @@ let sections_data = {
                           animationType: 'fade-up', animationDelay: null,
                           isDraggable  : true,
                           desc: [
-                            {type: 'text', key: {name: 'GROUP F', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px; '}, itemStyle: 'display: inline-block; width: 100% !important; float: left;'},
+                            {type: 'text', key: {name: 'Group F', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px; '}, itemStyle: 'display: inline-block; width: 100% !important;'},
 
                           ],
-                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px;',
+                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 9px; margin-left: 10px; margin-top: -5px; color: black;',
                       },
                   ],
                   sectionClass: '',
@@ -1881,15 +1881,15 @@ let sections_data = {
                         desc: [
                           // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
                             {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
+                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 12px; padding-bottom: 3px; '}, itemStyle: ''},
                                 // {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 600; ">Group : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
                                 {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: ''},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1904,10 +1904,10 @@ let sections_data = {
                           animationType: 'fade-up', animationDelay: null,
                           isDraggable  : true,
                           desc: [
-                            {type: 'text', key: {name: 'GROUP G', class: 'default-outline-color', style: 'display: inline-block; font-size: 22px;'}, itemStyle: 'display: inline-block; width: 100% !important; float: left;'},
+                            {type: 'text', key: {name: 'Group G', class: 'default-outline-color', style: 'display: inline-block; font-size: 22px;'}, itemStyle: 'display: inline-block; width: 100% !important;'},
 
                           ],
-                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px;',
+                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 9px; margin-left: 10px; margin-top: -5px; color: black;',
                       },
                   ],
                   sectionClass: '',
@@ -1923,15 +1923,15 @@ let sections_data = {
                         desc: [
                           // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
                             {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
+                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 12px; padding-bottom: 3px; '}, itemStyle: ''},
                                 // {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 600; ">Group : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
                                 {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: ''},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1946,10 +1946,10 @@ let sections_data = {
                           animationType: 'fade-up', animationDelay: null,
                           isDraggable  : true,
                           desc: [
-                            {type: 'text', key: {name: 'GROUP H', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px;'}, itemStyle: 'display: inline-block; width: 100% !important; float: left;'},
+                            {type: 'text', key: {name: 'Group H', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px;'}, itemStyle: 'display: inline-block; width: 100% !important;'},
 
                           ],
-                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px;',
+                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 9px; margin-left: 10px; margin-top: -5px; color: black;',
                       },
                   ],
                   sectionClass: '',
@@ -1965,15 +1965,15 @@ let sections_data = {
                         desc: [
                           // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
                             {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
+                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 12px; padding-bottom: 3px; '}, itemStyle: ''},
                                 // {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 600; ">Group : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
                                 {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: ''},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1988,10 +1988,10 @@ let sections_data = {
                           animationType: 'fade-up', animationDelay: null,
                           isDraggable  : true,
                           desc: [
-                            {type: 'text', key: {name: 'GROUP I', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px;'}, itemStyle: 'display: inline-block; width: 100% !important; float: left;'},
+                            {type: 'text', key: {name: 'Group I', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px;'}, itemStyle: 'display: inline-block; width: 100% !important;'},
 
                           ],
-                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px;',
+                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 9px; margin-left: 10px; margin-top: -5px; color: black;',
                       },
                   ],
                   sectionClass: '',
@@ -2004,18 +2004,18 @@ let sections_data = {
                     {
                         animationType: 'fade-up', animationDelay: null,
                         isDraggable  : false,
-                         desc: [
+                        desc: [
                           // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
                             {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
+                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 12px; padding-bottom: 3px; '}, itemStyle: ''},
                                 // {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 600; ">Group : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
                                 {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: ''},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -2030,10 +2030,10 @@ let sections_data = {
                           animationType: 'fade-up', animationDelay: null,
                           isDraggable  : true,
                           desc: [
-                            {type: 'text', key: {name: 'GROUP J', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px; '}, itemStyle: 'display: inline-block; width: 100% !important; float: left;'},
+                            {type: 'text', key: {name: 'Group J', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px; '}, itemStyle: 'display: inline-block; width: 100% !important;'},
 
                           ],
-                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px;',
+                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 9px; margin-left: 10px; margin-top: -5px; color: black;',
                       },
                   ],
                   sectionClass: '',
@@ -2049,15 +2049,15 @@ let sections_data = {
                         desc: [
                           // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
                             {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
+                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 12px; padding-bottom: 3px; '}, itemStyle: ''},
                                 // {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 600; ">Group : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
                                 {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: ''},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -2072,10 +2072,10 @@ let sections_data = {
                           animationType: 'fade-up', animationDelay: null,
                           isDraggable  : true,
                           desc: [
-                            {type: 'text', key: {name: 'GROUP K', class: 'default-outline-color', style: 'display: inline-block; font-size: 22px;'}, itemStyle: 'display: inline-block; width: 100% !important; float: left;'},
+                            {type: 'text', key: {name: 'Group K', class: 'default-outline-color', style: 'display: inline-block; font-size: 22px;'}, itemStyle: 'display: inline-block; width: 100% !important;'},
 
                           ],
-                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px;',
+                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 9px; margin-left: 10px; margin-top: -5px; color: black;',
                       },
                   ],
                   sectionClass: '',
@@ -2091,15 +2091,15 @@ let sections_data = {
                         desc: [
                           // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
                             {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
+                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 12px; padding-bottom: 3px; '}, itemStyle: ''},
                                 // {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 600; ">Group : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
                                 {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: ''},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -2114,10 +2114,10 @@ let sections_data = {
                           animationType: 'fade-up', animationDelay: null,
                           isDraggable  : true,
                           desc: [
-                            {type: 'text', key: {name: 'GROUP L', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px;'}, itemStyle: 'display: inline-block; width: 100% !important; float: left;'},
+                            {type: 'text', key: {name: 'Group L', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px;'}, itemStyle: 'display: inline-block; width: 100% !important;'},
 
                           ],
-                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 10px;',
+                          partStyle: 'width: 100%;display: inline-block;  font-family: math; padding-bottom: 9px; margin-left: 10px; margin-top: -5px; color: black;',
                       },
                   ],
                   sectionClass: '',
@@ -2133,15 +2133,15 @@ let sections_data = {
                         desc: [
                           // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
                             {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
+                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'continent', class: '', style: 'font-size: 12px; padding-bottom: 3px; '}, itemStyle: ''},
                                 // {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 600; ">Group : </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
                                 {type: 'image', dataSource: 'API', key: {name: 'countryFlagImgUrl', defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-widget-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: ''},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -2980,50 +2980,132 @@ let sections_data = {
                 animationType: 'fade-up', animationDelay: null,
                 dataSource: {from: 'API', dataPath: 'root>entries>stadiums', view: 'collection', limit: "none"},
                 parts: [
-                    // {
-                    //     animationType: 'fade-up', animationDelay: null,
-                    //     isDraggable  : false,
-                    //     desc: [
-                    //       // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
-                    //         {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                    //             {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 700;'}, itemStyle: 'white-space: nowrap; overflow: hidden; text-overflow: ellipsis;'},
-                    //             {type: 'text', dataSource: 'API', key: {name: 'city', class: '', style: 'font-size: 15px; padding-bottom: 3px; '}, itemStyle: 'min-height: 65px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;'},
-                    //             {type: 'text', dataSource: 'API', key: {name: 'capacity', class: '', style: 'font-size: 15px; padding-bottom: 3px; '}, itemStyle: 'min-height: 65px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;'},
-                            
-                    //         {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
-
-                    //     ],
-                    //     partClass: 'collection-parts-mob-style  overlay-container',
-                    //     partStyle: 'display: inline-block; width: 31%; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 15px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
-                    // },
                     {
                         animationType: 'fade-up', animationDelay: null,
                         isDraggable  : false,
                         desc: [
                           // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
                             {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 700;'}, itemStyle: 'white-space: nowrap;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'city', class: '', preHtml: '<span style="font-weight: 500; ">City: </span>', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
-                                {type: 'text', dataSource: 'API', key: {name: 'capacity', preHtml: '<span style="font-weight: 500; ">Capacity: </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'timezone', preHtml: '<span style="font-weight: 500; ">Timezone: </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'coords', preHtml: '<span style="font-weight: 500; ">Coords: </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 700;'}, itemStyle: 'white-space: nowrap;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'city', class: '', preHtml: '<span style="font-weight: 300; ">City: </span>', style: 'font-size: 11px; padding-bottom: 3px; '}, itemStyle: ''},
+                                {type: 'text', dataSource: 'API', key: {name: 'capacity', preHtml: '<span style="font-weight: 300; ">Capacity: </span>', style: 'font-size: 11px; '}, itemStyle: 'white-space: initial;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'timezone', preHtml: '<span style="font-weight: 300; ">Timezone: </span>', style: 'font-size: 11px; '}, itemStyle: 'white-space: initial;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'coords', preHtml: '<span style="font-weight: 300; ">Coords: </span>', style: 'font-size: 11px; '}, itemStyle: 'white-space: initial;'},
 
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 custom-stadiums-part',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'collection-parts-mob-style  overlay-container ',
                 sectionStyle: 'clear: both;'
                 // sectionStyle: 'overflow-x: scroll; overflow-y: hidden; white-space: nowrap;',
-              },
+            },
+            // {
+            //     animationType: 'fade-up', animationDelay: null,
+            //     dataSource: {from: 'API', dataPath: 'root>entries>stadiums', view: 'collection', limit: "none"},
+            //     parts: [
+            //         // {
+            //         //     animationType: 'fade-up', animationDelay: null,
+            //         //     isDraggable  : false,
+            //         //     desc: [
+            //         //       // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
+            //         //         {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
+            //         //             {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 700;'}, itemStyle: 'white-space: nowrap; overflow: hidden; text-overflow: ellipsis;'},
+            //         //             {type: 'text', dataSource: 'API', key: {name: 'city', class: '', style: 'font-size: 15px; padding-bottom: 3px; '}, itemStyle: 'min-height: 65px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;'},
+            //         //             {type: 'text', dataSource: 'API', key: {name: 'capacity', class: '', style: 'font-size: 15px; padding-bottom: 3px; '}, itemStyle: 'min-height: 65px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;'},
+                            
+            //         //         {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+            //         //     ],
+            //         //     partClass: 'collection-parts-mob-style  overlay-container',
+            //         //     partStyle: 'display: inline-block; width: 31%; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 15px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+            //         // },
+            //         {
+            //             animationType: 'fade-up', animationDelay: null,
+            //             isDraggable  : false,
+            //             desc: [
+            //               // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
+            //                 {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
+            //                     {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 700;'}, itemStyle: 'white-space: nowrap;'},
+            //                     {type: 'text', dataSource: 'API', key: {name: 'city', class: '', preHtml: '<span style="font-weight: 500; ">City: </span>', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
+            //                     {type: 'text', dataSource: 'API', key: {name: 'capacity', preHtml: '<span style="font-weight: 500; ">Capacity: </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
+            //                     {type: 'text', dataSource: 'API', key: {name: 'timezone', preHtml: '<span style="font-weight: 500; ">Timezone: </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
+            //                     {type: 'text', dataSource: 'API', key: {name: 'coords', preHtml: '<span style="font-weight: 500; ">Coords: </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
+
+            //                 {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+            //             ],
+            //             partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 custom-stadiums-part',
+            //             partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+            //         },
+            //     ],
+            //     sectionClass: 'collection-parts-mob-style  overlay-container ',
+            //     sectionStyle: 'clear: both;'
+            //     // sectionStyle: 'overflow-x: scroll; overflow-y: hidden; white-space: nowrap;',
+            // },
 
         ],
           blockStyle: '',
       }
     },
+
+    "footballWorldCupYear2026NationSquads_section": {
+      sectionName : 'footballWorldCupYear2026NationSquads_section',
+      // dataSource: {type: 'API', url: 'https://api.publicapis.org/entries'},
+      dataSource: {type: 'DATA-SERVER', dataFilePath: '/FOOTBALL_WORLD_CUP_YEAR26/store/footballWorldCup26NationSquads.js'},
+      block: {
+          sections: [
+            {
+                animationType: 'fade-up', animationDelay: null,
+                dataSource: {from: 'API', dataPath: 'root>entries', view: 'custom-collection', limit: "none"},
+                parts: [
+                    {
+                        animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root',
+                        desc: [
+                          // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 16px 10px 16px 10px;'},
+                                {type: 'text', dataSource: 'API',  key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 500; ">Group: </span>', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
+                                {type: 'text', key: {name: 'Here are the team squads for 2026', class: '', style: 'font-size: 11px; padding-bottom: 3px; '}, itemStyle: ''},
+
+                            {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+                        ],
+                        partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
+                        partStyle: 'display: inline-block; margin-right: 5px; margin-bottom: 10px; vertical-align: top; background: white; color: black; font-family: math; padding: 0px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                    },
+                    {
+                        animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root>players',
+                        desc: [
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 14px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'club>name', preHtml: '<span style="font-weight: 500; "></span>', class: '', style: 'font-size: 11px; padding-bottom: 3px; '}, itemStyle: ''},
+                                {type: 'text', dataSource: 'API', key: {name: 'date_of_birth', preHtml: '<span style="font-weight: 600; "></span>', class: '', style: 'font-size: 11px; padding-bottom: 3px; '}, itemStyle: ''},
+                                {type: 'text', dataSource: 'API', key: {name: 'pos', class: '', preHtml: '<span style="font-weight: 500; "></span>', style: 'font-size: 11px; padding-bottom: 3px; '}, itemStyle: ''},
+
+                            {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+                        ],
+                        partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 custom-players-inner-part',
+                        partStyle: 'display: inline-block; margin-right: 5px; margin-bottom: 10px; vertical-align: top; background: black; color: white; font-family: math; font-weight: 100; padding: 0px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                    },
+                ],
+                sectionClass: 'desktop-sec-style mob-sec-style custom-mob-sec-style',
+                sectionStyle: 'clear: both;'
+                // sectionStyle: 'overflow-x: scroll; overflow-y: hidden; white-space: nowrap;',
+            },
+        ],
+          blockStyle: '',
+      }
+    },
+
 
     "headerNav_section": {
         sectionName : 'headerNav_section',
@@ -3065,6 +3147,23 @@ let sections_data = {
                     eventName : 'onClickHeaderNavigation(this, event)',
                     eventType: 'onclick',
                     argument : {mapToSections: ['footballWorldCupYear26GroupStandings']},
+                    dataSetName: 'nav-links-data'
+                  },
+                ],
+                itemStyle: ''
+              }
+            },
+             {
+              type: 'link',
+              key: {
+                name: 'Team Squads',
+                class: '',
+                style: '',
+                event: [
+                  {
+                    eventName : 'onClickHeaderNavigation(this, event)',
+                    eventType: 'onclick',
+                    argument : {mapToSections: ['footballWorldCupYear2026NationSquads']},
                     dataSetName: 'nav-links-data'
                   },
                 ],
@@ -3193,7 +3292,13 @@ let sections_data = {
             loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
             template: {style: ''}
           },
-
+          {
+            section: {name: 'footballWorldCupYear2026NationSquads', id: '', class: '', style: ''},
+            menu: {name: '', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: 'fwcup26-nation-squads-custom-layout', style: ' '},
+            loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+            template: {style: ''}
+          },
           
 
         ],

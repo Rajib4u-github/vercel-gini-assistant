@@ -1677,7 +1677,77 @@ function get_schema_to_section_data(section, dataSourceData, sectionName, reques
             let newPartsSchema1 = getNewPartsDescSchema(request, section, localDataSourceData, partsSchema, localDataSourceData, 0);
             filteredParts.push(newPartsSchema1);
 
-      }
+        }else if(section.dataSource.view !== undefined && section.dataSource.view !== null && section.dataSource.view === 'custom-collection'){
+            let partsSchemaSubTemplate = '';
+            if(localDataSourceData !== undefined && localDataSourceData !== null && localDataSourceData !== ''){
+                if(Array.isArray(localDataSourceData)){
+                        if(section.dataSource.limit === "none"){
+                            localDataSourceData = localDataSourceData;
+                        }else if(localDataSourceData.length > 10 && section.dataSource.limit !== undefined && section.dataSource.limit !== null && section.dataSource.limit !== ''){
+                            localDataSourceData = localDataSourceData.slice(0, section.dataSource.limit);
+                        }
+                }
+
+                localDataSourceData.forEach((item, itemIndex) => {
+
+                        if(section.parts.length){
+                            section.parts.forEach((part, partIndex) => {
+                                let partsSchema = part;
+                                let result;
+                                if(part.innerDataPath === 'root'){
+                                    
+                                    if(partsSchema.addClass !== undefined && partsSchema.addClass !== ''){
+                                        if(partsSchema.addClass.exp !==undefined && partsSchema.addClass.exp !== ''){
+                                            partsSchema.addClass.expResult = eval(partsSchema.addClass.exp);
+                                            result = eval(partsSchema.addClass.exp);
+                                        }
+                                    }
+                                    if(partsSchema.addStyle !== undefined && partsSchema.addStyle !== null){
+                                    if(partsSchema.addStyle.exp !== undefined && partsSchema.addStyle.exp !== ''){
+                                        partsSchema.addStyle.expResult = eval(partsSchema.addStyle.exp);
+                                        result = eval(partsSchema.addStyle.exp);
+                                    }
+                                    }
+                                    
+                                    partsSchemaSubTemplate = getNewPartsDescSchema(request, section, localDataSourceData, partsSchema, item, itemIndex)
+                                    filteredParts.push(partsSchemaSubTemplate);
+                                    
+                                }else if(part.innerDataPath.indexOf(">") !== -1){
+                                        if(part.innerDataPath !== undefined && part.innerDataPath !== ''){
+                                        let targetInnerDataPath = '';
+                                        let localInnerData = '';
+                                        if(part.innerDataPath.split(">").length === 2){
+                                            targetInnerDataPath = part.innerDataPath.split(">")[1];
+                                        }
+                                        console.log("======= targetInnerDataPath : ", targetInnerDataPath)
+                                        if(item && item[targetInnerDataPath] !== undefined){
+                                            localInnerData = item[targetInnerDataPath];
+                                        }
+
+                                        console.log(" ==== localDataSourceData inner data : ", localInnerData)
+
+
+                                        if(Array.isArray(localInnerData)){
+                                            localInnerData.forEach((innerItem, innerItemIndex) => {
+                                                partsSchemaSubTemplate = getNewPartsDescSchema(request, section, localInnerData, partsSchema, innerItem, innerItemIndex)
+                                                filteredParts.push(partsSchemaSubTemplate);
+
+                                            })
+                                        }
+                                    }
+                                }
+                                
+                            })
+                            
+                            // filteredParts.push(partsSchemaSubTemplate);
+
+                        }       
+                })
+
+                // filteredParts.push(partsSchemaSubTemplate);
+
+            }
+        }
               console.log("111111111111111111111111111111111111111111111111111111")
 
       return filteredParts;
