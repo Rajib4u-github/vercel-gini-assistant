@@ -2647,11 +2647,11 @@ let sections_data = {
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
                             {type: 'text', key: {name: 'Round Of 32 Tracker', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
-                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/r32', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img fwcup26-round32-widget-img ',  style: ''}, itemStyle: 'display: inline-block; '},
+                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/r32', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img fwcup26-round32-widget-img ',  style: ''}, itemStyle: 'display: inline-block; ',  itemClass: 'scrollable-image-block'},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
-                        partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
+                        partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style scrollable-image-container',
                         partStyle: 'display: inline-block; ',
                     },
                 ],
@@ -2659,73 +2659,7 @@ let sections_data = {
                 sectionStyle: 'clear: both; '
                 // sectionStyle: 'overflow-x: scroll; overflow-y: hidden; white-space: nowrap;',
             }, 
-            // {
-            //     animationType: 'fade-up', animationDelay: null,
-            //     // dataSource: {from: 'API', dataPath: 'root>entries>groupA', view: 'collection', limit: "none"},
-            //     parts: [
-            //         {
-            //             animationType: 'fade-up', animationDelay: null,
-            //             isDraggable  : false,
-            //             desc: [
-            //                 // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-            //                 {type: 'text', key: {name: 'All Groups Standings', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
-            //                 {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/groups', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img fwcup26-brackets-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
-            //                 // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
-
-            //             ],
-            //             partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
-            //             partStyle: 'display: inline-block; ',
-            //         },
-            //     ],
-            //     sectionClass: 'fwcup26-custom-widget-section',
-            //     sectionStyle: 'clear: both; '
-            //     // sectionStyle: 'overflow-x: scroll; overflow-y: hidden; white-space: nowrap;',
-            // },
-            // {
-            //     animationType: 'fade-up', animationDelay: null,
-            //     // dataSource: {from: 'API', dataPath: 'root>entries>groupA', view: 'collection', limit: "none"},
-            //     parts: [
-            //         {
-            //             animationType: 'fade-up', animationDelay: null,
-            //             isDraggable  : false,
-            //             desc: [
-            //                 // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-            //                 {type: 'text', key: {name: 'Knockout Bracket', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
-            //                 {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/bracket', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img fwcup26-brackets-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
-            //                 // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
-
-            //             ],
-            //             partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
-            //             partStyle: 'display: inline-block; ',
-            //         },
-            //     ],
-            //     sectionClass: 'fwcup26-custom-widget-section',
-            //     sectionStyle: 'clear: both; '
-            //     // sectionStyle: 'overflow-x: scroll; overflow-y: hidden; white-space: nowrap;',
-            // },
            
-            // {
-            //     animationType: 'fade-up', animationDelay: null,
-            //     // dataSource: {from: 'API', dataPath: 'root>entries>groupA', view: 'collection', limit: "none"},
-            //     parts: [
-            //         {
-            //             animationType: 'fade-up', animationDelay: null,
-            //             isDraggable  : false,
-            //             desc: [
-            //                 // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-            //                 {type: 'text', key: {name: 'World Cup 26 Statics', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
-            //                 {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/stats', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
-            //                 // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
-
-            //             ],
-            //             partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
-            //             partStyle: 'display: inline-block;',
-            //         },
-            //     ],
-            //     sectionClass: 'fwcup26-custom-widget-section',
-            //     sectionStyle: 'clear: both; '
-            //     // sectionStyle: 'overflow-x: scroll; overflow-y: hidden; white-space: nowrap;',
-            // },
             {
                 animationType: 'fade-up', animationDelay: null,
                 // dataSource: {from: 'API', dataPath: 'root>entries>groupA', view: 'collection', limit: "none"},
@@ -2736,11 +2670,11 @@ let sections_data = {
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
                             {type: 'text', key: {name: 'All Group Standings', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
-                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/groups', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img fwcup26-large-groups-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
+                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/groups', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img fwcup26-large-groups-widget-img',  style: ''}, itemStyle: 'display: inline-block; ', itemClass: 'scrollable-image-block'},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
-                        partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
+                        partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style scrollable-image-container',
                         partStyle: 'display: inline-block; ',
                     },
                 ],
@@ -2758,11 +2692,11 @@ let sections_data = {
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
                             {type: 'text', key: {name: 'Knockout Bracket', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
-                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/bracket', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img fwcup26-large-brackets-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
+                            {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/bracket', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img fwcup26-large-brackets-widget-img',  style: ''}, itemStyle: 'display: inline-block; ', itemClass: 'scrollable-image-block'},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
-                        partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
+                        partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style scrollable-image-container',
                         partStyle: 'display: inline-block; ',
                     },
                 ],
@@ -3035,13 +2969,70 @@ let sections_data = {
       }
     }, 
 
+    "footballWorldCupYear2026StadiumDetails_section": {
+      sectionName : 'footballWorldCupYear2026StadiumDetails_section',
+      // dataSource: {type: 'API', url: 'https://api.publicapis.org/entries'},
+      dataSource: {type: 'DATA-SERVER', dataFilePath: '/FOOTBALL_WORLD_CUP_YEAR26/store/footballWorldCup2026StadiumDetails.js'},
+
+      block: {
+          sections: [
+            {
+                animationType: 'fade-up', animationDelay: null,
+                dataSource: {from: 'API', dataPath: 'root>entries>stadiums', view: 'collection', limit: "none"},
+                parts: [
+                    // {
+                    //     animationType: 'fade-up', animationDelay: null,
+                    //     isDraggable  : false,
+                    //     desc: [
+                    //       // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
+                    //         {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
+                    //             {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 700;'}, itemStyle: 'white-space: nowrap; overflow: hidden; text-overflow: ellipsis;'},
+                    //             {type: 'text', dataSource: 'API', key: {name: 'city', class: '', style: 'font-size: 15px; padding-bottom: 3px; '}, itemStyle: 'min-height: 65px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;'},
+                    //             {type: 'text', dataSource: 'API', key: {name: 'capacity', class: '', style: 'font-size: 15px; padding-bottom: 3px; '}, itemStyle: 'min-height: 65px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;'},
+                            
+                    //         {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+                    //     ],
+                    //     partClass: 'collection-parts-mob-style  overlay-container',
+                    //     partStyle: 'display: inline-block; width: 31%; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 15px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                    // },
+                    {
+                        animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        desc: [
+                          // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 700;'}, itemStyle: 'white-space: nowrap;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'city', class: '', preHtml: '<span style="font-weight: 500; ">City: </span>', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
+                                {type: 'text', dataSource: 'API', key: {name: 'capacity', preHtml: '<span style="font-weight: 500; ">Capacity: </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'timezone', preHtml: '<span style="font-weight: 500; ">Timezone: </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'coords', preHtml: '<span style="font-weight: 500; ">Coords: </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
+
+                            {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+                        ],
+                        partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 custom-stadiums-part',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                    },
+                ],
+                sectionClass: 'collection-parts-mob-style  overlay-container ',
+                sectionStyle: 'clear: both;'
+                // sectionStyle: 'overflow-x: scroll; overflow-y: hidden; white-space: nowrap;',
+              },
+
+        ],
+          blockStyle: '',
+      }
+    },
+
     "headerNav_section": {
         sectionName : 'headerNav_section',
         brand: {
           values: [
+            {type: 'image', key: {name: 'static/img/footballWorldCupYear2026CountryFlags/fwcup2026logo.png', class: 'custom-mob-header-brand-img', style: ' border-radius: 5%;'}, itemStyle: ''},
             {type: 'text', key: {name: `FIFA 2026`, class: '',  style: ''}, itemStyle: ''},
-            // {type: 'image', key: {name: 'static/img/me_portfolio/myImg1.jpg', style: ' border-radius: 5%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 0px 10px; float: left;'},
-          ],
+
+        ],
           brandStyle: 'margin-left: -8%;'
         },
         navigation: {
@@ -3124,7 +3115,7 @@ let sections_data = {
                   {
                     eventName : 'onClickHeaderNavigation(this, event)',
                     eventType: 'onclick',
-                    argument : {mapToSections: ['footballWorldCupYear26Groupdetails']},
+                    argument : {mapToSections: ['footballWorldCupYear2026StadiumDetails']},
                     dataSetName: 'nav-links-data'
                   },
                 ],
@@ -3190,6 +3181,13 @@ let sections_data = {
           },
           {
             section: {name: 'footballWorldCupYear26NextMatch', id: '', class: '', style: ''},
+            menu: {name: '', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: 'fwcup26-custom-layout', style: ' '},
+            loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+            template: {style: ''}
+          },
+           {
+            section: {name: 'footballWorldCupYear2026StadiumDetails', id: '', class: '', style: ''},
             menu: {name: '', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
             block: {class: 'fwcup26-custom-layout', style: ' '},
             loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},

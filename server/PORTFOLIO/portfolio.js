@@ -1153,8 +1153,9 @@ function getGridTemplate(data, sectionName, sectionIndex, partsIndex, applicatio
     }
 
     if(ele.type !== 'wrap-open' || ele.type !== 'wrap-close'){
+      let eleItemClass = (ele.itemClass !== undefined && ele.itemClass !== '') ? ele.itemClass : '';
       template += `
-          <div id="`+itemId+`"  class="grid-section mob-width-full `+secClass+` `+additionClass+` `+itemClass+`" style="`+ele.itemStyle+` `+additionStyle+`">
+          <div id="`+itemId+`"  class="grid-section mob-width-full `+secClass+` `+additionClass+` `+itemClass+` ${eleItemClass}" style="`+ele.itemStyle+` `+additionStyle+`">
               `+subTemplate+`
           </div>
       `;
@@ -4228,7 +4229,14 @@ function get_header_navigation_template(nav, application, request){
         nav.brand.values.forEach((item, index) => {
           if(item.type === 'text'){
             brandTemplate += '<h1 class="logo mr-auto mob-header-brand-block-text"><a href="index.html" style="'+item.key.style+'">'+item.key.name+'</a></h1>';
+          }else if(item.type === 'image'){
+            let customImgClass = (item.key.class !== undefined && item.key.class !== '') ? item.key.class : ''
+            brandTemplate += `<span><img src="`+item.key.name+`" class="img-fluid ${customImgClass}" style="`+item.key.style+`" alt=""></span>`;
+
           }
+
+        // subTemplate += `<span><img src="`+ele.key.name+`" class="img-fluid" `+onclickMethod+` style="`+ele.key.style+`" alt=""></span>`;
+
         });
         brandTemplate += '</div>';
 

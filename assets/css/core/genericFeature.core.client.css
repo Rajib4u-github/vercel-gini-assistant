@@ -156,7 +156,7 @@
     .mob-header-nav{position: relative; left: -25%;}
     .mob-header-brand-block{margin-left: 3% !important}
     .mob-header-brand-block-text{font-size: 13px;}
-    .mob-header-nav-block{margin-left: 2% !important; overflow-y: scroll;}
+    .mob-header-nav-block{margin-left: 5% !important; overflow-y: scroll;}
     .mob-custom-header{left: 0px !important;}
     .mob-side-bar-search-section{
       position: relative; width: 100%; display: block; float: left; top: 110px; padding: 9px 6px; padding-right: 0px;
