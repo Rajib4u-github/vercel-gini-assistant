@@ -2540,7 +2540,7 @@ let sections_data = {
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
-                        partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
+                        partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style custom-dashboard-upcomming-card',
                         partStyle: 'display: inline-block; ',
                     },
                 ],
