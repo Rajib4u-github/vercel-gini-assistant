@@ -275,7 +275,7 @@
     .fwcup26-large-brackets-widget-img{ width: 100% !important; height: auto !important; }
     .fwcup26-group-stndings-widget-section-layout{ position: relative; top: -20px;}
     .fwcup26-dashboard-next-match-widget-img {height: auto !important; width: 100% !important;}
-    .scrollable-image-container { display: inline-block; width: 370px !important; overflow: scroll;}
+    .scrollable-image-container { display: inline-block; width: 370px; overflow: scroll;}
     .scrollable-image-block{ width: 750px !important;}
     .customImgClass{ width: 36px; height: 36px; display: inline-block; position: absolute; top: 9px;}
     .mob-header-brand-block{ margin-left: 0% !important; padding-bottom: 5px;}
@@ -290,6 +290,6 @@
 
 @media only screen and (max-width: 480px) {
   /* Your Motorola/mobile portrait styles go here */
-  .scrollable-image-container { display: inline-block; width: 420px !important; overflow: scroll;}
+  /* .scrollable-image-container { display: inline-block; width: 420px !important; overflow: scroll;} */
 
 }

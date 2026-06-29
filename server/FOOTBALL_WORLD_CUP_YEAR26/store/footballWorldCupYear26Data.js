@@ -3153,23 +3153,23 @@ let sections_data = {
                 itemStyle: ''
               }
             },
-             {
-              type: 'link',
-              key: {
-                name: 'Team Squads',
-                class: '',
-                style: '',
-                event: [
-                  {
-                    eventName : 'onClickHeaderNavigation(this, event)',
-                    eventType: 'onclick',
-                    argument : {mapToSections: ['footballWorldCupYear2026NationSquads']},
-                    dataSetName: 'nav-links-data'
-                  },
-                ],
-                itemStyle: ''
-              }
-            },
+            // {
+            //   type: 'link',
+            //   key: {
+            //     name: 'Team Squads',
+            //     class: '',
+            //     style: '',
+            //     event: [
+            //       {
+            //         eventName : 'onClickHeaderNavigation(this, event)',
+            //         eventType: 'onclick',
+            //         argument : {mapToSections: ['footballWorldCupYear2026NationSquads']},
+            //         dataSetName: 'nav-links-data'
+            //       },
+            //     ],
+            //     itemStyle: ''
+            //   }
+            // },
             {
               type: 'link',
               key: {
