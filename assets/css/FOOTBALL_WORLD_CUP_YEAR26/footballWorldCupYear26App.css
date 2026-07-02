@@ -224,7 +224,7 @@
   .custom-mob-header-block{background: #b0b2b6; }
   .fwcup26-custom-layout{ position: relative; top: 105px; width: 90%; margin-left: 7%; }
   .fwcup26-widget-group-standing-img{ width: 100%; height: 270px; }
-  .fwcup26-dashboard-card-style {margin-right: 10px; margin-bottom: 10px; padding: 5px; padding-bottom: 5px; border-radius: 9px; background: hsla(0, 0%, 100%, 1); color: black; width: 98%; height: 100%; text-align: center;}
+  .fwcup26-dashboard-card-style {margin-right: 10px; margin-bottom: 4px; padding: 5px; padding-bottom: 5px; border-radius: 9px; background: hsla(0, 0%, 100%, 1); color: black; width: 98%; height: 100%; text-align: center;}
   .fwcup26-dashboard-widget-img{ height: 425px !important; width: 100% !important; height: auto !important;}
   .fwcup26-upcomming-widget-img{height: auto !important; width: 100% !important; position: relative; top: 10px !important; }
   .fwcup26-top-scorer-widget-img{ height: 425px !important; position: relative; top: 30px !important;}
@@ -259,12 +259,12 @@
     /* .custom-nav-menu{ color: gray; } */
     .custom-mob-header-block{background: #d8ba34 !important; padding: 0px !important;}
 
-    .nav-menu .active {padding: 2px; background:rgb(40, 40, 12); color: white !important; border-radius: 9px; font-weight: 100; font-family: math;}
+    .nav-menu .active {padding: 2px; background:rgb(40, 40, 12); color: white !important; border-radius: 3px; font-weight: 100; font-family: math;}
     .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a { color: white !important; font-family: math; }
     .nav-menu a { font-family: math; font-weight: lighter;}
     .fwcup26-custom-layout{ position: relative; top: 105px; width: 100%; margin-left: 0% !important; }
     .fwcup26-widget-group-standing-img{ width: 100% !important; height: auto !important; }
-    .fwcup26-dashboard-card-style {margin-right: 0px; margin-bottom: 10px; padding: 0px; padding-bottom: 5px; border-radius: 9px; background: hsla(0, 0%, 100%, 1); color: black; width: 100%; height: 100%; text-align: center;}
+    .fwcup26-dashboard-card-style {margin-right: 0px; margin-bottom: 4px; padding: 0px; padding-bottom: 5px; border-radius: 9px; background: hsla(0, 0%, 100%, 1); color: black; width: 100%; height: 100%; text-align: center;}
     .fwcup26-dashboard-widget-img{ height: 115px !important;}
     .fwcup26-upcomming-widget-img{ position: relative; top: 2px !important; width: 100% !important; height: auto !important; }
     .fwcup26-top-scorer-widget-img{ width: 100% !important; height: auto !important; position: relative; top: 30px !important;}
@@ -282,12 +282,19 @@
     .scrollable-image-block{ width: 750px !important;}
     .customImgClass{ width: 36px; height: 36px; display: inline-block; position: absolute; top: 9px;}
     .mob-header-brand-block{ margin-left: 0% !important; padding-bottom: 5px;}
-    .mob-header-brand-block-text{font-size: 20px; display: inline-block; position: relative; left: 15px;}
+    .mob-header-brand-block-text{font-size: 20px; display: inline-block; position: relative; left: 15px; top: 0px; }
     .custom-mob-header-brand-img{ display: inline-block; width: 36px !important; height: 36px !important; position: relative; top: -5px; left: 15px;}
     .custom-stadiums-part {width: 96% !important; padding: 20px; margin-left: 2%;}
     .custom-players-inner-part{ width: 47% !important; margin-left: 0%;}
-    .fwcup26-nation-squads-custom-layout{ position: relative; top: 105px; width: 100%; margin-left: 0%;}
+    .fwcup26-nation-squads-custom-layout{ position: relative; top: 105px; width: 100%; margin-left: -3%;}
     /* .custom-mob-sec-style {margin-left: 5px !important; max-width: 375px; overflow: scroll; white-space: nowrap;} */
+    .custom-dashboard-upcomming-card { min-height: 0px; position: relative; top: -5px;}
+    .mob-header-nav-block { margin-left: 3% !important; position: relative; top: 8px;}
+    .custom-mob-fwcup26-squads-section{ margin-left: 0px !important;}
+    .custom-brackets-layout{ position: relative; top: -18px;}
+  
+  
+  
   }
 
 

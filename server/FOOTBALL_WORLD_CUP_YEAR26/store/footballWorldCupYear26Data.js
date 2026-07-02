@@ -1679,7 +1679,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1721,7 +1721,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1763,7 +1763,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1805,7 +1805,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1847,7 +1847,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1889,7 +1889,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1931,7 +1931,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1973,7 +1973,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -2015,7 +2015,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -2057,7 +2057,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -2099,7 +2099,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -2141,7 +2141,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -2168,13 +2168,13 @@ let sections_data = {
                         isDraggable  : false,
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                            {type: 'text', key: {name: 'Next Match Portugal', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Next Match Portugal', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px; '},
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=POR&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
-                        partStyle: 'display: inline-block;',
+                        partStyle: 'display: inline-block; background: #182119; color: white;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2196,7 +2196,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
-                        partStyle: 'display: inline-block; ',
+                        partStyle: 'display: inline-block; background: #182119; color: white;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2212,13 +2212,13 @@ let sections_data = {
                         isDraggable  : false,
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                            {type: 'text', key: {name: 'Next Match Argentina', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Next Match Argentina', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px; '},
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=ARG&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
-                        partStyle: 'display: inline-block; ',
+                        partStyle: 'display: inline-block; background: #182119; color: white;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2234,13 +2234,13 @@ let sections_data = {
                         isDraggable  : false,
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                            {type: 'text', key: {name: 'Next Match France', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Next Match France', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px;  '},
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=FRA&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
-                        partStyle: 'display: inline-block; ',
+                        partStyle: 'display: inline-block; background: #182119; color: white;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2257,13 +2257,13 @@ let sections_data = {
                         isDraggable  : false,
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                            {type: 'text', key: {name: 'Next Match England', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Next Match England', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px; '},
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=ENG&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
-                        partStyle: 'display: inline-block;',
+                        partStyle: 'display: inline-block; background: #182119; color: white;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2279,13 +2279,13 @@ let sections_data = {
                         isDraggable  : false,
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                            {type: 'text', key: {name: 'Next Match Belgium', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Next Match Belgium', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px;  '},
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=BEL&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
-                        partStyle: 'display: inline-block; ',
+                        partStyle: 'display: inline-block; background: #182119; color: white;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2301,13 +2301,13 @@ let sections_data = {
                         isDraggable  : false,
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                            {type: 'text', key: {name: 'Next Match Colombia', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Next Match Colombia', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px;  '},
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=COL&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
-                        partStyle: 'display: inline-block; ',
+                        partStyle: 'display: inline-block; background: #182119; color: white;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2323,13 +2323,13 @@ let sections_data = {
                         isDraggable  : false,
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                            {type: 'text', key: {name: 'Next Match Croatia', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Next Match Croatia', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px; '},
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=CRO&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
-                        partStyle: 'display: inline-block; ',
+                        partStyle: 'display: inline-block; background: #182119; color: white;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2347,13 +2347,13 @@ let sections_data = {
                         isDraggable  : false,
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                            {type: 'text', key: {name: 'Next Match Germany', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Next Match Germany', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px;  '},
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=GER&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
-                        partStyle: 'display: inline-block;',
+                        partStyle: 'display: inline-block; background: #182119; color: white;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2369,13 +2369,13 @@ let sections_data = {
                         isDraggable  : false,
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                            {type: 'text', key: {name: 'Next Match Ghana', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Next Match Ghana', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px;  '},
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=GHA&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
-                        partStyle: 'display: inline-block; ',
+                        partStyle: 'display: inline-block; background: #182119; color: white;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2391,13 +2391,13 @@ let sections_data = {
                         isDraggable  : false,
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                            {type: 'text', key: {name: 'Next Match Japan', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Next Match Japan', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px;  '},
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=JPN&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
-                        partStyle: 'display: inline-block; ',
+                        partStyle: 'display: inline-block; background: #182119; color: white;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2413,13 +2413,13 @@ let sections_data = {
                         isDraggable  : false,
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                            {type: 'text', key: {name: 'Next Match Netherland', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Next Match Netherland', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px;  '},
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=NED&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
-                        partStyle: 'display: inline-block; ',
+                        partStyle: 'display: inline-block; background: #182119; color: white;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2437,13 +2437,13 @@ let sections_data = {
                         isDraggable  : false,
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                            {type: 'text', key: {name: 'Next Match Mexico', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Next Match Mexico', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px;  '},
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=MEX&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
-                        partStyle: 'display: inline-block;',
+                        partStyle: 'display: inline-block; background: #182119; color: white;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2459,13 +2459,13 @@ let sections_data = {
                         isDraggable  : false,
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                            {type: 'text', key: {name: 'Next Match Morocco', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Next Match Morocco', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px;  '},
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=MAR&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
-                        partStyle: 'display: inline-block; ',
+                        partStyle: 'display: inline-block; background: #182119; color: white;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2481,13 +2481,13 @@ let sections_data = {
                         isDraggable  : false,
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                            {type: 'text', key: {name: 'Next Match Spain', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Next Match Spain', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px;  '},
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=ESP&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
-                        partStyle: 'display: inline-block; ',
+                        partStyle: 'display: inline-block; background: #182119; color: white;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2503,13 +2503,13 @@ let sections_data = {
                         isDraggable  : false,
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                            {type: 'text', key: {name: 'Next Match Switzerland', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Next Match Switzerland', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px; '},
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/team?id=SUI&tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-dashboard-next-match-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
-                        partStyle: 'display: inline-block; ',
+                        partStyle: 'display: inline-block; background: #182119; color: white;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2535,13 +2535,13 @@ let sections_data = {
                         isDraggable  : false,
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                            {type: 'text', key: {name: 'Todays Upcomming Match', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px;'},
+                            {type: 'text', key: {name: 'Todays Upcomming Match', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px;'},
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/match?tz=Asia%2FCalcutta', class: 'fwcup26-widget-section fwcup26-upcomming-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style custom-dashboard-upcomming-card',
-                        partStyle: 'display: inline-block; ',
+                        partStyle: 'display: inline-block; background: #182119; color: white; ',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2557,13 +2557,13 @@ let sections_data = {
                         isDraggable  : false,
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                            {type: 'text', key: {name: 'World Cup 26 Statics', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'World Cup 26 Statics', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px; '},
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/stats', class: 'fwcup26-widget-section fwcup26-dashboard-stats-widget-img',  style: ''}, itemStyle: 'display: inline-block;'},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
-                        partStyle: 'display: inline-block; ',
+                        partStyle: 'display: inline-block; background: #182119; color: white;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2579,13 +2579,13 @@ let sections_data = {
                         isDraggable  : false,
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                            {type: 'text', key: {name: 'Todays Matches', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Todays Matches', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px; '},
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/today?tz=Asia%2FCalcutta', class: 'fwcup26-dashboard-todays-matches-widget-img',  style: ''}, itemStyle: 'display: inline-block; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups fwcup26-dashboard-card-style desktop-width-22',
-                        partStyle: 'display: inline-block; ',
+                        partStyle: 'display: inline-block; background: #182119; color: white;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2608,7 +2608,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
-                        partStyle: 'display: inline-block; ',
+                        partStyle: 'display: inline-block; background: #182119; color: white;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2624,13 +2624,13 @@ let sections_data = {
                         isDraggable  : false,
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                            {type: 'text', key: {name: 'Top Scorers', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Top Scorers', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px; '},
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/scorers', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img fwcup26-top-scorer-widget-img',  style: ''}, itemStyle: 'display: inline-block; position: relative; top: -32px; '},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style',
-                        partStyle: 'display: inline-block; ',
+                        partStyle: 'display: inline-block; background: #182119; color: white;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section fwcup26-top-scorer-layout',
@@ -2646,13 +2646,13 @@ let sections_data = {
                         isDraggable  : false,
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                            {type: 'text', key: {name: 'Round Of 32 Tracker', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Round Of 32 Tracker', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px; '},
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/r32', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img fwcup26-round32-widget-img ',  style: ''}, itemStyle: 'display: inline-block; ',  itemClass: 'scrollable-image-block'},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style scrollable-image-container',
-                        partStyle: 'display: inline-block; ',
+                        partStyle: 'display: inline-block; background: #182119; color: white;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section fwcup26-round32-widget-section',
@@ -2669,13 +2669,13 @@ let sections_data = {
                         isDraggable  : false,
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                            {type: 'text', key: {name: 'All Group Standings', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'All Group Standings', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px; '},
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/groups', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img fwcup26-large-groups-widget-img',  style: ''}, itemStyle: 'display: inline-block; ', itemClass: 'scrollable-image-block'},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style scrollable-image-container',
-                        partStyle: 'display: inline-block; ',
+                        partStyle: 'display: inline-block; background: #182119; color: white; ',
                     },
                 ],
                 sectionClass: 'fwcup26-group-stndings-widget-section-layout',
@@ -2691,16 +2691,16 @@ let sections_data = {
                         isDraggable  : false,
                         desc: [
                             // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                            {type: 'text', key: {name: 'Knockout Bracket', class: 'default-outline-color', style: 'display: inline-block;  font-size: 16px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Knockout Bracket', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px; '},
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/bracket', class: 'fwcup26-widget-section fwcup26-dashboard-widget-img fwcup26-large-brackets-widget-img',  style: ''}, itemStyle: 'display: inline-block; ', itemClass: 'scrollable-image-block'},
                             // {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 fwcup26-dashboard-card-style scrollable-image-container',
-                        partStyle: 'display: inline-block; ',
+                        partStyle: 'display: inline-block; background: #182119; color: white;',
                     },
                 ],
-                sectionClass: '',
+                sectionClass: 'custom-brackets-layout',
                 sectionStyle: 'clear: both; width: 100%; '
                 // sectionStyle: 'overflow-x: scroll; overflow-y: hidden; white-space: nowrap;',
             },
@@ -2708,7 +2708,6 @@ let sections_data = {
           blockStyle: '',
       }
     }, 
-
 
     "footballWorldCupYear26GroupStandings_section": {
       sectionName : 'footballWorldCupYear26GroupStandings_section',
@@ -2722,12 +2721,12 @@ let sections_data = {
                         animationType: 'fade-up', animationDelay: null,
                         isDraggable  : false,
                         desc: [
-                            {type: 'text', key: {name: 'GROUP A', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Group A', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px; '},
 
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/group?id=A', class: 'fwcup26-widget-group-standing-img',  style: ''}, itemStyle: 'display: inline-block; position: relative; top: 5px;'},
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: hsla(0, 0%, 100%, 1); color: black; width: 98%; height: 100%; text-align: center;',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #182119; color: white; width: 98%; height: 100%; text-align: left;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2742,13 +2741,13 @@ let sections_data = {
                         animationType: 'fade-up', animationDelay: null,
                         isDraggable  : false,
                         desc: [
-                            {type: 'text', key: {name: 'GROUP B', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Group B', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px; '},
 
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/group?id=B', class: 'fwcup26-widget-group-standing-img',  style: ''}, itemStyle: 'display: inline-block; position: relative; top: 5px;'},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: hsla(0, 0%, 100%, 1); color: black; width: 98%; height: 100%; text-align: center;',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #182119; color: white; width: 98%; height: 100%; text-align: left;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2763,13 +2762,13 @@ let sections_data = {
                         animationType: 'fade-up', animationDelay: null,
                         isDraggable  : false,
                         desc: [
-                            {type: 'text', key: {name: 'GROUP C', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Group C', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px; '},
 
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/group?id=C', class: 'fwcup26-widget-group-standing-img',  style: ''}, itemStyle: 'display: inline-block; position: relative; top: 5px;'},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; padding-bottom: 9px; border-radius: 9px; background: hsla(0, 0%, 100%, 1); color: black; width: 98%; height: 100%; text-align: center;',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #182119; color: white; width: 98%; height: 100%; text-align: left;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2784,13 +2783,13 @@ let sections_data = {
                         animationType: 'fade-up', animationDelay: null,
                         isDraggable  : false,
                         desc: [
-                            {type: 'text', key: {name: 'GROUP D', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Group D', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px; '},
 
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/group?id=D', class: 'fwcup26-widget-group-standing-img',  style: ''}, itemStyle: 'display: inline-block; position: relative; top: 5px;'},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; padding-bottom: 9px; border-radius: 9px; background: hsla(0, 0%, 100%, 1); color: black; width: 98%; height: 100%; text-align: center;',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #182119; color: white; width: 98%; height: 100%; text-align: left;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2805,13 +2804,13 @@ let sections_data = {
                         animationType: 'fade-up', animationDelay: null,
                         isDraggable  : false,
                         desc: [
-                            {type: 'text', key: {name: 'GROUP E', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Group E', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px; '},
 
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/group?id=E', class: 'fwcup26-widget-group-standing-img',  style: ''}, itemStyle: 'display: inline-block; position: relative; top: 5px;'},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: hsla(0, 0%, 100%, 1); color: black; width: 98%; height: 100%; text-align: center;',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #182119; color: white; width: 98%; height: 100%; text-align: left;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2826,12 +2825,12 @@ let sections_data = {
                         animationType: 'fade-up', animationDelay: null,
                         isDraggable  : false,
                         desc: [
-                            {type: 'text', key: {name: 'GROUP F', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Group F', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px; '},
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/group?id=F', class: 'fwcup26-widget-group-standing-img',  style: ''}, itemStyle: 'display: inline-block; position: relative; top: 5px;'},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: hsla(0, 0%, 100%, 1); color: black; width: 98%; height: 100%; text-align: center;',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #182119; color: white; width: 98%; height: 100%; text-align: left;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2846,13 +2845,13 @@ let sections_data = {
                         animationType: 'fade-up', animationDelay: null,
                         isDraggable  : false,
                         desc: [
-                            {type: 'text', key: {name: 'GROUP G', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Group G', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px; '},
 
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/group?id=G', class: 'fwcup26-widget-group-standing-img',  style: ''}, itemStyle: 'display: inline-block; position: relative; top: 5px;'},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: hsla(0, 0%, 100%, 1); color: black; width: 98%; height: 100%; text-align: center;',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #182119; color: white; width: 98%; height: 100%; text-align: left;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2867,13 +2866,13 @@ let sections_data = {
                         animationType: 'fade-up', animationDelay: null,
                         isDraggable  : false,
                         desc: [
-                            {type: 'text', key: {name: 'GROUP H', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Group H', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px; '},
 
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/group?id=H', class: 'fwcup26-widget-group-standing-img',  style: ''}, itemStyle: 'display: inline-block; position: relative; top: 5px;'},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: hsla(0, 0%, 100%, 1); color: black; width: 98%; height: 100%; text-align: center;',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #182119; color: white; width: 98%; height: 100%; text-align: left;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2888,13 +2887,13 @@ let sections_data = {
                         animationType: 'fade-up', animationDelay: null,
                         isDraggable  : false,
                         desc: [
-                            {type: 'text', key: {name: 'GROUP I', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Group I', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px; '},
 
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/group?id=I', class: 'fwcup26-widget-group-standing-img',  style: ''}, itemStyle: 'display: inline-block; position: relative; top: 5px;'},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: hsla(0, 0%, 100%, 1); color: black; width: 98%; height: 100%; text-align: center;',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #182119; color: white; width: 98%; height: 100%; text-align: left;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2909,13 +2908,13 @@ let sections_data = {
                         animationType: 'fade-up', animationDelay: null,
                         isDraggable  : false,
                         desc: [
-                            {type: 'text', key: {name: 'GROUP J', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Group J', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px; '},
 
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/group?id=J', class: 'fwcup26-widget-group-standing-img',  style: ''}, itemStyle: 'display: inline-block; position: relative; top: 5px;'},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; padding-bottom: 9px; border-radius: 9px; background: hsla(0, 0%, 100%, 1); color: black; width: 98%; height: 100%; text-align: center;',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #182119; color: white; width: 98%; height: 100%; text-align: left;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2930,13 +2929,13 @@ let sections_data = {
                         animationType: 'fade-up', animationDelay: null,
                         isDraggable  : false,
                         desc: [
-                            {type: 'text', key: {name: 'GROUP K', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Group K', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px; '},
 
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/group?id=K', class: 'fwcup26-widget-group-standing-img',  style: ''}, itemStyle: 'display: inline-block; position: relative; top: 5px;'},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; padding-bottom: 9px; border-radius: 9px; background: hsla(0, 0%, 100%, 1); color: black; width: 98%; height: 100%; text-align: center;',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #182119; color: white; width: 98%; height: 100%; text-align: left;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2951,13 +2950,13 @@ let sections_data = {
                         animationType: 'fade-up', animationDelay: null,
                         isDraggable  : false,
                         desc: [
-                            {type: 'text', key: {name: 'GROUP L', class: 'default-outline-color', style: 'display: inline-block;  font-size: 22px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: center; padding: 10px; '},
+                            {type: 'text', key: {name: 'Group L', class: 'default-outline-color', style: 'display: inline-block;  font-size: 15px; font-family: math;'}, itemStyle: 'display: block; position: relative; top: 0px; text-align: left; padding: 8px 5px 5px 12px; '},
 
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/group?id=L', class: 'fwcup26-widget-group-standing-img',  style: ''}, itemStyle: 'display: inline-block; position: relative; top: 5px;'},
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: hsla(0, 0%, 100%, 1); color: black; width: 98%; height: 100%; text-align: center;',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #182119; color: white; width: 98%; height: 100%; text-align: left;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2996,57 +2995,14 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 custom-stadiums-part',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'collection-parts-mob-style  overlay-container ',
                 sectionStyle: 'clear: both;'
                 // sectionStyle: 'overflow-x: scroll; overflow-y: hidden; white-space: nowrap;',
             },
-            // {
-            //     animationType: 'fade-up', animationDelay: null,
-            //     dataSource: {from: 'API', dataPath: 'root>entries>stadiums', view: 'collection', limit: "none"},
-            //     parts: [
-            //         // {
-            //         //     animationType: 'fade-up', animationDelay: null,
-            //         //     isDraggable  : false,
-            //         //     desc: [
-            //         //       // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
-            //         //         {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-            //         //             {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 700;'}, itemStyle: 'white-space: nowrap; overflow: hidden; text-overflow: ellipsis;'},
-            //         //             {type: 'text', dataSource: 'API', key: {name: 'city', class: '', style: 'font-size: 15px; padding-bottom: 3px; '}, itemStyle: 'min-height: 65px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;'},
-            //         //             {type: 'text', dataSource: 'API', key: {name: 'capacity', class: '', style: 'font-size: 15px; padding-bottom: 3px; '}, itemStyle: 'min-height: 65px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;'},
-                            
-            //         //         {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
-
-            //         //     ],
-            //         //     partClass: 'collection-parts-mob-style  overlay-container',
-            //         //     partStyle: 'display: inline-block; width: 31%; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 15px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
-            //         // },
-            //         {
-            //             animationType: 'fade-up', animationDelay: null,
-            //             isDraggable  : false,
-            //             desc: [
-            //               // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
-            //                 {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-            //                     {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 700;'}, itemStyle: 'white-space: nowrap;'},
-            //                     {type: 'text', dataSource: 'API', key: {name: 'city', class: '', preHtml: '<span style="font-weight: 500; ">City: </span>', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
-            //                     {type: 'text', dataSource: 'API', key: {name: 'capacity', preHtml: '<span style="font-weight: 500; ">Capacity: </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
-            //                     {type: 'text', dataSource: 'API', key: {name: 'timezone', preHtml: '<span style="font-weight: 500; ">Timezone: </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
-            //                     {type: 'text', dataSource: 'API', key: {name: 'coords', preHtml: '<span style="font-weight: 500; ">Coords: </span>', style: 'font-size: 15px; '}, itemStyle: 'white-space: initial;'},
-
-            //                 {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
-
-            //             ],
-            //             partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 custom-stadiums-part',
-            //             partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px; vertical-align: top; background: hsla(0, 0%, 100%, 1); color: black; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
-            //         },
-            //     ],
-            //     sectionClass: 'collection-parts-mob-style  overlay-container ',
-            //     sectionStyle: 'clear: both;'
-            //     // sectionStyle: 'overflow-x: scroll; overflow-y: hidden; white-space: nowrap;',
-            // },
-
+            
         ],
           blockStyle: '',
       }
@@ -3077,7 +3033,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 5px; margin-bottom: 10px; vertical-align: top; background: white; color: black; font-family: math; padding: 0px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 5px; margin-bottom: 5px; vertical-align: top; background: #203142; color: white; font-family: math; padding: 0px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                     {
                         animationType: 'fade-up', animationDelay: null,
@@ -3094,10 +3050,10 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 custom-players-inner-part',
-                        partStyle: 'display: inline-block; margin-right: 5px; margin-bottom: 10px; vertical-align: top; background: black; color: white; font-family: math; font-weight: 100; padding: 0px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 5px; margin-bottom: 10px; vertical-align: top; background: #6b8196; color: white; font-family: math; font-weight: 100; padding: 0px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
-                sectionClass: 'desktop-sec-style mob-sec-style custom-mob-sec-style',
+                sectionClass: 'desktop-sec-style mob-sec-style custom-mob-sec-style custom-mob-fwcup26-squads-section',
                 sectionStyle: 'clear: both;'
                 // sectionStyle: 'overflow-x: scroll; overflow-y: hidden; white-space: nowrap;',
             },
