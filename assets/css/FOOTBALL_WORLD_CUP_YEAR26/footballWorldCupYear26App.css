@@ -257,7 +257,7 @@
     section { padding: 20px 0 !important; }
     /* .custom-mob-header-tabs{ padding: 3px; background: yellow; color: black !important; border-radius: 9px;} */
     /* .custom-nav-menu{ color: gray; } */
-    .custom-mob-header-block{background: #d8ba34 !important; padding: 0px !important;}
+    .custom-mob-header-block{background: #b46a4c !important; padding: 0px !important;}
 
     .nav-menu .active {padding: 2px; background:rgb(40, 40, 12); color: white !important; border-radius: 3px; font-weight: 100; font-family: math;}
     .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a { color: white !important; font-family: math; }
