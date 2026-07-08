@@ -1364,9 +1364,11 @@ var get_api_data = function(uri, authKey, dataSource){
   }
 };
 
-function getNewPartsDescSchema(request, section, dataSourceData, partsSchema, item, itemIndex){
+function getNewPartsDescSchema(request, section, dataSourceData, partsSchema, item, itemIndex, sectionIndex, data){
 //   console.log("========= investing on mutual funds data =========");
-//   console.log("==== item : ", item);
+//   console.log("==== getNewPartsDescSchema sectionIndex : ", sectionIndex);
+    // console.log("==== getNewPartsDescSchema data : ", data);
+
   let newPartsSchema = JSON.parse(JSON.stringify(partsSchema));
   let newPartsDesc = [];
   if(section.dataSource.innerDataPath !== undefined && section.dataSource.innerDataPath !== null && section.dataSource.innerDataPath !== ''){
@@ -1407,20 +1409,14 @@ function getNewPartsDescSchema(request, section, dataSourceData, partsSchema, it
                                             payload.push(localItem[name.toString()])
                                         }
                                         
-                                        // let nameObject = {
-                                        //     key 
-                                        // }
-                                        // nameValueString += localItem[item.argument.key.name.toString()] + "***";
                                     })
                                 }
                                 console.log("****** payload : ", payload);
                                 item.argument.key.name = payload;
                                 // item.argument.key.name = localItem[item.argument.key.name.toString()];
-                            }else{
-                                console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$ ******************** ");
-
-                                item.argument.key.name = localItem[item.argument.key.name.toString()];
-                            }
+                        }else{
+                            item.argument.key.name = localItem[item.argument.key.name.toString()];
+                        }
                             
                       }
                       if(item.argument.dataSource !== undefined && item.argument.dataSource === 'API' && item.argument.key.name === 'self'){
@@ -1442,83 +1438,82 @@ function getNewPartsDescSchema(request, section, dataSourceData, partsSchema, it
                     dataSourceValue = commaSeparatednamesValue;
                     ele.key.name = commaSeparatednamesValue;
               }
-              
-              if(ele.key.name.indexOf(">") !== -1){
-                  let splitDataPath = ele.key.name.split(">");
-                  // console.log("8888 splitDataPath arr : ", splitDataPath);
-                  let keyName = splitDataPath[splitDataPath.length - 1];
-                  for (let i = 0; i < splitDataPath.length - 1; i++) {
-                      localItem = localItem[splitDataPath[i].toString()];
-                  }
-                  dataSourceValue = localItem[keyName.toString()];
 
-              }else{
-                  if(ele.applyFilter !== undefined && ele.applyFilter !== null && ele.applyFilter !== ''){
+              if(ele.key.name.indexOf(">") !== -1){
+                    let splitDataPath = ele.key.name.split(">");
+                    // console.log("8888 splitDataPath arr : ", splitDataPath);
+                    let keyName = splitDataPath[splitDataPath.length - 1];
+                    for (let i = 0; i < splitDataPath.length - 1; i++) {
+                        localItem = localItem[splitDataPath[i].toString()];
+                    }
+                    dataSourceValue = localItem[keyName.toString()];
+
+              }
+
+              if(ele.key.name.indexOf("index") !== -1){
+                            let index = parseInt(ele.key.name.split(":")[1]);
+                            // console.log("========== index : ", index)
+                            // console.log("========= localItem : ", localItem)
+                            // console.log("========= typeof localItem : ", typeof(localItem))
+
+                            dataSourceValue = localItem;
+              } else if(ele.applyFilter !== undefined && ele.applyFilter !== null && ele.applyFilter !== ''){
                     dataSourceValue = ele.applyFilter.expResult;
-                  }else{
-                    if(localItem[ele.key.name.toString()] === null || localItem[ele.key.name.toString()] === undefined){
+                }else{
+                    if((ele.key.name.indexOf("index") === -1) && (localItem[ele.key.name.toString()] === null || localItem[ele.key.name.toString()] === undefined)){
                         if(ele.type === 'range-slider'){
                             dataSourceValue = '0';
                         }else{
                             dataSourceValue = 'N/A';
-                        }
-                        
-
+                        }    
                     }else{
                         dataSourceValue = localItem[ele.key.name.toString()];
+                    }   
+                }
+
+               if(ele.key.refAction){
+                    // console.log("########################################################")
+                    // console.log("##### data : ", data)    
+                    // console.log("##### sectionIndex : ", sectionIndex)             
+                    let actionName = ele.key.refAction.name;
+                    let arg = '';
+                    if(ele.key.name){
+                        arg = localItem[ele.key.name.toString()]
                     }
-                    
-                  }
+                    // console.log("####### argValue : ", arg)
+                    let argValue =  data.block.sections[sectionIndex]?.sectionActions?.[actionName]?.(arg);
+                    dataSourceValue = argValue;
+               }
 
-              }
-
-              if(request.apiRef === 'kontestsApisLeftSideBarSearch_section'){
-                  if(ele.event !== undefined && ele.event && ele.event.argument && ele.event.argument.dataSource === 'API'){
-                      if(Array.isArray(ele.event.argument.key)){
-                          let arr = [];
-                          ele.event.argument.key.forEach((arg, i) => {
-                              for (const [key,val] of Object.entries(arg)) {
-                                    let obj = {key: key, value: localItem[val]};
-                                    arr.push(obj);
-                              }
-                          });
-                          ele.event.argument.key = arr;
-                      }else{
-                          let val = localItem[ele.event.argument.key.name.toString()];
-                          ele.event.argument.key.name = val;
-                      }
-                  }
-              }
-
-              if((dataSourceValue === undefined || dataSourceValue === null || dataSourceValue === '' || dataSourceValue === "None" || dataSourceValue === "none")){
-                  if((ele.key.defaultValue !== undefined && ele.key.defaultValue !== null && ele.key.defaultValue !== '')){
-                        ele.key.name = ele.key.defaultValue;
-                  }else{
-                        ele.key.name = ele.key.name;
-                  }
-              }else{
-                  ele.key.name = dataSourceValue;
-              }
+               if((dataSourceValue === undefined || dataSourceValue === null || dataSourceValue === '' || dataSourceValue === "None" || dataSourceValue === "none")){
+                    if((ele.key.defaultValue !== undefined && ele.key.defaultValue !== null && ele.key.defaultValue !== '')){
+                            ele.key.name = ele.key.defaultValue;
+                    }else{
+                            ele.key.name = ele.key.name;
+                    }
+                }else{
+                    ele.key.name = dataSourceValue;
+                }
 
               if(ele.key.showWords !== undefined && ele.key.showWords !== ''){
-                    console.log("==== ele.key.name : ", ele.key.name)
-                    let wordsArr = ele.key.name.split(" ");
-                    console.log("=== wordsArr : ", wordsArr)
-                    let showWord = ''
-                    if(wordsArr.length >= ele.key.showWords){
-                        for(let i = 0; i< ele.key.showWords; i++){
-                            showWord += wordsArr[i]+' '
+                        console.log("==== ele.key.name : ", ele.key.name)
+                        let wordsArr = ele.key.name.split(" ");
+                        console.log("=== wordsArr : ", wordsArr)
+                        let showWord = ''
+                        if(wordsArr.length >= ele.key.showWords){
+                            for(let i = 0; i< ele.key.showWords; i++){
+                                showWord += wordsArr[i]+' '
+                            }
+                        }else if(wordsArr.length === 1){
+                            showWord = wordsArr[0];
                         }
-                    }else if(wordsArr.length === 1){
-                        showWord = wordsArr[0];
-                    }
-                    ele.key.name = showWord;
+                        ele.key.name = showWord;
               }
 
-              newPartsDesc.push(ele);
-          }else if(ele.dataSource === undefined ){
-              newPartsDesc.push(ele);
-          }
+                newPartsDesc.push(ele);
+            }else if(ele.dataSource === undefined ){
+                newPartsDesc.push(ele);
+            }
       })
 
   }
@@ -1564,12 +1559,15 @@ function getDataPathSplitedData(section, dataSourceData){
     return localDataSourceData;
 }
 
-function get_schema_to_section_data(section, dataSourceData, sectionName, request, sectionIndex){
+function get_schema_to_section_data(section, dataSourceData, sectionName, request, sectionIndex, data){
     console.log("99999999999999999999999999999999999999999999999999999999999999999999999999");
-    // console.log("####### section :: ", section);
-    // console.log("####### request :: ", request);
+
+    console.log("####### sectionIndex :: ", sectionIndex);
+    console.log("####### data :: ", data);
     // console.log("####### dataSourceData :: ", dataSourceData);
     let filteredParts = [];
+    let customCollectionTemplate = '';
+    let filteredCustomCollectionParts = [];
     let localDataSourceData = JSON.parse(JSON.stringify(dataSourceData));
     if(request && request.sectionData && request.sectionData.dataSource && request.sectionData.dataSource.data){
         localDataSourceData = request.sectionData.dataSource.data;
@@ -1667,14 +1665,14 @@ function get_schema_to_section_data(section, dataSourceData, sectionName, reques
                       }
                     }
 
-                    let newPartsSchema1 = getNewPartsDescSchema(request, section, localDataSourceData, partsSchema, item, itemIndex)
+                    let newPartsSchema1 = getNewPartsDescSchema(request, section,  localDataSourceData, partsSchema, item, itemIndex, sectionIndex, data)
                     filteredParts.push(newPartsSchema1);
                 })
               }
           }
         }else if(section.dataSource.view !== undefined && section.dataSource.view !== null && section.dataSource.view === 'paragraph'){
             let partsSchema = section.parts[0];
-            let newPartsSchema1 = getNewPartsDescSchema(request, section, localDataSourceData, partsSchema, localDataSourceData, 0);
+            let newPartsSchema1 = getNewPartsDescSchema(request, section, localDataSourceData, partsSchema, localDataSourceData, 0, sectionIndex, data);
             filteredParts.push(newPartsSchema1);
 
         }else if(section.dataSource.view !== undefined && section.dataSource.view !== null && section.dataSource.view === 'custom-collection'){
@@ -1689,7 +1687,7 @@ function get_schema_to_section_data(section, dataSourceData, sectionName, reques
                 }
 
                 localDataSourceData.forEach((item, itemIndex) => {
-
+                    let customCollectionSubTemplate = '';
                         if(section.parts.length){
                             section.parts.forEach((part, partIndex) => {
                                 let partsSchema = part;
@@ -1709,7 +1707,7 @@ function get_schema_to_section_data(section, dataSourceData, sectionName, reques
                                     }
                                     }
                                     
-                                    partsSchemaSubTemplate = getNewPartsDescSchema(request, section, localDataSourceData, partsSchema, item, itemIndex)
+                                    partsSchemaSubTemplate = getNewPartsDescSchema(request, section, localDataSourceData, partsSchema, item, itemIndex, sectionIndex, data)
                                     filteredParts.push(partsSchemaSubTemplate);
                                     
                                 }else if(part.innerDataPath.indexOf(">") !== -1){
@@ -1718,18 +1716,33 @@ function get_schema_to_section_data(section, dataSourceData, sectionName, reques
                                         let localInnerData = '';
                                         if(part.innerDataPath.split(">").length === 2){
                                             targetInnerDataPath = part.innerDataPath.split(">")[1];
-                                        }
-                                        console.log("======= targetInnerDataPath : ", targetInnerDataPath)
-                                        if(item && item[targetInnerDataPath] !== undefined){
-                                            localInnerData = item[targetInnerDataPath];
-                                        }
+                                            // console.log("======= targetInnerDataPath : ", targetInnerDataPath)
+                                            if(item && item[targetInnerDataPath] !== undefined){
+                                                localInnerData = item[targetInnerDataPath];
+                                            }
+                                        }else{
+                                            // working here 
+                                            let splittedDataPath = part.innerDataPath.split(">");
+                                            let dupItem = JSON.parse(JSON.stringify(item));
+                                            // console.log("===== splittedDataPath : ", splittedDataPath)
+                                            for (let i = 1; i < splittedDataPath.length; i++) {
+                                                if(item){
+                                                    if(item[splittedDataPath[i].toString()]){
+                                                        item = item[splittedDataPath[i].toString()];
+                                                    }
+                                                }
+                                            }
+                                            localInnerData = item;
+                                            item = dupItem;
+                                            // console.log("============ localInnerData : ", localInnerData)
 
-                                        console.log(" ==== localDataSourceData inner data : ", localInnerData)
-
+                                        }
 
                                         if(Array.isArray(localInnerData)){
                                             localInnerData.forEach((innerItem, innerItemIndex) => {
-                                                partsSchemaSubTemplate = getNewPartsDescSchema(request, section, localInnerData, partsSchema, innerItem, innerItemIndex)
+                                                // console.log("========= innerItem  :  ", innerItem)
+                                                partsSchemaSubTemplate = getNewPartsDescSchema(request, section, localInnerData, partsSchema, innerItem, innerItemIndex, sectionIndex, data)
+                                                customCollectionSubTemplate += partsSchemaSubTemplate;
                                                 filteredParts.push(partsSchemaSubTemplate);
 
                                             })
@@ -1738,21 +1751,36 @@ function get_schema_to_section_data(section, dataSourceData, sectionName, reques
                                 }
                                 
                             })
-                            
-                            // filteredParts.push(partsSchemaSubTemplate);
-
-                        }       
+                       
+                        }
+                        
+                        if((section.customCollectionClass && section.customCollectionClass !== '') || (section.customCollectionStyle && section.customCollectionStyle !== '')){
+                                let customCollectionClass = (section.customCollectionClass && section.customCollectionClass !== '') ? section.customCollectionClass : '';
+                                let customCollectionStyle = (section.customCollectionStyle && section.customCollectionStyle !== '') ? section.customCollectionStyle : '';
+                                console.log("999999999999999999  custom collection   999999999999999999999999999")
+                                customCollectionTemplate += `
+                                            <div class=" default-custom-collection-part ${customCollectionClass} ">
+                                                <div>${customCollectionSubTemplate}</div>
+                                            </div>
+                                `;
+                                filteredCustomCollectionParts.push(customCollectionTemplate);
+                                customCollectionSubTemplate = '';
+                        }
                 })
 
+                
                 // filteredParts.push(partsSchemaSubTemplate);
 
             }
         }
-              console.log("111111111111111111111111111111111111111111111111111111")
+        if(section.customCollectionClass || section.customCollectionStyle){
+            console.log("88888888888888  custom collection   8888888888888888888")
+            filteredParts = filteredCustomCollectionParts;
+        }
 
       return filteredParts;
     }else{
-      return filteredParts
+      return filteredParts;
     }
 
 }
@@ -1871,44 +1899,13 @@ function get_schema_to_section_data1(section, dataSourceData, sectionName, reque
 }
 
 function get_section_template(sectionName, editable, data, application, request){
-    console.log("==== calling create new section ====");
-    console.log("#### editable: ", editable);
-    console.log("11111 #### request : ", request);
-    console.log("11111 #### sectionName: ", sectionName);
-    console.log("11111 ##### data : ", data);
+    // console.log("==== calling create new section ====");
+    // console.log("#### editable: ", editable);
+    // console.log("11111 #### request : ", request);
+    // console.log("11111 #### sectionName: ", sectionName);
+    // console.log("11111 ##### data : ", data);
     // console.log("#### section data : ", data.dataSource.data.entries);
     let dataSourceData = null;
-    // if(data !== undefined && data.dataSource !== undefined && data.dataSource.data !== undefined && data.dataSource.data !== null && data.dataSource.data !== ''){
-    //       dataSourceData = data.dataSource.data;
-    // }
-    // if(request.apiRef !== 'custom_search' && data !== undefined && data.dataSource !== undefined && data.dataSource.data !== undefined && data.dataSource.data !== null && data.dataSource.data !== ''){
-    //       dataSourceData = data.dataSource.data;
-    // }else if(request.apiRef === 'custom_search'){
-    //       dataSourceData = data.dataSource.data;
-    // }
-
-     if(request && request.sectionData && request.sectionData.dataSource && request.sectionData.dataSource.data){
-        dataSourceData = request.sectionData.dataSource.data;
-    }
-
-    // if(data !== undefined && data.dataSource !== undefined && data.dataSource.data !== undefined && data.dataSource.data !== null && data.dataSource.data !== ''){
-    //       dataSourceData = data;
-    // }
-    // if(request.apiRef !== 'custom_search' && data !== undefined && data.dataSource !== undefined && data.dataSource.data !== undefined && data.dataSource.data !== null && data.dataSource.data !== ''){
-    //       dataSourceData = data;
-    // }else if(request.apiRef === 'custom_search'){
-    //       dataSourceData = data;
-    // }
-
-    // if(data && data.sectionName && data.block){
-    //      dataSourceData = data;
-    // }
-
-    // console.log("######### dataSourceData : ", dataSourceData);
-
-    // if(request.apiRef === 'headerNav_section'){
-    //     console.log("######### dataSourceData : ", JSON.stringify(dataSourceData));
-    // }
     let template = '';
     let progressTemplate = '';
     let additionalSkillsetTemplate = '';
@@ -1916,6 +1913,9 @@ function get_section_template(sectionName, editable, data, application, request)
     let containerStyle = '';
     let blockStyle = '';
 
+    if(request && request.sectionData && request.sectionData.dataSource && request.sectionData.dataSource.data){
+        dataSourceData = request.sectionData.dataSource.data;
+    }
     if(data && data.containerStyle !== undefined && data.containerStyle !== null && data.containerStyle !== ''){
         containerStyle += data.containerStyle;
     }
@@ -1937,6 +1937,14 @@ function get_section_template(sectionName, editable, data, application, request)
             let sectionId = 'section_'+sectionName+'-'+sectionIndex;
             animation += getAotAnimation(section);
             section = JSON.parse(JSON.stringify(section));
+            // console.log("=========== calling sectionsflags function =============")
+            // console.log("===== typeof(section.sectionActions) : ", typeof(section.sectionActions))
+            if(section.sectionActions){
+                // console.log("=========== calling sectionsflags function =============")
+                const actionResponse = data.block.sections[sectionIndex]?.sectionActions?.['action1']?.();
+                console.log("======== data :  ", actionResponse)
+                section.state = actionResponse;
+            }
             if(section.sectionClass !== undefined && section.sectionClass !== ''){
                   sectionClass += section.sectionClass;
             }
@@ -1950,12 +1958,10 @@ function get_section_template(sectionName, editable, data, application, request)
                       isSectionVisibleStyle += 'display: none;';
                   }
             }
-            // console.log("============= 111111111111111111111 ==================")
             if(section.dataSource !== undefined && section.dataSource !== null && section.dataSource !== ''){
-                let newPartsSchema = get_schema_to_section_data(section, dataSourceData, sectionName, request, sectionIndex);
+                let newPartsSchema = get_schema_to_section_data(section, dataSourceData, sectionName, request, sectionIndex, data);
                 section.parts = newPartsSchema;
             }
-            // console.log("============= 22222222222222222222222 ==================")
 
             section.parts.forEach((ele, partsIndex) => {
                 // console.log("\n\n ++++++++++++ ele : ", ele)
@@ -2076,7 +2082,6 @@ function get_section_template(sectionName, editable, data, application, request)
                       `;
                   }
             });
-            console.log("============= 333333333333333333333333333 ==================")
 
             if(section.slider !== undefined && section.slider !== null && section.slider !== ''){
                 let indicatorsTemplate = '';
@@ -2157,15 +2162,13 @@ function get_section_template(sectionName, editable, data, application, request)
                 }
             }else{
               blockTemplate += `
-                  <div id="`+sectionId+` " class="`+sectionClass+`" style=" `+sectionStyle+`  `+isSectionVisibleStyle+`">
+                  <div id="`+sectionId+` " class="custom-section `+sectionClass+`" style=" `+sectionStyle+`  `+isSectionVisibleStyle+`">
                     `+sectionsTemplate+`
                   </div>
               `;
             }
         })
     }
-            console.log("=============4444 333333333333333333333333333 ==================")
-
     template += `
           <div class="container" style="`+containerStyle+`">
               <div class="skills-content" style="width: 100%; `+blockStyle+`" >
@@ -2177,11 +2180,8 @@ function get_section_template(sectionName, editable, data, application, request)
         template += ''+data.postHTML;
     }
     if(editable){
-                    // console.log("============= 444444444444444444444444 ==================")
-
       return {template : template, templateData: data};
     }else{
-        // console.log("444444444444444444 ############## request response :: template :: ", template)
       return template;
     }
 }
@@ -2875,7 +2875,7 @@ function workcat_list_section(request){
   let data = request.sectionData;
   const activeMenuStyleClass = data.defaultMenuStyle.activeMenuStyleClass;
   const deActiveMenuStyleClass = data.defaultMenuStyle.deActiveMenuStyleClass;
-
+  const listItemsBlockStyle = (data.listBlockStyle) ? data.listBlockStyle : '';
 //   console.log("data list ============= :: deActiveMenuStyleClass ", deActiveMenuStyleClass)
 //   console.log("data list ============= :: activeMenuStyleClass ", activeMenuStyleClass)
 
@@ -2889,7 +2889,8 @@ function workcat_list_section(request){
     if(request.sectionData && request.sectionData.passByArgument){
         argument = JSON.stringify({
             ...request.sectionData.passByArgument,
-            category: item.name
+            category: item.name,
+            filterByText: item.filterByText
         })
     }
     // let argument = JSON.stringify({sectionName: argumentSectionName, category: item.name, activeMenuStyleClass : activeMenuStyleClass, deActiveMenuStyleClass: deActiveMenuStyleClass, applyActiveDeactiveMenuStyleClassMethod: 'activeDeactiveMenuStyleClass'});
@@ -2919,9 +2920,9 @@ function workcat_list_section(request){
      
   })
 
-template += `
+    template += `
       <div class="cat-block" data-aos="fade-up" style="width: 100%;">
-          <div class="cat-items-block" style="width: 90%; display: inline-block; ">
+          <div class="cat-items-block" style="display: inline-block; ${listItemsBlockStyle}">
               <div class="scrollmenu" id="" style="padding: 5px;">
                 `+itemsTemplate+`
               </div>

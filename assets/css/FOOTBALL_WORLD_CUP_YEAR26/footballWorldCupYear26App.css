@@ -214,7 +214,7 @@
   .custom-yt-Player .custom-ytplayer-close-btn {float: right; font-size: 22px; position: relative; right: 5px; color: white; top: -5px; }
 
   .custom-mob-header-block{background: transparent !important; }
-  .fwcup26-top-scorer-layout {position: relative; top: 15px; }
+  /* .fwcup26-top-scorer-layout {position: relative; top: 15px; } */
 
 }
 
@@ -235,7 +235,7 @@
   .fwcup26-dashboard-todays-matches-widget-img { height: auto !important; width: 100% !important;}
   .fwcup26-dashboard-next-match-widget-img {height: 175px !important;}
   .custom-mob-header-brand-img{border-radius: 5%; width: 70px; height: 70px; position: absolute; left: 3%; top: 8%;}
-  .fwcup26-nation-squads-custom-layout{position: relative; top: 110px; left: 5%;}
+  .fwcup26-nation-squads-custom-layout{position: relative; top: 110px;}
   .mob-header-nav-block {    margin-left: 20% !important;}
   .mob-header-brand-block-text { position: relative; left: -32px; font-size: 22px; top: 10px; }
   .custom-dashboard-upcomming-card { min-height: 242px; position: relative; top: -15px;}
@@ -262,7 +262,7 @@
     .nav-menu .active {padding: 2px; background:rgb(40, 40, 12); color: white !important; border-radius: 3px; font-weight: 100; font-family: math;}
     .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a { color: white !important; font-family: math; }
     .nav-menu a { font-family: math; font-weight: lighter;}
-    .fwcup26-custom-layout{ position: relative; top: 105px; width: 100%; margin-left: 0% !important; }
+    .fwcup26-custom-layout{ position: relative; top: 100px; width: 96%; margin: auto !important; }
     .fwcup26-widget-group-standing-img{ width: 100% !important; height: auto !important; }
     .fwcup26-dashboard-card-style {margin-right: 0px; margin-bottom: 4px; padding: 0px; padding-bottom: 5px; border-radius: 9px; background: hsla(0, 0%, 100%, 1); color: black; width: 100%; height: 100%; text-align: center;}
     .fwcup26-dashboard-widget-img{ height: 115px !important;}
@@ -270,7 +270,7 @@
     .fwcup26-top-scorer-widget-img{ width: 100% !important; height: auto !important; position: relative; top: 30px !important;}
     .fwcup26-dashboard-stats-widget-img{ width: 100% !important; height: auto !important;}
     /* .fwcup26-top-scorer-widget-img{ position: relative; top: 32px;} */
-    .fwcup26-top-scorer-layout {position: relative; top: -25px; }
+    .fwcup26-top-scorer-layout {position: relative; top: -18px; }
     .fwcup26-dashboard-todays-matches-widget-img {width: 100% !important; height: auto !important;  }
     .fwcup26-round32-widget-img { width: 100% !important; height: auto !important; position: relative; top: 0px; }
     .fwcup26-round32-widget-section{ position: relative; top: -25px;}
@@ -278,7 +278,7 @@
     .fwcup26-large-brackets-widget-img{ width: 100% !important; height: auto !important; }
     .fwcup26-group-stndings-widget-section-layout{ position: relative; top: -20px;}
     .fwcup26-dashboard-next-match-widget-img {height: auto !important; width: 100% !important;}
-    .scrollable-image-container { display: inline-block; width: 370px; overflow: scroll;}
+    .scrollable-image-container { display: inline-block; width: 370px; overflow-x: scroll; overflow-y: hidden;}
     .scrollable-image-block{ width: 750px !important;}
     .customImgClass{ width: 36px; height: 36px; display: inline-block; position: absolute; top: 9px;}
     .mob-header-brand-block{ margin-left: 0% !important; padding-bottom: 5px;}
@@ -290,10 +290,36 @@
     /* .custom-mob-sec-style {margin-left: 5px !important; max-width: 375px; overflow: scroll; white-space: nowrap;} */
     .custom-dashboard-upcomming-card { min-height: 0px; position: relative; top: -5px;}
     .mob-header-nav-block { margin-left: 3% !important; position: relative; top: 8px;}
-    .custom-mob-fwcup26-squads-section{ margin-left: 0px !important;}
+    /* .custom-mob-fwcup26-squads-section{ margin-left: 0px !important;} */
     .custom-brackets-layout{ position: relative; top: -18px;}
-  
-  
+    .mob-custom-header {left: 0px !important; overflow: hidden !important; }
+    .mob-header-nav-block{ margin-left: 5% !important; overflow-y: scroll; overflow-x: scroll; overflow-y: hidden; }
+    .fwcup26-all-matches-section-layout { position: relative; top: 22px; width: 98%; margin: auto; }
+    .fwcup26-all-matches-nation-flag {width: 90px !important; height: 60px !important; position: relative; margin-top: 0px;}
+    .fwcup26-team-squads-nation-flag {width: 90px !important; height: 60px !important; position: relative; margin-top: -30px; float: right;}
+
+    .fwcup26-home-dashboard-section-layout{ overflow: visible; width: 96% !important; margin: auto; margin-top: -5px;}
+    
+    .custom-category-section { position: relative; top: 95px; width: 98%; margin: auto; padding-bottom: 0px; } 
+    /* scrollbar-color: var(--default-theme-color) white; */
+    div.scrollmenu a { padding: 0px;}
+    .cat-items-block{ width: 98% !important;}
+    .workcat-menu-active-selection {
+        background: var(--default-theme-color) !important;
+        color: white;
+        border-radius: 20px;
+        padding: 6px 12px !important;
+        border: none;
+        font-weight: 700;
+    }
+
+    .workcat-menu-de-active-selection {
+        background: ghostwhite !important;
+        color: black;
+        border-radius: 20px;
+        padding: 6px 15px !important;
+        border: none;
+    }
   
   }
 

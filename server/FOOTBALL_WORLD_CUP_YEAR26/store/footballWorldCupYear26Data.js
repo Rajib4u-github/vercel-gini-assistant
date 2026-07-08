@@ -1679,7 +1679,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1721,7 +1721,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1763,7 +1763,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1805,7 +1805,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1847,7 +1847,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1889,7 +1889,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1931,7 +1931,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1973,7 +1973,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -2015,7 +2015,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -2057,7 +2057,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -2099,7 +2099,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -2141,7 +2141,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -2656,7 +2656,7 @@ let sections_data = {
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section fwcup26-round32-widget-section',
-                sectionStyle: 'clear: both; '
+                sectionStyle: 'clear: both; position: relative; top: -16px;'
                 // sectionStyle: 'overflow-x: scroll; overflow-y: hidden; white-space: nowrap;',
             }, 
            
@@ -2995,7 +2995,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 custom-stadiums-part',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #6b8196; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'collection-parts-mob-style  overlay-container ',
@@ -3015,6 +3015,29 @@ let sections_data = {
       block: {
           sections: [
             {
+                    state: {},
+                    sectionActions: {
+                    state: {},
+                    action1(){
+                        console.log("===== this is from inside nation flag function ==========")
+                        // const allNationsFlags = require(ROOT_DIR+'/FOOTBALL_WORLD_CUP_YEAR26/store/footballWorldCup26CountryFlags.js');
+                        const allNationsFlags = require('./footballWorldCup26CountryFlags.js');
+                        this.state.allNationsFlag = allNationsFlags.rawData;
+                      
+                    },
+                    action2(nationName){
+                        // console.log("===== this is from inside nation flag function :  action2 ; action2: ==========")
+                        // console.log("==== this.state : ", this.state)
+                        // console.log("====== nationName : ", nationName)
+                        let flagUrl = this.state.allNationsFlag?.entries[nationName.toString()]?.flag;
+                        if(flagUrl === undefined) {
+                            flagUrl = this.state.allNationsFlag.defaultImage;
+                        }
+                        // console.log("======= flagurl : ", flagUrl)
+
+                        return flagUrl;
+                    }
+                },
                 animationType: 'fade-up', animationDelay: null,
                 dataSource: {from: 'API', dataPath: 'root>entries', view: 'custom-collection', limit: "none"},
                 parts: [
@@ -3026,8 +3049,12 @@ let sections_data = {
                           // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
                             {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 16px 10px 16px 10px;'},
                                 {type: 'text', dataSource: 'API',  key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 18px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 500; ">Group: </span>', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
-                                {type: 'text', key: {name: 'Here are the team squads for 2026', class: '', style: 'font-size: 11px; padding-bottom: 3px; '}, itemStyle: ''},
+                                {type: 'image', dataSource: 'API', key: {name: 'name', refAction: {name: 'action2', args: 'name'}, defaultValue: 'static/img/footballWorldCupYear2026CountryFlags/commingSoon.png', class: 'fwcup26-team-squads-nation-flag', style: 'border-radius: 4px; object-fit: cover; '}, itemStyle: 'display: inline-block;'},
+                                
+                                {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; position: relative; margin-top: -20px; top: -12px; '},
+                                    {type: 'text', dataSource: 'API', key: {name: 'group', preHtml: '<span style="font-weight: 500; ">Group: </span>', class: '', style: 'font-size: 13px; padding-bottom: 3px; '}, itemStyle: ''},
+                                    {type: 'text', key: {name: 'Here are the team squads for 2026', class: '', style: 'font-size: 11px; padding-bottom: 3px; '}, itemStyle: ''},
+                                {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 
@@ -3050,7 +3077,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 custom-players-inner-part',
-                        partStyle: 'display: inline-block; margin-right: 5px; margin-bottom: 10px; vertical-align: top; background: #6b8196; color: white; font-family: math; font-weight: 100; padding: 0px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 5px; margin-bottom: 10px; vertical-align: top; background: black; color: white; font-family: math; font-weight: 100; padding: 0px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style custom-mob-sec-style custom-mob-fwcup26-squads-section',
@@ -3062,6 +3089,666 @@ let sections_data = {
       }
     },
 
+    "footballWorldCupYear2026AllMatches_section2": {
+      sectionName : 'footballWorldCupYear2026AllMatches_section',
+      // dataSource: {type: 'API', url: 'https://api.publicapis.org/entries'},
+      dataSource: {type: 'API', url: 'https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json'},
+
+    //   dataSource: {type: 'DATA-SERVER', dataFilePath: '/FOOTBALL_WORLD_CUP_YEAR26/store/footballWorldCup26AllMatches.js'},
+      details: 'This fifa all matches component is [ WHITE ] based theme.',
+      block: {
+        sections: [
+            {
+                animationType: 'fade-up', animationDelay: null,
+                state: {},
+                sectionActions: {
+                    state: {},
+                    action1(){
+                        // console.log("===== this is from inside nation flag function ==========")
+                        // const allNationsFlags = require(ROOT_DIR+'/FOOTBALL_WORLD_CUP_YEAR26/store/footballWorldCup26CountryFlags.js');
+                        const allNationsFlags = require('./footballWorldCup26CountryFlags.js');
+                        this.state.allNationsFlag = allNationsFlags.rawData?.entries;
+                      
+                    },
+                    action2(nationName){
+                        // console.log("===== this is from inside nation flag function :  action2 ; action2: ==========")
+                        // console.log("==== this.state : ", this.state)
+                        // console.log("====== nationName : ", nationName)
+                        let flagUrl = this.state.allNationsFlag[nationName.toString()]?.flag;
+                        // console.log("======= flagurl : ", flagUrl)
+                        return flagUrl;
+                    }
+                },
+                dataSource: {from: 'API', dataPath: 'root>matches', view: 'custom-collection', limit: "none"},
+                parts: [
+                    {
+                        animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root',
+                        desc: [
+                          // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 0px 0px 10px'},
+                                {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; width: 100% !important;'},
+                                    {type: 'text', dataSource: 'API', key: {name: 'group', style: 'font-size: 11px; '}, itemStyle: 'white-space: initial;  display: inline-block; width: 20% !important; '},
+                                    {type: 'text', dataSource: 'API', key: {name: 'round', class:'default-theme-primary-color', style: 'font-size: 15px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 500;'}, itemStyle: 'white-space: nowrap; display: inline-block; width: 55% !important; text-align: center;'},
+
+                                    {type: 'text', dataSource: 'API', key: {name: 'date', class: '', preHtml: '<span style="font-weight: 300; "></span>', style: 'font-size: 11px; padding-bottom: 3px; '}, itemStyle: ' display: inline-block; width: 20% !important; text-align: right;'},
+                                {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
+                                
+                                {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; width: 100% !important; padding-top: 12px;'},
+                                    {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; width: 40% !important;'},
+                                        {type: 'image', dataSource: 'API', key: {name: 'team1', refAction: {name: 'action2', args: 'team1'}, defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-all-matches-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: 'width: 100%;'},
+                                        {type: 'text', dataSource: 'API', key: {name: 'team1',  style: ' font-weight: 400; font-size: 11px; '}, itemStyle: 'white-space: initial; display: block; text-align: center;'},
+                                    {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
+                                    
+                                    {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; width: 15% !important;'},
+                                        {type: 'text', key: {name: 'vs', preHtml: '<span style="font-weight: 300; "></span>', style: ' font-weight: 300; font-size: 15px; position: relative; top: -35px; left: 13px;'}, itemStyle: 'white-space: initial; display: inline-block; width: 15% !important; '},
+                                    {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
+
+                                    {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; width: 40% !important; float: right;'},
+                                        {type: 'image', dataSource: 'API', key: {name: 'team2', refAction: {name: 'action2', args: 'team2'}, defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-all-matches-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: 'width: 100%;'},
+                                        {type: 'text', dataSource: 'API', key: {name: 'team2', style: ' font-weight: 400; font-size: 11px; '}, itemStyle: 'white-space: initial; display: block; text-align: center;'},
+                                    {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
+                                {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
+
+                            {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+                        ],
+                        partClass: '',
+                        partStyle: 'display: inline-block; background: white; border-top: 10px solid black;',
+                    },
+                   
+                    {
+                        animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root',
+                        desc: [
+                            // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; width: 40% !important;'},
+                                    {type: 'text', key: {name: 'ft', class:'default-theme-primary-color', style: 'font-size: 13px; display: block; width: 100%; position: relative; font-weight: 300; text-align: center;'}, itemStyle: 'white-space: initial; display: inline-block; width: 100% !important;'},
+                            // {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
+                        ],
+                        partClass: '',
+                        partStyle: 'background: white; white-space: initial; display: block; text-align: center; position: absolute; z-index: 99; width: auto !important; left: 48%; margin-top: 16px;',
+                    },
+
+                    {
+                        animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root>score>ft',
+                        desc: [
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; width: 40% !important;'},
+                                    {type: 'text', dataSource: 'API', key: {name: 'index', class:'default-theme-primary-color', style: 'font-size: 40px; display: block; width: 100%; position: relative; font-weight: 600; text-align: center;'}, itemStyle: 'white-space: initial; display: inline-block; width: 100% !important;'},
+                            {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
+                        ],
+                        partClass: '',
+                        partStyle: 'display: inline-block; background: white; white-space: initial; display: inline-block; width: 50% !important; float: left; text-align: center;',
+                    },
+
+                    {
+                        animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root',
+                        desc: [
+                            // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; width: 40% !important;'},
+                                    {type: 'text', key: {name: 'ht', class:'default-theme-primary-color', style: 'font-size: 13px; display: block; width: 100%; position: relative; font-weight: 300; text-align: center;'}, itemStyle: 'white-space: initial; display: inline-block; width: 100% !important;'},
+                            // {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
+                        ],
+                        partClass: '',
+                        partStyle: 'background: white; white-space: initial; display: block; text-align: center; position: absolute; z-index: 99; width: auto !important; left: 48%; margin-top: 58px;',
+                    },
+                   
+                    {
+                        animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root>score>ht',
+                        desc: [
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; width: 40% !important;'},
+                                    {type: 'text', dataSource: 'API', key: {name: 'index', class:'default-theme-primary-color', style: 'font-size: 13px;  display: block; width: 100%; position: relative; font-weight: 300; text-align: center;'}, itemStyle: 'white-space: initial; display: inline-block; width: 100% !important;'},
+                            {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
+                            
+                        ],
+                        partClass: '',
+                        partStyle: 'display: inline-block; background: white; white-space: initial; display: inline-block; width: 50% !important; float: right; text-align: center; ',
+                    },
+                    
+                    {
+                        animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root>goals1',
+                        desc: [
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; '},
+                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 11px; font-weight: 300;'}, itemStyle: 'white-space: nowrap; display: inline-block; width: 68% !important; position: relative; text-align: left; left: 15%; '},
+                                {type: 'text', dataSource: 'API', key: {name: 'minute', preHtml: '<span style="font-weight: 300; "> ( </span>', postHtml: '<span style="font-weight: 300; ">mnt. ) </span>', style: 'font-size: 10px; '}, itemStyle: 'white-space: initial; display: inline-block; width: 25% !important; position: relative; text-align: right; '},
+                            {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+                        ],
+                        partClass: '',
+                        partStyle: 'display: inline-block; background: white; width: 100% !important;',
+                    },
+                    {
+                        animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root>goals2',
+                        desc: [
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; '},
+                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 11px; display: block; width: 100%; position: relative; font-weight: 300;'}, itemStyle: 'white-space: nowrap; display: inline-block; width: 68% !important; position: relative; text-align: left; left: 15%; '},
+                                {type: 'text', dataSource: 'API', key: {name: 'minute', pretHtml: '<span style="font-weight: 300; "> ( </span>', postHtml: '<span style="font-weight: 300; ">mnt. ) </span>', style: 'font-size: 10px; '}, itemStyle: 'white-space: initial; display: inline-block; width: 25% !important; position: relative; text-align: right;'},
+                            {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+                        ],
+                        partClass: '',
+                        partStyle: 'display: inline-block; background: white; width: 100% !important; ',
+                    },
+                    {
+                        animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root',
+                        desc: [
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'time', preHtml: '<span style="font-weight: 300; "></span>', style: 'font-size: 11px; '}, itemStyle: 'white-space: initial; display: inline-block; width: 50% !important;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'ground', preHtml: '<span style="font-weight: 300; "></span>', style: 'font-size: 11px; float; right;'}, itemStyle: 'white-space: initial; display: inline-block; width: 48% !important; text-align: right;'},
+                            {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+                        ],
+                        partClass: '',
+                        partStyle: 'display: inline-block; background: white; ',
+                    },
+
+                ],
+                sectionClass: 'fwcup26-all-matches-section-layout',
+                sectionStyle: 'clear: both; ',
+                // customCollectionClass: 'custom-collection-section-layout',
+                // customCollectionStyle: 'margin-bottom: 15px; '
+                // sectionStyle: 'overflow-x: scroll; overflow-y: hidden; white-space: nowrap;',
+            },
+        ],
+          blockStyle: '',
+      }
+    },
+
+    "footballWorldCupYear2026AllMatches_section": {
+      sectionName : 'footballWorldCupYear2026AllMatches_section',
+      dataSource: {type: 'API', url: 'https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json'},
+    //   dataSource: {type: 'DATA-SERVER', dataFilePath: '/FOOTBALL_WORLD_CUP_YEAR26/store/footballWorldCup26AllMatches.js'},
+      details: 'This fifa all matches component is [] BLACK ] based theme.',
+      block: {
+        sections: [
+            {
+                animationType: 'fade-up', animationDelay: null,
+                state: {},
+                sectionActions: {
+                    state: {},
+                    action1(){
+                        console.log("===== this is from inside nation flag function ==========")
+                        // const allNationsFlags = require(ROOT_DIR+'/FOOTBALL_WORLD_CUP_YEAR26/store/footballWorldCup26CountryFlags.js');
+                        const allNationsFlags = require('./footballWorldCup26CountryFlags.js');
+                        this.state.allNationsFlag = allNationsFlags.rawData;
+                      
+                    },
+                    action2(nationName){
+                        // console.log("===== this is from inside nation flag function :  action2 ; action2: ==========")
+                        // console.log("==== this.state : ", this.state)
+                        // console.log("====== nationName : ", nationName)
+                        let flagUrl = this.state.allNationsFlag?.entries[nationName.toString()]?.flag;
+                        if(flagUrl === undefined) {
+                            flagUrl = this.state.allNationsFlag.defaultImage;
+                        }
+                        // console.log("======= flagurl : ", flagUrl)
+
+                        return flagUrl;
+                    }
+                },
+                dataSource: {from: 'API', dataPath: 'root>matches', view: 'custom-collection', limit: "none"},
+                parts: [
+                    {
+                        // animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root',
+                        desc: [
+                          // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 0px 0px 10px'},
+                                {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; width: 100% !important; color: darkgray; '},
+                                    {type: 'text', dataSource: 'API', key: {name: 'group', style: 'font-size: 11px; '}, itemStyle: 'white-space: initial;  display: inline-block; width: 20% !important; '},
+                                    {type: 'text', dataSource: 'API', key: {name: 'round', class:'default-theme-primary-color', style: 'font-size: 15px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 500;'}, itemStyle: 'white-space: nowrap; display: inline-block; width: 55% !important; text-align: center;'},
+                                    {type: 'text', dataSource: 'API', key: {name: 'date', class: '', preHtml: '<span style="font-weight: 300; "></span>', style: 'font-size: 11px; padding-bottom: 3px; '}, itemStyle: ' display: inline-block; width: 20% !important; text-align: right;'},
+                                {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
+                                
+                                {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; width: 100% !important; padding-top: 12px;'},
+                                    {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; width: 40% !important;'},
+                                        {type: 'image', dataSource: 'API', key: {name: 'team1', refAction: {name: 'action2', args: 'team1'}, defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-all-matches-nation-flag', style: 'border-radius: 4px; object-fit: cover; '}, itemStyle: 'width: 100%; text-align: center;'},
+                                        {type: 'text', dataSource: 'API', key: {name: 'team1',  style: ' font-weight: 400; font-size: 11px; '}, itemStyle: 'white-space: initial; display: block; text-align: center; padding-top: 3px;'},
+                                    {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
+                                    
+                                    {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; width: 15% !important;'},
+                                        {type: 'text', key: {name: 'vs', preHtml: '<span style="font-weight: 300; "></span>', style: ' font-weight: 300; font-size: 15px; position: relative; top: -35px; left: 13px;'}, itemStyle: 'white-space: initial; display: inline-block; width: 15% !important; color: darkgray; '},
+                                    {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
+
+                                    {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; width: 40% !important; float: right;'},
+                                        {type: 'image', dataSource: 'API', key: {name: 'team2', refAction: {name: 'action2', args: 'team2'}, defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-all-matches-nation-flag', style: 'border-radius: 4px; object-fit: cover;  '}, itemStyle: 'width: 100%; text-align: center;'},
+                                        {type: 'text', dataSource: 'API', key: {name: 'team2', style: ' font-weight: 400; font-size: 11px; '}, itemStyle: 'white-space: initial; display: block; text-align: center; padding-top: 3px;'},
+                                    {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
+                                {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
+
+                            {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+                        ],
+                        partClass: '',
+                        partStyle: 'display: inline-block; background: black; color: white; margin-top: 8px; border-radius: 9px 9px 0px 0px;',
+                    },
+                   
+                    {
+                        // animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root',
+                        desc: [
+                            {type: 'text', key: {name: 'ft', class:'default-theme-primary-color', style: 'font-size: 13px; display: block; width: 100%; position: relative; font-weight: 300; text-align: center;'}, itemStyle: 'white-space: initial; display: inline-block; width: 100% !important; color: darkgray;'},
+                        ],
+                        partClass: '',
+                        partStyle: 'background: black; color: white;  white-space: initial; display: block; text-align: center; position: absolute; z-index: 99; width: auto !important; left: 48%; margin-top: 16px;',
+                    },
+
+                    {
+                        // animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root>score>ft',
+                        desc: [
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; width: 40% !important;'},
+                                    {type: 'text', dataSource: 'API', key: {name: 'index', class:'default-theme-primary-color', style: 'font-size: 40px; display: block; width: 100%; position: relative; font-weight: 600; text-align: center;'}, itemStyle: 'white-space: initial; display: inline-block; width: 100% !important;'},
+                            {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
+                        ],
+                        partClass: '',
+                        partStyle: 'display: inline-block; background: black; color: white;  white-space: initial; display: inline-block; width: 50% !important; float: left; text-align: center;',
+                    },
+
+                    {
+                        // animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root',
+                        desc: [
+                            {type: 'text', key: {name: 'ht', class:'default-theme-primary-color', style: 'font-size: 13px; display: block; width: 100%; position: relative; font-weight: 300; text-align: center;'}, itemStyle: 'white-space: initial; display: inline-block; width: 100% !important; color: darkgray;'},
+                        ],
+                        partClass: '',
+                        partStyle: 'background: black; color: white;  white-space: initial; display: block; text-align: center; position: absolute; z-index: 99; width: auto !important; left: 48%; margin-top: 58px;',
+                    },
+                   
+                    {
+                        // animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root>score>ht',
+                        desc: [
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; width: 40% !important;'},
+                                    {type: 'text', dataSource: 'API', key: {name: 'index', class:'default-theme-primary-color', style: 'font-size: 13px;  display: block; width: 100%; position: relative; font-weight: 300; text-align: center;'}, itemStyle: 'white-space: initial; display: inline-block; width: 100% !important;'},
+                            {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
+                            
+                        ],
+                        partClass: '',
+                        partStyle: 'display: inline-block; background: black; color: white;  white-space: initial; display: inline-block; width: 50% !important; float: right; text-align: center; ',
+                    },
+                    
+                    {
+                        // animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root>goals1',
+                        desc: [
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; '},
+                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 13px; font-weight: 300;'}, itemStyle: 'white-space: nowrap; display: inline-block; width: 68% !important; position: relative; text-align: left; left: 8%; '},
+                                {type: 'text', dataSource: 'API', key: {name: 'minute', preHtml: '<span style="font-weight: 600; "> <span class="glyphicon glyphicon-time" style="font-size: 8px; padding-right: 3px; "></span> </span>', postHtml: '<span style="font-weight: 300; ">mnt.</span>', style: 'font-size: 12px; '}, itemStyle: 'white-space: initial; display: inline-block; width: 25% !important; position: relative; text-align: right; '},
+                            {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+                        ],
+                        partClass: '',
+                        partStyle: 'display: inline-block; background: black; color: deepskyblue;  width: 100% !important;',
+                    },
+                    {
+                        // animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root>goals2',
+                        desc: [
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; '},
+                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 13px; display: block; width: 100%; position: relative; font-weight: 300;'}, itemStyle: 'white-space: nowrap; display: inline-block; width: 68% !important; position: relative; text-align: left; left: 8%; '},
+                                {type: 'text', dataSource: 'API', key: {name: 'minute', pretHtml: '<span style="font-weight: 600; "> <span class="glyphicon glyphicon-time" style="font-size: 8px; padding-right: 3px; "></span></span>', postHtml: '<span style="font-weight: 300; ">mnt.</span>', style: 'font-size: 12px; '}, itemStyle: 'white-space: initial; display: inline-block; width: 25% !important; position: relative; text-align: right;'},
+                            {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+                        ],
+                        partClass: '',
+                        partStyle: 'display: inline-block; background: black; color: deepskyblue;  width: 100% !important; ',
+                    },
+                    {
+                        // animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root',
+                        desc: [
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px; color: darkgray; '},
+                                {type: 'text', dataSource: 'API', key: {name: 'time', preHtml: '<span style="font-weight: 300; "></span>', style: 'font-size: 11px; '}, itemStyle: 'white-space: initial; display: inline-block; width: 50% !important;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'ground', preHtml: '<span style="font-weight: 300; "></span>', style: 'font-size: 11px; float; right;'}, itemStyle: 'white-space: initial; display: inline-block; width: 48% !important; text-align: right;'},
+                            {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+                        ],
+                        partClass: '',
+                        partStyle: 'display: inline-block; background: black; color: white; border-radius: 0px 0px 9px 9px; ',
+                    },
+
+                ],
+                sectionClass: 'fwcup26-all-matches-section-layout',
+                sectionStyle: 'clear: both; ',
+            },
+        ],
+          blockStyle: '',
+      }
+    },
+
+    "footballWorldCupYear2026AllMatches_section1": {
+      sectionName : 'footballWorldCupYear2026AllMatches_section',
+      // dataSource: {type: 'API', url: 'https://api.publicapis.org/entries'},
+      dataSource: {type: 'API', url: 'https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json'},
+
+    //   dataSource: {type: 'DATA-SERVER', dataFilePath: '/FOOTBALL_WORLD_CUP_YEAR26/store/footballWorldCup26AllMatches.js'},
+      details: 'This fifa all matches component is [ WHITE ] based theme.',
+      block: {
+        sections: [
+            {
+                animationType: 'fade-up', animationDelay: null,
+                state: {},
+                sectionActions: {
+                    state: {},
+                    action1(){
+                        console.log("===== this is from inside nation flag function ==========")
+                        // const allNationsFlags = require(ROOT_DIR+'/FOOTBALL_WORLD_CUP_YEAR26/store/footballWorldCup26CountryFlags.js');
+                        const allNationsFlags = require('./footballWorldCup26CountryFlags.js');
+                        this.state.allNationsFlag = allNationsFlags.rawData?.entries;
+                      
+                    },
+                    action2(nationName){
+                        // console.log("===== this is from inside nation flag function :  action2 ; action2: ==========")
+                        // console.log("==== this.state : ", this.state)
+                        // console.log("====== nationName : ", nationName)
+                        let flagUrl = this.state.allNationsFlag[nationName.toString()]?.flag;
+                        // console.log("======= flagurl : ", flagUrl)
+                        return flagUrl;
+                    }
+                },
+                dataSource: {from: 'API', dataPath: 'root>matches', view: 'custom-collection', limit: "none"},
+                parts: [
+                    {
+                        animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root',
+                        desc: [
+                          // {type: 'image', dataSource: 'API', key: {name: 'img', defaultValue: 'static/img/news/default_currents_news_img.png', style: 'width: 100%; height: 250px;'}, itemStyle: 'display: inline-block; width: 100%; float: left;'},
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 0px 0px 10px'},
+                                {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; width: 100% !important;'},
+                                    {type: 'text', dataSource: 'API', key: {name: 'group', style: 'font-size: 11px; '}, itemStyle: 'white-space: initial;  display: inline-block; width: 20% !important; '},
+                                    {type: 'text', dataSource: 'API', key: {name: 'round', class:'default-theme-primary-color', style: 'font-size: 15px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 500;'}, itemStyle: 'white-space: nowrap; display: inline-block; width: 55% !important; text-align: center;'},
+
+                                    {type: 'text', dataSource: 'API', key: {name: 'date', class: '', preHtml: '<span style="font-weight: 300; "></span>', style: 'font-size: 11px; padding-bottom: 3px; '}, itemStyle: ' display: inline-block; width: 20% !important; text-align: right;'},
+                                {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
+                                
+                                {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; width: 100% !important; padding-top: 12px;'},
+                                    {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; width: 40% !important;'},
+                                        {type: 'image', dataSource: 'API', key: {name: 'team1', refAction: {name: 'action2', args: 'team1'}, defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-all-matches-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: 'width: 100%;'},
+                                        {type: 'text', dataSource: 'API', key: {name: 'team1',  style: ' font-weight: 400; font-size: 11px; '}, itemStyle: 'white-space: initial; display: block; text-align: center;'},
+                                    {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
+                                    
+                                    {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; width: 15% !important;'},
+                                        {type: 'text', key: {name: 'vs', preHtml: '<span style="font-weight: 300; "></span>', style: ' font-weight: 300; font-size: 15px; position: relative; top: -35px; left: 13px;'}, itemStyle: 'white-space: initial; display: inline-block; width: 15% !important; '},
+                                    {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
+
+                                    {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; width: 40% !important; float: right;'},
+                                        {type: 'image', dataSource: 'API', key: {name: 'team2', refAction: {name: 'action2', args: 'team2'}, defaultValue: 'static/img/news/default_currents_news_img.png', class: 'fwcup26-all-matches-nation-flag', style: 'border-radius: 4px; object-fit: cover; float: right; '}, itemStyle: 'width: 100%;'},
+                                        {type: 'text', dataSource: 'API', key: {name: 'team2', style: ' font-weight: 400; font-size: 11px; '}, itemStyle: 'white-space: initial; display: block; text-align: center;'},
+                                    {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
+                                {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
+
+                            {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+                        ],
+                        partClass: '',
+                        partStyle: 'display: inline-block; background: white; border-top: 10px solid black;',
+                    },
+                   
+                    {
+                        animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root',
+                        desc: [
+                            // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; width: 40% !important;'},
+                                    {type: 'text', key: {name: 'ft', class:'default-theme-primary-color', style: 'font-size: 13px; display: block; width: 100%; position: relative; font-weight: 300; text-align: center;'}, itemStyle: 'white-space: initial; display: inline-block; width: 100% !important;'},
+                            // {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
+                        ],
+                        partClass: '',
+                        partStyle: 'background: white; white-space: initial; display: block; text-align: center; position: absolute; z-index: 99; width: auto !important; left: 48%; margin-top: 16px;',
+                    },
+
+                    {
+                        animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root>score>ft',
+                        desc: [
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; width: 40% !important;'},
+                                    {type: 'text', dataSource: 'API', key: {name: 'index', class:'default-theme-primary-color', style: 'font-size: 40px; display: block; width: 100%; position: relative; font-weight: 600; text-align: center;'}, itemStyle: 'white-space: initial; display: inline-block; width: 100% !important;'},
+                            {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
+                        ],
+                        partClass: '',
+                        partStyle: 'display: inline-block; background: white; white-space: initial; display: inline-block; width: 50% !important; float: left; text-align: center;',
+                    },
+
+                    {
+                        animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root',
+                        desc: [
+                            // {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; width: 40% !important;'},
+                                    {type: 'text', key: {name: 'ht', class:'default-theme-primary-color', style: 'font-size: 13px; display: block; width: 100%; position: relative; font-weight: 300; text-align: center;'}, itemStyle: 'white-space: initial; display: inline-block; width: 100% !important;'},
+                            // {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
+                        ],
+                        partClass: '',
+                        partStyle: 'background: white; white-space: initial; display: block; text-align: center; position: absolute; z-index: 99; width: auto !important; left: 48%; margin-top: 58px;',
+                    },
+                   
+                    {
+                        animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root>score>ht',
+                        desc: [
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; width: 40% !important;'},
+                                    {type: 'text', dataSource: 'API', key: {name: 'index', class:'default-theme-primary-color', style: 'font-size: 13px;  display: block; width: 100%; position: relative; font-weight: 300; text-align: center;'}, itemStyle: 'white-space: initial; display: inline-block; width: 100% !important;'},
+                            {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
+                            
+                        ],
+                        partClass: '',
+                        partStyle: 'display: inline-block; background: white; white-space: initial; display: inline-block; width: 50% !important; float: right; text-align: center; ',
+                    },
+                    
+                    {
+                        animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root>goals1',
+                        desc: [
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; '},
+                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 11px; font-weight: 300;'}, itemStyle: 'white-space: nowrap; display: inline-block; width: 68% !important; position: relative; text-align: left; left: 15%; '},
+                                {type: 'text', dataSource: 'API', key: {name: 'minute', preHtml: '<span style="font-weight: 300; "> ( </span>', postHtml: '<span style="font-weight: 300; ">mnt. ) </span>', style: 'font-size: 10px; '}, itemStyle: 'white-space: initial; display: inline-block; width: 25% !important; position: relative; text-align: right; '},
+                            {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+                        ],
+                        partClass: '',
+                        partStyle: 'display: inline-block; background: white; width: 100% !important;',
+                    },
+                    {
+                        animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root>goals2',
+                        desc: [
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; '},
+                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 11px; display: block; width: 100%; position: relative; font-weight: 300;'}, itemStyle: 'white-space: nowrap; display: inline-block; width: 68% !important; position: relative; text-align: left; left: 15%; '},
+                                {type: 'text', dataSource: 'API', key: {name: 'minute', pretHtml: '<span style="font-weight: 300; "> ( </span>', postHtml: '<span style="font-weight: 300; ">mnt. ) </span>', style: 'font-size: 10px; '}, itemStyle: 'white-space: initial; display: inline-block; width: 25% !important; position: relative; text-align: right;'},
+                            {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+                        ],
+                        partClass: '',
+                        partStyle: 'display: inline-block; background: white; width: 100% !important; ',
+                    },
+                    {
+                        animationType: 'fade-up', animationDelay: null,
+                        isDraggable  : false,
+                        innerDataPath: 'root',
+                        desc: [
+                            {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'time', preHtml: '<span style="font-weight: 300; "></span>', style: 'font-size: 11px; '}, itemStyle: 'white-space: initial; display: inline-block; width: 50% !important;'},
+                                {type: 'text', dataSource: 'API', key: {name: 'ground', preHtml: '<span style="font-weight: 300; "></span>', style: 'font-size: 11px; float; right;'}, itemStyle: 'white-space: initial; display: inline-block; width: 48% !important; text-align: right;'},
+                            {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
+
+                        ],
+                        partClass: '',
+                        partStyle: 'display: inline-block; background: white; ',
+                    },
+
+                ],
+                sectionClass: 'fwcup26-all-matches-section-layout',
+                sectionStyle: 'clear: both; ',
+                // customCollectionClass: 'custom-collection-section-layout',
+                // customCollectionStyle: 'margin-bottom: 15px; '
+                // sectionStyle: 'overflow-x: scroll; overflow-y: hidden; white-space: nowrap;',
+            },
+        ],
+          blockStyle: '',
+      }
+    },
+
+    "workcat_section1": {
+            sectionName : 'workcat_section',
+            defaultCategory : {name: 'All', style: 'background: '+default_style.themeColor+'; color: white;'},
+            defaultMenuStyle: {activeMenuStyleClass: 'workcat-menu-active-selection', deActiveMenuStyleClass: 'workcat-menu-de-active-selection'},
+            activeMenuStyleClass: 'workcat-menu-active-selection',
+            deActiveMenuStyleClass: 'workcat-menu-de-active-selection',
+            activeMenuStyle : 'background: blue; color: white;',
+            deActiveMenuStyle : 'background: red; color: white;',
+            passByArgument: {
+                  sectionName: 'workcat',
+                  activeMenuStyleClass: 'workcat-menu-active-selection',
+                  deActiveMenuStyleClass: 'workcat-menu-de-active-selection',
+                  applyActiveDeactiveMenuStyleClassMethod: 'activeDeactiveMenuStyleClass',
+                  action: 'filterBy',
+                  actionType: 'filterByPropertyValue',
+                  targetSectionName: 'footballWorldCupYear2026AllMatches',
+                  rawDataTargetProperty: 'round',
+                  innerDataPath: 'root>matches',
+                  action: [
+                    {
+                        actionName: 'filterBy',
+                        actionType: 'filterByPropertyValue',
+                        filterProperty: 'round',
+                        filterByText: 'matchday',
+                        innerDataPath: 'root>matches',
+                    }
+                  ]
+            },
+            lists: [
+                {name : "All", type: 'list', filterByText: ''},
+                {name : "Matchday", type: 'list', filterByText: 'matchday'},
+                {name : "Round Of 32", type: 'list', filterByText: 'Round Of 32'},
+                {name : "Round Of 16", type: 'list', filterByText: 'Round Of 16'},
+                {name : "Quarter-final", type: 'list', filterByText: 'Quarter-final'},
+                {name : "Semi-final", type: 'list', filterByText: 'Semi-final'},
+                {name : "Third Place", type: 'list', filterByText: 'Match for third place'},
+                {name : "Final", type: 'list', filterByText: 'Final'},
+                // {
+                //   name: 'Query by text...', 
+                //   type: 'input-type-text',
+                //   id: 'queryNpmByText',
+                //   style: 'display: inline-block; border: 1px solid white; border-radius: 16px; background: white; padding: 6px; padding-left: 15px; outline: none !important;',
+                //   event: [
+                //       {
+                //         eventName : "onKeyUpInput(this, event, 'global_filter_by_text')", 
+                //         eventType: 'onKeyUp',
+                //         argument : {
+                //                 category: 'self',
+                //                 sectionName: 'workcat',
+                //                 apiRef: 'global_filter_by_text',
+                //                 editable: false,
+                //                 action: 'global_filter_by_text',
+                //                 targetSectionName: 'footballWorldCupYear2026AllMatches',
+                //                 filterType: 'global_filter_by_text',
+                //                 activeMenuStyleClass: 'workcat-menu-active-selection',
+                //                 deActiveMenuStyleClass: 'workcat-menu-de-active-selection',
+                //                 applyActiveDeactiveMenuStyleClassMethod: 'activeDeactiveMenuStyleClass',
+                //         }, 
+                //       },
+                //   ],
+                // }
+            ],
+            listBlockStyle: '',
+    
+            sectionStyle: '',
+            // sectionHeading: {text: 'Filter by', style: 'display: inline-block;'}
+    },
+
+     "workcat_section": {
+            sectionName : 'workcat_section',
+            defaultCategory : {name: 'All', style: 'background: '+default_style.themeColor+'; color: white;'},
+            defaultMenuStyle: {activeMenuStyleClass: 'workcat-menu-active-selection', deActiveMenuStyleClass: 'workcat-menu-de-active-selection'},
+            activeMenuStyleClass: 'workcat-menu-active-selection',
+            deActiveMenuStyleClass: 'workcat-menu-de-active-selection',
+            activeMenuStyle : 'background: blue; color: white;',
+            deActiveMenuStyle : 'background: red; color: white;',
+            passByArgument: {
+                  sectionName: 'workcat',
+                  activeMenuStyleClass: 'workcat-menu-active-selection',
+                  deActiveMenuStyleClass: 'workcat-menu-de-active-selection',
+                  applyActiveDeactiveMenuStyleClassMethod: 'activeDeactiveMenuStyleClass',
+                  action: 'filterBy',
+                  actionType: 'filterByPropertyValue',
+                  targetSectionName: 'footballWorldCupYear2026AllMatches',
+                  rawDataTargetProperty: 'round',
+                  innerDataPath: 'root>matches',
+                  action: [
+                    {
+                        actionName: 'filterBy',
+                        actionType: 'filterByPropertyValue',
+                        filterProperty: 'round',
+                        filterByText: 'matchday',
+                        innerDataPath: 'root>matches',
+                    }
+                  ]
+            },
+            lists: [
+                {name : "All", type: 'list', filterByText: ''},
+                {name : "Matchday", type: 'list', filterByText: 'matchday'},
+                {name : "Round Of 32", type: 'list', filterByText: 'Round Of 32'},
+                {name : "Round Of 16", type: 'list', filterByText: 'Round Of 16'},
+                {name : "Quarter-final", type: 'list', filterByText: 'Quarter-final'},
+                {name : "Semi-final", type: 'list', filterByText: 'Semi-final'},
+                {name : "Third Place", type: 'list', filterByText: 'Match for third place'},
+                {name : "Final", type: 'list', filterByText: 'Final'},
+                // {
+                //   name: 'Query by text...', 
+                //   type: 'input-type-text',
+                //   id: 'queryNpmByText',
+                //   style: 'display: inline-block; border: 1px solid white; border-radius: 16px; background: white; padding: 6px; padding-left: 15px; outline: none !important;',
+                //   event: [
+                //       {
+                //         eventName : "onKeyUpInput(this, event, 'global_filter_by_text')", 
+                //         eventType: 'onKeyUp',
+                //         argument : {
+                //                 category: 'self',
+                //                 sectionName: 'workcat',
+                //                 apiRef: 'global_filter_by_text',
+                //                 editable: false,
+                //                 action: 'global_filter_by_text',
+                //                 targetSectionName: 'footballWorldCupYear2026AllMatches',
+                //                 filterType: 'global_filter_by_text',
+                //                 activeMenuStyleClass: 'workcat-menu-active-selection',
+                //                 deActiveMenuStyleClass: 'workcat-menu-de-active-selection',
+                //                 applyActiveDeactiveMenuStyleClassMethod: 'activeDeactiveMenuStyleClass',
+                //         }, 
+                //       },
+                //   ],
+                // }
+            ],
+            listBlockStyle: '',
+    
+            sectionStyle: '',
+            // sectionHeading: {text: 'Filter by', style: 'display: inline-block;'}
+    },
 
     "headerNav_section": {
         sectionName : 'headerNav_section',
@@ -3090,6 +3777,25 @@ let sections_data = {
                 ]
               },
                    itemStyle: ''
+            },
+            // footballWorldCupYear26HomeDashboard
+
+            {
+              type: 'link',
+              key: {
+                name: 'All Matches',
+                class: '',
+                style: '',
+                event: [
+                  {
+                    eventName : 'onClickHeaderNavigation(this, event)',
+                    eventType: 'onclick',
+                    argument : {mapToSections: ['workcat','footballWorldCupYear2026AllMatches']},
+                    dataSetName: 'nav-links-data'
+                  },
+                ],
+                itemStyle: ''
+              }
             },
             
             {
@@ -3253,10 +3959,25 @@ let sections_data = {
           {
             section: {name: 'footballWorldCupYear2026NationSquads', id: '', class: '', style: ''},
             menu: {name: '', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
-            block: {class: 'fwcup26-nation-squads-custom-layout', style: ' '},
+            block: {class: 'fwcup26-nation-squads-custom-layout fwcup26-custom-layout', style: ' '},
             loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
             template: {style: ''}
           },
+          {
+            section: {name: 'footballWorldCupYear2026AllMatches', id: '', class: '', style: ''},
+            menu: {name: '', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+            block: {class: 'fwcup26-all-matches-section-layout fwcup26-custom-layout', style: ' '},
+            loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+            template: {style: ''}
+          },
+          {
+              section: {name: 'workcat', id: '', class: 'custom-category-section', style: ''},
+              menu: {name: 'Work Category', style: '', method: '', icon: {name: 'file-blank',type: 'bx', style: ''}},
+              block: {class: '', style: ''},
+              loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+              template: {style: ''}
+          },
+          
           
 
         ],
@@ -3276,21 +3997,19 @@ let sections_data = {
           {
             section: {name: 'footballWorldCupYear26HomeDashboard', id: '', class: '', style: 'overflow: visible;'},
             menu: {name: '', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
-            block: {class: 'fwcup26-custom-layout', style: ' '},
+            block: {class: 'fwcup26-custom-layout', style: ''},
             loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
             template: {style: ''}
           },
-          // {
-          //   section: {name: 'footballWorldCupYear26Groupdetails', id: '', class: '', style: ''},
-          //   menu: {name: '', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
-          //   block: {class: '', style: 'position: relative; top: 105px; width: 90; margin-left: 5%; '},
-          //   loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
-          //   template: {style: ''}
-          // },
 
-          
-          
-
+        //   {
+        //     section: {name: 'footballWorldCupYear26HomeDashboard', id: '', class: 'fwcup26-home-dashboard-section-layout', style: 'overflow: visible;'},
+        //     menu: {name: '', style: '', method: '', icon: {name: 'user',type: 'bx', style: ''}},
+        //     block: {class: 'fwcup26-custom-layout', style: ' '},
+        //     loader: {img: {imgUrl: 'static/img/generic_portfolio_image/loader/loader_wait.gif', alt: '', style: ''},  style: ''},
+        //     template: {style: ''}
+        //   },
+         
         ],
         partStyle: 'background: #F1F3F6;',
     },

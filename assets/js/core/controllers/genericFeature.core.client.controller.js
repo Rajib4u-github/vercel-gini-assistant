@@ -1553,10 +1553,9 @@ console.log("============= file : genericFeature.core.client.controller.js =====
             console.log("===== category : ", category)
             //socket.emit("request-generic-portfolio", {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, category : category, application: application});
             //const payload = {apiRef : sectionName+'_section', sectionName: sectionName+'_section', blockId: 'custom_'+sectionName+'_block', templateId: 'custom_'+sectionName+'_template', loaderId: 'custom_'+sectionName+'_loader', edit: false, logoCategory : category, application: application, fileName: fileName};
-            const payload = {apiRef : argument.targetSectionName+'_section', sectionName: argument.targetSectionName+'_section', blockId: 'custom_'+argument.targetSectionName+'_block', templateId: 'custom_'+argument.targetSectionName+'_template', loaderId: 'custom_'+argument.targetSectionName+'_loader', edit: false, logoCategory : category, targetProperty: argument?.rawDataTargetProperty, application: application, fileName: fileName};
+            const payload = {apiRef : argument.targetSectionName+'_section', sectionName: argument.targetSectionName+'_section', blockId: 'custom_'+argument.targetSectionName+'_block', templateId: 'custom_'+argument.targetSectionName+'_template', loaderId: 'custom_'+argument.targetSectionName+'_loader', edit: false, logoCategory : category, filterByCategory: category, innerDataPath: argument?.innerDataPath, targetProperty: argument?.rawDataTargetProperty, application: application, fileName: fileName, clientProps: argument};
             const genericSectionsTemplate = await postData({method: 'POST', url: '/fetchGenericSections'}, payload)
             renderGenericSections(genericSectionsTemplate)
-
         }
         }catch(err){
             console.log("============= err :  ", err)

@@ -1045,32 +1045,41 @@ app.use('/fetchGenericSections', function(req, res) {
             sectionData.dataSource.type === "API"
           ){
             console.log("999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999");
+            console.log("====== request :: ", request)
             if(sectionData.dataSource && sectionData.dataSource.data && sectionData.dataSource.data !== null && sectionData.dataSource.data !== ''){
               if(request.edit){
                   let res = CUSTOM_PORTFOLIO_SERVICE.generic_portfolio_functionality_mapping.get_section_template(request.apiRef, request.edit, sectionData, request.application, request);
                   template = res.template;
                   //socket.emit("response-generic-portfolio", {template : template, blockId: request.blockId, templateId: request.templateId, loaderId: request.loaderId, edit: request.edit, templateData: res.templateData});
-                  res.status(200).json({ status: "Success", text: "I am from /fetchGenericSections...", payload: {initSections : sections, allSectionsData : allSections, defaultStyle: defaultStyle, apiRef: request.apiRef}});
+                  res.status(200).json({ status: "Success", text: "I am from /fetchGenericSections...", payload: {template : template, blockId: request.blockId, templateId: request.templateId, loaderId: request.loaderId, apiRef : request.apiRef}});
 
                 }else{
-                  template = CUSTOM_PORTFOLIO_SERVICE.generic_portfolio_functionality_mapping.get_section_template(request.apiRef, request.edit, sectionData, request.application, request);
-                  if(request.apiRef === 'hereMapNearByRestaurant_section'){
-                    console.log("999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999");
-                    // console.log("@@@@ 999999 \n: ", template);
+                 
+                  if(request && request.clientProps?.action){
+                      console.log("======== before filter action : sectionData : ", sectionData)
+                      // const filteredData = actionFilterBy(request);
+                      sectionData.dataSource.data = actionFilterBy(request);
+                      // console.log("===  filteredData : ", filteredData)
                   }
+                  template = CUSTOM_PORTFOLIO_SERVICE.generic_portfolio_functionality_mapping.get_section_template(request.apiRef, request.edit, sectionData, request.application, request);
+                  // if(request.apiRef === 'hereMapNearByRestaurant_section'){
+                  //   console.log("999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999");
+                  //   // console.log("@@@@ 999999 \n: ", template);
+                  // }
+
+                  // console.log("===== template : ", template)
                   //socket.emit("response-generic-portfolio", {template : template, blockId: request.blockId, templateId: request.templateId, loaderId: request.loaderId, apiRef : request.apiRef});
-                  res.status(200).json({ status: "Success", text: "I am from /fetchGenericSections...", payload: {initSections : sections, allSectionsData : allSections, defaultStyle: defaultStyle, apiRef: request.apiRef}});
+                  // res.status(200).json({ status: "Success", text: "I am from /fetchGenericSections...", payload: {initSections : sections, allSectionsData : allSections, defaultStyle: defaultStyle, apiRef: request.apiRef}});
+
+                  res.status(200).json({ status: "Success", text: "I am from /fetchGenericSections...", payload: {template : template, blockId: request.blockId, templateId: request.templateId, loaderId: request.loaderId, apiRef : request.apiRef}});
 
                 }
             }else{
                  CUSTOM_PORTFOLIO_SERVICE.generic_portfolio_functionality_mapping.get_api_data(sectionData.dataSource.url, sectionData.dataSource.authorizationKey, sectionData.dataSource).then((data) => {
                 console.log("@@@ Response from APIS : ", data);
-                if(request.apiRef === "allPublicApis_section"){
-                    console.log("**********************************");
-                                        console.log("**********************************");
-                    console.log("**********************************");
-                    console.log("**********************************");
+                request.sectionData.dataSource.apiData = JSON.parse(JSON.stringify(data));
 
+                if(request.apiRef === "allPublicApis_section"){
                    let futureKontests = [];
                    let runningKontests = [];
                    let playedKontests = [];
@@ -1101,6 +1110,7 @@ app.use('/fetchGenericSections', function(req, res) {
                        console.log("@@@@@@@@@@@ length : ", sectionData.dataSource.data.length);
                    }else{
                         sectionData.dataSource.data = data;
+                        
                    }
 
                 }else if(request.apiRef === "kontestsApisLeftSideBarSearch_section"){
@@ -1118,25 +1128,26 @@ app.use('/fetchGenericSections', function(req, res) {
                 }
 
                 if(request.edit){
-                  let res = CUSTOM_PORTFOLIO_SERVICE.generic_portfolio_functionality_mapping.get_section_template(request.apiRef, request.edit, sectionData, request.application, request);
-                  template = res.template;
-                  //socket.emit("response-generic-portfolio", {template : template, blockId: request.blockId, templateId: request.templateId, loaderId: request.loaderId, edit: request.edit, templateData: res.templateData});
-                  res.status(200).json({ status: "Success", text: "I am from /fetchGenericSections...", payload: {initSections : sections, allSectionsData : allSections, defaultStyle: defaultStyle, apiRef: request.apiRef}});
+                    let res = CUSTOM_PORTFOLIO_SERVICE.generic_portfolio_functionality_mapping.get_section_template(request.apiRef, request.edit, sectionData, request.application, request);
+                    template = res.template;
+                    //socket.emit("response-generic-portfolio", {template : template, blockId: request.blockId, templateId: request.templateId, loaderId: request.loaderId, edit: request.edit, templateData: res.templateData});
+                    res.status(200).json({ status: "Success", text: "I am from /fetchGenericSections...", payload: {initSections : sections, allSectionsData : allSections, defaultStyle: defaultStyle, apiRef: request.apiRef}});
 
                 }else{
-                  template = CUSTOM_PORTFOLIO_SERVICE.generic_portfolio_functionality_mapping.get_section_template(request.apiRef, request.edit, sectionData, request.application, request);
-                  if(request.apiRef === 'hereMapNearByRestaurant_section'){
-                    console.log("999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999");
-                    // console.log("@@@@ 999999 \n: ", template);
-                  }
-                  //socket.emit("response-generic-portfolio", {template : template, blockId: request.blockId, templateId: request.templateId, loaderId: request.loaderId, apiRef : request.apiRef});
-                   res.status(200).json({ status: "Success", text: "I am from /fetchGenericSections...", payload: {template : template, blockId: request.blockId, templateId: request.templateId, loaderId: request.loaderId, apiRef : request.apiRef}});
+                    template = CUSTOM_PORTFOLIO_SERVICE.generic_portfolio_functionality_mapping.get_section_template(request.apiRef, request.edit, sectionData, request.application, request);
+                    if(request.apiRef === 'hereMapNearByRestaurant_section'){
+                      console.log("999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999");
+                      // console.log("@@@@ 999999 \n: ", template);
+                    }
+
+                    // console.log("===== template : ", template)
+                    //socket.emit("response-generic-portfolio", {template : template, blockId: request.blockId, templateId: request.templateId, loaderId: request.loaderId, apiRef : request.apiRef});
+                    res.status(200).json({ status: "Success", text: "I am from /fetchGenericSections...", payload: {template : template, blockId: request.blockId, templateId: request.templateId, loaderId: request.loaderId, apiRef : request.apiRef}});
 
                 }
                  })
             }
-           
-
+          
           }else if(
               sectionData !== undefined && sectionData !== null && sectionData !== '' &&
               sectionData.dataSource !== undefined &&
@@ -1179,13 +1190,12 @@ app.use('/fetchGenericSections', function(req, res) {
             sectionData.dataSource.type === "DATA-SERVER"
           ){
               // console.log("=========== calling all public apis rad data ============");
-              console.log("1111111111111111111111111@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
               let filePath = './server'+sectionData.dataSource.dataFilePath;
               console.log("++++++++++++++++++ file path ::: ", filePath);
               console.log("=== request.sectionname : ", request.sectionName)
               let rawData = require(filePath).rawData;
               // rawData = JSON.parse(JSON.stringify(rawData));
-              // console.log("======= rawData : ", rawData);
+              console.log("======= rawData : ", rawData);
 
               if(request.logoCategory && request.logoCategory !== 'All' && request.targetProperty !== ''){
                 let filteredArr = [];
@@ -1244,6 +1254,9 @@ app.use('/fetchGenericSections', function(req, res) {
                   sectionData.sectionData.collapseData = modifiedCollapseData;
                   // console.log("======== final modifiedCollapseData: ", JSON.stringify(modifiedCollapseData))
               }
+              if(request.sectionName === 'footballWorldCupYear2026AllMatches_section'){
+
+              }
               if(request.apiRef === "allPublicApis_section" && request.actionType === 'public_apis_by_category' && request.byCategory !== 'All'){
                     let filteredArr = [];
                     let data = rawData.entries;
@@ -1257,9 +1270,11 @@ app.use('/fetchGenericSections', function(req, res) {
                     // let sName = 'allPublicApisGlobalSearch_section';
                     // sName = sName.split('_')[0];
                
-                }else{
+              }else{
                     sectionData.dataSource.data = rawData;
               }
+
+              console.log("++++++++++++++++    555555555555   ++++++++++++++++++++++++++++")
 
               if(request.actionType === 'global_filter_by_text'){
                   console.log("++++++++++++++++++++++++++++++++++++++++++++")
@@ -1583,6 +1598,68 @@ app.use((err, req, res, next) => {
 
   //==========================================================================
 
+
+function actionFilterBy(request){
+    console.log("================== calling filterByPropOrValue =================")
+    console.log("================== 555555555555555555555 =================")
+    console.log("===== request.sectionData.dataSource.apiData: ", request.sectionData.dataSource.apiData)
+    // console.log("==== request.sectionData.dataSource.data : ", request.sectionData.dataSource.data)
+    // console.log("==== request.sectionData.dataSource.data : ", request.sectionData.dataSource.data)
+    let dupData = request.sectionData.dataSource.apiData;
+    let returenedFilteredData = '';
+    let filteredData = [];
+    if(request.filterByCategory === 'All'){
+        returenedFilteredData = request.sectionData.dataSource.apiData;
+    }
+    if(request.filterByCategory !== 'All' && request.clientProps?.action){
+        request.clientProps.action.forEach((actionItem, actionIndex) => {
+            if(actionItem.actionName === 'filterBy'){
+                if(actionItem.innerDataPath){
+                    let splittedDataPath = actionItem.innerDataPath.split(">")
+                    for (let i = 1; i < splittedDataPath.length; i++) {
+                        if(dupData){
+                            if(dupData[splittedDataPath[i].toString()]){
+                                dupData = dupData[splittedDataPath[i].toString()];
+                                if(i === (splittedDataPath.length -1)){
+                                        console.log("================== 7777777777777777777 =================")
+                                        if(actionItem.filterProperty){
+                                            if(Array.isArray(dupData)){
+                                                dupData.forEach((item, itemIndex) => {
+                                                    // console.log("====== item[actionItem?.filterProperty.toString()] : ", item[actionItem?.filterProperty.toString()])
+                                                    if(item && actionItem?.filterProperty && item[actionItem?.filterProperty.toString()]) {
+                                                        let filterByPropertyValue = item[actionItem?.filterProperty.toString()];
+                                                        console.log("== filterByPropertyValue : ", filterByPropertyValue)
+                                                        console.log("== request.clientProps?.filterByText : ", request.clientProps?.filterByText)
+                                                        console.log("==== filterByPropertyValue.toLowerCase().indexOf(request.clientProps?.filterByText) : ", filterByPropertyValue.toLowerCase().indexOf(request.clientProps?.filterByText.toString().toLowerCase()))
+                                                        if(filterByPropertyValue && actionItem?.filterByText && filterByPropertyValue.toLowerCase().indexOf(request.clientProps?.filterByText.toString().toLowerCase()) !== -1){
+                                                         console.log("================== 888888888888888888888888888 =================")
+  
+                                                            filteredData.push(item)
+                                                        }
+                                                    }
+                                                })
+                                                console.log("====== filtered data :: ", filteredData.length)
+                                            }
+                                        }
+                                        request.sectionData.dataSource.data[splittedDataPath[i].toString()] = filteredData;
+                                }
+                            }
+                        }
+                    }
+
+                    
+
+                // console.log("====== request.sectionData.dataSource.data : ", request.sectionData.dataSource.data)
+                // return request.sectionData.dataSource.data;
+                returenedFilteredData = request.sectionData.dataSource.data;
+              }
+
+            }
+        })
+    }
+
+    return returenedFilteredData;
+}
 
 function readFile(file){
     fs.readFile(file.path, file.type, (err, data) => {
