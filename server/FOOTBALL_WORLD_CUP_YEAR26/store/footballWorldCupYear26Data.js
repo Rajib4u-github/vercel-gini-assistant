@@ -3068,10 +3068,10 @@ let sections_data = {
                         innerDataPath: 'root>players',
                         desc: [
                             {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'name', class:'default-theme-primary-color', style: 'font-size: 14px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600;'}, itemStyle: 'white-space: nowrap;'},
-                                {type: 'text', dataSource: 'API', key: {name: 'club>name', preHtml: '<span style="font-weight: 500; "></span>', class: '', style: 'font-size: 11px; padding-bottom: 3px; '}, itemStyle: ''},
-                                {type: 'text', dataSource: 'API', key: {name: 'date_of_birth', preHtml: '<span style="font-weight: 600; "></span>', class: '', style: 'font-size: 11px; padding-bottom: 3px; '}, itemStyle: ''},
-                                {type: 'text', dataSource: 'API', key: {name: 'pos', class: '', preHtml: '<span style="font-weight: 500; "></span>', style: 'font-size: 11px; padding-bottom: 3px; '}, itemStyle: ''},
+                                {type: 'text', dataSource: 'API', key: {name: 'name', preHtml: '<span style="font-weight: 500; "></span>', class:'default-theme-primary-color', style: 'font-size: 14px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 600; color: white;'}, itemStyle: ''},
+                                {type: 'text', dataSource: 'API', key: {name: 'club>name', preHtml: '<span style="font-weight: 500; color: white; ">Club - </span>', class: '', style: 'font-size: 11px; padding-bottom: 3px; color: lightgray; font-weight: 300;'}, itemStyle: ''},
+                                {type: 'text', dataSource: 'API', key: {name: 'pos', class: '', preHtml: '<span style="font-weight: 500; color: white; ">Position - </span>', style: 'font-size: 10px; padding-bottom: 3px; font-weight: 300; color: lightgray;'}, itemStyle: ''},
+                                {type: 'text', dataSource: 'API', key: {name: 'date_of_birth', preHtml: '<span style="font-weight: 600; color: white;">DOB - </span>', class: '', style: 'font-size: 10px; padding-bottom: 3px; font-weight: 300; color: lightgray;'}, itemStyle: ''},
 
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
 

@@ -1447,7 +1447,10 @@ function getNewPartsDescSchema(request, section, dataSourceData, partsSchema, it
                         localItem = localItem[splitDataPath[i].toString()];
                     }
                     dataSourceValue = localItem[keyName.toString()];
-
+                    console.log("===== dataSourceValue : ", dataSourceValue)
+                    ele.key.name = dataSourceValue;
+                    newPartsDesc.push(ele);
+                    return;
               }
 
               if(ele.key.name.indexOf("index") !== -1){
