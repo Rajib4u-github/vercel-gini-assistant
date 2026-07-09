@@ -3279,7 +3279,7 @@ let sections_data = {
                             {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'display: inline-block; width: 100%; padding: 5px 10px 16px 10px;'},
                                 {type: 'text', dataSource: 'API', key: {name: 'title', class:'default-theme-primary-color', style: 'font-size: 16px; padding: 3px 0px; display: block; width: 100%; position: relative; font-weight: 700;'}, itemStyle: ' '},
                                 {type: 'text', dataSource: 'API', key: {name: 'description', class: '', style: 'font-size: 11px; padding-bottom: 3px; color: lightgray;'}, itemStyle: ''},
-                                {type: 'image', dataSource: 'API', key: {name: 'image_url', style: 'margin-top: 10px; margin-bottom: 6px; '}, itemStyle: ' '},
+                                {type: 'image', dataSource: 'API', key: {name: 'image_url', style: 'margin-top: 10px; margin-bottom: 6px; width: 100%; height: 100%;'}, itemStyle: ' '},
                                 {type: 'text', dataSource: 'API', key: {name: 'language', preHtml: '<span style="font-weight: 300; ">Language : </span>', style: 'font-size: 11x;'}, itemStyle: 'white-space: initial;'},
                                 {type: 'text', dataSource: 'API', key: {name: 'source_name', preHtml: '<span style="font-weight: 300; ">Source : </span>', style: 'font-size: 11px;'}, itemStyle: 'white-space: initial;'},
 
