@@ -1679,7 +1679,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #ff9879; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1721,7 +1721,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #ff9879; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1763,7 +1763,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #ff9879; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1805,7 +1805,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #ff9879; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1847,7 +1847,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #ff9879; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1889,7 +1889,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #ff9879; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1931,7 +1931,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #ff9879; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -1973,7 +1973,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #ff9879; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -2015,7 +2015,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #ff9879; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -2057,7 +2057,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #ff9879; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -2099,7 +2099,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #ff9879; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -2141,7 +2141,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #ff9879; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',
@@ -2726,7 +2726,7 @@ let sections_data = {
                             {type: 'image', key: {name: '', defaultValue: 'https://wc26-widget.vercel.app/group?id=A', class: 'fwcup26-widget-group-standing-img',  style: ''}, itemStyle: 'display: inline-block; position: relative; top: 5px;'},
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #182119; color: white; width: 98%; height: 100%; text-align: left;',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #ba69c6; color: white; width: 98%; height: 100%; text-align: left;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2747,7 +2747,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #182119; color: white; width: 98%; height: 100%; text-align: left;',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #ba69c6; color: white; width: 98%; height: 100%; text-align: left;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2768,7 +2768,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #182119; color: white; width: 98%; height: 100%; text-align: left;',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #ba69c6; color: white; width: 98%; height: 100%; text-align: left;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2789,7 +2789,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #182119; color: white; width: 98%; height: 100%; text-align: left;',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #ba69c6; color: white; width: 98%; height: 100%; text-align: left;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2810,7 +2810,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #182119; color: white; width: 98%; height: 100%; text-align: left;',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #ba69c6; color: white; width: 98%; height: 100%; text-align: left;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2830,7 +2830,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #182119; color: white; width: 98%; height: 100%; text-align: left;',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #ba69c6; color: white; width: 98%; height: 100%; text-align: left;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2851,7 +2851,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #182119; color: white; width: 98%; height: 100%; text-align: left;',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #ba69c6; color: white; width: 98%; height: 100%; text-align: left;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2872,7 +2872,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #182119; color: white; width: 98%; height: 100%; text-align: left;',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #ba69c6; color: white; width: 98%; height: 100%; text-align: left;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2893,7 +2893,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #182119; color: white; width: 98%; height: 100%; text-align: left;',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #ba69c6; color: white; width: 98%; height: 100%; text-align: left;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2914,7 +2914,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #182119; color: white; width: 98%; height: 100%; text-align: left;',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #ba69c6; color: white; width: 98%; height: 100%; text-align: left;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2935,7 +2935,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #182119; color: white; width: 98%; height: 100%; text-align: left;',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #ba69c6; color: white; width: 98%; height: 100%; text-align: left;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2956,7 +2956,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #182119; color: white; width: 98%; height: 100%; text-align: left;',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 10px;  padding-bottom: 9px; border-radius: 9px; background: #ba69c6; color: white; width: 98%; height: 100%; text-align: left;',
                     },
                 ],
                 sectionClass: 'fwcup26-custom-widget-section',
@@ -2995,7 +2995,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 custom-stadiums-part',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 4px; vertical-align: top; background: #ba69c6; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'collection-parts-mob-style  overlay-container ',
@@ -3060,7 +3060,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22',
-                        partStyle: 'display: inline-block; margin-right: 5px; margin-bottom: 5px; vertical-align: top; background: #203142; color: white; font-family: math; padding: 0px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 5px; margin-bottom: 5px; vertical-align: top; background: #b1eb00; color: black; font-family: math; padding: 0px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                     {
                         animationType: 'fade-up', animationDelay: null,
@@ -3077,7 +3077,7 @@ let sections_data = {
 
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-custom-wcup-groups desktop-width-22 custom-players-inner-part',
-                        partStyle: 'display: inline-block; margin-right: 5px; margin-bottom: 10px; vertical-align: top; background: black; color: white; font-family: math; font-weight: 100; padding: 0px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 5px; margin-bottom: 10px; vertical-align: top; background: #6100e9; color: black !important; font-family: math; font-weight: 100; padding: 0px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style custom-mob-sec-style custom-mob-fwcup26-squads-section',
@@ -3508,7 +3508,7 @@ let sections_data = {
                           },
                         ],
                         partClass: 'collection-parts-mob-style  overlay-container mob-full-width desktop-width-30',
-                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 5px; vertical-align: top; background: black; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
+                        partStyle: 'display: inline-block; margin-right: 10px; margin-bottom: 5px; vertical-align: top; background: #1a247d; color: white; padding: 5px; border: 0 solid hsla(0, 0%, 92%, 1); border-radius: 8px; box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);',
                     },
                 ],
                 sectionClass: 'desktop-sec-style mob-sec-style',

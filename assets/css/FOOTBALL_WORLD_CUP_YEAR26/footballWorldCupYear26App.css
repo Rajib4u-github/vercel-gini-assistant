@@ -257,10 +257,10 @@
     section { padding: 20px 0 !important; }
     /* .custom-mob-header-tabs{ padding: 3px; background: yellow; color: black !important; border-radius: 9px;} */
     /* .custom-nav-menu{ color: gray; } */
-    .custom-mob-header-block{background: #b4880d !important; padding: 0px !important;}
+    .custom-mob-header-block{background: #d40100 !important; padding: 0px !important;}
 
-    .nav-menu .active {padding: 2px; background:rgb(40, 40, 12); color: white !important; border-radius: 3px; font-weight: 100; font-family: math;}
-    .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a { color: white !important; font-family: math; }
+    .nav-menu .active {padding: 2px; background: white !important; color: #c80400 !important; border-radius: 3px; font-weight: 100; font-family: math;}
+    .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a { color: #c80400 !important; font-family: math; }
     .nav-menu a { font-family: math; font-weight: lighter;}
     .fwcup26-custom-layout{ position: relative; top: 100px; width: 96%; margin: auto !important; }
     .fwcup26-widget-group-standing-img{ width: 100% !important; height: auto !important; }
@@ -307,16 +307,16 @@
     div.scrollmenu a { padding: 0px;}
     .cat-items-block{ width: 98% !important;}
     .workcat-menu-active-selection {
-        background: var(--default-theme-color) !important;
-        color: white;
+        background: white !important;
+        color: #c80400;
         border-radius: 20px;
         padding: 6px 12px !important;
         border: none;
         font-weight: 700;
     }
     .workcat-menu-de-active-selection {
-        background: ghostwhite !important;
-        color: black;
+        background: #b387ff !important;
+        color: white;
         border-radius: 20px;
         padding: 6px 15px !important;
         border: none;
