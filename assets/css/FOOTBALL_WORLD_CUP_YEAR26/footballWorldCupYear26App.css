@@ -257,7 +257,7 @@
     section { padding: 20px 0 !important; }
     /* .custom-mob-header-tabs{ padding: 3px; background: yellow; color: black !important; border-radius: 9px;} */
     /* .custom-nav-menu{ color: gray; } */
-    .custom-mob-header-block{background: #296d70 !important; padding: 0px !important;}
+    .custom-mob-header-block{background: #b4880d !important; padding: 0px !important;}
 
     .nav-menu .active {padding: 2px; background:rgb(40, 40, 12); color: white !important; border-radius: 3px; font-weight: 100; font-family: math;}
     .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a { color: white !important; font-family: math; }
@@ -295,7 +295,9 @@
     .mob-custom-header {left: 0px !important; overflow: hidden !important; }
     .mob-header-nav-block{ margin-left: 5% !important; overflow-y: scroll; overflow-x: scroll; overflow-y: hidden; }
     .fwcup26-all-matches-section-layout { position: relative; top: 22px; width: 98%; margin: auto; }
-    .fwcup26-all-matches-nation-flag {width: 90px !important; height: 60px !important; position: relative; margin-top: 0px;}
+    .fwcup26-all-matches-nation-flag {width: 110px !important; height: 60px !important; position: relative; margin-top: 0px;}
+    .fwcup26-all-matches-new-nation-flag {width: 80px !important; height: 50px !important; position: relative; margin-top: 0px;}
+
     .fwcup26-team-squads-nation-flag {width: 90px !important; height: 60px !important; position: relative; margin-top: -30px; float: right;}
 
     .fwcup26-home-dashboard-section-layout{ overflow: visible; width: 96% !important; margin: auto; margin-top: -5px;}
