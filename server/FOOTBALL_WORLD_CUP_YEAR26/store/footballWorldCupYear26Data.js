@@ -3347,7 +3347,7 @@ let sections_data = {
                                     
                                     {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block; '},
                                         {type: 'image', dataSource: 'API', key: {name: 'team1', refAction: {name: 'action2', args: 'team1'}, defaultValue: 'static/img/footballWorldCupYear2026CountryFlags/commingSoon.png', class: 'fwcup26-all-matches-new-nation-flag', style: 'border-radius: 4px; object-fit: cover; position: relative; left: 0px;  '}, itemStyle: 'width: 100%; text-align: center;'},
-                                        {type: 'text', dataSource: 'API', key: {name: 'team1',  style: ' font-weight: 400; font-size: 11px; color: yellow; '}, itemStyle: 'white-space: initial; display: block; text-align: center; padding-top: 3px;'},
+                                        {type: 'text', dataSource: 'API', key: {name: 'team1',  style: ' font-weight: 400; font-size: 11px; color: #b1eb00; '}, itemStyle: 'white-space: initial; display: block; text-align: center; padding-top: 3px;'},
                                     {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
                                   
                                 {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
@@ -3382,7 +3382,7 @@ let sections_data = {
                                     
                                     {type: 'wrap-open', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: 'white-space: initial; display: inline-block;'},
                                         {type: 'image', dataSource: 'API', key: {name: 'team2', refAction: {name: 'action2', args: 'team2'}, defaultValue: 'static/img/footballWorldCupYear2026CountryFlags/commingSoon.png', class: 'fwcup26-all-matches-new-nation-flag', style: 'border-radius: 4px; object-fit: cover; position: relative; '}, itemStyle: 'width: 100%; text-align: center;'},
-                                        {type: 'text', dataSource: 'API', key: {name: 'team2', style: ' font-weight: 400; font-size: 11px; color: turquoise; '}, itemStyle: 'white-space: initial; display: block; text-align: center; padding-top: 3px; '},
+                                        {type: 'text', dataSource: 'API', key: {name: 'team2', style: ' font-weight: 400; font-size: 11px; color: #ff9879; '}, itemStyle: 'white-space: initial; display: block; text-align: center; padding-top: 3px; '},
                                     {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
                                 {type: 'wrap-close', key: {name: 'div', class: '', style: 'width: 100%;'}, itemStyle: ''},
                             {type: 'wrap-close', key: {name: 'div', class: '', style: ' '}, itemStyle: ''},
@@ -3431,7 +3431,7 @@ let sections_data = {
 
                         ],
                         partClass: '',
-                        partStyle: 'display: inline-block; background: black; color: yellow;  width: 75% !important; margin-left: 12%;',
+                        partStyle: 'display: inline-block; background: black; color: #b1eb00;  width: 75% !important; margin-left: 12%;',
                     },
                   
                     {
@@ -3446,7 +3446,7 @@ let sections_data = {
 
                         ],
                         partClass: '',
-                        partStyle: 'display: inline-block; background: black; color: turquoise; vertical-align: top; width: 75% !important; margin-left: 12%; ',
+                        partStyle: 'display: inline-block; background: black; color: #ff9879; vertical-align: top; width: 75% !important; margin-left: 12%; ',
                     },
 
                     {

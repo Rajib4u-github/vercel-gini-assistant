@@ -259,8 +259,8 @@
     /* .custom-nav-menu{ color: gray; } */
     .custom-mob-header-block{background: #d40100 !important; padding: 0px !important;}
 
-    .nav-menu .active {padding: 2px; background: white !important; color: #c80400 !important; border-radius: 3px; font-weight: 100; font-family: math;}
-    .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a { color: #c80400 !important; font-family: math; }
+    .nav-menu .active {padding: 2px; background: #b1eb00 !important; color: black !important; border-radius: 3px; font-weight: 100; font-family: math;}
+    .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a { color: black !important; font-family: math; }
     .nav-menu a { font-family: math; font-weight: lighter;}
     .fwcup26-custom-layout{ position: relative; top: 100px; width: 96%; margin: auto !important; }
     .fwcup26-widget-group-standing-img{ width: 100% !important; height: auto !important; }
